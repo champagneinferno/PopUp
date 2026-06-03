@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Apple",
+    "url": "https://www.apple.com/",
+    "category": "corporate",
+    "status": "PASS",
+    "reason": "",
+    "objects": 12,
+    "tokens": 425,
+    "style": "bold-cinematic"
+  },
+  {
+    "name": "Microsoft",
+    "url": "https://www.microsoft.com/",
+    "category": "corporate",
+    "status": "PASS",
+    "reason": "",
+    "objects": 9,
+    "tokens": 350,
+    "style": "bold-cinematic"
+  },
+  {
+    "name": "Stripe",
+    "url": "https://stripe.com/",
+    "category": "corporate",
+    "status": "PASS",
+    "reason": "",
+    "objects": 12,
+    "tokens": 425,
+    "style": "bold-cinematic"
+  },
+  {
+    "name": "Dribbble",
+    "url": "https://dribbble.com/",
+    "category": "creative",
+    "status": "PASS",
+    "reason": "",
+    "objects": 9,
+    "tokens": 350,
+    "style": "creative-playful"
+  },
+  {
+    "name": "Behance",
+    "url": "https://www.behance.net/",
+    "category": "creative",
+    "status": "PASS",
+    "reason": "",
+    "objects": 12,
+    "tokens": 425,
+    "style": "bold-cinematic"
+  },
+  {
+    "name": "Facebook",
+    "url": "https://facebook.com/",
+    "category": "js_heavy",
+    "status": "WARN",
+    "reason": "No 3D objects created",
+    "objects": 0,
+    "tokens": 50,
+    "style": "minimalist"
+  },
+  {
+    "name": "Twitter",
+    "url": "https://twitter.com/",
+    "category": "js_heavy",
+    "status": "PASS",
+    "reason": "",
+    "objects": 2,
+    "tokens": 70,
+    "style": "bold-cinematic"
+  },
+  {
+    "name": "React Docs",
+    "url": "https://react.dev/",
+    "category": "js_heavy",
+    "status": "PASS",
+    "reason": "",
+    "objects": 9,
+    "tokens": 350,
+    "style": "creative-playful"
+  },
+  {
+    "name": "HTTPbin.org",
+    "url": "https://httpbin.org/",
+    "category": "static",
+    "status": "FAIL",
+    "reason": "Evaluator failed",
+    "objects": 0,
+    "tokens": 0,
+    "style": "N/A"
+  },
+  {
+    "name": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Main_Page",
+    "category": "static_complex",
+    "status": "PASS",
+    "reason": "",
+    "objects": 9,
+    "tokens": 350,
+    "style": "bold-cinematic"
+  },
+  {
+    "name": "Python.org",
+    "url": "https://www.python.org/",
+    "category": "static_complex",
+    "status": "PASS",
+    "reason": "",
+    "objects": 6,
+    "tokens": 165,
+    "style": "bold-cinematic"
+  },
+  {
+    "name": "Example.com",
+    "url": "https://example.com/",
+    "category": "static_simple",
+    "status": "PASS",
+    "reason": "",
+    "objects": 1,
+    "tokens": 60,
+    "style": "bold-cinematic"
+  },
+  {
+    "name": "Stack Overflow",
+    "url": "https://stackoverflow.com/",
+    "category": "tech",
+    "status": "FAIL",
+    "reason": "Evaluator failed",
+    "objects": 0,
+    "tokens": 0,
+    "style": "N/A"
+  },
+  {
+    "name": "GitHub",
+    "url": "https://github.com/",
+    "category": "tech_dev",
+    "status": "PASS",
+    "reason": "",
+    "objects": 12,
+    "tokens": 425,
+    "style": "bold-cinematic"
+  },
+  {
+    "name": "Metawatt",
+    "url": "https://www.metawatt.com/",
+    "category": "wix_sites",
+    "status": "PASS",
+    "reason": "",
+    "objects": 12,
+    "tokens": 425,
+    "style": "bold-cinematic"
+  },
+  {
+    "name": "Wix Demo",
+    "url": "https://www.wix.com/demo/",
+    "category": "wix_sites",
+    "status": "PASS",
+    "reason": "",
+    "objects": 12,
+    "tokens": 425,
+    "style": "bold-cinematic"
+  }
+]

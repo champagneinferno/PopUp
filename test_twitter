@@ -1,0 +1,277 @@
+{
+  "website_profile": {
+    "url": "https://twitter.com",
+    "title": "",
+    "extraction_timestamp": "2026-06-03T21:16:35.452889",
+    "brand_dna": {
+      "color_palette": [
+        "rgb(0, 0, 0)",
+        "none",
+        "rgb(255, 255, 255)",
+        "rgb(26, 26, 26)",
+        "rgb(208, 219, 226)",
+        "rgb(209, 213, 219)",
+        "rgb(15, 23, 42)",
+        "rgb(212, 212, 216)",
+        "rgb(113, 113, 122)",
+        "rgb(14, 165, 233)"
+      ],
+      "fonts": [
+        "TwitterChirp",
+        "Geist",
+        "Times New Roman"
+      ],
+      "style_vibe": [
+        "interactive"
+      ]
+    },
+    "structure": {
+      "navigation": [
+        {
+          "text": "About",
+          "href": "https://about.x.com/"
+        },
+        {
+          "text": "Download the X app",
+          "href": "https://help.x.com/using-x/download-the-x-app"
+        },
+        {
+          "text": "Grok",
+          "href": "https://grok.com/"
+        },
+        {
+          "text": "Help Center",
+          "href": "https://help.x.com/"
+        },
+        {
+          "text": "Terms of Service",
+          "href": "https://x.com/tos"
+        },
+        {
+          "text": "Privacy Policy",
+          "href": "https://x.com/privacy"
+        },
+        {
+          "text": "Cookie Policy",
+          "href": "https://support.x.com/articles/20170514"
+        },
+        {
+          "text": "Accessibility",
+          "href": "https://help.x.com/resources/accessibility"
+        },
+        {
+          "text": "Ads info",
+          "href": "https://business.x.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo"
+        },
+        {
+          "text": "Blog",
+          "href": "https://blog.x.com/"
+        },
+        {
+          "text": "Careers",
+          "href": "https://careers.x.com/"
+        },
+        {
+          "text": "Brand Resources",
+          "href": "https://about.x.com/press/brand-assets"
+        },
+        {
+          "text": "Advertising",
+          "href": "https://ads.x.com/?ref=gl-tw-tw-twitter-advertise"
+        },
+        {
+          "text": "Marketing",
+          "href": "https://marketing.x.com/"
+        },
+        {
+          "text": "X for Business",
+          "href": "https://business.x.com/?ref=web-twc-ao-gbl-twitterforbusiness&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=twitterforbusiness"
+        }
+      ],
+      "hero_section": {
+        "heading": "JavaScript is not available.",
+        "selector": "h1 (fallback)",
+        "cta_buttons": []
+      },
+      "sections": [
+        {
+          "heading": "Happening now.",
+          "tag": "div"
+        },
+        {
+          "heading": "Happening now.",
+          "tag": "div"
+        },
+        {
+          "heading": "Happening now.",
+          "tag": "div"
+        },
+        {
+          "heading": "Happening now.",
+          "tag": "div"
+        },
+        {
+          "heading": "Happening now.",
+          "tag": "main"
+        },
+        {
+          "heading": "Happening now.",
+          "tag": "div"
+        },
+        {
+          "heading": "Happening now.",
+          "tag": "div"
+        },
+        {
+          "heading": "Happening now.",
+          "tag": "div"
+        },
+        {
+          "heading": "Happening now.",
+          "tag": "div"
+        },
+        {
+          "heading": "Happening now.",
+          "tag": "div"
+        }
+      ],
+      "footer": {
+        "links": [
+          {
+            "text": "Terms of Service",
+            "url": "https://x.com/tos"
+          },
+          {
+            "text": "Privacy Policy",
+            "url": "https://x.com/privacy"
+          },
+          {
+            "text": "Cookie Policy",
+            "url": "https://support.x.com/articles/20170514"
+          },
+          {
+            "text": "Imprint",
+            "url": "https://legal.twitter.com/imprint.html"
+          },
+          {
+            "text": "Ads info",
+            "url": "https://business.twitter.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo"
+          }
+        ],
+        "text": "Terms of ServicePrivacy PolicyCookie PolicyImprintAds info© 2026 X Corp.",
+        "social_links": [
+          {
+            "platform": "https://legal.twitter.com/imprint.html",
+            "url": "https://legal.twitter.com/imprint.html"
+          },
+          {
+            "platform": "https://business.twitter.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo",
+            "url": "https://business.twitter.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo"
+          }
+        ]
+      },
+      "buttons": [
+        {
+          "text": "Continue with phone",
+          "tag": "button",
+          "classes": [],
+          "href": ""
+        },
+        {
+          "text": "Continue with AppleContinue with Apple",
+          "tag": "button",
+          "classes": [],
+          "href": ""
+        }
+      ]
+    },
+    "visual_dna": {
+      "hero_background": {
+        "background_image": null,
+        "background_color": "rgb(255, 255, 255)",
+        "element": "BODY"
+      },
+      "background_images": [],
+      "computed_colors": [
+        "rgb(0, 0, 0)",
+        "none",
+        "rgb(255, 255, 255)",
+        "rgb(26, 26, 26)",
+        "rgb(208, 219, 226)",
+        "rgb(209, 213, 219)",
+        "rgb(15, 23, 42)",
+        "rgb(212, 212, 216)",
+        "rgb(113, 113, 122)",
+        "rgb(14, 165, 233)",
+        "rgb(212, 212, 212)",
+        "rgb(120, 113, 108)",
+        "rgb(128, 128, 128)",
+        "rgb(34, 34, 34)",
+        "rgb(83, 100, 113)",
+        "rgb(130, 154, 171)"
+      ],
+      "button_styles": [
+        {
+          "text": "Continue with phone",
+          "bg_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "0px",
+          "padding": "0px",
+          "font_size": "15px",
+          "class": "jf-element jmm2vci0 j-5ger9i0 j-d7h1p60 jzedevn100"
+        },
+        {
+          "text": "Continue with AppleContinue with Apple",
+          "bg_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "0px",
+          "padding": "0px",
+          "font_size": "15px",
+          "class": "jf-element"
+        }
+      ],
+      "layout_structure": {
+        "has_nav": true,
+        "has_footer": false,
+        "has_hero": false,
+        "section_count": 0,
+        "div_count": 87,
+        "image_count": 0,
+        "link_count": 21
+      }
+    },
+    "assets": {
+      "favicon": "https://abs.twimg.com/responsive-web/client-web/icon-ios.77d25eba.png",
+      "logo": "svg-logo:body > * svg",
+      "images": [
+        {
+          "src": "https://abs.twimg.com/emoji/v2/svg/26a0.svg",
+          "alt": "⚠️",
+          "class": [
+            "r-4qtqp9",
+            "r-dflpy8",
+            "r-k4bwe5",
+            "r-1kpi4qh",
+            "r-pp5qcn",
+            "r-h9hxbl"
+          ]
+        }
+      ],
+      "stylesheets": []
+    },
+    "meta": {
+      "viewport": "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover",
+      "fb:app_id": "2231777543",
+      "og:site_name": "X (formerly Twitter)",
+      "google-site-verification": "reUF-TgZq93ZGtzImw42sfYglI2hY0QiGRmfc4jeKbs",
+      "facebook-domain-verification": "x6sdcc8b5ju3bh8nbm59eswogvg6t1",
+      "twitter-site-verification": "JfPXrsD9Ll/Nu6Y7ftbjVblzmBU6naN3pA5n2onpGlUNMkFLC03HObOO8QhuYSsJ",
+      "theme-color": "#000000"
+    },
+    "analysis": {
+      "has_dynamic_content": false,
+      "complexity_score": 6,
+      "recommended_3d_style": "interactive-explorer"
+    }
+  }
+}

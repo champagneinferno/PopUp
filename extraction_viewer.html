@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopUp Extractor - Data Viewer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 1400px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #333; margin-bottom: 20px; }
+        
+        .main-layout { display: flex; gap: 20px; }
+        .sidebar { width: 300px; flex-shrink: 0; }
+        .content { flex: 1; }
+        
+        .timeframe-tree { background: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 15px; margin-bottom: 20px; }
+        .timeframe-tree h3 { color: #666; margin-bottom: 10px; font-size: 14px; }
+        .tree-item { padding: 8px 12px; margin: 5px 0; background: white; border: 1px solid #ddd; border-radius: 3px; cursor: pointer; transition: all 0.2s; }
+        .tree-item:hover { background: #e3f2fd; border-color: #1976d2; }
+        .tree-item.loaded { background: #e8f5e9; border-color: #4caf50; }
+        .tree-item-header { display: flex; justify-content: space-between; align-items: center; }
+        .timestamp { color: #999; font-size: 12px; }
+        .file-count { background: #1976d2; color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; }
+        
+        .upload-section { margin-bottom: 20px; padding: 15px; background: #e3f2fd; border-radius: 5px; }
+        input[type="file"] { margin: 10px 0; }
+        
+        .data-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        .data-section h2 { color: #1976d2; margin-bottom: 10px; }
+        .logo-img { max-width: 200px; max-height: 100px; border: 1px solid #ddd; padding: 10px; }
+        .color-box { display: inline-block; width: 50px; height: 50px; margin: 5px; border: 1px solid #ddd; border-radius: 5px; }
+        .image-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-top: 10px; }
+        .image-item { border: 1px solid #ddd; padding: 10px; border-radius: 5px; text-align: center; }
+        .image-item img { max-width: 100%; max-height: 100px; }
+        .button-item { display: inline-block; padding: 8px 15px; margin: 5px; background: #1976d2; color: white; border-radius: 5px; }
+        pre { background: #f5f5f5; padding: 10px; border-radius: 5px; overflow-x: auto; font-size: 12px; }
+        .nav-item { padding: 5px 10px; background: #f5f5f5; margin: 2px; display: inline-block; border-radius: 3px; }
+        .error { color: red; padding: 10px; background: #ffebee; border-radius: 5px; }
+        .success { color: green; padding: 10px; background: #e8f5e9; border-radius: 5px; }
+        
+        .code-version { font-size: 11px; color: #999; margin-top: 5px; }
+        .tabs { display: flex; margin-bottom: 20px; border-bottom: 2px solid #ddd; }
+        .tab { padding: 10px 20px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; }
+        .tab.active { border-bottom: 2px solid #1976d2; color: #1976d2; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PopUp Extractor - Data Viewer</h1>
+        
+        <div class="main-layout">
+            <div class="sidebar">
+                <div class="timeframe-tree">
+                    <h3>📁 Extraction History</h3>
+                    <div id="timeframeTree"></div>
+                </div>
+                
+                <div class="upload-section">
+                    <h3>📤 Upload JSON</h3>
+                    <input type="file" id="fileInput" accept=".json">
+                    <p id="status"></p>
+                </div>
+            </div>
+            
+            <div class="content">
+                <div id="results"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let fileList = [];
+        let currentFile = null;
+        
+        // Load file list on page load
+        window.onload = function() {
+            loadFileList();
+        };
+        
+        async function loadFileList() {
+            try {
+                const response = await fetch('test_data/file_list.json');
+                const data = await response.json();
+                fileList = data.files;
+                displayTimeframeTree();
+            } catch (err) {
+                document.getElementById('timeframeTree').innerHTML = 
+                    `<div class="error">Error loading file list: ${err.message}</div>`;
+            }
+        }
+        
+        function displayTimeframeTree() {
+            const treeDiv = document.getElementById('timeframeTree');
+            
+            // Group files by folder (timestamp)
+            const groups = {};
+            fileList.forEach(file => {
+                const parts = file.path.split('/');
+                const folder = parts[1]; // e.g., 2026-06-03_22-09-07
+                if (!groups[folder]) groups[folder] = [];
+                groups[folder].push(file);
+            });
+            
+            let html = '';
+            for (const [folder, files] of Object.entries(groups)) {
+                html += `<div class="tree-item" onclick="toggleFolder('${folder}')">
+                    <div class="tree-item-header">
+                        <span>📂 ${folder}</span>
+                        <span class="file-count">${files.length} files</span>
+                    </div>
+                    <div id="folder-${folder}" style="display: none; margin-left: 15px; margin-top: 5px;">`;
+                
+                files.forEach(file => {
+                    html += `<div class="tree-item" onclick="event.stopPropagation(); loadFile('${file.path}', this)">
+                        <span>📄 ${file.name}</span>
+                        <div class="code-version">Click to load</div>
+                    </div>`;
+                });
+                
+                html += `</div></div>`;
+            }
+            
+            treeDiv.innerHTML = html;
+        }
+        
+        function toggleFolder(folder) {
+            const folderDiv = document.getElementById(`folder-${folder}`);
+            if (folderDiv.style.display === 'none') {
+                folderDiv.style.display = 'block';
+            } else {
+                folderDiv.style.display = 'none';
+            }
+        }
+        
+        async function loadFile(path, element) {
+            try {
+                document.getElementById('status').innerHTML = 
+                    `<div class="success">Loading ${path}...</div>`;
+                
+                const response = await fetch(path);
+                const data = await response.json();
+                
+                displayData(data, path);
+                currentFile = path;
+                
+                // Mark as loaded
+                document.querySelectorAll('.tree-item').forEach(item => {
+                    item.classList.remove('loaded');
+                });
+                if (element) element.classList.add('loaded');
+                
+            } catch (err) {
+                document.getElementById('status').innerHTML = 
+                    `<div class="error">Error loading file: ${err.message}</div>`;
+            }
+        }
+        
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    displayData(data, file.name);
+                    currentFile = file.name;
+                } catch (err) {
+                    document.getElementById('status').innerHTML = 
+                        `<div class="error">Error parsing JSON: ${err.message}</div>`;
+                }
+            };
+            reader.readAsText(file);
+        });
+        
+        function displayData(data, filename) {
+            const wp = data.website_profile || data;
+            const results = document.getElementById('results');
+            
+            let html = `<div class="success">Loaded: ${filename}</div>`;
+            
+            // Code version info (if available)
+            if (data.extraction_metadata && data.extraction_metadata.code_version) {
+                html += `<div class="code-version">Code Version: ${data.extraction_metadata.code_version}</div>`;
+            }
+            
+            // Logo Section
+            html += `<div class="data-section">
+                <h2>Logo</h2>`;
+            if (wp.assets && wp.assets.logo) {
+                html += `<img src="${wp.assets.logo}" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+                        <p>URL: ${wp.assets.logo}</p>`;
+            } else if (wp.structure && wp.structure.logo) {
+                html += `<p>Logo: ${wp.structure.logo}</p>`;
+            } else {
+                html += `<p>No logo extracted</p>`;
+            }
+            html += `</div>`;
+            
+            // Colors Section
+            if (wp.brand_dna && wp.brand_dna.color_palette && wp.brand_dna.color_palette.length > 0) {
+                html += `<div class="data-section">
+                    <h2>Extracted Colors (${wp.brand_dna.color_palette.length})</h2>
+                    <div>`;
+                wp.brand_dna.color_palette.forEach(color => {
+                    html += `<div class="color-box" style="background: ${color}" title="${color}"></div>`;
+                });
+                html += `</div></div>`;
+            }
+            
+            // Navigation
+            if (wp.structure && wp.structure.navigation && wp.structure.navigation.length > 0) {
+                html += `<div class="data-section">
+                    <h2>Navigation (${wp.structure.navigation.length} items)</h2>`;
+                wp.structure.navigation.forEach(item => {
+                    html += `<span class="nav-item">${item.text || 'No text'}</span>`;
+                });
+                html += `</div>`;
+            }
+            
+            // Buttons
+            if (wp.structure && wp.structure.buttons && wp.structure.buttons.length > 0) {
+                html += `<div class="data-section">
+                    <h2>Buttons (${wp.structure.buttons.length} found)</h2>`;
+                wp.structure.buttons.forEach(btn => {
+                    html += `<span class="button-item">${btn.text || 'No text'}</span>`;
+                });
+                html += `</div>`;
+            }
+            
+            // Background Images (Separate from content images!)
+            if (wp.visual_dna && wp.visual_dna.background_images && wp.visual_dna.background_images.length > 0) {
+                html += `<div class="data-section">
+                    <h2>🌄 Background Images (${wp.visual_dna.background_images.length} found)</h2>
+                    <p><em>These are images used as backgrounds (CSS background-image)</em></p>
+                    <div class="image-grid">`;
+                wp.visual_dna.background_images.slice(0, 10).forEach(bg => {
+                    const imgUrl = bg.background_image ? bg.background_image.replace(/url\(['"]?([^'"]+)['"]?\)/, '$1') : '';
+                    if (imgUrl) {
+                        html += `<div class="image-item">
+                            <img src="${imgUrl}" alt="Background" onerror="this.style.display='none'">
+                            <small>${bg.element || 'Unknown'}</small>
+                        </div>`;
+                    }
+                });
+                html += `</div></div>`;
+            } else {
+                html += `<div class="data-section">
+                    <h2>🌄 Background Images</h2>
+                    <p><em>No background images extracted (known issue - working on fix)</em></p>
+                </div>`;
+            }
+            
+            // Content Images (Separate from background!)
+            if (wp.assets && wp.assets.images && wp.assets.images.length > 0) {
+                html += `<div class="data-section">
+                    <h2>🖼️ Content Images (${wp.assets.images.length} found)</h2>
+                    <p><em>These are regular images found in the page content</em></p>
+                    <div class="image-grid">`;
+                wp.assets.images.slice(0, 10).forEach(img => {
+                    html += `<div class="image-item">
+                        <img src="${img.src}" alt="${img.alt || 'Image'}" onerror="this.style.display='none'">
+                        <small>${img.alt || 'No alt'}</small>
+                    </div>`;
+                });
+                html += `</div></div>`;
+            }
+            
+            // Text Sections
+            if (wp.structure && wp.structure.sections && wp.structure.sections.length > 0) {
+                html += `<div class="data-section">
+                    <h2>📝 Text Sections (${wp.structure.sections.length} found)</h2>`;
+                wp.structure.sections.forEach(section => {
+                    html += `<h3>${section.heading || 'No heading'}</h3>
+                            <p>${section.text_preview || section.text_full || 'No text'}</p>`;
+                });
+                html += `</div>`;
+            }
+            
+            // Footer
+            if (wp.structure && wp.structure.footer) {
+                html += `<div class="data-section">
+                    <h2>📄 Footer</h2>`;
+                if (wp.structure.footer.text) {
+                    html += `<p>${wp.structure.footer.text}</p>`;
+                }
+                if (wp.structure.footer.links && wp.structure.footer.links.length > 0) {
+                    html += `<p>Links: ${wp.structure.footer.links.length} found</p>`;
+                }
+                html += `</div>`;
+            }
+            
+            // Raw JSON (collapsible)
+            html += `<div class="data-section">
+                <h2>📋 Raw JSON Data</h2>
+                <details>
+                    <summary>Click to view raw JSON</summary>
+                    <pre>${JSON.stringify(data, null, 2).substring(0, 5000)}...</pre>
+                </details>
+            </div>`;
+            
+            results.innerHTML = html;
+            document.getElementById('status').innerHTML = 
+                `<div class="success">Successfully loaded ${filename}</div>`;
+        }
+    </script>
+</body>
+</html>

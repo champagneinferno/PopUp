@@ -1,0 +1,389 @@
+{
+  "website_profile": {
+    "url": "https://www.wikipedia.org",
+    "title": "Wikipedia",
+    "extraction_timestamp": "2026-06-03T21:45:25.218875",
+    "brand_dna": {
+      "color_palette": [],
+      "fonts": [],
+      "style_vibe": [
+        "minimalist"
+      ]
+    },
+    "structure": {
+      "navigation": [
+        {
+          "text": "English7,189,000+articles",
+          "url": "https://en.wikipedia.org/",
+          "location": "nav"
+        },
+        {
+          "text": "æ¥æ¬èª1,503,000+è¨äº",
+          "url": "https://ja.wikipedia.org/",
+          "location": "nav"
+        },
+        {
+          "text": "Deutsch3.125.000+Artikel",
+          "url": "https://de.wikipedia.org/",
+          "location": "nav"
+        },
+        {
+          "text": "Ð ÑÑÑÐºÐ¸Ð¹2Â 103Â 000+ÑÑÐ°ÑÐµÐ¹",
+          "url": "https://ru.wikipedia.org/",
+          "location": "nav"
+        },
+        {
+          "text": "FranÃ§ais2â¯761â¯000+articles",
+          "url": "https://fr.wikipedia.org/",
+          "location": "nav"
+        },
+        {
+          "text": "EspaÃ±ol2.116.000+artÃ­culos",
+          "url": "https://es.wikipedia.org/",
+          "location": "nav"
+        },
+        {
+          "text": "ä¸­æ1,537,000+æ¡ç® / æ¢ç®",
+          "url": "https://zh.wikipedia.org/",
+          "location": "nav"
+        },
+        {
+          "text": "Italiano1.971.000+voci",
+          "url": "https://it.wikipedia.org/",
+          "location": "nav"
+        },
+        {
+          "text": "Polski1Â 696Â 000+haseÅ",
+          "url": "https://pl.wikipedia.org/",
+          "location": "nav"
+        },
+        {
+          "text": "PortuguÃªs1.173.000+artigos",
+          "url": "https://pt.wikipedia.org/",
+          "location": "nav"
+        },
+        {
+          "text": "Ø§ÙØ¹Ø±Ø¨ÙØ©",
+          "url": "https://ar.wikipedia.org/",
+          "location": "nav"
+        },
+        {
+          "text": "Deutsch",
+          "url": "https://de.wikipedia.org/",
+          "location": "nav"
+        },
+        {
+          "text": "English",
+          "url": "https://en.wikipedia.org/",
+          "location": "nav"
+        },
+        {
+          "text": "EspaÃ±ol",
+          "url": "https://es.wikipedia.org/",
+          "location": "nav"
+        },
+        {
+          "text": "ÙØ§Ø±Ø³Û",
+          "url": "https://fa.wikipedia.org/",
+          "location": "nav"
+        }
+      ],
+      "hero_section": {
+        "heading": "WikipediaThe Free Encyclopedia",
+        "selector": "h1 (fallback)",
+        "cta_buttons": []
+      },
+      "sections": [
+        {
+          "id": "section_10",
+          "heading": "We owe you an explanation.",
+          "class": [
+            "banner",
+            "banner-bottom"
+          ],
+          "text_full": "CloseWe owe you an explanation.You deserve an explanation, so please don't skip this 1-minute read. Our fundraiser won't last long, and we need some help to reach our goal. Less than 2% of our readers donate, but if everyone who saw this message gave$2.75, we'd hit our goal in a few hours. The rare few who donate do so because Wikipedia provides them with useful knowledge. If that sounds like you, please donate$2.75. Any contribution you make today helps.We ask you, sincerely: don't skip this. Be one of the rare readers who gives.There are no small contributions: every edit counts, every donation counts. Thank you.Donate nowI already donated",
+          "text_preview": "CloseWe owe you an explanation.You deserve an explanation, so please don't skip this 1-minute read. Our fundraiser won't last long, and we need some help to reach our goal. Less than 2% of our readers",
+          "html_snippet": "<div class=\"banner banner-bottom\" id=\"portalBanner_en10C_2526_blueBanner\">\n<button class=\"banner__close\" type=\"button\">\n<svg aria-labelledby=\"banner__close-icon\" class=\"banner__close-icon\" height=\"16\" viewbox=\"0 0 16 16\" width=\"16\" xmlns=\"http://www.w3.org/2000/svg\">\n<title id=\"banner__close-icon\">Close</title>\n<g fill=\"none\" fill-rule=\"evenodd\" transform=\"translate(1 1)\">\n<circle cx=\"7\" cy=\"7\" r=\"7\"></circle>\n<path d=\"M4.375 4.375l5.25 5.25m0-5.25l-5.25 5.25\" stroke-linecap=\"round\"></path>\n</g>"
+        },
+        {
+          "id": "section_11",
+          "heading": "We owe you an explanation.",
+          "class": [
+            "portal-banner"
+          ],
+          "text_full": "We owe you an explanation.You deserve an explanation, so please don't skip this 1-minute read. Our fundraiser won't last long, and we need some help to reach our goal. Less than 2% of our readers donate, but if everyone who saw this message gave$2.75, we'd hit our goal in a few hours. The rare few who donate do so because Wikipedia provides them with useful knowledge. If that sounds like you, please donate$2.75. Any contribution you make today helps.We ask you, sincerely: don't skip this. Be one of the rare readers who gives.There are no small contributions: every edit counts, every donation counts. Thank you.Donate nowI already donated",
+          "text_preview": "We owe you an explanation.You deserve an explanation, so please don't skip this 1-minute read. Our fundraiser won't last long, and we need some help to reach our goal. Less than 2% of our readers dona",
+          "html_snippet": "<div class=\"portal-banner\">\n<div class=\"portal-banner-content\">\n<div class=\"portal-banner-content-message\">\n<svg class=\"wmf-identity\" style=\"enable-background:new 0 0 797.3 185.2;\" version=\"1.1\" viewbox=\"0 0 797.3 185.2\" x=\"0px\" xml:space=\"preserve\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" y=\"0px\">\n<g>\n<path d=\"M243.2,78.4l11.9-38.6h15.6l11.8,38.6l13.3-38.6h16.2l-23.4,67.1h-11.1l-14.7-46.7l-14.6,46.7h-11.1l-23.4-67.1h16.2   L243.2,78.4z\"></path>\n<path d=\"M320"
+        },
+        {
+          "id": "section_12",
+          "heading": "We owe you an explanation.",
+          "class": [
+            "portal-banner-content"
+          ],
+          "text_full": "We owe you an explanation.You deserve an explanation, so please don't skip this 1-minute read. Our fundraiser won't last long, and we need some help to reach our goal. Less than 2% of our readers donate, but if everyone who saw this message gave$2.75, we'd hit our goal in a few hours. The rare few who donate do so because Wikipedia provides them with useful knowledge. If that sounds like you, please donate$2.75. Any contribution you make today helps.We ask you, sincerely: don't skip this. Be one of the rare readers who gives.There are no small contributions: every edit counts, every donation counts. Thank you.Donate nowI already donated",
+          "text_preview": "We owe you an explanation.You deserve an explanation, so please don't skip this 1-minute read. Our fundraiser won't last long, and we need some help to reach our goal. Less than 2% of our readers dona",
+          "html_snippet": "<div class=\"portal-banner-content\">\n<div class=\"portal-banner-content-message\">\n<svg class=\"wmf-identity\" style=\"enable-background:new 0 0 797.3 185.2;\" version=\"1.1\" viewbox=\"0 0 797.3 185.2\" x=\"0px\" xml:space=\"preserve\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" y=\"0px\">\n<g>\n<path d=\"M243.2,78.4l11.9-38.6h15.6l11.8,38.6l13.3-38.6h16.2l-23.4,67.1h-11.1l-14.7-46.7l-14.6,46.7h-11.1l-23.4-67.1h16.2   L243.2,78.4z\"></path>\n<path d=\"M320.1,39.8h15v67.1h-15V39.8z\"><"
+        },
+        {
+          "id": "section_13",
+          "heading": "We owe you an explanation.",
+          "class": [
+            "portal-banner-content-message"
+          ],
+          "text_full": "We owe you an explanation.You deserve an explanation, so please don't skip this 1-minute read. Our fundraiser won't last long, and we need some help to reach our goal. Less than 2% of our readers donate, but if everyone who saw this message gave$2.75, we'd hit our goal in a few hours. The rare few who donate do so because Wikipedia provides them with useful knowledge. If that sounds like you, please donate$2.75. Any contribution you make today helps.",
+          "text_preview": "We owe you an explanation.You deserve an explanation, so please don't skip this 1-minute read. Our fundraiser won't last long, and we need some help to reach our goal. Less than 2% of our readers dona",
+          "html_snippet": "<div class=\"portal-banner-content-message\">\n<svg class=\"wmf-identity\" style=\"enable-background:new 0 0 797.3 185.2;\" version=\"1.1\" viewbox=\"0 0 797.3 185.2\" x=\"0px\" xml:space=\"preserve\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" y=\"0px\">\n<g>\n<path d=\"M243.2,78.4l11.9-38.6h15.6l11.8,38.6l13.3-38.6h16.2l-23.4,67.1h-11.1l-14.7-46.7l-14.6,46.7h-11.1l-23.4-67.1h16.2   L243.2,78.4z\"></path>\n<path d=\"M320.1,39.8h15v67.1h-15V39.8z\"></path>\n<path d=\"M351.6,39.8h15v27.6l"
+        }
+      ],
+      "footer": {
+        "links": [
+          {
+            "text": "You can support our work with a donation.",
+            "url": "https://donate.wikimedia.org/?wmf_medium=portal&wmf_campaign=portalFooter&wmf_source=portalFooter"
+          },
+          {
+            "text": "Download Wikipedia for Android or iOS",
+            "url": "https://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications"
+          },
+          {
+            "text": "Google Play Store",
+            "url": "https://play.google.com/store/apps/details?id=org.wikipedia&referrer=utm_source%3Dportal%26utm_medium%3Dbutton%26anid%3Dadmob"
+          },
+          {
+            "text": "Apple App Store",
+            "url": "https://itunes.apple.com/app/apple-store/id324715238?pt=208305&ct=portal&mt=8"
+          },
+          {
+            "text": "CommonsFree media collection",
+            "url": "https://commons.wikimedia.org/"
+          },
+          {
+            "text": "WikivoyageFree travel guide",
+            "url": "https://www.wikivoyage.org/"
+          },
+          {
+            "text": "WiktionaryFree dictionary",
+            "url": "https://www.wiktionary.org/"
+          },
+          {
+            "text": "WikibooksFree textbooks",
+            "url": "https://www.wikibooks.org/"
+          },
+          {
+            "text": "WikidataFree knowledge base",
+            "url": "https://www.wikidata.org/"
+          },
+          {
+            "text": "WikiversityFree learning resources",
+            "url": "https://www.wikiversity.org/"
+          },
+          {
+            "text": "WikiquoteFree quote compendium",
+            "url": "https://www.wikiquote.org/"
+          },
+          {
+            "text": "MediaWikiFree & open wiki software",
+            "url": "https://www.mediawiki.org/"
+          },
+          {
+            "text": "WikisourceFree content library",
+            "url": "https://www.wikisource.org/"
+          },
+          {
+            "text": "WikispeciesFree species directory",
+            "url": "https://species.wikimedia.org/"
+          },
+          {
+            "text": "WikifunctionsFree function library",
+            "url": "https://www.wikifunctions.org/"
+          }
+        ],
+        "text": "Wikipedia is hosted by the Wikimedia Foundation, a non-profit organization that also hosts a range of other projects.You can support our work with a donation.Download Wikipedia for Android or iOSSave your favorite articles to read offline, sync your reading lists across devices and customize your reading experience with the official Wikipedia app.Google Play StoreApple App StoreCommonsFree media collectionWikivoyageFree travel guideWiktionaryFree dictionaryWikibooksFree textbooksWikidataFree kno",
+        "social_links": []
+      },
+      "buttons": [
+        {
+          "text": "English7,189,000+articles",
+          "tag": "a",
+          "classes": [
+            "link-box"
+          ],
+          "href": "https://en.wikipedia.org/"
+        },
+        {
+          "text": "æ¥æ¬èª1,503,000+è¨äº",
+          "tag": "a",
+          "classes": [
+            "link-box"
+          ],
+          "href": "https://ja.wikipedia.org/"
+        },
+        {
+          "text": "Deutsch3.125.000+Artikel",
+          "tag": "a",
+          "classes": [
+            "link-box"
+          ],
+          "href": "https://de.wikipedia.org/"
+        },
+        {
+          "text": "Ð ÑÑÑÐºÐ¸Ð¹2Â 103Â 000+ÑÑÐ°ÑÐµÐ¹",
+          "tag": "a",
+          "classes": [
+            "link-box"
+          ],
+          "href": "https://ru.wikipedia.org/"
+        },
+        {
+          "text": "FranÃ§ais2â¯761â¯000+articles",
+          "tag": "a",
+          "classes": [
+            "link-box"
+          ],
+          "href": "https://fr.wikipedia.org/"
+        },
+        {
+          "text": "EspaÃ±ol2.116.000+artÃ­culos",
+          "tag": "a",
+          "classes": [
+            "link-box"
+          ],
+          "href": "https://es.wikipedia.org/"
+        },
+        {
+          "text": "ä¸­æ1,537,000+æ¡ç® / æ¢ç®",
+          "tag": "a",
+          "classes": [
+            "link-box",
+            "localize-variant"
+          ],
+          "href": "https://zh.wikipedia.org/"
+        },
+        {
+          "text": "Italiano1.971.000+voci",
+          "tag": "a",
+          "classes": [
+            "link-box"
+          ],
+          "href": "https://it.wikipedia.org/"
+        },
+        {
+          "text": "Polski1Â 696Â 000+haseÅ",
+          "tag": "a",
+          "classes": [
+            "link-box"
+          ],
+          "href": "https://pl.wikipedia.org/"
+        },
+        {
+          "text": "PortuguÃªs1.173.000+artigos",
+          "tag": "a",
+          "classes": [
+            "link-box"
+          ],
+          "href": "https://pt.wikipedia.org/"
+        },
+        {
+          "text": "Search",
+          "tag": "button",
+          "classes": [
+            "pure-button",
+            "pure-button-primary-progressive"
+          ],
+          "href": "https://www.wikipedia.org/search-redirect.php"
+        },
+        {
+          "text": "Read Wikipedia in your language",
+          "tag": "button",
+          "classes": [
+            "lang-list-button"
+          ],
+          "href": ""
+        },
+        {
+          "text": "Ø§ÙØ¹Ø±Ø¨ÙØ©",
+          "tag": "a",
+          "classes": [],
+          "href": "https://ar.wikipedia.org/"
+        },
+        {
+          "text": "Deutsch",
+          "tag": "a",
+          "classes": [],
+          "href": "https://de.wikipedia.org/"
+        },
+        {
+          "text": "English",
+          "tag": "a",
+          "classes": [],
+          "href": "https://en.wikipedia.org/"
+        },
+        {
+          "text": "EspaÃ±ol",
+          "tag": "a",
+          "classes": [],
+          "href": "https://es.wikipedia.org/"
+        },
+        {
+          "text": "ÙØ§Ø±Ø³Û",
+          "tag": "a",
+          "classes": [],
+          "href": "https://fa.wikipedia.org/"
+        },
+        {
+          "text": "FranÃ§ais",
+          "tag": "a",
+          "classes": [],
+          "href": "https://fr.wikipedia.org/"
+        },
+        {
+          "text": "Italiano",
+          "tag": "a",
+          "classes": [],
+          "href": "https://it.wikipedia.org/"
+        },
+        {
+          "text": "ÙØµØ±Ù",
+          "tag": "a",
+          "classes": [],
+          "href": "https://arz.wikipedia.org/"
+        }
+      ]
+    },
+    "visual_dna": {
+      "hero_background": null,
+      "background_images": [],
+      "computed_colors": [],
+      "button_styles": [],
+      "layout_structure": {}
+    },
+    "assets": {
+      "favicon": "https://www.wikipedia.org/static/apple-touch/wikipedia.png",
+      "logo": "https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png",
+      "images": [
+        {
+          "src": "https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png",
+          "alt": "",
+          "class": [
+            "central-featured-logo"
+          ]
+        }
+      ],
+      "stylesheets": []
+    },
+    "meta": {
+      "description": "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation.",
+      "viewport": "initial-scale=1,user-scalable=yes",
+      "og:title": "Wikipedia, the free encyclopedia",
+      "og:type": "website",
+      "og:description": "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation.",
+      "og:image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/250px-Wikipedia-logo-v2.svg.png"
+    },
+    "analysis": {
+      "has_dynamic_content": false,
+      "complexity_score": 8,
+      "recommended_3d_style": "clean-layered"
+    }
+  }
+}
