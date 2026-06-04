@@ -1,0 +1,184 @@
+{
+  "website_profile": {
+    "url": "https://twitter.com",
+    "title": "",
+    "extraction_timestamp": "2026-06-03T21:45:30.443573",
+    "brand_dna": {
+      "color_palette": [],
+      "fonts": [],
+      "style_vibe": [
+        "minimalist"
+      ]
+    },
+    "structure": {
+      "navigation": [
+        {
+          "text": "Help Center",
+          "url": "https://help.x.com/using-x/x-supported-browsers",
+          "location": "nav-generic"
+        },
+        {
+          "text": "Terms of Service",
+          "url": "https://x.com/tos",
+          "location": "nav-generic"
+        },
+        {
+          "text": "Privacy Policy",
+          "url": "https://x.com/privacy",
+          "location": "nav-generic"
+        },
+        {
+          "text": "Cookie Policy",
+          "url": "https://support.x.com/articles/20170514",
+          "location": "nav-generic"
+        },
+        {
+          "text": "Imprint",
+          "url": "https://legal.twitter.com/imprint.html",
+          "location": "nav-generic"
+        },
+        {
+          "text": "Ads info",
+          "url": "https://business.twitter.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo",
+          "location": "nav-generic"
+        }
+      ],
+      "hero_section": {
+        "heading": "JavaScript is not available.",
+        "selector": "h1 (fallback)",
+        "cta_buttons": []
+      },
+      "sections": [
+        {
+          "id": "section_dynamic_0",
+          "heading": "JavaScript is not available.",
+          "class": [
+            "errorContainer"
+          ],
+          "text_full": "JavaScript is not available.We’ve detected that JavaScript is disabled in this browser. Please enable JavaScript or switch to a supported browser to continue using x.com. You can see a list of supported browsers in our Help Center.Help CenterTerms of ServicePrivacy PolicyCookie PolicyImprintAds info© 2026 X Corp.",
+          "text_preview": "JavaScript is not available.We’ve detected that JavaScript is disabled in this browser. Please enable JavaScript or switch to a supported browser to continue using x.com. You can see a list of support",
+          "html_snippet": "<div class=\"errorContainer\">\n<svg aria-label=\"X logo\" height=\"48\" role=\"img\" viewbox=\"0 0 128 128\" width=\"48\" xmlns=\"http://www.w3.org/2000/svg\">\n<path clip-rule=\"evenodd\" d=\"M86.8918 28.25H99.0219L72.5243 58.5334L103.698 99.75H79.285L60.1647 74.7536L38.2929 99.75H26.1627L54.5069 67.3565L24.5938 28.25H49.6199L66.9004 51.0974L86.8918 28.25ZM82.6337 92.4904H89.3555L45.9716 35.1301H38.7584L82.6337 92.4904Z\" fill=\"black\" fill-rule=\"evenodd\"></path>\n</svg>\n<h1>JavaScript is not available.</h1>\n<p>We’"
+        }
+      ],
+      "footer": {
+        "links": [
+          {
+            "text": "Terms of Service",
+            "url": "https://x.com/tos"
+          },
+          {
+            "text": "Privacy Policy",
+            "url": "https://x.com/privacy"
+          },
+          {
+            "text": "Cookie Policy",
+            "url": "https://support.x.com/articles/20170514"
+          },
+          {
+            "text": "Imprint",
+            "url": "https://legal.twitter.com/imprint.html"
+          },
+          {
+            "text": "Ads info",
+            "url": "https://business.twitter.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo"
+          }
+        ],
+        "text": "Terms of ServicePrivacy PolicyCookie PolicyImprintAds info© 2026 X Corp.",
+        "social_links": [
+          {
+            "platform": "https://legal.twitter.com/imprint.html",
+            "url": "https://legal.twitter.com/imprint.html"
+          },
+          {
+            "platform": "https://business.twitter.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo",
+            "url": "https://business.twitter.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo"
+          }
+        ]
+      },
+      "buttons": [
+        {
+          "text": "Help Center",
+          "tag": "a",
+          "classes": [],
+          "href": "https://help.x.com/using-x/x-supported-browsers"
+        },
+        {
+          "text": "Terms of Service",
+          "tag": "a",
+          "classes": [],
+          "href": "https://x.com/tos"
+        },
+        {
+          "text": "Privacy Policy",
+          "tag": "a",
+          "classes": [],
+          "href": "https://x.com/privacy"
+        },
+        {
+          "text": "Cookie Policy",
+          "tag": "a",
+          "classes": [],
+          "href": "https://support.x.com/articles/20170514"
+        },
+        {
+          "text": "Imprint",
+          "tag": "a",
+          "classes": [],
+          "href": "https://legal.twitter.com/imprint.html"
+        },
+        {
+          "text": "Ads info",
+          "tag": "a",
+          "classes": [],
+          "href": "https://business.twitter.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo"
+        },
+        {
+          "text": "Try again",
+          "tag": "button",
+          "classes": [],
+          "href": "(form-submit)"
+        }
+      ]
+    },
+    "visual_dna": {
+      "hero_background": null,
+      "background_images": [],
+      "computed_colors": [],
+      "button_styles": [],
+      "layout_structure": {}
+    },
+    "assets": {
+      "favicon": "https://abs.twimg.com/responsive-web/client-web/icon-ios.77d25eba.png",
+      "logo": "https://abs.twimg.com/responsive-web/client-web/icon-ios.77d25eba.png",
+      "images": [
+        {
+          "src": "https://abs.twimg.com/emoji/v2/svg/26a0.svg",
+          "alt": "⚠️",
+          "class": [
+            "r-4qtqp9",
+            "r-dflpy8",
+            "r-k4bwe5",
+            "r-1kpi4qh",
+            "r-pp5qcn",
+            "r-h9hxbl"
+          ]
+        }
+      ],
+      "stylesheets": []
+    },
+    "meta": {
+      "viewport": "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover",
+      "fb:app_id": "2231777543",
+      "og:site_name": "X (formerly Twitter)",
+      "google-site-verification": "reUF-TgZq93ZGtzImw42sfYglI2hY0QiGRmfc4jeKbs",
+      "facebook-domain-verification": "x6sdcc8b5ju3bh8nbm59eswogvg6t1",
+      "twitter-site-verification": "zHqbajcYtm4K44tRY198Rp+TB5gpCK7EVuluN9Px4RHyoanUbG5yvexHYqNpi1Sp",
+      "theme-color": "#000000"
+    },
+    "analysis": {
+      "has_dynamic_content": false,
+      "complexity_score": 6,
+      "recommended_3d_style": "clean-layered"
+    }
+  }
+}

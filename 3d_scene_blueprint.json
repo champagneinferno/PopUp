@@ -1,0 +1,206 @@
+{
+  "scene_metadata": {
+    "source_url": "https://www.metawatt.com",
+    "title": "Metawatt. | Your All-in-One AI Innovation Hub",
+    "style": "bold-cinematic",
+    "complexity": 2.5,
+    "token_cost_estimate": 425,
+    "token_usage": {
+      "base_cost": 50,
+      "complexity_multiplier": 2.5,
+      "total_tokens": 425,
+      "decisions_made": 12
+    }
+  },
+  "environment": {
+    "background": {
+      "type": "color",
+      "value": "rgb(0, 0, 0)",
+      "note": "From website color palette"
+    },
+    "lighting": {
+      "type": "spotlight",
+      "intensity": 1.0,
+      "color": "#ffffff"
+    },
+    "fog": {
+      "enabled": false
+    }
+  },
+  "3d_objects": [
+    {
+      "type": "navigation_ring",
+      "elements": [
+        {
+          "text": "Home",
+          "url": "https://www.metawatt.com",
+          "location": "nav"
+        },
+        {
+          "text": "Who We Are",
+          "url": "https://www.metawatt.com/aboutus",
+          "location": "nav"
+        },
+        {
+          "text": "Resources",
+          "url": "https://www.metawatt.com/resources",
+          "location": "nav"
+        },
+        {
+          "text": "Contact",
+          "url": "https://www.metawatt.com/contact",
+          "location": "nav"
+        },
+        {
+          "text": "FAQ",
+          "url": "https://www.metawatt.com/faq",
+          "location": "nav"
+        }
+      ],
+      "style": "fixed",
+      "position": {
+        "x": 0,
+        "y": 1.5,
+        "z": -3
+      }
+    },
+    {
+      "type": "hero_text",
+      "content": "Your All-in-OneInnovation Hub",
+      "cta_buttons": [],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "scale": 1.5
+    },
+    {
+      "type": "content_panel",
+      "heading": "Your All-in-OneInnovation Hub",
+      "preview": "Your All-in-OneInnovation HubThe Complete Journey: From Learning to Business ImpactApply NowSubmit Your Application TodayAre you a student, individual, or business owner*RequiredStudentIndividualBusiness OwnerSubmit ApplicationSecure Your Spot and Save TimeUnlock the Power of AIIntelligent Tech for Limitless PotentialAI-Powered EfficiencyWhether you're a business owner optimizing operations or a student enhancing your skills, our AI solutions automate workflows, improve decision-making, and drive efficiency.Seamless AI IntegrationWe provide reliable and scalable AI tools that adapt to your needs—whether you’re running a company or preparing for the future.AI Education for Growth & SuccessFrom automation and data analysis to personalized learning and business scaling, we offer AI-driven solutions designed for both professionals and students",
+      "position": {
+        "x": 0,
+        "y": -1.0,
+        "z": -5
+      }
+    },
+    {
+      "type": "content_panel",
+      "heading": "About METAWATT",
+      "preview": "About METAWATTAI Solutions. Real-World Experience. Future-Ready Innovation.At MetaWatt, we bridge the gap between AI-driven technology and real-world application. Our cutting-edge solutions empower individuals to automate tasks, enhance decision-making, and drive innovation, all while gaining practical experience in the evolving AI landscape.Through hands-on learning and real-world AI integration, we provide a platform where you can develop future-proof skills, implement AI solutions in professional settings, and stay ahead in an AI-driven world. Whether optimizing workflows, analyzing data, or exploring intelligent automation, our solutions are designed to prepare you for what’s next.Qualify Now",
+      "position": {
+        "x": 0,
+        "y": -2.5,
+        "z": -7
+      }
+    },
+    {
+      "type": "content_panel",
+      "heading": "World-Class AI-Powered Solutions",
+      "preview": "World-Class AI-Powered SolutionsDeveloping AI software can be a complex process, which is why our AI-training system is designed to guide you step by step in creating world-class, industry leading AI solutions.",
+      "position": {
+        "x": 0,
+        "y": -4.0,
+        "z": -9
+      }
+    },
+    {
+      "type": "interactive_button",
+      "text": "Apply Now",
+      "classes": [
+        "twJknM",
+        "wixui-button",
+        "ZhVEJq"
+      ],
+      "position": {
+        "x": -1,
+        "y": -2,
+        "z": 0
+      },
+      "visual_style": {
+        "bg_color": "rgb(255, 255, 255)",
+        "color": "rgb(17, 109, 255)",
+        "border_radius": "24px"
+      }
+    },
+    {
+      "type": "interactive_button",
+      "text": "Apply Now",
+      "classes": [
+        "twJknM",
+        "wixui-button",
+        "ZhVEJq"
+      ],
+      "position": {
+        "x": 0,
+        "y": -2,
+        "z": 0
+      },
+      "visual_style": {
+        "bg_color": "rgba(126, 85, 246, 0)",
+        "color": "rgb(0, 0, 0)",
+        "border_radius": "0px"
+      }
+    },
+    {
+      "type": "interactive_button",
+      "text": "Submit Application",
+      "classes": [
+        "twJknM",
+        "wixui-button",
+        "ZhVEJq"
+      ],
+      "position": {
+        "x": 1,
+        "y": -2,
+        "z": 0
+      },
+      "visual_style": {
+        "bg_color": "rgba(126, 85, 246, 0)",
+        "color": "rgb(0, 0, 0)",
+        "border_radius": "0px"
+      }
+    },
+    {
+      "type": "image_texture",
+      "src": "https://static.wixstatic.com/media/e54946_19f16859809f4c2bbf54160705011384~mv2.png/v1/crop/x_0,y_66,w_500,h_118/fill/w_191,h_45,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/CD68DF04-D8B7-44A9-AD93-7492393E5444.png",
+      "alt": "CD68DF04-D8B7-44A9-AD93-7492393E5444.png",
+      "position": {
+        "x": -1.5,
+        "y": 1,
+        "z": -8
+      }
+    },
+    {
+      "type": "image_texture",
+      "src": "https://static.wixstatic.com/media/11062b_f6bec34858fa456ab712aa4018880375~mv2.jpg/v1/fill/w_147,h_97,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/11062b_f6bec34858fa456ab712aa4018880375~mv2.jpg",
+      "alt": "Modern Architecture",
+      "position": {
+        "x": 1.5,
+        "y": 1,
+        "z": -8
+      }
+    },
+    {
+      "type": "image_texture",
+      "src": "https://static.wixstatic.com/media/c837a6_44e3014997b64b829ef10d8761ce79ee~mv2.jpg/v1/fill/w_147,h_97,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/c837a6_44e3014997b64b829ef10d8761ce79ee~mv2.jpg",
+      "alt": "",
+      "position": {
+        "x": -1.5,
+        "y": 1,
+        "z": -11
+      }
+    },
+    {
+      "type": "image_texture",
+      "src": "https://static.wixstatic.com/media/e54946_7f289a6af84247d99a8ff3ba883976eb~mv2.png/v1/fill/w_36,h_24,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/e54946_7f289a6af84247d99a8ff3ba883976eb~mv2.png",
+      "alt": "hd_image_20250315021532.png",
+      "position": {
+        "x": 1.5,
+        "y": 1,
+        "z": -11
+      }
+    }
+  ]
+}

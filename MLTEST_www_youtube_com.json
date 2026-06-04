@@ -1,0 +1,194 @@
+{
+  "website_profile": {
+    "url": "https://www.youtube.com",
+    "title": "YouTube",
+    "extraction_timestamp": "2026-06-03T21:45:28.225431",
+    "brand_dna": {
+      "color_palette": [],
+      "fonts": [
+        "Roboto:wght@300;400;500;700"
+      ],
+      "style_vibe": [
+        "minimalist"
+      ]
+    },
+    "structure": {
+      "navigation": [
+        {
+          "text": "About",
+          "url": "https://www.youtube.com/about/",
+          "location": "nav-generic"
+        },
+        {
+          "text": "Press",
+          "url": "https://www.youtube.com/about/press/",
+          "location": "nav-generic"
+        },
+        {
+          "text": "Copyright",
+          "url": "https://www.youtube.com/about/copyright/",
+          "location": "nav-generic"
+        },
+        {
+          "text": "Contact us",
+          "url": "https://www.youtube.com/t/contact_us/",
+          "location": "nav-generic"
+        },
+        {
+          "text": "Creators",
+          "url": "https://www.youtube.com/creators/",
+          "location": "nav-generic"
+        },
+        {
+          "text": "Advertise",
+          "url": "https://www.youtube.com/ads/",
+          "location": "nav-generic"
+        },
+        {
+          "text": "Developers",
+          "url": "https://developers.google.com/youtube",
+          "location": "nav-generic"
+        },
+        {
+          "text": "Terms",
+          "url": "https://www.youtube.com/t/terms",
+          "location": "nav-generic"
+        },
+        {
+          "text": "Privacy",
+          "url": "https://www.youtube.com/t/privacy",
+          "location": "nav-generic"
+        },
+        {
+          "text": "Policy & Safety",
+          "url": "https://www.youtube.com/about/policies/",
+          "location": "nav-generic"
+        },
+        {
+          "text": "How YouTube works",
+          "url": "https://www.youtube.com/howyoutubeworks?utm_campaign=ytgen&utm_source=ythp&utm_medium=LeftNav&utm_content=txt&u=https%3A%2F%2Fwww.youtube.com%2Fhowyoutubeworks%3Futm_source%3Dythp%26utm_medium%3DLeftNav%26utm_campaign%3Dytgen",
+          "location": "nav-generic"
+        },
+        {
+          "text": "Test new features",
+          "url": "https://www.youtube.com/new",
+          "location": "nav-generic"
+        }
+      ],
+      "hero_section": {},
+      "sections": [],
+      "footer": {
+        "links": [],
+        "text": "© 2026 Google LLC",
+        "social_links": []
+      },
+      "buttons": [
+        {
+          "text": "About",
+          "tag": "a",
+          "classes": [],
+          "href": "https://www.youtube.com/about/"
+        },
+        {
+          "text": "Press",
+          "tag": "a",
+          "classes": [],
+          "href": "https://www.youtube.com/about/press/"
+        },
+        {
+          "text": "Copyright",
+          "tag": "a",
+          "classes": [],
+          "href": "https://www.youtube.com/about/copyright/"
+        },
+        {
+          "text": "Contact us",
+          "tag": "a",
+          "classes": [],
+          "href": "https://www.youtube.com/t/contact_us/"
+        },
+        {
+          "text": "Creators",
+          "tag": "a",
+          "classes": [],
+          "href": "https://www.youtube.com/creators/"
+        },
+        {
+          "text": "Advertise",
+          "tag": "a",
+          "classes": [],
+          "href": "https://www.youtube.com/ads/"
+        },
+        {
+          "text": "Developers",
+          "tag": "a",
+          "classes": [],
+          "href": "https://developers.google.com/youtube"
+        },
+        {
+          "text": "Terms",
+          "tag": "a",
+          "classes": [],
+          "href": "https://www.youtube.com/t/terms"
+        },
+        {
+          "text": "Privacy",
+          "tag": "a",
+          "classes": [],
+          "href": "https://www.youtube.com/t/privacy"
+        },
+        {
+          "text": "Policy & Safety",
+          "tag": "a",
+          "classes": [],
+          "href": "https://www.youtube.com/about/policies/"
+        },
+        {
+          "text": "How YouTube works",
+          "tag": "a",
+          "classes": [],
+          "href": "https://www.youtube.com/howyoutubeworks?utm_campaign=ytgen&utm_source=ythp&utm_medium=LeftNav&utm_content=txt&u=https%3A%2F%2Fwww.youtube.com%2Fhowyoutubeworks%3Futm_source%3Dythp%26utm_medium%3DLeftNav%26utm_campaign%3Dytgen"
+        },
+        {
+          "text": "Test new features",
+          "tag": "a",
+          "classes": [],
+          "href": "https://www.youtube.com/new"
+        }
+      ]
+    },
+    "visual_dna": {
+      "hero_background": null,
+      "background_images": [],
+      "computed_colors": [],
+      "button_styles": [],
+      "layout_structure": {}
+    },
+    "assets": {
+      "favicon": "https://www.youtube.com/s/desktop/be7f6540/img/favicon.ico",
+      "logo": "https://www.youtube.com/s/desktop/be7f6540/img/favicon.ico",
+      "images": [],
+      "stylesheets": [
+        "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=YouTube+Sans:wght@300..900&display=swap",
+        "https://www.youtube.com/s/desktop/be7f6540/cssbin/www-main-desktop-home-page-skeleton.css",
+        "https://www.youtube.com/s/desktop/be7f6540/cssbin/www-onepick.css",
+        "https://www.youtube.com/s/_/ytmainappweb/_/ss/k=ytmainappweb.kevlar_base.OPzqKRWfvKA.L.W.O/am=AAAAACBACAAL/d=0/rs=AGKMywEtLM0ao3Kgxyu_b1V-rf0RD02kWQ",
+        "https://www.youtube.com/s/desktop/be7f6540/cssbin/www-main-desktop-watch-page-skeleton.css"
+      ]
+    },
+    "meta": {
+      "apple-itunes-app": "app-id=544007664, app-argument=https://www.youtube.com/?referring_app=com.apple.mobilesafari-smartbanner, affiliate-data=ct=smart_app_banner_polymer&pt=9008",
+      "og:image": "https://www.youtube.com/img/desktop/yt_1200.png",
+      "og:title": "YouTube",
+      "fb:app_id": "87741124305",
+      "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
+      "keywords": "video, sharing, camera phone, video phone, free, upload",
+      "theme-color": "rgba(255, 255, 255, 0.98)"
+    },
+    "analysis": {
+      "has_dynamic_content": false,
+      "complexity_score": 5,
+      "recommended_3d_style": "clean-layered"
+    }
+  }
+}
