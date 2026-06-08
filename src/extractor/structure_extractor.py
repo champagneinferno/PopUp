@@ -181,7 +181,16 @@ class StructureExtractor:
                             "location": "nav-menu"
                         })
         
-        return nav_items[:15]
+        # DEDUPLICATION: Remove duplicates based on text+url combination
+        seen = set()
+        unique_nav = []
+        for item in nav_items:
+            key = (item['text'], item['url'])
+            if key not in seen:
+                seen.add(key)
+                unique_nav.append(item)
+        
+        return unique_nav[:15]
     
     def _extract_sections_smart(self):
         """Extract sections with content (relentless)"""
@@ -334,19 +343,52 @@ class StructureExtractor:
         return footer
     
     def _extract_images_smart(self):
-        """Extract images with context"""
+        """Extract images with context AND classification"""
         images = []
         
         for img in self.soup.find_all('img', src=True):
             src = img['src']
             if src and not src.startswith('data:'):
+                # CLASSIFY the image
+                image_type = self._classify_image(img)
+                
                 images.append({
                     "src": urljoin(self.url, src),
                     "alt": img.get('alt', ''),
-                    "class": img.get("class", [])
+                    "class": img.get('class', []),
+                    "type": image_type  # NEW: content, background, or ui
                 })
         
         return images[:30]
+    
+    def _classify_image(self, img_elem):
+        """Classify image as content, background, or ui (icons/buttons/logos)"""
+        src = img_elem.get('src', '').lower()
+        alt = img_elem.get('alt', '').lower()
+        classes = ' '.join(img_elem.get('class', [])).lower()
+        parent_classes = ''
+        if img_elem.parent:
+            parent_classes = ' '.join(img_elem.parent.get('class', [])).lower()
+        
+        # BACKGROUND images
+        if any(kw in classes for kw in ['bg', 'background', 'hero', 'cover']):
+            return 'background'
+        if 'background-image' in img_elem.get('style', '').lower():
+            return 'background'
+        
+        # UI images (icons, buttons, logos)
+        ui_keywords = ['icon', 'logo', 'button', 'btn', 'arrow', 'chevron', 'close', 'menu', 'hamburger']
+        if any(kw in src for kw in ui_keywords):
+            return 'ui'
+        if any(kw in alt for kw in ui_keywords):
+            return 'ui'
+        if any(kw in classes for kw in ui_keywords):
+            return 'ui'
+        if any(kw in parent_classes for kw in ['nav', 'menu', 'header', 'footer']):
+            return 'ui'
+        
+        # Content images (everything else)
+        return 'content'
     
     def _extract_color_hints_smart(self):
         """Extract colors from ALL possible sources"""
@@ -443,8 +485,9 @@ class StructureExtractor:
         return nav_elements[:15]  # Limit to 15 items
     
     def _extract_hero(self):
-        """Find hero/main section"""
+        """Find hero/main section AND capture CTA buttons"""
         hero = {}
+        hero_elem = None
         
         # Look for common hero selectors
         hero_selectors = [
@@ -459,6 +502,7 @@ class StructureExtractor:
                 if h1:
                     hero["heading"] = h1.get_text(strip=True)
                     hero["selector"] = selector
+                    hero_elem = elem
                     break
         
         # Fallback: first h1 on page
@@ -467,16 +511,42 @@ class StructureExtractor:
             if h1:
                 hero["heading"] = h1.get_text(strip=True)
                 hero["selector"] = "h1 (fallback)"
+                # Try to find parent section/div as hero element
+                hero_elem = h1.find_parent(['section', 'div', 'header'])
         
-        # Look for CTA buttons near hero
-        if hero:
-            cta_buttons = []
+        # CAPTURE CTA BUTTONS FROM HERO SECTION
+        cta_buttons = []
+        
+        if hero_elem:
+            # Look for buttons/links within hero section
+            for btn in hero_elem.select("a, button, input[type='button'], input[type='submit']"):
+                text = btn.get_text(strip=True)
+                if text and len(text) < 50:
+                    href = btn.get('href', '') or btn.get('onclick', '(js-handled)')
+                    cta_buttons.append({
+                        "text": text,
+                        "href": href if href != '(js-handled)' else ''
+                    })
+            
+            # Also check for links with button-like classes
+            for link in hero_elem.select("a[class*='btn'], a[class*='button'], a[class*='cta']"):
+                text = link.get_text(strip=True)
+                if text and len(text) < 50:
+                    cta_buttons.append({
+                        "text": text,
+                        "href": link.get('href', '')
+                    })
+        else:
+            # Fallback: look for CTA-like buttons anywhere on page
             for btn in self.soup.find_all(["a", "button"], class_=re.compile("btn|cta|action", re.I)):
                 text = btn.get_text(strip=True)
                 if text and len(text) < 30:
-                    cta_buttons.append(text)
-            hero["cta_buttons"] = cta_buttons[:5]
+                    cta_buttons.append({
+                        "text": text,
+                        "href": btn.get('href', '') or '(js-handled)'
+                    })
         
+        hero["cta_buttons"] = cta_buttons[:5]
         return hero
     
     def _extract_sections(self):

@@ -134,7 +134,7 @@ async function extractVisualDNA(url) {
             }
             
             // Method1b: Standard img logos (AFTER SVG check)
-            const logoSelectors = [
+            const imgLogoSelectors = [
                 'img[class*="logo" i]',
                 'img[id*="logo" i]',
                 'img[alt*="logo" i]',
@@ -145,7 +145,7 @@ async function extractVisualDNA(url) {
                 '[role="banner"] img'
             ];
                 
-            for (const selector of logoSelectors) {
+            for (const selector of imgLogoSelectors) {
                 try {
                     const imgs = document.querySelectorAll(selector);
                     for (const img of imgs) {
@@ -160,55 +160,6 @@ async function extractVisualDNA(url) {
                                 type: 'img'
                             };
                         }
-                    }
-                } catch (e) {}
-            }
-                
-            // Method1b: SVG logos (for modern sites like YouTube)
-            const svgSelectors = [
-                // YouTube-specific selectors
-                'ytd-topbar-logo-renderer a',
-                'ytd-topbar-logo-renderer svg',
-                'a[aria-label*="YouTube" i]',
-                'a[title*="YouTube" i]',
-                // Generic SVG logo selectors
-                'svg[class*="logo" i]',
-                'a svg',
-                'header svg',
-                '[role="banner"] svg',
-                // Look for any SVG near the top of the page
-                'body > * svg',
-                '#logo svg',
-                '.logo svg'
-            ];
-                
-            for (const selector of svgSelectors) {
-                try {
-                    const elem = document.querySelector(selector);
-                    if (elem) {
-                        // For YouTube's logo, the <a> tag has the href, SVG is inside
-                        let href = '';
-                        let svgElement = elem;
-                        
-                        if (elem.tagName === 'A') {
-                            href = elem.href;
-                            // Try to find SVG inside the link
-                            const svgInside = elem.querySelector('svg');
-                            if (svgInside) svgElement = svgInside;
-                        } else if (elem.tagName === 'SVG') {
-                            // SVG element - look for parent link
-                            const parentLink = elem.closest('a');
-                            if (parentLink) href = parentLink.href;
-                        }
-                        
-                        // Return SVG logo info
-                        return {
-                            src: href || 'svg-logo-detected',
-                            alt: 'SVG Logo',
-                            selector: selector,
-                            type: 'svg',
-                            svg_html: svgElement.outerHTML ? svgElement.outerHTML.substring(0, 1000) : ''
-                        };
                     }
                 } catch (e) {}
             }
@@ -292,7 +243,17 @@ async function extractVisualDNA(url) {
                 } catch (e) {}
             });
             
-            result.computed_colors = Array.from(colorSet).slice(0, 50);
+            // CLEAN colors: remove junk values
+            result.computed_colors = Array.from(colorSet)
+                .filter(c => {
+                    if (!c || c === 'none' || c === '') return false;
+                    if (c.includes('undefined') || c.includes('null')) return false;
+                    // Keep only valid CSS color formats
+                    if (c.startsWith('rgb') || c.startsWith('#') || c === 'transparent') return true;
+                    if (c.match(/^[a-z]+$/i) && ['black','white','red','blue','green','yellow','orange','purple','pink','gray','grey'].includes(c.toLowerCase())) return true;
+                    return false;
+                })
+                .slice(0, 15);  // Limit to 15 colors
             
             // 2. NEW: Extract structural data from RENDERED page
             
@@ -529,19 +490,36 @@ async function extractVisualDNA(url) {
             });
             result.fonts_used = Array.from(fontSet).slice(0, 20);
 
-            // 5. Analyze buttons
-            const buttons = document.querySelectorAll('button, a[class*="btn"], a[class*="button"], input[type="button"], input[type="submit"]');
+            // 5. Analyze buttons (ENHANCED - capture MORE visual details)
+            const buttons = document.querySelectorAll('button, a[class*="btn"], a[class*="button"], input[type="button"], input[type="submit"], [role="button"]');
             buttons.forEach(btn => {
                 try {
                     const style = window.getComputedStyle(btn);
+                    const hoverStyle = {}; // Would need Playwright to capture hover
+                    
                     result.button_styles.push({
                         text: btn.textContent.trim().substring(0, 50),
-                        bg_color: style.backgroundColor,
+                        // Core styles
+                        background_color: style.backgroundColor,
                         color: style.color,
                         border_radius: style.borderRadius,
+                        border: style.border,
                         padding: style.padding,
+                        margin: style.margin,
                         font_size: style.fontSize,
-                        class: btn.className
+                        font_weight: style.fontWeight,
+                        font_family: style.fontFamily,
+                        text_transform: style.textTransform,
+                        letter_spacing: style.letterSpacing,
+                        box_shadow: style.boxShadow,
+                        cursor: style.cursor,
+                        // Layout
+                        display: style.display,
+                        width: style.width,
+                        height: style.height,
+                        // Classes for identification
+                        class: btn.className,
+                        tag: btn.tagName.toLowerCase()
                     });
                 } catch (e) {}
             });
@@ -557,6 +535,85 @@ async function extractVisualDNA(url) {
                 link_count: document.querySelectorAll('a').length
             };
             
+            // 6b. NEW: Capture text styling per element type
+            result.text_styles = {
+                headings: {},
+                paragraphs: {},
+                links: {},
+                buttons: {}
+            };
+            
+            // Capture heading styles (h1-h3)
+            for (let i = 1; i <= 3; i++) {
+                const heading = document.querySelector(`h${i}`);
+                if (heading) {
+                    const style = window.getComputedStyle(heading);
+                    result.text_styles.headings[`h${i}`] = {
+                        font_family: style.fontFamily,
+                        font_size: style.fontSize,
+                        font_weight: style.fontWeight,
+                        color: style.color,
+                        line_height: style.lineHeight,
+                        letter_spacing: style.letterSpacing,
+                        text_transform: style.textTransform,
+                        margin: style.margin,
+                        padding: style.padding
+                    };
+                }
+            }
+            
+            // Capture paragraph styles
+            const firstP = document.querySelector('p');
+            if (firstP) {
+                const style = window.getComputedStyle(firstP);
+                result.text_styles.paragraphs.p = {
+                    font_family: style.fontFamily,
+                    font_size: style.fontSize,
+                    font_weight: style.fontWeight,
+                    color: style.color,
+                    line_height: style.lineHeight,
+                    margin: style.margin
+                };
+            }
+            
+            // Capture link styles
+            const firstLink = document.querySelector('a');
+            if (firstLink) {
+                const style = window.getComputedStyle(firstLink);
+                result.text_styles.links.a = {
+                    font_family: style.fontFamily,
+                    font_size: style.fontSize,
+                    font_weight: style.fontWeight,
+                    color: style.color,
+                    text_decoration: style.textDecoration
+                };
+            }
+            
+            // 6c. NEW: Enhanced image properties
+            result.enhanced_images = [];
+            document.querySelectorAll('img[src]').forEach(img => {
+                try {
+                    const style = window.getComputedStyle(img);
+                    const rect = img.getBoundingClientRect();
+                    result.enhanced_images.push({
+                        src: img.src,
+                        alt: img.alt || '',
+                        width: rect.width,
+                        height: rect.height,
+                        natural_width: img.naturalWidth,
+                        natural_height: img.naturalHeight,
+                        object_fit: style.objectFit,
+                        position: style.position,
+                        display: style.display,
+                        margin: style.margin,
+                        padding: style.padding,
+                        border_radius: style.borderRadius,
+                        box_shadow: style.boxShadow
+                    });
+                } catch (e) {}
+            });
+            result.enhanced_images = result.enhanced_images.slice(0, 20);
+            
             // 7. NEW: Detect if page has meaningful content
             result.page_text_length = document.body ? document.body.innerText.length : 0;
 
@@ -564,14 +621,14 @@ async function extractVisualDNA(url) {
         });
         
         // NEW: Log if page seems empty (JS didn't load)
-        if (visualDNA.page_text_length < 100) {
-            console.error(`[VisualExtractor] WARNING: Page seems empty (${visualDNA.page_text_length} chars). JS may not have loaded.`);
+        if (result.page_text_length < 100) {
+            console.error(`[VisualExtractor] WARNING: Page seems empty (${result.page_text_length} chars). JS may not have loaded.`);
         } else {
-            console.error(`[VisualExtractor] Page loaded OK (${visualDNA.page_text_length} chars)`);
+            console.error(`[VisualExtractor] Page loaded OK (${result.page_text_length} chars)`);
         }
-
+        
         await browser.close();
-        return visualDNA;
+        return result;
 
     } catch (error) {
         await browser.close();

@@ -330,19 +330,32 @@ class WebsiteEvaluator:
             blueprint['3d_objects'].append(btn_3d)
             self.token_usage['decisions_made'] += 1
         
-        # Process images → 3D textures/spheres (REDUCED)
+        # Process images → 3D textures/spheres (SMART: only content images)
         images = dna.get('assets', {}).get('images', [])
-        for idx, img in enumerate(images[:4]):  # Reduced from 8 to 4
-            blueprint['3d_objects'].append({
+        
+        # Filter: only convert 'content' images to 3D (not ui or background)
+        content_images = [img for img in images if img.get('type', 'content') == 'content']
+        
+        for idx, img in enumerate(content_images[:4]):
+            img_3d = {
                 "type": "image_texture",
                 "src": img.get('src', ''),
                 "alt": img.get('alt', ''),
+                "image_type": img.get('type', 'content'),
                 "position": {
                     "x": -1.5 + (idx % 2) * 3,
                     "y": 1,
                     "z": -8 - (idx // 2) * 3
                 }
-            })
+            }
+            
+            # SKETCHFAB FALLBACK: Search for similar 3D assets
+            if img.get('alt'):
+                sketchfab_query = self._search_sketchfab(img.get('alt', ''))
+                if sketchfab_query:
+                    img_3d['sketchfab_fallback'] = sketchfab_query
+            
+            blueprint['3d_objects'].append(img_3d)
             self.token_usage['decisions_made'] += 1
         
         self.token_usage['total_tokens'] += (self.token_usage['decisions_made'] * 50)
@@ -418,6 +431,43 @@ class WebsiteEvaluator:
         # Add to blueprint
         blueprint['scene_metadata']['token_usage'] = self.token_usage
         blueprint['scene_metadata']['token_cost_estimate'] = self.token_usage['total_tokens']
+    
+    def _search_sketchfab(self, query, limit=3):
+        """Search SketchFab for similar 3D assets (fallback when website assets aren't suitable)"""
+        try:
+            import requests
+            
+            # SketchFab public search API (no auth required for search)
+            api_url = f"https://api.sketchfab.com/v3/search"
+            params = {
+                'type': 'models',
+                'q': query,
+                'count': limit
+            }
+            
+            resp = requests.get(api_url, params=params, timeout=5)
+            if resp.status_code == 200:
+                data = resp.json()
+                results = []
+                
+                for item in data.get('results', [])[:limit]:
+                    results.append({
+                        'name': item.get('name', ''),
+                        'url': item.get('viewerUrl', ''),
+                        'thumbnail': item.get('thumbnails', {}).get('images', [{}])[0].get('url', ''),
+                        'author': item.get('user', {}).get('username', ''),
+                        'polycount': item.get('vertexCount', 0)
+                    })
+                
+                if results:
+                    print(f"[SketchFab] Found {len(results)} fallback assets for: {query}")
+                    return results
+            
+            return None
+            
+        except Exception as e:
+            print(f"[SketchFab] Search failed (non-critical): {e}")
+            return None
     
     def save_blueprint(self, blueprint, output_path="3d_scene_blueprint.json"):
         """Save the 3D scene blueprint"""
