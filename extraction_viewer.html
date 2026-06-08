@@ -6,303 +6,496 @@
     <title>PopUp Extractor - Data Viewer</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
-        .container { max-width: 1400px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1 { color: #333; margin-bottom: 20px; }
+        body { font-family: Arial, sans-serif; background: #f5f5f5; display: flex; height: 100vh; overflow: hidden; }
         
-        .main-layout { display: flex; gap: 20px; }
-        .sidebar { width: 300px; flex-shrink: 0; }
-        .content { flex: 1; }
+        .sidebar { width: 280px; background: white; border-right: 1px solid #ddd; display: flex; flex-direction: column; overflow: hidden; box-shadow: 2px 0 4px rgba(0,0,0,0.1); }
+        .sidebar-header { padding: 15px; border-bottom: 1px solid #ddd; background: #1976d2; }
+        .sidebar-header h2 { margin: 0 0 10px 0; font-size: 18px; color: white; }
+        .sidebar-header a { color: white; text-decoration: none; font-size: 12px; opacity: 0.9; }
+        .sidebar-header a:hover { opacity: 1; text-decoration: underline; }
+
+        .add-website-section { padding: 10px 15px; background: #f8f9fa; border-bottom: 1px solid #ddd; }
+        .add-website-header { display: flex; align-items: center; gap: 5px; margin-bottom: 8px; }
+        .add-website-header button { width: 36px; height: 36px; border-radius: 50%; background: #28a745; color: white; border: none; cursor: pointer; font-size: 18px; font-weight: bold; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s; }
+        .add-website-header button:hover { background: #218838; }
+        .add-website-header span { font-size: 13px; color: #666; }
         
-        .timeframe-tree { background: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 15px; margin-bottom: 20px; }
-        .timeframe-tree h3 { color: #666; margin-bottom: 10px; font-size: 14px; }
-        .tree-item { padding: 8px 12px; margin: 5px 0; background: white; border: 1px solid #ddd; border-radius: 3px; cursor: pointer; transition: all 0.2s; }
-        .tree-item:hover { background: #e3f2fd; border-color: #1976d2; }
-        .tree-item.loaded { background: #e8f5e9; border-color: #4caf50; }
-        .tree-item-header { display: flex; justify-content: space-between; align-items: center; }
-        .timestamp { color: #999; font-size: 12px; }
-        .file-count { background: #1976d2; color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; }
+        .url-input-row { display: flex; gap: 5px; align-items: center; margin-bottom: 8px; }
+        .url-input-row input { flex: 1; padding: 8px 12px; border: 1px solid #ddd; border-radius: 20px; font-size: 13px; background: white; color: #333; }
+        .url-input-row input:focus { outline: none; border-color: #1976d2; box-shadow: 0 0 0 2px rgba(25,118,210,0.2); }
+        .url-input-row button.remove-btn { width: 32px; height: 32px; background: #dc3545; color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s; }
+        .url-input-row button.remove-btn:hover { background: #c82333; }
+        .extract-all-btn { width: 100%; padding: 10px; background: #1976d2; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: bold; margin-top: 8px; transition: background 0.2s; }
+        .extract-all-btn:hover { background: #1565c0; }
+        .extract-all-btn:disabled { background: #ccc; cursor: not-allowed; }
+
+        #searchInput { width: 100%; padding: 8px; margin-top: 10px; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px; color: white; font-size: 13px; }
+        #searchInput::placeholder { color: rgba(255,255,255,0.7); }
+        #searchInput:focus { outline: none; background: rgba(255,255,255,0.3); }
         
-        .upload-section { margin-bottom: 20px; padding: 15px; background: #e3f2fd; border-radius: 5px; }
-        input[type="file"] { margin: 10px 0; }
+        .batch-list { flex: 1; overflow-y: auto; padding: 10px; }
         
-        .data-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
-        .data-section h2 { color: #1976d2; margin-bottom: 10px; }
-        .logo-img { max-width: 200px; max-height: 100px; border: 1px solid #ddd; padding: 10px; }
-        .color-box { display: inline-block; width: 50px; height: 50px; margin: 5px; border: 1px solid #ddd; border-radius: 5px; }
-        .image-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-top: 10px; }
-        .image-item { border: 1px solid #ddd; padding: 10px; border-radius: 5px; text-align: center; }
-        .image-item img { max-width: 100%; max-height: 100px; }
-        .button-item { display: inline-block; padding: 8px 15px; margin: 5px; background: #1976d2; color: white; border-radius: 5px; }
-        pre { background: #f5f5f5; padding: 10px; border-radius: 5px; overflow-x: auto; font-size: 12px; }
-        .nav-item { padding: 5px 10px; background: #f5f5f5; margin: 2px; display: inline-block; border-radius: 3px; }
-        .error { color: red; padding: 10px; background: #ffebee; border-radius: 5px; }
-        .success { color: green; padding: 10px; background: #e8f5e9; border-radius: 5px; }
+        .batch-item { margin-bottom: 8px; border: 1px solid #ddd; border-radius: 6px; background: white; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .batch-header { padding: 10px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; background: #f8f9fa; transition: background 0.2s; }
+        .batch-header:hover { background: #e9ecef; }
+        .batch-header h3 { margin: 0; font-size: 14px; color: #333; display: flex; align-items: center; gap: 6px; flex-wrap: nowrap; }
+        .batch-date { font-size: 11px; color: #666; margin-top: 2px; }
         
-        .code-version { font-size: 11px; color: #999; margin-top: 5px; }
-        .tabs { display: flex; margin-bottom: 20px; border-bottom: 2px solid #ddd; }
-        .tab { padding: 10px 20px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; }
-        .tab.active { border-bottom: 2px solid #1976d2; color: #1976d2; font-weight: bold; }
+        .badge-new { background: #4caf50; color: white; padding: 2px 6px; border-radius: 3px; font-size: 10px; font-weight: bold; white-space: nowrap; }
+        .badge-count { background: #1976d2; color: white; padding: 2px 6px; border-radius: 3px; font-size: 11px; white-space: nowrap; margin-left: 8px; }
+        
+        .website-list { display: none; padding: 5px 0; background: white; }
+        .website-list.expanded { display: block; }
+        
+        .tree-item { padding: 8px 15px; cursor: pointer; display: flex; align-items: center; gap: 8px; border-left: 3px solid transparent; transition: all 0.2s; margin: 2px 5px; border-radius: 4px; border: 1px solid #28a745; background: rgba(40, 167, 69, 0.05); }
+        
+        .tree-item:hover { background: rgba(255, 165, 0, 0.2); border-color: #ff8c00; border-left: 3px solid #ff8c00; box-shadow: 0 0 8px rgba(255, 165, 0, 0.3); }
+        .tree-item.active { background: rgba(25, 118, 210, 0.2); border-color: #1976d2; border-left: 3px solid #1976d2; }
+        
+        .tree-item .favicon { width: 16px; height: 16px; flex-shrink: 0; }
+        .tree-item .site-url { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; color: #333; }
+        
+        .main-content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+        .content-header { padding: 15px 20px; background: white; border-bottom: 1px solid #ddd; display: flex; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .content-header h2 { margin: 0; font-size: 18px; color: #1976d2; }
+        
+        .data-display { flex: 1; overflow-y: auto; padding: 20px; }
+        
+        .data-section { margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px; background: white; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .data-section h3 { padding: 12px 15px; margin: 0; background: #1976d2; font-size: 14px; color: white; }
+        .data-section pre { padding: 15px; margin: 0; background: #f8f9fa; overflow-x: auto; font-size: 12px; line-height: 1.5; white-space: pre-wrap; word-wrap: break-word; max-width: 100%; color: #333; }
+        
+        .welcome-message { text-align: center; padding: 50px 20px; color: #666; }
+        .welcome-message h2 { color: #1976d2; margin-bottom: 10px; }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f5f5f5; }
+        ::-webkit-scrollbar-thumb { background: #bbb; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #999; }
+        
+        .loading { text-align: center; padding: 20px; color: #666; }
+        .error { color: #f44336; padding: 15px; background: #ffebee; border-radius: 4px; margin: 10px; border: 1px solid #f44336; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>PopUp Extractor - Data Viewer</h1>
-        
-        <div class="main-layout">
-            <div class="sidebar">
-                <div class="timeframe-tree">
-                    <h3>📁 Extraction History</h3>
-                    <div id="timeframeTree"></div>
-                </div>
-                
-                <div class="upload-section">
-                    <h3>📤 Upload JSON</h3>
-                    <input type="file" id="fileInput" accept=".json">
-                    <p id="status"></p>
-                </div>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>📁 PopUp Extractor</h2>
+            <a href="dashboard.html">📊 View Dashboard</a>
+            <input type="text" id="searchInput" placeholder="🔍 Search batches..." onkeyup="filterBatches()">
+        </div>
+        <div class="add-website-section">
+            <div class="add-website-header">
+                <button onclick="addUrlInput()" title="Add Website">+</button>
+                <span>Add websites to extract</span>
             </div>
-            
-            <div class="content">
-                <div id="results"></div>
+            <div id="urlInputsContainer"></div>
+            <button class="extract-all-btn" onclick="extractAllWebsites()">🚀 Extract All Websites</button>
+        </div>
+        <div class="batch-list" id="batchList">
+            <div class="loading">Loading batches...</div>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="content-header">
+            <h2 id="contentTitle">Select a website to view extraction data</h2>
+        </div>
+        
+        <div class="data-display" id="dataDisplay">
+            <div class="welcome-message">
+                <h2>🎯 Welcome to PopUp Extractor</h2>
+                <p>Select a batch from the sidebar to view extracted website DNA</p>
             </div>
         </div>
     </div>
 
     <script>
-        let fileList = [];
-        let currentFile = null;
+        let batches = [];
+        let currentBatchId = null;
+        let urlInputCounter = 0;
         
-        // Load file list on page load
-        window.onload = function() {
-            loadFileList();
-        };
-        
-        async function loadFileList() {
-            try {
-                const response = await fetch('test_data/file_list.json');
-                const data = await response.json();
-                fileList = data.files;
-                displayTimeframeTree();
-            } catch (err) {
-                document.getElementById('timeframeTree').innerHTML = 
-                    `<div class="error">Error loading file list: ${err.message}</div>`;
-            }
-        }
-        
-        function displayTimeframeTree() {
-            const treeDiv = document.getElementById('timeframeTree');
-            
-            // Group files by folder (timestamp)
-            const groups = {};
-            fileList.forEach(file => {
-                const parts = file.path.split('/');
-                const folder = parts[1]; // e.g., 2026-06-03_22-09-07
-                if (!groups[folder]) groups[folder] = [];
-                groups[folder].push(file);
-            });
-            
-            let html = '';
-            for (const [folder, files] of Object.entries(groups)) {
-                html += `<div class="tree-item" onclick="toggleFolder('${folder}')">
-                    <div class="tree-item-header">
-                        <span>📂 ${folder}</span>
-                        <span class="file-count">${files.length} files</span>
-                    </div>
-                    <div id="folder-${folder}" style="display: none; margin-left: 15px; margin-top: 5px;">`;
-                
-                files.forEach(file => {
-                    html += `<div class="tree-item" onclick="event.stopPropagation(); loadFile('${file.path}', this)">
-                        <span>📄 ${file.name}</span>
-                        <div class="code-version">Click to load</div>
-                    </div>`;
-                });
-                
-                html += `</div></div>`;
-            }
-            
-            treeDiv.innerHTML = html;
-        }
-        
-        function toggleFolder(folder) {
-            const folderDiv = document.getElementById(`folder-${folder}`);
-            if (folderDiv.style.display === 'none') {
-                folderDiv.style.display = 'block';
-            } else {
-                folderDiv.style.display = 'none';
-            }
-        }
-        
-        async function loadFile(path, element) {
-            try {
-                document.getElementById('status').innerHTML = 
-                    `<div class="success">Loading ${path}...</div>`;
-                
-                const response = await fetch(path);
-                const data = await response.json();
-                
-                displayData(data, path);
-                currentFile = path;
-                
-                // Mark as loaded
-                document.querySelectorAll('.tree-item').forEach(item => {
-                    item.classList.remove('loaded');
-                });
-                if (element) element.classList.add('loaded');
-                
-            } catch (err) {
-                document.getElementById('status').innerHTML = 
-                    `<div class="error">Error loading file: ${err.message}</div>`;
-            }
-        }
-        
-        document.getElementById('fileInput').addEventListener('change', function(e) {
-            const file = e.target.files[0];
-            if (!file) return;
-            
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                try {
-                    const data = JSON.parse(e.target.result);
-                    displayData(data, file.name);
-                    currentFile = file.name;
-                } catch (err) {
-                    document.getElementById('status').innerHTML = 
-                        `<div class="error">Error parsing JSON: ${err.message}</div>`;
-                }
-            };
-            reader.readAsText(file);
+        // Auto-add first URL input on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            addUrlInput();
+            loadBatches();
         });
         
-        function displayData(data, filename) {
-            const wp = data.website_profile || data;
-            const results = document.getElementById('results');
+        function addUrlInput() {
+            urlInputCounter++;
+            const container = document.getElementById('urlInputsContainer');
+            const rowId = `urlRow${urlInputCounter}`;
             
-            let html = `<div class="success">Loaded: ${filename}</div>`;
+            const row = document.createElement('div');
+            row.className = 'url-input-row';
+            row.id = rowId;
+            row.innerHTML = `
+                <input type="url" id="urlInput${urlInputCounter}" placeholder="https://example.com">
+                <button class="remove-btn" onclick="removeUrlInput('${rowId}')">×</button>
+            `;
             
-            // Code version info (if available)
-            if (data.extraction_metadata && data.extraction_metadata.code_version) {
-                html += `<div class="code-version">Code Version: ${data.extraction_metadata.code_version}</div>`;
+            container.appendChild(row);
+            document.getElementById(`urlInput${urlInputCounter}`).focus();
+        }
+        
+        function removeUrlInput(rowId) {
+            const row = document.getElementById(rowId);
+            if (row) row.remove();
+        }
+        
+        function extractAllWebsites() {
+            const inputs = document.querySelectorAll('#urlInputsContainer input[type="url"]');
+            const urls = [];
+            
+            inputs.forEach(input => {
+                if (input.value.trim()) {
+                    urls.push(input.value.trim());
+                }
+            });
+            
+            if (urls.length === 0) {
+                alert('Please add at least one URL');
+                return;
             }
             
-            // Logo Section
-            html += `<div class="data-section">
-                <h2>Logo</h2>`;
-            if (wp.assets && wp.assets.logo) {
-                html += `<img src="${wp.assets.logo}" alt="Logo" class="logo-img" onerror="this.style.display='none'">
-                        <p>URL: ${wp.assets.logo}</p>`;
-            } else if (wp.structure && wp.structure.logo) {
-                html += `<p>Logo: ${wp.structure.logo}</p>`;
+            alert(`Extracting ${urls.length} website(s):\n${urls.join('\n')}\n\n(Backend connection needed)`);
+            // TODO: Connect to actual extraction backend
+            // For now, just show what would be extracted
+        }
+        
+        async function loadBatches() {
+            try {
+                const indexResponse = await fetch('extraction_results/batch_index.json');
+                if (!indexResponse.ok) throw new Error('batch_index.json not found');
+                
+                const batchFolders = await indexResponse.json();
+                batches = [];
+                
+                for (const folder of batchFolders) {
+                    try {
+                        const manifestResponse = await fetch(`extraction_results/${folder}/batch_manifest.json`);
+                        if (!manifestResponse.ok) continue;
+                        
+                        const data = await manifestResponse.json();
+                        const batchNum = parseInt(folder.match(/Batch(\d+)/)[1]);
+                        
+                        batches.push({
+                            id: `batch${batchNum}`,
+                            batchNumber: batchNum,
+                            batchName: data.batch_id || folder,
+                            timestamp: data.created_at || new Date().toISOString(),
+                            status: 'completed',
+                            batchPath: `extraction_results/${folder}`,
+                            websites: data.websites || []
+                        });
+                    } catch (e) {
+                        console.log(`Failed to load ${folder}:`, e);
+                    }
+                }
+                
+                batches.sort((a, b) => b.batchNumber - a.batchNumber);
+                
+                displayBatches();
+            } catch (error) {
+                document.getElementById('batchList').innerHTML = `<div class="error">Error loading batches: ${error.message}</div>`;
+            }
+        }
+        
+        function displayBatches() {
+            const batchList = document.getElementById('batchList');
+            if (batches.length === 0) {
+                batchList.innerHTML = '<div class="welcome-message"><p>No batches found</p></div>';
+                return;
+            }
+            
+            const mostRecentBatchId = batches.length > 0 ? batches[0].id : null;
+            
+            batchList.innerHTML = batches.map(batch => {
+                const date = new Date(batch.timestamp);
+                const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                const timeStr = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+                const isNew = batch.id === mostRecentBatchId;
+                
+                return `
+                    <div class="batch-item">
+                        <div class="batch-header" onclick="toggleBatch('${batch.id}')">
+                            <div>
+                                <h3>
+                                    ${batch.batchName}
+                                    ${isNew ? '<span class="badge-new">NEW</span>' : ''}
+                                </h3>
+                                <div class="batch-date">${dateStr} at ${timeStr}</div>
+                            </div>
+                            <span class="badge-count">${batch.websites.length} sites</span>
+                        </div>
+                        <div class="website-list" id="websites-${batch.id}">
+                            ${batch.websites.map(site => `
+                                <div class="tree-item" onclick="event.stopPropagation(); loadWebsite('${batch.batchPath}', '${site.data_path}', '${site.domain}')">
+                                    <img class="favicon" src="https://www.google.com/s2/favicons?domain=${site.domain}&sz=32" alt="">
+                                    <span class="site-url">${site.domain}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        function toggleBatch(batchId) {
+            const websiteList = document.getElementById(`websites-${batchId}`);
+            if (websiteList.classList.contains('expanded')) {
+                websiteList.classList.remove('expanded');
             } else {
-                html += `<p>No logo extracted</p>`;
+                document.querySelectorAll('.website-list.expanded').forEach(el => el.classList.remove('expanded'));
+                websiteList.classList.add('expanded');
             }
-            html += `</div>`;
+        }
+        
+        function filterBatches() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            document.querySelectorAll('.batch-item').forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(searchTerm) ? 'block' : 'none';
+            });
+        }
+        
+        async function loadWebsite(batchPath, dataPath, domain) {
+            try {
+                document.querySelectorAll('.tree-item.active').forEach(el => el.classList.remove('active'));
+                
+                event.target.closest('.tree-item').classList.add('active');
+                
+                document.getElementById('contentTitle').textContent = `Viewing: ${domain}`;
+                
+                const fullPath = `${batchPath}/${dataPath}`;
+                console.log('Loading:', fullPath);
+                
+                const response = await fetch(fullPath);
+                if (!response.ok) throw new Error(`Failed to load ${fullPath} (status: ${response.status})`);
+                
+                const data = await response.json();
+                console.log('Loaded data:', data);
+                displayData(data);
+            } catch (error) {
+                console.error('Error loading website data:', error);
+                document.getElementById('dataDisplay').innerHTML = `<div class="error">Error loading website data: ${error.message}</div>`;
+            }
+        }
+        
+        function displayData(data) {
+            const profile = data.website_profile || {};
+            const structure = profile.structure || {};
+            const assets = profile.assets || {};
+            const brandDna = profile.brand_dna || {};
+            const visualDna = profile.visual_dna || {};
             
-            // Colors Section
-            if (wp.brand_dna && wp.brand_dna.color_palette && wp.brand_dna.color_palette.length > 0) {
-                html += `<div class="data-section">
-                    <h2>Extracted Colors (${wp.brand_dna.color_palette.length})</h2>
-                    <div>`;
-                wp.brand_dna.color_palette.forEach(color => {
-                    html += `<div class="color-box" style="background: ${color}" title="${color}"></div>`;
-                });
-                html += `</div></div>`;
+            const display = document.getElementById('dataDisplay');
+            
+            let html = `<div style="padding: 20px;">`;
+            
+            // Hero Section with styling
+            if (structure.hero_section) {
+                html += `
+                    <div class="data-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 8px; margin-bottom: 20px;">
+                        <h3 style="color: white; margin-top: 0;">🎯 Hero Section</h3>
+                        <h1 style="font-size: 32px; margin: 10px 0;">${structure.hero_section.heading || 'No heading'}</h1>
+                        ${structure.hero_section.cta_buttons && structure.hero_section.cta_buttons.length > 0 ? 
+                            `<button style="background: white; color: #667eea; border: none; padding: 12px 24px; border-radius: 25px; font-weight: bold; margin-top: 10px; cursor: pointer;">${structure.hero_section.cta_buttons[0].text || 'CTA'}</button>` 
+                            : ''}
+                    </div>
+                `;
             }
             
-            // Navigation
-            if (wp.structure && wp.structure.navigation && wp.structure.navigation.length > 0) {
-                html += `<div class="data-section">
-                    <h2>Navigation (${wp.structure.navigation.length} items)</h2>`;
-                wp.structure.navigation.forEach(item => {
-                    html += `<span class="nav-item">${item.text || 'No text'}</span>`;
-                });
-                html += `</div>`;
+            // Logo with proper display
+            if (assets.logo) {
+                html += `
+                    <div class="data-section">
+                        <h3>🖼️ Logo</h3>
+                        <div style="background: white; padding: 20px; border-radius: 8px; display: inline-block; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <img src="${assets.logo}" style="max-width: 300px; max-height: 150px; object-fit: contain;" onerror="this.style.display='none'">
+                        </div>
+                    </div>
+                `;
             }
             
-            // Buttons
-            if (wp.structure && wp.structure.buttons && wp.structure.buttons.length > 0) {
-                html += `<div class="data-section">
-                    <h2>Buttons (${wp.structure.buttons.length} found)</h2>`;
-                wp.structure.buttons.forEach(btn => {
-                    html += `<span class="button-item">${btn.text || 'No text'}</span>`;
-                });
-                html += `</div>`;
+            // Navigation as visual pills
+            if (structure.navigation && structure.navigation.length > 0) {
+                html += `
+                    <div class="data-section">
+                        <h3>🧭 Navigation (${structure.navigation.length} items)</h3>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+                            ${structure.navigation.map(n => 
+                                `<a href="${n.url || '#'}" style="padding: 8px 16px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 20px; text-decoration: none; color: #495057; font-size: 14px; transition: all 0.2s;" onmouseover="this.style.background='#1976d2';this.style.color='white'" onmouseout="this.style.background='#f8f9fa';this.style.color='#495057'">${n.text}</a>`
+                            ).join('')}
+                        </div>
+                    </div>
+                `;
             }
             
-            // Background Images (Separate from content images!)
-            if (wp.visual_dna && wp.visual_dna.background_images && wp.visual_dna.background_images.length > 0) {
-                html += `<div class="data-section">
-                    <h2>🌄 Background Images (${wp.visual_dna.background_images.length} found)</h2>
-                    <p><em>These are images used as backgrounds (CSS background-image)</em></p>
-                    <div class="image-grid">`;
-                wp.visual_dna.background_images.slice(0, 10).forEach(bg => {
-                    const imgUrl = bg.background_image ? bg.background_image.replace(/url\(['"]?([^'"]+)['"]?\)/, '$1') : '';
-                    if (imgUrl) {
-                        html += `<div class="image-item">
-                            <img src="${imgUrl}" alt="Background" onerror="this.style.display='none'">
-                            <small>${bg.element || 'Unknown'}</small>
-                        </div>`;
+            // Content Sections with card layout
+            if (structure.sections && structure.sections.length > 0) {
+                html += `<div class="data-section"><h3>📄 Content Sections (${structure.sections.length})</h3>`;
+                structure.sections.forEach((section, idx) => {
+                    if (section.heading || section.text_preview) {
+                        html += `
+                            <div style="background: white; padding: 20px; margin: 15px 0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-left: 4px solid #1976d2;">
+                                <h4 style="margin-top: 0; color: #1976d2;">${section.heading || `Section ${idx + 1}`}</h4>
+                                <p style="color: #666; line-height: 1.6;">${(section.text_preview || section.text_full || '').substring(0, 300)}...</p>
+                            </div>
+                        `;
                     }
                 });
-                html += `</div></div>`;
-            } else {
-                html += `<div class="data-section">
-                    <h2>🌄 Background Images</h2>
-                    <p><em>No background images extracted (known issue - working on fix)</em></p>
-                </div>`;
-            }
-            
-            // Content Images (Separate from background!)
-            if (wp.assets && wp.assets.images && wp.assets.images.length > 0) {
-                html += `<div class="data-section">
-                    <h2>🖼️ Content Images (${wp.assets.images.length} found)</h2>
-                    <p><em>These are regular images found in the page content</em></p>
-                    <div class="image-grid">`;
-                wp.assets.images.slice(0, 10).forEach(img => {
-                    html += `<div class="image-item">
-                        <img src="${img.src}" alt="${img.alt || 'Image'}" onerror="this.style.display='none'">
-                        <small>${img.alt || 'No alt'}</small>
-                    </div>`;
-                });
-                html += `</div></div>`;
-            }
-            
-            // Text Sections
-            if (wp.structure && wp.structure.sections && wp.structure.sections.length > 0) {
-                html += `<div class="data-section">
-                    <h2>📝 Text Sections (${wp.structure.sections.length} found)</h2>`;
-                wp.structure.sections.forEach(section => {
-                    html += `<h3>${section.heading || 'No heading'}</h3>
-                            <p>${section.text_preview || section.text_full || 'No text'}</p>`;
-                });
                 html += `</div>`;
+            }
+            
+            // Buttons as actual styled buttons
+            if (structure.buttons && structure.buttons.length > 0) {
+                html += `
+                    <div class="data-section">
+                        <h3>🔘 Buttons (${structure.buttons.length})</h3>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+                            ${structure.buttons.map(b => {
+                                const isPrimary = b.classes && b.classes.some(c => c.includes('wixui-button'));
+                                return `<button style="
+                                    padding: 10px 20px;
+                                    background: ${isPrimary ? '#1976d2' : '#6c757d'};
+                                    color: white;
+                                    border: none;
+                                    border-radius: 4px;
+                                    cursor: pointer;
+                                    font-size: 14px;
+                                    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                                    transition: all 0.2s;
+                                " onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 4px rgba(0,0,0,0.2)'">${b.text || 'Button'}</button>`;
+                            }).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Images in a proper grid (ENHANCED - show dimensions)
+            if (assets.images && assets.images.length > 0) {
+                html += `
+                    <div class="data-section">
+                        <h3>🖼️ Images (${assets.images.length})</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 10px;">
+                            ${assets.images.slice(0, 12).map(img => `
+                                <div style="background: white; padding: 10px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+                                    <img src="${img.src}" alt="${img.alt || 'image'}" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px;" onerror="this.style.display='none'">
+                                    ${img.alt ? `<p style="margin: 5px 0 0 0; font-size: 11px; color: #666;">${img.alt}</p>` : ''}
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // NEW: Enhanced Images with dimensions
+            const enhImages = visualDna.enhanced_images || [];
+            if (enhImages.length > 0) {
+                html += `
+                    <div class="data-section">
+                        <h3>📐 Enhanced Images (${enhImages.length}) - with dimensions</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; margin-top: 10px;">
+                            ${enhImages.slice(0, 8).map(img => `
+                                <div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                    <img src="${img.src}" alt="${img.alt || 'image'}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;" onerror="this.style.display='none'">
+                                    <div style="margin-top: 10px; font-size: 12px; color: #666;">
+                                        ${img.alt ? `<p style="margin: 2px 0;"><strong>Alt:</strong> ${img.alt}</p>` : ''}
+                                        <p style="margin: 2px 0;"><strong>Dimensions:</strong> ${Math.round(img.width)}×${Math.round(img.height)}px (natural: ${img.natural_width}×${img.natural_height})</p>
+                                        <p style="margin: 2px 0;"><strong>Object-fit:</strong> ${img.object_fit}</p>
+                                        ${img.border_radius && img.border_radius !== '0px' ? `<p style="margin: 2px 0;"><strong>Border-radius:</strong> ${img.border_radius}</p>` : ''}
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // NEW: Text Styles
+            const textStyles = visualDna.text_styles || {};
+            if (textStyles.headings && Object.keys(textStyles.headings).length > 0) {
+                html += `
+                    <div class="data-section">
+                        <h3>🔤 Text Styles - Headings</h3>
+                        ${Object.entries(textStyles.headings).map(([selector, styles]) => `
+                            <div style="background: #f8f9fa; padding: 15px; margin: 10px 0; border-left: 4px solid #1976d2; border-radius: 4px;">
+                                <h4 style="margin: 0 0 10px 0; color: #1976d2;">${selector.toUpperCase()}</h4>
+                                <pre style="margin: 0; font-size: 11px; line-height: 1.4;">Font: ${styles.font_family}
+Size: ${styles.font_size}
+Weight: ${styles.font_weight}
+Color: ${styles.color}
+Line-height: ${styles.line_height}</pre>
+                                <div style="margin-top: 10px; padding: 10px; background: white; border-radius: 4px;">
+                                    <${selector} style="font-family: ${styles.font_family}; font-size: ${styles.font_size}; font-weight: ${styles.font_weight}; color: ${styles.color};">Sample ${selector} text</${selector}>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+            
+            // NEW: Enhanced Button Styles with LIVE PREVIEW
+            const buttonStyles = visualDna.button_styles || [];
+            if (buttonStyles.length > 0) {
+                html += `
+                    <div class="data-section">
+                        <h3>🔘 Enhanced Button Styles (${buttonStyles.length}) - Live Preview</h3>
+                        <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 15px;">
+                            ${buttonStyles.slice(0, 6).map((btn, idx) => `
+                                <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); min-width: 200px;">
+                                    <p style="margin: 0 0 10px 0; font-weight: bold; color: #1976d2;">Button ${idx + 1}: ${btn.text || '(no text)'}</p>
+                                    <button style="
+                                        background: ${btn.background_color || '#1976d2'};
+                                        color: ${btn.color || 'white'};
+                                        border-radius: ${btn.border_radius || '4px'};
+                                        border: ${btn.border || 'none'};
+                                        padding: ${btn.padding || '10px 20px'};
+                                        margin: ${btn.margin || '0'};
+                                        font-size: ${btn.font_size || '14px'};
+                                        font-weight: ${btn.font_weight || 'normal'};
+                                        font-family: ${btn.font_family || 'inherit'};
+                                        text-transform: ${btn.text_transform || 'none'};
+                                        letter-spacing: ${btn.letter_spacing || 'normal'};
+                                        box-shadow: ${btn.box_shadow || 'none'};
+                                        cursor: ${btn.cursor || 'pointer'};
+                                        display: ${btn.display || 'inline-block'};
+                                        width: ${btn.width || 'auto'};
+                                        height: ${btn.height || 'auto'};
+                                    ">${btn.text || 'Button'}</button>
+                                    <div style="margin-top: 10px; font-size: 10px; color: #666; line-height: 1.6;">
+                                        <p style="margin: 2px 0;"><strong>Background:</strong> ${btn.background_color || 'N/A'}</p>
+                                        <p style="margin: 2px 0;"><strong>Color:</strong> ${btn.color || 'N/A'}</p>
+                                        <p style="margin: 2px 0;"><strong>Border-radius:</strong> ${btn.border_radius || 'N/A'}</p>
+                                        <p style="margin: 2px 0;"><strong>Padding:</strong> ${btn.padding || 'N/A'}</p>
+                                        <p style="margin: 2px 0;"><strong>Font-size:</strong> ${btn.font_size || 'N/A'}</p>
+                                        <p style="margin: 2px 0;"><strong>Box-shadow:</strong> ${btn.box_shadow || 'none'}</p>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
             }
             
             // Footer
-            if (wp.structure && wp.structure.footer) {
-                html += `<div class="data-section">
-                    <h2>📄 Footer</h2>`;
-                if (wp.structure.footer.text) {
-                    html += `<p>${wp.structure.footer.text}</p>`;
-                }
-                if (wp.structure.footer.links && wp.structure.footer.links.length > 0) {
-                    html += `<p>Links: ${wp.structure.footer.links.length} found</p>`;
-                }
-                html += `</div>`;
+            if (structure.footer) {
+                html += `
+                    <div class="data-section" style="background: #343a40; color: white; padding: 20px; border-radius: 8px;">
+                        <h3 style="color: white;">📍 Footer</h3>
+                        <p>${structure.footer.text || ''}</p>
+                        ${structure.footer.links && structure.footer.links.length > 0 ? `
+                            <div style="margin-top: 10px;">
+                                ${structure.footer.links.map(l => `<a href="${l.url}" style="color: #17a2b8; margin-right: 15px; text-decoration: none;">${l.text}</a>`).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
             }
             
-            // Raw JSON (collapsible)
-            html += `<div class="data-section">
-                <h2>📋 Raw JSON Data</h2>
-                <details>
-                    <summary>Click to view raw JSON</summary>
-                    <pre>${JSON.stringify(data, null, 2).substring(0, 5000)}...</pre>
-                </details>
-            </div>`;
-            
-            results.innerHTML = html;
-            document.getElementById('status').innerHTML = 
-                `<div class="success">Successfully loaded ${filename}</div>`;
+            html += `</div>`;
+            display.innerHTML = html;
         }
     </script>
 </body>

@@ -170,13 +170,16 @@ class WebsiteDNASequencer:
                     "buttons": button_data
                 },
                 
-                # Visual Elements
+                # Visual Elements (ENHANCED - include ALL visual data)
                 "visual_dna": {
                     "hero_background": visual.get("hero_background"),
                     "background_images": visual.get("background_images", []),
                     "computed_colors": visual.get("computed_colors", []),
                     "button_styles": visual.get("button_styles", []),
-                    "layout_structure": visual.get("layout_structure", {})
+                    "layout_structure": visual.get("layout_structure", {}),
+                    # NEW: Enhanced visual data (properly added)
+                    "text_styles": visual.get("text_styles", {}),
+                    "enhanced_images": visual.get("enhanced_images", [])
                 },
                 
                 # Assets (use best available data - CONTEXTUAL)
