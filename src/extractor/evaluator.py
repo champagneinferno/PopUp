@@ -34,36 +34,78 @@ class WebsiteEvaluator:
         return self.profile
     
     def evaluate(self):
-        """Main evaluation logic - decides what becomes 3D"""
+        """Main evaluation logic - decides what becomes 3D (EFFICIENT)"""
         if not self.profile:
             result = self.load_profile()
             if "error" in result:
                 return result
         
         print(f"\n🎨 Evaluator - Creative Director")
-        print("=" * 70)
+        print("="*70)
         print(f"Analyzing DNA Profile for: {self.profile['website_profile']['url']}")
         
         dna = self.profile['website_profile']
         
-        # Phase 1: Analyze website complexity
+        # Phase 1: Identify FOCAL POINT and THEME
+        focal_point = self._identify_focal_point(dna)
+        theme = self._identify_theme(dna)
+        
+        print(f"\n[Focal Point] {focal_point}")
+        print(f"[Theme] {theme}")
+        
+        # Phase 2: Analyze website complexity
         complexity = self._analyze_complexity(dna)
         self.token_usage["complexity_multiplier"] = complexity['multiplier']
         self.token_usage["total_tokens"] *= complexity['multiplier']
         
-        # Phase 2: Determine color palette (including implicit from images)
+        # Phase 3: Determine color palette (including implicit from images)
         colors = self._extract_all_colors(dna)
         
-        # Phase 3: Decide 3D style based on DNA
+        # Phase 4: Decide 3D style based on DNA
         style = self._determine_3d_style(dna, colors)
         
-        # Phase 4: Map elements to 3D objects
-        scene_blueprint = self._create_scene_blueprint(dna, colors, style)
+        # Phase 5: Create EFFICIENT scene blueprint (only what's NEEDED)
+        scene_blueprint = self._create_efficient_scene(dna, colors, style, focal_point, theme)
         
-        # Phase 5: Generate token report
+        # Phase 6: Generate token report
         self._update_token_usage(scene_blueprint)
         
         return scene_blueprint
+    
+    def _identify_focal_point(self, dna):
+        """Identify the MAIN focal point of the website (hero heading)"""
+        hero = dna.get('structure', {}).get('hero_section', {})
+        if hero and hero.get('heading'):
+            return hero['heading']
+        
+        # Fallback: first section heading
+        sections = dna.get('structure', {}).get('sections', [])
+        if sections and sections[0].get('heading'):
+            return sections[0]['heading']
+        
+        return dna.get('title', 'Untitled')
+    
+    def _identify_theme(self, dna):
+        """Identify the website theme/category"""
+        url = dna.get('url', '').lower()
+        title = dna.get('title', '').lower()
+        desc = dna.get('meta', {}).get('description', '').lower()
+        
+        combined = f"{url} {title} {desc}"
+        
+        # Theme detection
+        if any(kw in combined for kw in ['shop', 'store', 'commerce', 'product', 'buy', 'sell']):
+            return 'e-commerce'
+        elif any(kw in combined for kw in ['ai', 'artificial intelligence', 'machine learning', 'agent']):
+            return 'ai-technology'
+        elif any(kw in combined for kw in ['design', 'creative', 'portfolio', 'studio']):
+            return 'design-creative'
+        elif any(kw in combined for kw in ['saas', 'software', 'platform', 'cloud']):
+            return 'saas-platform'
+        elif any(kw in combined for kw in ['blog', 'news', 'article', 'post']):
+            return 'content-media'
+        else:
+            return 'generic'
     
     def _analyze_complexity(self, dna):
         """Analyze website complexity to estimate token usage"""
@@ -239,15 +281,31 @@ class WebsiteEvaluator:
             'all_scores': style_scores
         }
     
-    def _create_scene_blueprint(self, dna, colors, style_decision):
-        """Create the 3D scene blueprint"""
+    def _create_efficient_scene(self, dna, colors, style_decision, focal_point, theme):
+        """Create EFFICIENT 3D scene - only convert what's NEEDED"""
+        
+        # THEME-BASED OBJECT LIMITS (efficiency!)
+        theme_limits = {
+            'e-commerce': 4,      # hero + 2 CTA + 1 product
+            'ai-technology': 5,     # hero + 2 CTA + 2 features
+            'design-creative': 5,   # hero + 2 CTA + 2 examples
+            'saas-platform': 4,      # hero + 2 CTA + 1 feature
+            'content-media': 3,      # hero + 1 CTA + 1 article
+            'generic': 3              # hero + 1 CTA + 1 section
+        }
+        
+        max_objects = theme_limits.get(theme, 3)
+        
         blueprint = {
             "scene_metadata": {
                 "source_url": dna['url'],
                 "title": dna['title'],
                 "style": style_decision['style'],
+                "theme": theme,
+                "focal_point": focal_point,
                 "complexity": self.token_usage["complexity_multiplier"],
-                "token_cost_estimate": self.token_usage["total_tokens"]
+                "token_cost_estimate": self.token_usage["total_tokens"],
+                "max_3d_objects": max_objects  # EFFICIENCY marker
             },
             "environment": {
                 "background": self._decide_background(dna, colors),
@@ -257,108 +315,89 @@ class WebsiteEvaluator:
             "3d_objects": []
         }
         
-        # Process navigation → 3D ring or menu (DEDUPED)
-        nav = dna.get('structure', {}).get('navigation', [])
-        seen_nav = set()
-        unique_nav = []
-        for item in nav:
-            if item['text'] not in seen_nav:
-                seen_nav.add(item['text'])
-                unique_nav.append(item)
+        object_count = 0
         
-        if unique_nav:
-            blueprint['3d_objects'].append({
-                "type": "navigation_ring",
-                "elements": unique_nav[:6],  # Limit to 6 unique items
-                "style": "floating" if style_decision['style'] == 'creative-playful' else "fixed",
-                "position": {"x": 0, "y": 1.5, "z": -3}
-            })
-            self.token_usage['decisions_made'] += 1
-        
-        # Process hero section → center stage
+        # 1. FOCAL POINT → 3D (ALWAYS convert)
         hero = dna.get('structure', {}).get('hero_section', {})
-        if hero and hero.get('heading'):
+        if hero and hero.get('heading') and object_count < max_objects:
             blueprint['3d_objects'].append({
                 "type": "hero_text",
                 "content": hero['heading'],
                 "cta_buttons": hero.get('cta_buttons', []),
                 "position": {"x": 0, "y": 0, "z": 0},
-                "scale": 1.5 if style_decision['style'] == 'bold-cinematic' else 1.0
+                "scale": 1.5 if style_decision['style'] == 'bold-cinematic' else 1.0,
+                "priority": "high"  # Focal point = highest priority
             })
+            object_count += 1
             self.token_usage['decisions_made'] += 1
         
-        # Process sections → 3D panels (REDUCED)
+        # 2. CTA BUTTONS → 3D (only if present, max 2)
+        cta_buttons = hero.get('cta_buttons', [])[:2]  # Max 2 CTA
+        if cta_buttons and object_count < max_objects:
+            for idx, cta in enumerate(cta_buttons):
+                if object_count >= max_objects:
+                    break
+                blueprint['3d_objects'].append({
+                    "type": "cta_button",
+                    "text": cta.get('text', ''),
+                    "href": cta.get('href', ''),
+                    "position": {
+                        "x": -1 + (idx * 1),
+                        "y": -1,
+                        "z": 0
+                    },
+                    "priority": "high"
+                })
+                object_count += 1
+                self.token_usage['decisions_made'] += 1
+        
+        # 3. CONTENT SECTIONS → 3D (max 1-2 based on theme)
         sections = dna.get('structure', {}).get('sections', [])
-        for idx, section in enumerate(sections[:3]):  # Reduced from 5 to 3
+        max_sections = 1 if max_objects <= 3 else 2
+        
+        for idx, section in enumerate(sections[:max_sections]):
+            if object_count >= max_objects:
+                break
+            
             blueprint['3d_objects'].append({
                 "type": "content_panel",
                 "heading": section.get('heading', ''),
-                "preview": section.get('text_full', section.get('text_preview', '')),  # FULL content, no truncation
+                "preview": section.get('text_full', section.get('text_preview', ''))[:200],  # Truncate for efficiency
                 "position": {
                     "x": 0,
-                    "y": -1 - (idx * 1.5),
+                    "y": -2 - (idx * 1.5),
                     "z": -5 - (idx * 2)
-                }
+                },
+                "priority": "medium"
             })
+            object_count += 1
             self.token_usage['decisions_made'] += 1
         
-        # Process buttons → interactive 3D buttons (REDUCED)
-        buttons = dna.get('structure', {}).get('buttons', [])
-        visual_buttons = dna.get('visual_dna', {}).get('button_styles', [])
-        
-        for idx, btn in enumerate(buttons[:3]):  # Reduced from 5 to 3
-            btn_3d = {
-                "type": "interactive_button",
-                "text": btn.get('text', ''),
-                "classes": btn.get('classes', []),
-                "position": {
-                    "x": -1 + (idx * 1),
-                    "y": -2,
-                    "z": 0
+        # 4. SEARCH UNSPLASH for background if needed
+        if blueprint['environment']['background']['type'] == 'color':
+            unsplash_bg = self._search_unsplash(theme, focal_point)
+            if unsplash_bg:
+                blueprint['environment']['background'] = {
+                    "type": "image",
+                    "source": unsplash_bg,
+                    "note": "From Unsplash API (free to use)"
                 }
-            }
-            
-            # Match with visual style if available
-            if idx < len(visual_buttons):
-                vb = visual_buttons[idx]
-                btn_3d['visual_style'] = {
-                    "bg_color": vb.get('bg_color'),
-                    "color": vb.get('color'),
-                    "border_radius": vb.get('border_radius')
-                }
-            
-            blueprint['3d_objects'].append(btn_3d)
-            self.token_usage['decisions_made'] += 1
         
-        # Process images → 3D textures/spheres (SMART: only content images)
-        images = dna.get('assets', {}).get('images', [])
+        # 5. SEARCH SKETCHFAB for 3D assets if needed (fallback)
+        if object_count < max_objects:
+            sketchfab_assets = self._search_sketchfab(focal_point, limit=1)
+            if sketchfab_assets:
+                blueprint['3d_objects'].append({
+                    "type": "sketchfab_asset",
+                    "asset": sketchfab_assets[0],
+                    "position": {"x": 2, "y": 0, "z": -3},
+                    "priority": "low",
+                    "note": "Fallback 3D asset from SketchFab"
+                })
+                object_count += 1
         
-        # Filter: only convert 'content' images to 3D (not ui or background)
-        content_images = [img for img in images if img.get('type', 'content') == 'content']
-        
-        for idx, img in enumerate(content_images[:4]):
-            img_3d = {
-                "type": "image_texture",
-                "src": img.get('src', ''),
-                "alt": img.get('alt', ''),
-                "image_type": img.get('type', 'content'),
-                "position": {
-                    "x": -1.5 + (idx % 2) * 3,
-                    "y": 1,
-                    "z": -8 - (idx // 2) * 3
-                }
-            }
-            
-            # SKETCHFAB FALLBACK: Search for similar 3D assets
-            if img.get('alt'):
-                sketchfab_query = self._search_sketchfab(img.get('alt', ''))
-                if sketchfab_query:
-                    img_3d['sketchfab_fallback'] = sketchfab_query
-            
-            blueprint['3d_objects'].append(img_3d)
-            self.token_usage['decisions_made'] += 1
-        
-        self.token_usage['total_tokens'] += (self.token_usage['decisions_made'] * 50)
+        print(f"\n[Efficiency] Created {object_count} 3D objects (max: {max_objects})")
+        print(f"[Theme] {theme} (limit: {max_objects} objects)")
         
         return blueprint
     
@@ -467,6 +506,51 @@ class WebsiteEvaluator:
             
         except Exception as e:
             print(f"[SketchFab] Search failed (non-critical): {e}")
+            return None
+    
+    def _search_unsplash(self, theme, query, limit=1):
+        """Search Unsplash for free-to-use background images"""
+        try:
+            import requests
+            
+            # Unsplash public search (no auth needed for basic access)
+            api_url = "https://api.unsplash.com/search/photos"
+            params = {
+                'query': f"{theme} {query}",
+                'per_page': limit,
+                'orientation': 'landscape'
+            }
+            
+            # Note: Unsplash requires registration for API access
+            # This is a fallback that tries public access
+            # For production, you'd need to set UNSPLASH_ACCESS_KEY env var
+            
+            resp = requests.get(api_url, params=params, timeout=5)
+            
+            if resp.status_code == 200:
+                data = resp.json()
+                results = []
+                
+                for item in data.get('results', [])[:limit]:
+                    results.append({
+                        'url': item.get('urls', {}).get('regular', ''),
+                        'thumb': item.get('urls', {}).get('thumb', ''),
+                        'author': item.get('user', {}).get('name', ''),
+                        'author_url': item.get('user', {}).get('links', {}).get('html', ''),
+                        'download': item.get('links', {}).get('download', '')
+                    })
+                
+                if results:
+                    print(f"[Unsplash] Found {len(results)} background images for: {query}")
+                    return results[0]['url']  # Return first image URL
+            
+            # Fallback: try simple Unsplash source (no API key needed)
+            simple_url = f"https://source.unsplash.com/1600x900/?{theme},{query}"
+            print(f"[Unsplash] Using simple source: {simple_url}")
+            return simple_url
+            
+        except Exception as e:
+            print(f"[Unsplash] Search failed (non-critical): {e}")
             return None
     
     def save_blueprint(self, blueprint, output_path="3d_scene_blueprint.json"):
