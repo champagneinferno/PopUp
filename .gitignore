@@ -4,7 +4,7 @@ dist/
 *.log
 venv/
 test_*.py
-extraction_results/
 *.json
 !package.json
 !src/**/*.json
+!extraction_results/

@@ -158,9 +158,125 @@
                 return;
             }
             
-            alert(`Extracting ${urls.length} website(s):\n${urls.join('\n')}\n\n(Backend connection needed)`);
-            // TODO: Connect to actual extraction backend
-            // For now, just show what would be extracted
+            // Disable button during extraction
+            const extractBtn = document.querySelector('.extract-all-btn');
+            extractBtn.disabled = true;
+            extractBtn.textContent = '⏳ Extracting...';
+            
+            // Call backend API
+            fetch('/api/extract', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ urls: urls })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to start extraction');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('✅ Extraction started:', data);
+                // Start polling for job status
+                if (data.job_ids && data.job_ids.length > 0) {
+                    pollJobStatus(data.job_ids);
+                } else {
+                    // No job IDs, just reload after delay
+                    setTimeout(() => {
+                        loadBatches();
+                        extractBtn.disabled = false;
+                        extractBtn.textContent = '🚀 Extract All Websites';
+                    }, 180000); // 3 minutes
+                }
+            })
+            .catch(error => {
+                alert('❌ Error starting extraction: ' + error.message);
+                extractBtn.disabled = false;
+                extractBtn.textContent = '🚀 Extract All Websites';
+            });
+        }
+        
+        function pollJobStatus(jobIds) {
+            const extractBtn = document.querySelector('.extract-all-btn');
+            let completed = 0;
+            const total = jobIds.length;
+            
+            function checkJob(index) {
+                if (index >= total) {
+                    // All jobs checked, now poll until completed
+                    checkCompletion(jobIds);
+                    return;
+                }
+                
+                const jobId = jobIds[index];
+                fetch(`/api/job/${jobId}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(`Job ${jobId}: ${data.status}`);
+                    if (data.status === 'completed' || data.status === 'failed') {
+                        completed++;
+                        if (completed === total) {
+                            // All jobs finished
+                            loadBatches();
+                            extractBtn.disabled = false;
+                            extractBtn.textContent = '🚀 Extract All Websites';
+                            alert('✅ Extraction completed! Check the sidebar for new batches.');
+                        }
+                    }
+                    // Check next job
+                    checkJob(index + 1);
+                })
+                .catch(error => {
+                    console.error('Error checking job status:', error);
+                    completed++;
+                    if (completed === total) {
+                        loadBatches();
+                        extractBtn.disabled = false;
+                        extractBtn.textContent = '🚀 Extract All Websites';
+                    }
+                    checkJob(index + 1);
+                });
+            }
+            
+            checkJob(0);
+        }
+        
+        function checkCompletion(jobIds) {
+            // Poll every 5 seconds until all jobs are completed
+            const extractBtn = document.querySelector('.extract-all-btn');
+            let allDone = false;
+            
+            function poll() {
+                if (allDone) return;
+                
+                const promises = jobIds.map(jobId =>
+                    fetch(`/api/job/${jobId}`)
+                    .then(r => r.json())
+                    .catch(() => ({ status: 'unknown' }))
+                );
+                
+                Promise.all(promises)
+                .then(results => {
+                    const allCompleted = results.every(r => r.status === 'completed' || r.status === 'failed');
+                    if (allCompleted) {
+                        allDone = true;
+                        loadBatches();
+                        extractBtn.disabled = false;
+                        extractBtn.textContent = '🚀 Extract All Websites';
+                        alert('✅ Extraction completed! Check the sidebar for new batches.');
+                    } else {
+                        // Poll again in 5 seconds
+                        setTimeout(poll, 5000);
+                    }
+                })
+                .catch(() => {
+                    setTimeout(poll, 5000);
+                });
+            }
+            
+            poll();
         }
         
         async function loadBatches() {
