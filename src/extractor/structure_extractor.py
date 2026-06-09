@@ -195,31 +195,39 @@ class StructureExtractor:
     def _extract_sections_smart(self):
         """Extract sections with content (relentless)"""
         sections = []
+        seen = set()  # DEDUP: Track section headings
         
         # Strategy 1: Standard section tags
         for idx, section in enumerate(self.soup.find_all(['section', 'div'], class_=re.compile(r'section|feature|about|service|hero|banner', re.I))):
             heading = section.find(['h1', 'h2', 'h3'])
             if heading:
-                full_text = section.get_text(strip=True)
-                sections.append({
-                    "id": f"section_{idx}",
-                    "heading": heading.get_text(strip=True),
-                    "class": section.get("class", []),
-                    "text_full": full_text,
-                    "text_preview": full_text[:200] if len(full_text) > 200 else full_text,
-                    "html_snippet": str(section)[:500]
-                })
+                heading_text = heading.get_text(strip=True)
+                # DEDUP: Only add if heading not seen
+                if heading_text and heading_text not in seen:
+                    seen.add(heading_text)
+                    full_text = section.get_text(strip=True)
+                    sections.append({
+                        "id": f"section_{idx}",
+                        "heading": heading_text,
+                        "class": section.get("class", []),
+                        "text_full": full_text,
+                        "text_preview": full_text[:200] if len(full_text) > 200 else full_text,
+                        "html_snippet": str(section)[:500]
+                    })
         
         # Strategy 2: Any element with a heading
         if len(sections) < 3:
             for idx, elem in enumerate(self.soup.find_all(['div', 'article', 'main'])):
                 heading = elem.find(['h1', 'h2', 'h3', 'h4'])
                 if heading:
+                    heading_text = heading.get_text(strip=True)
                     full_text = elem.get_text(strip=True)
-                    if len(full_text) > 50:  # Meaningful content
+                    # DEDUP: Only add if heading not seen AND meaningful content
+                    if heading_text and heading_text not in seen and len(full_text) > 50:
+                        seen.add(heading_text)
                         sections.append({
                             "id": f"section_dynamic_{idx}",
-                            "heading": heading.get_text(strip=True),
+                            "heading": heading_text,
                             "class": elem.get("class", []),
                             "text_full": full_text,
                             "text_preview": full_text[:200] if len(full_text) > 200 else full_text,
@@ -231,6 +239,7 @@ class StructureExtractor:
     def _extract_buttons_smart(self):
         """Extract buttons with ALL possible URL sources"""
         buttons = []
+        seen = set()  # DEDUPLICATION: Track (text, href) pairs
         
         # Strategy 1: Standard button selectors
         for btn in self.soup.select('button, a, input[type="button"], input[type="submit"]', class_=re.compile(r'btn|button|cta', re.I)):
@@ -283,12 +292,15 @@ class StructureExtractor:
             if href and href not in ['(js-handled)', '(form-submit)']:
                 href = urljoin(self.url, href)
             
-            buttons.append({
-                "text": text,
-                "tag": btn.name,
-                "classes": btn.get("class", []),
-                "href": href
-            })
+            # DEDUP: Only add if (text, href) pair not seen
+            if (text, href) not in seen:
+                seen.add((text, href))
+                buttons.append({
+                    "text": text,
+                    "tag": btn.name,
+                    "classes": btn.get("class", []),
+                    "href": href
+                })
         
         return buttons[:20]
     
@@ -431,54 +443,64 @@ class StructureExtractor:
     
     def _extract_navigation(self):
         nav_elements = []
+        seen = set()  # DEDUPLICATION: Track (text, url) pairs
         
         # Try nav tags (standard sites)
-        for nav in self.soup.find_all(["nav", "header"]):
-            links = nav.find_all("a", href=True)
+        for nav in self.soup.find_all(['nav', 'header']):
+            links = nav.find_all('a', href=True)
             for link in links:
                 text = link.get_text(strip=True)
-                if text and len(text) < 50:
+                href = urljoin(self.url, link['href'])
+                # DEDUP: Only add if (text, url) pair not seen
+                if text and len(text) < 50 and (text, href) not in seen:
+                    seen.add((text, href))
                     nav_elements.append({
                         "text": text,
-                        "url": urljoin(self.url, link["href"]),
+                        "url": href,
                         "location": "nav"
                     })
         
         # Try common nav classes/ids
-        for elem in self.soup.select(".nav, .navbar, .menu, #nav, #menu, [role='navigation']"):
-            links = elem.find_all("a", href=True)
+        for elem in self.soup.select('.nav, .navbar, .menu, #nav, #menu, [role="navigation"]'):
+            links = elem.find_all('a', href=True)
             for link in links:
                 text = link.get_text(strip=True)
-                if text and len(text) < 50:
+                href = urljoin(self.url, link['href'])
+                if text and len(text) < 50 and (text, href) not in seen:
+                    seen.add((text, href))
                     nav_elements.append({
                         "text": text,
-                        "url": urljoin(self.url, link["href"]),
+                        "url": href,
                         "location": "nav-class"
                     })
         
         # IMPROVED: Try generic selectors for JS-heavy sites (React, etc.)
-        # Look for divs with navigation-related roles or classes
-        for elem in self.soup.select("[role='navigation'], [aria-label*='nav'], [class*='nav'], [class*='menu']"):
-            links = elem.find_all("a", href=True)
+        for elem in self.soup.select('[role="navigation"], [aria-label*="nav"], [class*="nav"], [class*="menu"]'):
+            links = elem.find_all('a', href=True)
             for link in links:
                 text = link.get_text(strip=True)
-                if text and len(text) < 50:
+                href = urljoin(self.url, link['href'])
+                if text and len(text) < 50 and (text, href) not in seen:
+                    seen.add((text, href))
                     nav_elements.append({
                         "text": text,
-                        "url": urljoin(self.url, link["href"]),
+                        "url": href,
                         "location": "nav-generic"
                     })
         
         # Try to find any links in header-like divs
-        header_divs = self.soup.select("div[class*='header'], div[id*='header'], header")
+        header_divs = self.soup.select('div[class*="header"], div[id*="header"], header')
         for div in header_divs:
-            links = div.find_all("a", href=True)
+            links = div.find_all('a', href=True)
             for link in links:
                 text = link.get_text(strip=True)
-                if text and len(text) < 50 and text not in [n['text'] for n in nav_elements]:
+                href = urljoin(self.url, link['href'])
+                # DEDUP: Also check text not in [n['text'] for n in nav_elements]
+                if text and len(text) < 50 and (text, href) not in seen:
+                    seen.add((text, href))
                     nav_elements.append({
                         "text": text,
-                        "url": urljoin(self.url, link["href"]),
+                        "url": href,
                         "location": "header-div"
                     })
         
