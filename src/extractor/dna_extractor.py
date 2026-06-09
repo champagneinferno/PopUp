@@ -34,6 +34,7 @@ class WebsiteDNASequencer:
         self.project_root = Path(__file__).parent.parent.parent
         self.visual_extractor_path = self.project_root / "src" / "extractor" / "visual_extractor.cjs"
         self.code_version = get_git_commit_hash()
+        self.detected_framework = "unknown"
         
     def sequence_dna(self):
         """Run full DNA extraction sequence"""
@@ -41,7 +42,7 @@ class WebsiteDNASequencer:
         print("=" * 70)
         
         # Phase 1: Structure Extraction (BeautifulSoup)
-        print("\n[Phase 1/3] Extracting Structure DNA (BeautifulSoup)...")
+        print("\n[Phase 1/4] Extracting Structure DNA (BeautifulSoup)...")
         structure_data = self._extract_structure()
         
         if "error" in structure_data:
@@ -53,7 +54,7 @@ class WebsiteDNASequencer:
               f"{len(structure_data.get('images', []))} images")
         
         # Phase 2: Visual DNA Extraction (Playwright)
-        print("\n[Phase 2/3] Extracting Visual DNA (Playwright)...")
+        print("\n[Phase 2/4] Extracting Visual DNA (Playwright)...")
         visual_data = self._extract_visual()
         
         if "error" in visual_data:
@@ -64,8 +65,17 @@ class WebsiteDNASequencer:
                   f"{len(visual_data.get('background_images', []))} background images, "
                   f"{len(visual_data.get('fonts_used', []))} fonts")
         
-        # Phase 3: Merge & Analyze
-        print("\n[Phase 3/3] Merging DNA & Building Profile...")
+        # Phase 3: Framework Detection (NEW - Expert Tip #7)
+        print("\n[Phase 3/4] Detecting Website Framework...")
+        if hasattr(self, 'raw_html') and self.raw_html:
+            self.detected_framework = self.detect_framework(self.raw_html, visual_data)
+            print(f"✓ Framework detected: {self.detected_framework}")
+        else:
+            print("⚠️  No HTML content available for framework detection")
+            self.detected_framework = "unknown"
+        
+        # Phase 4: Merge & Analyze
+        print("\n[Phase 4/4] Merging DNA & Building Profile...")
         profile = self._merge_dna(structure_data, visual_data)
         
         print(f"✓ DNA Profile complete!")
@@ -77,7 +87,10 @@ class WebsiteDNASequencer:
         """Run BeautifulSoup structure extractor"""
         try:
             extractor = StructureExtractor(self.url)
-            return extractor.extract_all()
+            structure_data = extractor.extract_all()
+            # Save raw HTML for framework detection
+            self.raw_html = extractor.raw_html
+            return structure_data
         except Exception as e:
             return {"error": str(e)}
     
@@ -113,6 +126,51 @@ class WebsiteDNASequencer:
             return {"error": f"Failed to parse visual extraction output: {e}"}
         except Exception as e:
             return {"error": str(e)}
+    
+    def detect_framework(self, html_content, visual_data):
+        """Detect website framework for tailored extraction (Expert Tip #7)"""
+        html_lower = html_content.lower()
+        
+        # Framework signatures
+        frameworks = {
+            'wix': ['wix.com', 'wixstatic.com', '__wix', 'wix-services'],
+            'wordpress': ['wp-content', 'wp-includes', 'wordpress', 'wp-json'],
+            'shopify': ['shopify.com', 'shopifycdn.com', 'shopify', 'myshopify'],
+            'next.js': ['_next', '__NEXT_DATA__', 'next-router'],
+            'react': ['react', 'reactdom', 'react-root', '__react'],
+            'vue': ['vue', 'vuejs', 'nuxt'],
+            'angular': ['ng-', 'angular', 'ngapp'],
+            'squarespace': ['squarespace', 'squarespace.com'],
+            'webflow': ['webflow', 'webflow.io']
+        }
+        
+        # Check HTML content
+        for framework, signatures in frameworks.items():
+            if any(sig in html_lower for sig in signatures):
+                print(f"[Framework Detection] Detected: {framework}")
+                return framework
+        
+        # Check URL patterns
+        url_lower = self.url.lower()
+        if 'wixsite.com' in url_lower or 'wix.com' in url_lower:
+            return 'wix'
+        if 'shopify.com' in url_lower or '.myshopify.com' in url_lower:
+            return 'shopify'
+        if 'wordpress.com' in url_lower:
+            return 'wordpress'
+        
+        # Check visual data for framework hints
+        if visual_data and 'error' not in visual_data:
+            # Check for framework-specific JS files
+            if 'scripts' in visual_data:
+                for script in visual_data.get('scripts', []):
+                    if any(sig in script.lower() for sig in ['react', 'vue', 'angular']):
+                        # Extract framework name from script URL
+                        for framework in frameworks:
+                            if framework.replace('.js', '') in script.lower():
+                                return framework
+        
+        return 'generic'
     
     def _merge_dna(self, structure, visual):
         """Merge structure + visual into unified Website DNA Profile (IMPROVED for JS-heavy sites)"""
@@ -198,7 +256,10 @@ class WebsiteDNASequencer:
                     "has_dynamic_content": self._detect_dynamic_content(structure),
                     "complexity_score": self._calculate_complexity(structure, visual),
                     "recommended_3d_style": self._recommend_3d_style(structure, visual)
-                }
+                },
+                
+                # NEW: Framework Detection (Expert Tip #7)
+                "detected_framework": self.detected_framework
             }
         }
         
