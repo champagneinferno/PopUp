@@ -11,7 +11,7 @@ const PROJECT_ROOT = path.resolve('..');
 const EXTRACTION_RESULTS = path.join(PROJECT_ROOT, 'extraction_results');
 
 // Middleware
-app.use(express.json());
+app.use(express.json({ limit: '50mb' }));
 app.use(express.static(PROJECT_ROOT));
 
 // In-memory job store
@@ -24,7 +24,7 @@ try {
     console.error('Error creating extraction_results:', err);
 }
 
-// Run DNA extractor
+// Run DNA extractor with improved error handling
 function runExtraction(url, jobId) {
     return new Promise((resolve) => {
         jobs[jobId].status = 'running';
@@ -38,6 +38,8 @@ function runExtraction(url, jobId) {
             '--output', outputFile
         ];
         
+        console.log(`[Job ${jobId}] Starting extraction for: ${url}`);
+        
         const proc = spawn(cmd, args, {
             cwd: PROJECT_ROOT,
             shell: true,
@@ -48,26 +50,35 @@ function runExtraction(url, jobId) {
         let stderr = '';
         
         proc.stdout.on('data', (data) => {
-            stdout += data.toString();
+            const output = data.toString();
+            stdout += output;
+            console.log(`[Job ${jobId}] ${output.trim()}`);
         });
         
         proc.stderr.on('data', (data) => {
-            stderr += data.toString();
+            const output = data.toString();
+            stderr += output;
+            console.error(`[Job ${jobId}] ERROR: ${output.trim()}`);
         });
         
         proc.on('close', async (code) => {
+            console.log(`[Job ${jobId}] Process exited with code: ${code}`);
+            
             if (code === 0) {
                 try {
                     await createBatch(jobId, url, outputFile);
                     jobs[jobId].status = 'completed';
                     jobs[jobId].result = 'Extraction completed successfully';
+                    console.log(`[Job ${jobId}] ✅ Extraction completed successfully`);
                 } catch (err) {
                     jobs[jobId].status = 'failed';
                     jobs[jobId].error = err.message;
+                    console.error(`[Job ${jobId}] ❌ Failed to create batch:`, err);
                 }
             } else {
                 jobs[jobId].status = 'failed';
-                jobs[jobId].error = stderr || stdout;
+                jobs[jobId].error = stderr || stdout || 'Unknown error';
+                console.error(`[Job ${jobId}] ❌ Extraction failed:`, stderr || stdout);
             }
             resolve();
         });
@@ -75,12 +86,13 @@ function runExtraction(url, jobId) {
         proc.on('error', (err) => {
             jobs[jobId].status = 'failed';
             jobs[jobId].error = err.message;
+            console.error(`[Job ${jobId}] ❌ Process error:`, err);
             resolve();
         });
     });
 }
 
-// Create batch structure
+// Create batch structure with proper error handling
 async function createBatch(jobId, url, profileFilename) {
     const batchFolder = path.join(EXTRACTION_RESULTS, `Batch${jobId.substring(0, 8)}`);
     
@@ -93,8 +105,9 @@ async function createBatch(jobId, url, profileFilename) {
     try {
         await fs.access(src);
         await fs.copyFile(src, dst);
+        console.log(`[Job ${jobId}] ✅ Profile copied to: ${dst}`);
     } catch (err) {
-        console.log(`Source file not found: ${src}`);
+        console.log(`[Job ${jobId}] ⚠️  Source file not found: ${src}`);
     }
     
     // Create batch_manifest.json
@@ -131,9 +144,9 @@ async function createBatch(jobId, url, profileFilename) {
     const batchName = `Batch${jobId.substring(0, 8)}`;
     if (!index.includes(batchName)) {
         index.push(batchName);
+        await fs.writeFile(indexFile, JSON.stringify(index, null, 2));
+        console.log(`[Job ${jobId}] ✅ Added to batch index: ${batchName}`);
     }
-    
-    await fs.writeFile(indexFile, JSON.stringify(index, null, 2));
 }
 
 // Routes
@@ -147,6 +160,8 @@ app.post('/api/extract', async (req, res) => {
     if (!urls || urls.length === 0) {
         return res.status(400).json({ error: 'No URLs provided' });
     }
+    
+    console.log(`📥 Received extraction request for ${urls.length} URL(s):`, urls);
     
     const jobIds = [];
     
@@ -162,7 +177,7 @@ app.post('/api/extract', async (req, res) => {
         
         // Run extraction in background
         runExtraction(url, jobId).catch(err => {
-            console.error(`Error in job ${jobId}:`, err);
+            console.error(`[Job ${jobId}] ❌ Error:`, err);
             jobs[jobId].status = 'failed';
             jobs[jobId].error = err.message;
         });

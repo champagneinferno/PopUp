@@ -437,7 +437,68 @@
                 `;
             }
             
-            // Logo with proper display
+            
+            // Quality Metrics Section
+            if (profile.analysis || profile.extraction_quality) {
+                const quality = profile.extraction_quality || profile.analysis || {};
+                const score = quality.quality_score || 0;
+                const maxScore = quality.max_score || 8;
+                const percentage = (score / maxScore) * 100;
+                
+                let qualityColor = '#f44336'; // Red
+                if (percentage >= 80) qualityColor = '#4caf50'; // Green
+                else if (percentage >= 60) qualityColor = '#ff9800'; // Orange
+                
+                html += `
+                    <div class="data-section">
+                        <h3>📊 Extraction Quality Metrics</h3>
+                        <div style="background: white; padding: 20px; border-radius: 8px; margin-top: 10px;">
+                            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 20px;">
+                                <div style="width: 80px; height: 80px; border-radius: 50%; background: ${qualityColor}; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">
+                                    ${score}/${maxScore}
+                                </div>
+                                <div>
+                                    <h4 style="margin: 0 0 5px 0; color: #333;">Quality Score: ${score}/${maxScore}</h4>
+                                    <p style="margin: 0; color: #666;">${percentage >= 80 ? 'Excellent' : percentage >= 60 ? 'Good' : percentage >= 40 ? 'Fair' : 'Poor'}</p>
+                                </div>
+                            </div>
+                            
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                                <div style="padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                                    <h5 style="margin: 0 0 5px 0; color: #1976d2;">Logo Detection</h5>
+                                    <p style="margin: 0; font-size: 14px;">${quality.logo_extracted ? '✅ Found' : '❌ Not found'}</p>
+                                </div>
+                                
+                                <div style="padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                                    <h5 style="margin: 0 0 5px 0; color: #1976d2;">Background Images</h5>
+                                    <p style="margin: 0; font-size: 14px;">${quality.background_image_count || 0} found</p>
+                                </div>
+                                
+                                <div style="padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                                    <h5 style="margin: 0 0 5px 0; color: #1976d2;">Color Palette</h5>
+                                    <p style="margin: 0; font-size: 14px;">${quality.color_count || 0} colors</p>
+                                </div>
+                                
+                                <div style="padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                                    <h5 style="margin: 0 0 5px 0; color: #1976d2;">Navigation</h5>
+                                    <p style="margin: 0; font-size: 14px;">${quality.nav_item_count || 0} items</p>
+                                </div>
+                                
+                                <div style="padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                                    <h5 style="margin: 0 0 5px 0; color: #1976d2;">Content Sections</h5>
+                                    <p style="margin: 0; font-size: 14px;">${quality.section_count || 0} sections</p>
+                                </div>
+                                
+                                <div style="padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                                    <h5 style="margin: 0 0 5px 0; color: #1976d2;">Hero Section</h5>
+                                    <p style="margin: 0; font-size: 14px;">${quality.hero_detected ? '✅ Detected' : '❌ Not detected'}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+    // Logo with proper display
             if (assets.logo) {
                 html += `
                     <div class="data-section">
