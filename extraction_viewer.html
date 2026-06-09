@@ -409,14 +409,29 @@
             
             let html = `<div style="padding: 20px;">`;
             
-            // Hero Section with styling
+            // Hero Section with ACTUAL website styling
             if (structure.hero_section) {
+                const heroStyles = visualDna.hero_styles || {};
+                const bgColor = heroStyles.background_color || '#1976d2';
+                const textColor = heroStyles.color || 'white';
+                const headingFont = heroStyles.font_family || 'Arial';
+                const headingSize = heroStyles.font_size || '32px';
+                
                 html += `
-                    <div class="data-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 8px; margin-bottom: 20px;">
-                        <h3 style="color: white; margin-top: 0;">🎯 Hero Section</h3>
-                        <h1 style="font-size: 32px; margin: 10px 0;">${structure.hero_section.heading || 'No heading'}</h1>
+                    <div class="data-section" style="background: ${bgColor}; color: ${textColor}; padding: 30px; border-radius: 8px; margin-bottom: 20px;">
+                        <h3 style="color: ${textColor}; margin-top: 0;">🎯 Hero Section</h3>
+                        <h1 style="font-size: ${headingSize}; margin: 10px 0; font-family: ${headingFont};">${structure.hero_section.heading || 'No heading'}</h1>
                         ${structure.hero_section.cta_buttons && structure.hero_section.cta_buttons.length > 0 ? 
-                            `<button style="background: white; color: #667eea; border: none; padding: 12px 24px; border-radius: 25px; font-weight: bold; margin-top: 10px; cursor: pointer;">${structure.hero_section.cta_buttons[0].text || 'CTA'}</button>` 
+                            `<button style="
+                                background: ${heroStyles.cta_background || 'white'}; 
+                                color: ${heroStyles.cta_color || bgColor}; 
+                                border: none; 
+                                padding: 12px 24px; 
+                                border-radius: 25px; 
+                                font-weight: bold; 
+                                margin-top: 10px; 
+                                cursor: pointer;
+                            ">${structure.hero_section.cta_buttons[0].text || 'CTA'}</button>` 
                             : ''}
                     </div>
                 `;
@@ -434,14 +449,31 @@
                 `;
             }
             
-            // Navigation as visual pills
+            // Navigation with ACTUAL website styles
+            const navStyles = visualDna.nav_styles || {};
+            const navBg = navStyles.background_color || '#f8f9fa';
+            const navText = navStyles.color || '#333';
+            const navFont = navStyles.font_family || 'Arial';
+            
             if (structure.navigation && structure.navigation.length > 0) {
                 html += `
                     <div class="data-section">
                         <h3>🧭 Navigation (${structure.navigation.length} items)</h3>
-                        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; background: ${navBg}; padding: 15px; border-radius: 8px;">
                             ${structure.navigation.map(n => 
-                                `<a href="${n.url || '#'}" style="padding: 8px 16px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 20px; text-decoration: none; color: #495057; font-size: 14px; transition: all 0.2s;" onmouseover="this.style.background='#1976d2';this.style.color='white'" onmouseout="this.style.background='#f8f9fa';this.style.color='#495057'">${n.text}</a>`
+                                `<a href="${n.url || '#'}" style="
+                                    padding: 8px 16px; 
+                                    background: ${navStyles.link_background || 'transparent'}; 
+                                    color: ${navText}; 
+                                    border: ${navStyles.link_border || 'none'};
+                                    border-radius: ${navStyles.link_border_radius || '4px'}; 
+                                    text-decoration: ${navStyles.link_text_decoration || 'none'}; 
+                                    font-size: ${navStyles.font_size || '14px'};
+                                    font-family: ${navFont};
+                                    transition: all 0.2s;
+                                    display: inline-block;
+                                " onmouseover="this.style.background='${navStyles.link_hover_background || '#e9ecef'}'; this.style.color='${navStyles.link_hover_color || navText}'" 
+                                   onmouseout="this.style.background='${navStyles.link_background || 'transparent'}'; this.style.color='${navText}'">${n.text}</a>`
                             ).join('')}
                         </div>
                     </div>
@@ -464,38 +496,14 @@
                 html += `</div>`;
             }
             
-            // Buttons as actual styled buttons
-            if (structure.buttons && structure.buttons.length > 0) {
+            // Images in a proper grid (CONTENT IMAGES ONLY)
+            const contentImages = (assets.images || []).filter(img => !img.is_background);
+            if (contentImages.length > 0) {
                 html += `
                     <div class="data-section">
-                        <h3>🔘 Buttons (${structure.buttons.length})</h3>
-                        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-                            ${structure.buttons.map(b => {
-                                const isPrimary = b.classes && b.classes.some(c => c.includes('wixui-button'));
-                                return `<button style="
-                                    padding: 10px 20px;
-                                    background: ${isPrimary ? '#1976d2' : '#6c757d'};
-                                    color: white;
-                                    border: none;
-                                    border-radius: 4px;
-                                    cursor: pointer;
-                                    font-size: 14px;
-                                    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-                                    transition: all 0.2s;
-                                " onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 8px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 4px rgba(0,0,0,0.2)'">${b.text || 'Button'}</button>`;
-                            }).join('')}
-                        </div>
-                    </div>
-                `;
-            }
-            
-            // Images in a proper grid (ENHANCED - show dimensions)
-            if (assets.images && assets.images.length > 0) {
-                html += `
-                    <div class="data-section">
-                        <h3>🖼️ Images (${assets.images.length})</h3>
+                        <h3>🖼️ Content Images (${contentImages.length})</h3>
                         <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 10px;">
-                            ${assets.images.slice(0, 12).map(img => `
+                            ${contentImages.slice(0, 12).map(img => `
                                 <div style="background: white; padding: 10px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
                                     <img src="${img.src}" alt="${img.alt || 'image'}" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px;" onerror="this.style.display='none'">
                                     ${img.alt ? `<p style="margin: 5px 0 0 0; font-size: 11px; color: #666;">${img.alt}</p>` : ''}
@@ -506,21 +514,20 @@
                 `;
             }
             
-            // NEW: Enhanced Images with dimensions
-            const enhImages = visualDna.enhanced_images || [];
-            if (enhImages.length > 0) {
+            // BACKGROUND IMAGES (separate section)
+            const bgImages = visualDna.backgrounds || [];
+            if (bgImages.length > 0) {
                 html += `
                     <div class="data-section">
-                        <h3>📐 Enhanced Images (${enhImages.length}) - with dimensions</h3>
+                        <h3>🎨 Background Images (${bgImages.length})</h3>
                         <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; margin-top: 10px;">
-                            ${enhImages.slice(0, 8).map(img => `
+                            ${bgImages.slice(0, 8).map((img, idx) => `
                                 <div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                                    <img src="${img.src}" alt="${img.alt || 'image'}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;" onerror="this.style.display='none'">
+                                    <img src="${img.src || img.url}" alt="Background ${idx+1}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;" onerror="this.style.display='none'">
                                     <div style="margin-top: 10px; font-size: 12px; color: #666;">
                                         ${img.alt ? `<p style="margin: 2px 0;"><strong>Alt:</strong> ${img.alt}</p>` : ''}
-                                        <p style="margin: 2px 0;"><strong>Dimensions:</strong> ${Math.round(img.width)}×${Math.round(img.height)}px (natural: ${img.natural_width}×${img.natural_height})</p>
-                                        <p style="margin: 2px 0;"><strong>Object-fit:</strong> ${img.object_fit}</p>
-                                        ${img.border_radius && img.border_radius !== '0px' ? `<p style="margin: 2px 0;"><strong>Border-radius:</strong> ${img.border_radius}</p>` : ''}
+                                        <p style="margin: 2px 0;"><strong>Dimensions:</strong> ${Math.round(img.width || 0)}×${Math.round(img.height || 0)}px (natural: ${Math.round(img.natural_width || 0)}×${Math.round(img.natural_height || 0)})</p>
+                                        ${img.position ? `<p style="margin: 2px 0;"><strong>Position:</strong> ${img.position}</p>` : ''}
                                     </div>
                                 </div>
                             `).join('')}
@@ -595,15 +602,20 @@ Line-height: ${styles.line_height}</pre>
                 `;
             }
             
-            // Footer
+            // Footer with ACTUAL website styles
+            const footerStyles = visualDna.footer_styles || {};
+            const footerBg = footerStyles.background_color || '#343a40';
+            const footerText = footerStyles.color || 'white';
+            const footerLinkColor = footerStyles.link_color || '#17a2b8';
+            
             if (structure.footer) {
                 html += `
-                    <div class="data-section" style="background: #343a40; color: white; padding: 20px; border-radius: 8px;">
-                        <h3 style="color: white;">📍 Footer</h3>
+                    <div class="data-section" style="background: ${footerBg}; color: ${footerText}; padding: 20px; border-radius: 8px;">
+                        <h3 style="color: ${footerText};">📍 Footer</h3>
                         <p>${structure.footer.text || ''}</p>
                         ${structure.footer.links && structure.footer.links.length > 0 ? `
                             <div style="margin-top: 10px;">
-                                ${structure.footer.links.map(l => `<a href="${l.url}" style="color: #17a2b8; margin-right: 15px; text-decoration: none;">${l.text}</a>`).join('')}
+                                ${structure.footer.links.map(l => `<a href="${l.url}" style="color: ${footerLinkColor}; margin-right: 15px; text-decoration: none; font-size: 14px;">${l.text}</a>`).join('')}
                             </div>
                         ` : ''}
                     </div>
