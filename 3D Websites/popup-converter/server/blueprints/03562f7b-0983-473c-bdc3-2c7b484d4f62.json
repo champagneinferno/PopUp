@@ -1,0 +1,41 @@
+{
+  "id": "03562f7b-0983-473c-bdc3-2c7b484d4f62",
+  "url": "https://example.com",
+  "status": "complete",
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Example.com",
+      "subtitle": "Welcome to the extracted website",
+      "content": []
+    },
+    {
+      "type": "content",
+      "title": "About",
+      "content": [
+        "Primary content section extracted from https://example.com"
+      ]
+    },
+    {
+      "type": "features",
+      "title": "Features",
+      "items": [
+        "Feature 1",
+        "Feature 2",
+        "Feature 3"
+      ]
+    }
+  ],
+  "focal_point": "example.com",
+  "theme": "minimal",
+  "branding": {
+    "primary_color": "#1e293b",
+    "secondary_color": "#64748b",
+    "typography": {
+      "family": "Inter",
+      "fallback": "system-ui"
+    }
+  },
+  "created_at": "2026-06-09T16:22:04.224Z",
+  "_mock": true
+}

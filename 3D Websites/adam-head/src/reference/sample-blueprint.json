@@ -1,0 +1,78 @@
+{
+  "sections": [
+    {
+      "tag": "Welcome",
+      "heading": "The Sum of<br>All <span class=\"accent\">Human Knowledge</span>",
+      "body": "Seven million articles. Two hundred seventy-five thousand active editors. A living, breathing repository of everything humanity knows — freely available to everyone, forever.",
+      "stats": [
+        { "num": "7,189,764", "desc": "Articles in English — each one a doorway to understanding" },
+        { "num": "275,986", "desc": "Active editors shaping knowledge every day" },
+        { "num": "340+", "desc": "Languages spanning the globe" }
+      ],
+      "camera": { "x": 0, "y": 0.5, "z": 8 }
+    },
+    {
+      "tag": "Today's Featured Article",
+      "heading": "The <span class=\"accent\">Oregon State Capitol</span>",
+      "body": "Housing the legislature of the U.S. state of Oregon and the offices of the governor and other officials. Built from 1936 to 1938, its art deco design features a 50-foot rotunda with a marble floor inlaid with 37 types of Oregon stone.",
+      "specs": [
+        { "val": "1936–38", "lbl": "Construction" },
+        { "val": "Art Deco", "lbl": "Architectural Style" },
+        { "val": "50 ft", "lbl": "Rotunda Height" },
+        { "val": "37", "lbl": "Oregon Stone Types" }
+      ],
+      "camera": { "x": 1.5, "y": 0.8, "z": 4.5 }
+    },
+    {
+      "tag": "Did You Know",
+      "heading": "Curiosity <span class=\"accent\">Never</span> Stops",
+      "body": "Every day, Wikipedia uncovers the strange, the beautiful, and the unexpected — from art heists hidden on pig farms to Picasso drawings in forgotten collections.",
+      "cards": [
+        { "icon": "🎨", "title": "1972 Worcester Heist", "desc": "Four paintings stolen from the Worcester Art Museum were discovered hidden on a pig farm." },
+        { "icon": "✍️", "title": "Picasso Fountain", "desc": "\"Mother and Child by a Fountain\" — one of the stolen works, by Pablo Picasso himself." },
+        { "icon": "🏛️", "title": "Pope Leo XIV", "desc": "First encyclical \"Magnifica Humanitas\" expresses concerns about artificial intelligence." },
+        { "icon": "🇨🇾", "title": "Cyprus Elections", "desc": "Democratic Rally, led by Annita Demetriou, wins the most seats in parliament." }
+      ],
+      "camera": { "x": -2, "y": 0.3, "z": 5.5 }
+    },
+    {
+      "tag": "On This Day — June 2",
+      "heading": "<span class=\"accent\">History</span> Unfolds",
+      "body": "From Napoleonic wars to space exploration — every date on the calendar carries the weight of what came before.",
+      "cards": [
+        { "icon": "⚔️", "title": "1805", "desc": "Napoleonic Wars: A Franco-Spanish fleet recaptured ..." },
+        { "icon": "🇮🇹", "title": "1946", "desc": "Festa della Repubblica — Italy became a republic." },
+        { "icon": "🇮🇳", "title": "2014", "desc": "Telangana formed as the 29th state of India." },
+        { "icon": "🌊", "title": "International", "desc": "International Whores' Day — recognizing sex worker rights." }
+      ],
+      "camera": { "x": 0, "y": -0.5, "z": 6 }
+    },
+    {
+      "tag": "Today's Featured Picture",
+      "heading": "The <span class=\"accent\">Black Kite</span>",
+      "body": "A medium-sized bird of prey found across Europe, Asia, Africa, and Australia. Like Wikipedia itself — far-reaching, adaptable, and soaring above borders.",
+      "specs": [
+        { "val": "Milvus migrans", "lbl": "Scientific Name" },
+        { "val": "4 Continents", "lbl": "Global Range" },
+        { "val": "Medium", "lbl": "Size" },
+        { "val": "Accipitridae", "lbl": "Family" }
+      ],
+      "stats": [
+        { "num": "Community", "desc": "Wikipedia's sister projects — Wiktionary, Commons, Wikisource, Wikiquote, and more — extend knowledge beyond the encyclopedia." },
+        { "num": "Open", "desc": "Anyone can edit. Every article is a living document shaped by the global community." }
+      ],
+      "camera": { "x": 0, "y": 1.8, "z": 7 }
+    }
+  ],
+  "focal_point": "Wikipedia-inspired knowledge visualization",
+  "theme": "editorial",
+  "branding": {
+    "primary_color": "#3366cc",
+    "secondary_color": "#ffa500",
+    "typography": {
+      "family": "Inter",
+      "heading_family": "Georgia",
+      "mono_family": "JetBrains Mono"
+    }
+  }
+}

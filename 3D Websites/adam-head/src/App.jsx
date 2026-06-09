@@ -6,6 +6,7 @@ import { KernelSize } from 'postprocessing'
 import * as THREE from 'three'
 import Lenis from 'lenis'
 import Model from './components/Model'
+import Globe from './components/Globe'
 import CameraAnimator, { initMouseTracking } from './components/CameraAnimator'
 import Loader from './components/Loader'
 import { AnimatedHeading, PrimaryButton, Nav } from './components/ui'
@@ -156,6 +157,13 @@ export default function App() {
             onVisualsUpdate={onVisualsUpdate.current}
           />
           <Model modelRef={modelRef} visuals={sectionVisuals} />
+          <Globe
+            position={[0, 0.5, 0]}
+            visible={
+              sectionVisuals?.sectionIndex === 1 ||
+              sectionVisuals?.sectionIndex === 2
+            }
+          />
 
           <EffectComposer>
             <Bloom

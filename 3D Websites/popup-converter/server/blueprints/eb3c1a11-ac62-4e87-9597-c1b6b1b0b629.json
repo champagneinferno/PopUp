@@ -1,0 +1,41 @@
+{
+  "id": "eb3c1a11-ac62-4e87-9597-c1b6b1b0b629",
+  "url": "https://www.metawatt.com/",
+  "status": "complete",
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Metawatt.com",
+      "subtitle": "Welcome to the extracted website",
+      "content": []
+    },
+    {
+      "type": "content",
+      "title": "About",
+      "content": [
+        "Primary content section extracted from https://www.metawatt.com/"
+      ]
+    },
+    {
+      "type": "features",
+      "title": "Features",
+      "items": [
+        "Feature 1",
+        "Feature 2",
+        "Feature 3"
+      ]
+    }
+  ],
+  "focal_point": "metawatt.com",
+  "theme": "minimal",
+  "branding": {
+    "primary_color": "#1e293b",
+    "secondary_color": "#64748b",
+    "typography": {
+      "family": "Inter",
+      "fallback": "system-ui"
+    }
+  },
+  "created_at": "2026-06-09T14:34:30.961Z",
+  "_mock": true
+}
