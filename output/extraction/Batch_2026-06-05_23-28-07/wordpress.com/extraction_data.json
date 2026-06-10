@@ -1,0 +1,527 @@
+{
+  "website_profile": {
+    "url": "https://wordpress.com",
+    "title": "WordPress.com: Everything You Need to Build Your Website",
+    "extraction_timestamp": "2026-06-05T23:29:47.434878",
+    "extraction_metadata": {
+      "code_version": "7cb9ca1",
+      "extractor_version": "1.0"
+    },
+    "brand_dna": {
+      "color_palette": [],
+      "fonts": [],
+      "style_vibe": [
+        "minimalist"
+      ]
+    },
+    "structure": {
+      "navigation": [
+        {
+          "text": "Plans & Pricing",
+          "url": "https://wordpress.com/pricing/",
+          "location": "nav"
+        },
+        {
+          "text": "Log in",
+          "url": "https://wordpress.com/log-in/",
+          "location": "nav"
+        },
+        {
+          "text": "Get started",
+          "url": "https://wordpress.com/setup/onboarding/?ref=logged-out-homepage-lp",
+          "location": "nav"
+        }
+      ],
+      "hero_section": {
+        "heading": "WordPress, done right",
+        "selector": "h1 (fallback)",
+        "cta_buttons": []
+      },
+      "sections": [
+        {
+          "id": "section_0",
+          "heading": "WordPress, done right",
+          "class": [
+            "lp-block",
+            "lp-section",
+            "lp-section--name-hero",
+            "lp-hero-done-right",
+            "lp-section--static-content",
+            "lp-padding-bottom-0",
+            "lp-padding-bottom-7@M",
+            "lp-section--static-content"
+          ],
+          "text_full": "4.5 stars2,000+ reviewsWordPress, done rightAll from the people who know WordPress best. Unmetered traffic, site recovery, dev tools, and expert support.Get started",
+          "text_preview": "4.5 stars2,000+ reviewsWordPress, done rightAll from the people who know WordPress best. Unmetered traffic, site recovery, dev tools, and expert support.Get started",
+          "html_snippet": "<div class=\"lp-block lp-section lp-section--name-hero lp-hero-done-right lp-section--static-content lp-padding-bottom-0 lp-padding-bottom-7@M lp-section--static-content\" data-section-name=\"hero\" style=\"--lp-background:var(--lp-custom-blue-rgb);--lp-color:var(--lp-color-primary);--lp-color-button-label:var(--studio-wordpress-blue-50-rgb);--lp-gutter:var(--lp-pad-4);overflow:hidden\"><div class=\"lp-section__content\"><div class=\"lp-block lp-container lp-container--has-position-absolute lp-hero-backg"
+        },
+        {
+          "id": "section_1",
+          "heading": "WordPress, done right",
+          "class": [
+            "lp-section__content"
+          ],
+          "text_full": "4.5 stars2,000+ reviewsWordPress, done rightAll from the people who know WordPress best. Unmetered traffic, site recovery, dev tools, and expert support.Get started",
+          "text_preview": "4.5 stars2,000+ reviewsWordPress, done rightAll from the people who know WordPress best. Unmetered traffic, site recovery, dev tools, and expert support.Get started",
+          "html_snippet": "<div class=\"lp-section__content\"><div class=\"lp-block lp-container lp-container--has-position-absolute lp-hero-background lp-hero-background--plus\" style=\"position: absolute; top: -1px; bottom: 0; right: 0; left: 0; margin: 0 !important; background-size: 30px; background-repeat: repeat; background-image: url(https://wordpress.com/wp-content/uploads/2025/07/plus-pattern-white.webp); background-color: rgba(56, 88, 233, 1); -webkit-mask-image: linear-gradient(90deg, rgba(16, 21, 23, 0.3) 50%, rgba("
+        },
+        {
+          "id": "section_4",
+          "heading": "Host with the best",
+          "class": [
+            "lp-block",
+            "lp-section",
+            "lp-section--name-hosting",
+            "lp-section--has-background",
+            "lp-section-hosting",
+            "lp-padding-top-7",
+            "lp-padding-bottom-7",
+            "is-style-gray-0"
+          ],
+          "text_full": "Host with the bestWhen you create a site with WordPress.com, you get all of the power of lightning-fast, secure managed WordPress hosting.Explore hostingRoom to growScale as you go with unmetered bandwidth on all plans. Zero downtime. No limits.Seriously secureFirewalls, encryption, brute force, and DDoS protection. Security’s all taken care of.Bring it with youFast data transfer and performance come as standard with our global CDN—wherever your site visitors are.Flexible storageYou’ll never run out of storage with WordPress.com’s plans. Photos. Audio. 4K videos. All in one place.",
+          "text_preview": "Host with the bestWhen you create a site with WordPress.com, you get all of the power of lightning-fast, secure managed WordPress hosting.Explore hostingRoom to growScale as you go with unmetered band",
+          "html_snippet": "<div class=\"lp-block lp-section lp-section--name-hosting lp-section--has-background lp-section-hosting lp-padding-top-7 lp-padding-bottom-7 is-style-gray-0\" data-section-name=\"hosting\" style=\"margin-bottom:-1px;--lp-color-button:56, 88, 233;--lp-color-button-label:255, 255, 255;--lp-size:fit\"><div class=\"lp-section__background lp-section__background--has-image lp-section__background--name-image-full\"><div class=\"lp-section__background-layer\" style=\"background-image:url(https://wordpress.com/wp-c"
+        },
+        {
+          "id": "section_7",
+          "heading": "Host with the best",
+          "class": [
+            "lp-section__content"
+          ],
+          "text_full": "Host with the bestWhen you create a site with WordPress.com, you get all of the power of lightning-fast, secure managed WordPress hosting.Explore hostingRoom to growScale as you go with unmetered bandwidth on all plans. Zero downtime. No limits.Seriously secureFirewalls, encryption, brute force, and DDoS protection. Security’s all taken care of.Bring it with youFast data transfer and performance come as standard with our global CDN—wherever your site visitors are.Flexible storageYou’ll never run out of storage with WordPress.com’s plans. Photos. Audio. 4K videos. All in one place.",
+          "text_preview": "Host with the bestWhen you create a site with WordPress.com, you get all of the power of lightning-fast, secure managed WordPress hosting.Explore hostingRoom to growScale as you go with unmetered band",
+          "html_snippet": "<div class=\"lp-section__content\">\n<div class=\"lp-block lp-content lp-content--text-alignment lp-content--text-alignment-left lp-wrapper lp-wrapper--layout-wide\">\n<h2 class=\"wp-block-heading has-huge-font-size\" id=\"host-with-the-best\">Host with the best</h2>\n</div>\n<div class=\"lp-block lp-content lp-content--text-alignment lp-content--text-alignment-left lp-wrapper lp-wrapper--layout-left lp-pb-30 lp-pb-12@M\">\n<p class=\"wp-block-paragraph\">When you create a site with WordPress.com, you get all of"
+        },
+        {
+          "id": "section_8",
+          "heading": "Claim your home on the web",
+          "class": [
+            "lp-block",
+            "lp-section",
+            "lp-section--name-domains",
+            "lp-section-domains",
+            "lp-padding-top-7",
+            "lp-padding-bottom-7",
+            "is-style-gray-0"
+          ],
+          "text_full": "Claim your home on the webGrab the perfect domain—with or without a website—for an unbeatable price. The popular .com, .org, and .net extensions start at justper year. Easy to remember, easy to share, and sure to stand out.Help people find you with a personalized site address. A domain that’s easy to remember, easy to share, and sure to stand out.gluten-free-gutenberg.com\npool-request.com\nssh-pls.com\nhash-salts-bbq-malts.com\nsplash-cache.com\nblue-sky-api.com\njava-script-coffee-sip.com\nupload-down-code.com\nbrowser-powder.com\ninstall-de-stijl.com\nfull-stack-lipstick.com\nartificial-eloquence.com\nelectric-utopia.com\nmachine-kerning.com\nopen-sauce.com\nweb-three-one-four.com\nfour-oh-four.com\nplace-hodler.comFind your domain",
+          "text_preview": "Claim your home on the webGrab the perfect domain—with or without a website—for an unbeatable price. The popular .com, .org, and .net extensions start at justper year. Easy to remember, easy to share,",
+          "html_snippet": "<div class=\"lp-block lp-section lp-section--name-domains lp-section-domains lp-padding-top-7 lp-padding-bottom-7 is-style-gray-0\" data-section-name=\"domains\" style=\"border-top:1px solid rgba(195, 196, 199, 1);border-bottom:1px solid rgba(195, 196, 199, 1)\"><div class=\"lp-section__content\">\n<div class=\"lp-block lp-content lp-content--text-alignment lp-content--text-alignment-left lp-wrapper lp-wrapper--layout-left-ppppp\">\n<h2 class=\"wp-block-heading has-huge-font-size\" id=\"claim-your-home-on-the-"
+        },
+        {
+          "id": "section_9",
+          "heading": "Claim your home on the web",
+          "class": [
+            "lp-section__content"
+          ],
+          "text_full": "Claim your home on the webGrab the perfect domain—with or without a website—for an unbeatable price. The popular .com, .org, and .net extensions start at justper year. Easy to remember, easy to share, and sure to stand out.Help people find you with a personalized site address. A domain that’s easy to remember, easy to share, and sure to stand out.gluten-free-gutenberg.com\npool-request.com\nssh-pls.com\nhash-salts-bbq-malts.com\nsplash-cache.com\nblue-sky-api.com\njava-script-coffee-sip.com\nupload-down-code.com\nbrowser-powder.com\ninstall-de-stijl.com\nfull-stack-lipstick.com\nartificial-eloquence.com\nelectric-utopia.com\nmachine-kerning.com\nopen-sauce.com\nweb-three-one-four.com\nfour-oh-four.com\nplace-hodler.comFind your domain",
+          "text_preview": "Claim your home on the webGrab the perfect domain—with or without a website—for an unbeatable price. The popular .com, .org, and .net extensions start at justper year. Easy to remember, easy to share,",
+          "html_snippet": "<div class=\"lp-section__content\">\n<div class=\"lp-block lp-content lp-content--text-alignment lp-content--text-alignment-left lp-wrapper lp-wrapper--layout-left-ppppp\">\n<h2 class=\"wp-block-heading has-huge-font-size\" id=\"claim-your-home-on-the-web\">Claim your home on the web</h2>\n</div>\n<div class=\"lp-block lp-content lp-content--text-alignment lp-content--text-alignment-left lp-wrapper lp-wrapper--layout-left-p lp-padding-bottom-1@M lp-pb-6\"><div class=\"lp-block lp-block--has-breakpoints lp-bloc"
+        },
+        {
+          "id": "section_10",
+          "heading": "Drag, drop, set it apart",
+          "class": [
+            "lp-block",
+            "lp-section",
+            "lp-section--name-themes-hero",
+            "lp-padding-top-7",
+            "lp-padding-bottom-0",
+            "is-style-gray-0"
+          ],
+          "text_full": "Drag, drop, set it apartSeamlessly define a one-of-a-kind design with a range of beautiful themes and patterns.Explore themes",
+          "text_preview": "Drag, drop, set it apartSeamlessly define a one-of-a-kind design with a range of beautiful themes and patterns.Explore themes",
+          "html_snippet": "<div class=\"lp-block lp-section lp-section--name-themes-hero lp-padding-top-7 lp-padding-bottom-0 is-style-gray-0\" data-section-name=\"themes-hero\" style=\"--lp-color-button:56, 88, 233;--lp-color-button-label:255, 255, 255\"><div class=\"lp-section__content\">\n<div class=\"lp-block lp-content lp-content--text-alignment lp-content--text-alignment-left lp-wrapper lp-wrapper--layout-wide\">\n<h2 class=\"wp-block-heading is-style-default text-wrap-pretty has-huge-font-size\" id=\"drag-drop-set-it-apart\">Drag,"
+        },
+        {
+          "id": "section_11",
+          "heading": "Drag, drop, set it apart",
+          "class": [
+            "lp-section__content"
+          ],
+          "text_full": "Drag, drop, set it apartSeamlessly define a one-of-a-kind design with a range of beautiful themes and patterns.Explore themes",
+          "text_preview": "Drag, drop, set it apartSeamlessly define a one-of-a-kind design with a range of beautiful themes and patterns.Explore themes",
+          "html_snippet": "<div class=\"lp-section__content\">\n<div class=\"lp-block lp-content lp-content--text-alignment lp-content--text-alignment-left lp-wrapper lp-wrapper--layout-wide\">\n<h2 class=\"wp-block-heading is-style-default text-wrap-pretty has-huge-font-size\" id=\"drag-drop-set-it-apart\">Drag, drop, set it apart</h2>\n</div>\n<div class=\"lp-block lp-content lp-content--text-alignment lp-content--text-alignment-left lp-wrapper lp-wrapper--layout-left\">\n<p class=\"wp-block-paragraph\">Seamlessly define a one-of-a-kind"
+        },
+        {
+          "id": "section_16",
+          "heading": "Your forever home on the web",
+          "class": [
+            "lp-block",
+            "lp-section",
+            "lp-section--name-grow",
+            "lp-padding-bottom-6",
+            "lp-section-grow",
+            "is-style-text-gray-100-background-gray-0"
+          ],
+          "text_full": "Your forever home on the webGrow your audience with WordPress.com and keep full ownership of your content and followers.Start publishingHello |Grow your newsletterReach your audience on your terms. Share your story with rich customization,start freewith unlimited subscribers, and grow with pricing that lets you keep more of what you earn.Join the blogging movementMillions of creators are leaving social media stress behind. With WordPress.com blogs, your ideas have room to breathe, connect, and spark meaningful conversations.Discover great contentExplore WordPress.com’s creator network in theReader. Discover handpicked posts withFreshly Pressed, from personal stories to expert insights, and find your next favorite read on the open web.",
+          "text_preview": "Your forever home on the webGrow your audience with WordPress.com and keep full ownership of your content and followers.Start publishingHello |Grow your newsletterReach your audience on your terms. Sh",
+          "html_snippet": "<div class=\"lp-block lp-section lp-section--name-grow lp-padding-bottom-6 lp-section-grow is-style-text-gray-100-background-gray-0\" data-section-name=\"grow\" style=\"position:relative;z-index:9\"><div class=\"lp-section__content\">\n<div class=\"lp-block lp-content lp-content--text-alignment lp-content--text-alignment-left lp-wrapper lp-wrapper--layout-wide lp-flex@M\" style=\"align-items:flex-end\">\n<div class=\"lp-block lp-content lp-margin-top-0 lp-margin-bottom-0@M\" style=\"flex:1\">\n<div class=\"lp-block"
+        },
+        {
+          "id": "section_17",
+          "heading": "Your forever home on the web",
+          "class": [
+            "lp-section__content"
+          ],
+          "text_full": "Your forever home on the webGrow your audience with WordPress.com and keep full ownership of your content and followers.Start publishingHello |Grow your newsletterReach your audience on your terms. Share your story with rich customization,start freewith unlimited subscribers, and grow with pricing that lets you keep more of what you earn.Join the blogging movementMillions of creators are leaving social media stress behind. With WordPress.com blogs, your ideas have room to breathe, connect, and spark meaningful conversations.Discover great contentExplore WordPress.com’s creator network in theReader. Discover handpicked posts withFreshly Pressed, from personal stories to expert insights, and find your next favorite read on the open web.",
+          "text_preview": "Your forever home on the webGrow your audience with WordPress.com and keep full ownership of your content and followers.Start publishingHello |Grow your newsletterReach your audience on your terms. Sh",
+          "html_snippet": "<div class=\"lp-section__content\">\n<div class=\"lp-block lp-content lp-content--text-alignment lp-content--text-alignment-left lp-wrapper lp-wrapper--layout-wide lp-flex@M\" style=\"align-items:flex-end\">\n<div class=\"lp-block lp-content lp-margin-top-0 lp-margin-bottom-0@M\" style=\"flex:1\">\n<div class=\"lp-block lp-content lp-content--text-alignment lp-content--text-alignment-left\" style=\"max-width:441px\">\n<h2 class=\"wp-block-heading has-text-align-left lp-margin-bottom-1 is-style-default text-wrap-pr"
+        }
+      ],
+      "footer": {
+        "links": [
+          {
+            "text": "Automattic",
+            "url": "https://automattic.com"
+          },
+          {
+            "text": "Work With Us",
+            "url": "https://automattic.com/work-with-us/"
+          }
+        ],
+        "text": "AutomatticAutomatticWork With Us",
+        "social_links": []
+      },
+      "buttons": [
+        {
+          "text": "Products",
+          "tag": "button",
+          "classes": [
+            "x-nav-link",
+            "x-link"
+          ],
+          "href": ""
+        },
+        {
+          "text": "Features",
+          "tag": "button",
+          "classes": [
+            "x-nav-link",
+            "x-link"
+          ],
+          "href": ""
+        },
+        {
+          "text": "Resources",
+          "tag": "button",
+          "classes": [
+            "x-nav-link",
+            "x-link"
+          ],
+          "href": ""
+        },
+        {
+          "text": "Plans & Pricing",
+          "tag": "a",
+          "classes": [
+            "x-nav-link",
+            "x-link"
+          ],
+          "href": "https://wordpress.com/pricing/"
+        },
+        {
+          "text": "Log in",
+          "tag": "a",
+          "classes": [
+            "x-nav-link",
+            "x-link"
+          ],
+          "href": "https://wordpress.com/log-in/"
+        },
+        {
+          "text": "Get started",
+          "tag": "a",
+          "classes": [
+            "x-nav-link",
+            "x-nav-link--primary",
+            "x-link"
+          ],
+          "href": "https://wordpress.com/setup/onboarding/?ref=logged-out-homepage-lp"
+        },
+        {
+          "text": "Menu",
+          "tag": "button",
+          "classes": [
+            "x-nav-link",
+            "x-nav-link--menu",
+            "x-link"
+          ],
+          "href": ""
+        },
+        {
+          "text": "WordPress Hosting",
+          "tag": "a",
+          "classes": [
+            "x-dropdown-link",
+            "x-link"
+          ],
+          "href": "https://wordpress.com/hosting/"
+        },
+        {
+          "text": "WordPress for Agencies",
+          "tag": "a",
+          "classes": [
+            "x-dropdown-link",
+            "x-link"
+          ],
+          "href": "https://wordpress.com/for-agencies/"
+        },
+        {
+          "text": "Become an Affiliate",
+          "tag": "a",
+          "classes": [
+            "x-dropdown-link",
+            "x-link"
+          ],
+          "href": "https://wordpress.com/affiliates/"
+        },
+        {
+          "text": "Domain Names",
+          "tag": "a",
+          "classes": [
+            "x-dropdown-link",
+            "x-link"
+          ],
+          "href": "https://wordpress.com/domains/"
+        },
+        {
+          "text": "AI Website Builder",
+          "tag": "a",
+          "classes": [
+            "x-dropdown-link",
+            "x-link"
+          ],
+          "href": "https://wordpress.com/ai-website-builder/"
+        },
+        {
+          "text": "Website Builder",
+          "tag": "a",
+          "classes": [
+            "x-dropdown-link",
+            "x-link"
+          ],
+          "href": "https://wordpress.com/website-builder/"
+        },
+        {
+          "text": "Create a Blog",
+          "tag": "a",
+          "classes": [
+            "x-dropdown-link",
+            "x-link"
+          ],
+          "href": "https://wordpress.com/create-blog/"
+        },
+        {
+          "text": "Newsletter",
+          "tag": "a",
+          "classes": [
+            "x-dropdown-link",
+            "x-link"
+          ],
+          "href": "https://wordpress.com/newsletter/"
+        },
+        {
+          "text": "Professional Email",
+          "tag": "a",
+          "classes": [
+            "x-dropdown-link",
+            "x-link"
+          ],
+          "href": "https://wordpress.com/professional-email/"
+        },
+        {
+          "text": "Website Design Services",
+          "tag": "a",
+          "classes": [
+            "x-dropdown-link",
+            "x-link"
+          ],
+          "href": "https://wordpress.com/website-design-service/"
+        },
+        {
+          "text": "Commerce",
+          "tag": "a",
+          "classes": [
+            "x-dropdown-link",
+            "x-link"
+          ],
+          "href": "https://wordpress.com/ecommerce/"
+        },
+        {
+          "text": "WordPress Studio",
+          "tag": "a",
+          "classes": [
+            "x-dropdown-link",
+            "x-link"
+          ],
+          "href": "https://developer.wordpress.com/studio/"
+        },
+        {
+          "text": "Enterprise WordPress",
+          "tag": "a",
+          "classes": [
+            "x-dropdown-link",
+            "x-link"
+          ],
+          "href": "https://wpvip.com/wordpress-vip-agile-content-platform/?utm_source=WordPresscom&utm_medium=automattic_referral&utm_campaign=top_nav"
+        }
+      ]
+    },
+    "visual_dna": {
+      "hero_background": null,
+      "background_images": [],
+      "computed_colors": [],
+      "button_styles": [],
+      "layout_structure": {}
+    },
+    "assets": {
+      "favicon": "https://s1.wp.com/i/favicon.ico?v=1713425267",
+      "logo": "https://wordpress.com/wp-content/uploads/2024/06/vip-logo-2.webp",
+      "images": [
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2023/06/group-1000004724.png",
+          "alt": "",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2023/06/play-store-logo.png",
+          "alt": "",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2025/10/rating-icon402x.png",
+          "alt": "G2 rating icon",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2025/07/wordpress-done-right-hero-2.webp",
+          "alt": "WordPress editor displays a spa landing page while overlapping status cards show backup time, server settings, and a reliable-uptime metric in a clean, minimal dashboard workspace.",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2023/10/theme-1-2x-2-optimized.webp",
+          "alt": "Theme Issue",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2023/10/theme-2-2x-2-optimized.webp",
+          "alt": "Theme Covr",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2026/04/theme-3-2x-3.webp",
+          "alt": "Theme Miko",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2023/10/theme-11-2x-optimized.webp",
+          "alt": "Theme Negai",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2023/10/theme-12-2x-optimized.webp",
+          "alt": "Theme Organizer",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2023/10/theme-3-2-2x-optimized.webp",
+          "alt": "Theme Line",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2023/10/theme-19-2-2x-optimized.webp",
+          "alt": "Theme ueno",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2023/10/theme-4-2x-2-optimized.webp",
+          "alt": "Theme Freddie",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2023/10/theme-5-2x-2-optimized.webp",
+          "alt": "Theme Ctlg",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2023/10/theme-6-2x-2-optimized.webp",
+          "alt": "Theme Luminance",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2023/10/theme-14-2x-optimized.webp",
+          "alt": "Theme Erma",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2023/10/theme-15-2x-optimized.webp",
+          "alt": "Theme Overlaid",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2023/10/theme-mobile-1-2x-optimized.webp",
+          "alt": "Theme 1 Mobile",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2023/10/theme-mobile-2-2x-optimized.webp",
+          "alt": "Theme 4 Mobile",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2026/04/theme-mobile-3-2x-3.webp",
+          "alt": "Theme 2 Mobile",
+          "class": []
+        },
+        {
+          "src": "https://wordpress.com/wp-content/uploads/2023/10/theme-mobile-4-2x-optimized.webp",
+          "alt": "Theme 5 Mobile",
+          "class": []
+        }
+      ],
+      "stylesheets": [
+        "https://wordpress.com/_static/??-eJzTLy/QTc7PK0nNK9EvyClNz8wr1s9JzEspSEzO1k8qzcxJ0S8uqcxJ1UsuLtbRJ6w4L7FMF67BPtfW0Nzc0sLCxMDAIgsAjZ4m6g==&cssminify=yes",
+        "https://wordpress.com/_static/??-eJydy1EOwiAMANALiWyJyeaH8SxQKuIqRVpmuL16BPl/z76LAc6KWW2hFlMWSy6H4mCzviUK1hPDZkQ7oUlfK0cQOdj/ovaCwdwSUhjpApWJUo4j+c47VgPqRjJ0IByJr4aiifPIJY5svKu/e31e5mU5r+tpmubHB8bDoi4=&cssminify=yes",
+        "https://wordpress.com/wp-content/plugins/gutenberg-core/v23.2.2/build/styles/block-library/common.min.css?m=1779433917i&cssminify=yes"
+      ]
+    },
+    "meta": {
+      "viewport": "width=device-width, initial-scale=1.0, minimum-scale=1.0",
+      "description": "Create your WordPress website with built-in hosting, premium themes, and powerful tools. No technical setup required. Start building today—free plan available.",
+      "generator": "WordPress.com",
+      "application-name": "WordPress.com",
+      "fb:app_id": "249643311490",
+      "apple-itunes-app": "app-id=1565481562",
+      "apple-mobile-web-app-title": "WP.com",
+      "og:type": "website",
+      "og:title": "WordPress, Your Way",
+      "og:description": "Create your site. Share your voice. Earn online.",
+      "og:url": "https://wordpress.com/",
+      "og:site_name": "WordPress.com",
+      "og:image": "https://s1.wp.com/i/featured/hp-2024-jul.jpg",
+      "article:publisher": "https://www.facebook.com/WordPresscom",
+      "twitter:card": "summary",
+      "twitter:site": "@wordpressdotcom",
+      "twitter:creator": "@wordpressdotcom",
+      "twitter:app:name:iphone": "WordPress",
+      "twitter:app:id:iphone": "335703880",
+      "twitter:app:name:ipad": "WordPress",
+      "twitter:app:id:ipad": "335703880",
+      "twitter:app:name:googleplay": "WordPress",
+      "twitter:app:id:googleplay": "org.wordpress.android",
+      "google-site-verification": "Q9OTgmFGvbuu-bnRYsyoA-MXgythlBvu6gZJry9XxMA",
+      "msapplication-window": "width=device-width;height=device-height",
+      "msapplication-task": "name=WordPress.com Forums;action-uri=https://wordpress.com/forums/;icon-uri=https://s1.wp.com/i/favicon.ico",
+      "msapplication-TileImage": "https://wordpress.com/wp-content/themes/h4/tabs/images/wpcom-logo-144.png",
+      "msapplication-TileColor": "#0074a2",
+      "msApplication-PackageFamilyName": "AutomatticInc.WordPress.com_9ejavqh8rasr8",
+      "msApplication-ID": "App"
+    },
+    "analysis": {
+      "has_dynamic_content": false,
+      "complexity_score": 6,
+      "recommended_3d_style": "clean-layered"
+    }
+  }
+}

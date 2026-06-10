@@ -1,0 +1,71 @@
+{
+  "scene_metadata": {
+    "source_url": "https://www.shopify.com",
+    "title": "Shopify: The All-in-One Commerce Platform for Businesses - Shopify",
+    "style": "creative-playful",
+    "theme": "e-commerce",
+    "focal_point": "Be the nextAI all-star",
+    "complexity": 2.5,
+    "token_cost_estimate": 200,
+    "max_3d_objects": 4,
+    "token_usage": {
+      "base_cost": 50,
+      "complexity_multiplier": 2.5,
+      "total_tokens": 200,
+      "decisions_made": 3
+    }
+  },
+  "environment": {
+    "background": {
+      "type": "image",
+      "source": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c286d3c96e94b18cd1192ada3807c359.jpg?originalWidth=575&originalHeight=745\")",
+      "note": "Extracted from website hero background"
+    },
+    "lighting": {
+      "type": "hemisphere",
+      "intensity": 0.5,
+      "color": "#ffffff"
+    },
+    "fog": {
+      "enabled": true,
+      "color": "#1a1a2e",
+      "density": 0.02
+    }
+  },
+  "3d_objects": [
+    {
+      "type": "hero_text",
+      "content": "Be the nextAI all-star",
+      "cta_buttons": [],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "scale": 1.0,
+      "priority": "high"
+    },
+    {
+      "type": "content_panel",
+      "heading": "Be the nextAI all-star",
+      "preview": "Be the nextAI all-starBe the nextstore they line up forAIall-starhouseholdnamesolo-preneurcategorycreatorglobalempirestoretheylineupforbigthingDream big and build fast on Shopify. The world’s best com",
+      "position": {
+        "x": 0,
+        "y": -2.0,
+        "z": -5
+      },
+      "priority": "medium"
+    },
+    {
+      "type": "content_panel",
+      "heading": "Your brand has entered the chat",
+      "preview": "Your brand has entered the chatYour products get discovered across AI channels. Shoppers check out right in the chat. You keep track of every order. All powered byAgentic Storefronts.",
+      "position": {
+        "x": 0,
+        "y": -3.5,
+        "z": -7
+      },
+      "priority": "medium"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+﻿WEB SCRAPING OPTIMIZATION: TIPS FOR FASTER, SMARTER SCRAPERS
+
+
+1. Implement Error Handling - the internet is inherently unpredictable, and scripts can easily break due to network hiccups, server downtimes, or missing pages. Wrap your requests and parsing logic in try...catch blocks or use built-in HTTP client methods (like Python's raise_for_status()) to gracefully handle 404 or 500 errors without crashing the entire operation.
+
+
+For instance, in Python's requests library you need to manually check the response status code as follows:
+
+
+import requests
+    
+response = requests.get("https://example.com")
+if response.status_code == 200:
+    # handle the successful response...
+else:
+    # handle the error response... 
+
+
+Or, equivalently, use the raise for status () method: 
+
+
+import requests
+
+
+try:
+    response = requests.get("https://example.com")
+    # raises an HTTPError for bad responses (4xx or 5xx)
+    response.raise_for_status()  
+   # handle the successful response...
+except requests.exceptions.HTTPError as http_err:
+    # handle an HTTP error...
+except requests.exceptions.RequestException as req_err:
+    # handle a request error... 
+
+
+2. Failure Recovery with Request Retries - incorporate automated request retries to handle temporary server errors. To avoid overwhelming a struggling server, use exponential backoff, a technique that gradually increases the waiting time between consecutive retry attempts.
+
+
+The following code shows the implementation of the retry with backoff pattern.
+
+
+public async Task DoRetriesWithBackOff()
+  {
+     int retries = 0;
+     bool retry;
+     do
+     {
+       //Sample object for sending parameters
+       var parameterObj = new InputParameter { SimulateTimeout = "false" };
+       var content = new StringContent(JsonConvert.SerializeObject(parameterObj), 
+                                System.Text.Encoding.UTF8, "application/json");
+       var waitInMilliseconds = Convert.ToInt32((Math.Pow(2, retries) - 1) * 100);
+       System.Threading.Thread.Sleep(waitInMilliseconds);
+       var response =  await _client.PostAsync(_baseURL, content);
+       switch (response.StatusCode)
+       {
+         //Success
+         case HttpStatusCode.OK:
+           retry = false;
+           Console.WriteLine(response.Content.ReadAsStringAsync().Result);
+           break;
+         //Throttling, timeouts 
+         case HttpStatusCode.TooManyRequests:
+         case HttpStatusCode.GatewayTimeout:
+           retry = true;
+           break;
+         //Some other error occured, so stop calling the API
+         default:
+           retry = false;
+           break;
+       }
+       retries++;
+     } while (retry && retries < MAX_RETRIES);
+  }
+
+
+3. Write Generic Selectors - avoid copying hyper-specific, fragile selectors directly from browser DevTools (e.g., long, nested chains of tags and style classes). Instead, focus on more stable, resilient attributes less likely to change during site updates, such as id, data-*, or aria-* attributes.
+
+
+4. Prefer Fast HTML Parsers - when scaling up to scrape millions of pages, parsing overhead can drain server resources. Swapping out slow, standard parsers for highly optimized ones—such as switching to the lxml parser when using BeautifulSoup in Python—can significantly reduce total scraping time.
+
+
+The good news? Switching from one parser to another isn't that difficult. For example, in BeautifulSoup, it's just a simple parameter change:
+
+
+from bs4 import BeautifulSoup
+
+
+# or using html.parser
+soup = BeautifulSoup(html_content, "html.parser")
+
+
+# or using lxml parser
+soup = BeautifulSoup(html_content, "lxml")
+
+
+5. Harness HTTP/2 for Faster Requests - whenever a target website supports HTTP/2, use an HTTP client that accommodates it (such as HTTPX for Python). HTTP/2 allows your scraper to send multiple requests concurrently over a single connection, heavily reducing network latency.
+
+
+6. Task Parallelization - because web scraping is an I/O-bound task, scrapers spend a lot of time idling while waiting for server responses. Use concurrency or parallelism to send multiple requests simultaneously. However, you must carefully throttle your requests to avoid hitting rate limits or triggering anti-scraping IP bans.
+
+
+7. Embrace AI-Based Adaptive Algorithms - utilize AI-driven algorithms capable of learning page structures and pattern behaviors in real time. These algorithms adapt dynamically when a website shifts its layout or deploys anti-bot measures, ensuring the scraper continues to function without needing manual maintenance.
+
+
+Link: Data, B. (2024, November 15). Web Scraping Optimization: Tips for Faster, Smarter scrapers.
+https://hackernoon.com/web-scraping-optimization-tips-for-faster-smarter-scrapers

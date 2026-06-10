@@ -1,0 +1,13 @@
+{
+  "batch_name": "Batch_2026-06-10_20-00-00",
+  "timestamp": "2026-06-10_20-00-00",
+  "target_type": "layer-based with screenshot",
+  "total_sites": 1,
+  "results": [
+    {
+      "url": "https://www.metawatt.com",
+      "output": "output/extraction/Batch_2026-06-10_20-00-00/www.metawatt.com.json",
+      "status": "success"
+    }
+  ]
+}

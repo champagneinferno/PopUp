@@ -1,0 +1,76 @@
+{
+  "website_profile": {
+    "url": "https://example.com",
+    "title": "Example Domain",
+    "extraction_timestamp": "2026-06-05T23:03:44.247290",
+    "extraction_metadata": {
+      "code_version": "7cb9ca1",
+      "extractor_version": "1.0"
+    },
+    "brand_dna": {
+      "color_palette": [],
+      "fonts": [],
+      "style_vibe": [
+        "minimalist"
+      ]
+    },
+    "structure": {
+      "navigation": [
+        {
+          "text": "Learn more",
+          "url": "https://iana.org/domains/example",
+          "location": "nav-generic"
+        }
+      ],
+      "hero_section": {
+        "heading": "Example Domain",
+        "selector": "h1 (fallback)",
+        "cta_buttons": []
+      },
+      "sections": [
+        {
+          "id": "section_dynamic_0",
+          "heading": "Example Domain",
+          "class": [],
+          "text_full": "Example DomainThis domain is for use in documentation examples without needing permission. Avoid use in operations.Learn more",
+          "text_preview": "Example DomainThis domain is for use in documentation examples without needing permission. Avoid use in operations.Learn more",
+          "html_snippet": "<div><h1>Example Domain</h1><p>This domain is for use in documentation examples without needing permission. Avoid use in operations.</p><p><a href=\"https://iana.org/domains/example\">Learn more</a></p></div>"
+        }
+      ],
+      "footer": {
+        "links": [],
+        "text": "",
+        "social_links": []
+      },
+      "buttons": [
+        {
+          "text": "Learn more",
+          "tag": "a",
+          "classes": [],
+          "href": "https://iana.org/domains/example"
+        }
+      ]
+    },
+    "visual_dna": {
+      "hero_background": null,
+      "background_images": [],
+      "computed_colors": [],
+      "button_styles": [],
+      "layout_structure": {}
+    },
+    "assets": {
+      "favicon": "",
+      "logo": "",
+      "images": [],
+      "stylesheets": []
+    },
+    "meta": {
+      "viewport": "width=device-width, initial-scale=1"
+    },
+    "analysis": {
+      "has_dynamic_content": false,
+      "complexity_score": 2,
+      "recommended_3d_style": "clean-layered"
+    }
+  }
+}

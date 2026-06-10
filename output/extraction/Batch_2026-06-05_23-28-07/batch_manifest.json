@@ -1,0 +1,22 @@
+{
+  "batch_id": "Batch2_2026-06-05_23-28-07",
+  "created_at": "2026-06-05T23:28:07",
+  "description": "Batch 2 - Testing extractor on diverse real websites",
+  "websites": [
+    {
+      "domain": "metawatt.com",
+      "url": "https://www.metawatt.com",
+      "data_path": "metawatt.com/extraction_data.json"
+    },
+    {
+      "domain": "wordpress.com",
+      "url": "https://wordpress.com",
+      "data_path": "wordpress.com/extraction_data.json"
+    },
+    {
+      "domain": "github.com",
+      "url": "https://github.com",
+      "data_path": "github.com/extraction_data.json"
+    }
+  ]
+}

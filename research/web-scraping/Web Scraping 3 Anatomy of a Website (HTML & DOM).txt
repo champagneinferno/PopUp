@@ -1,0 +1,90 @@
+Web Scraping #3: Anatomy of a Website (HTML & DOM)
+
+Subtitle: Don’t scrape blindly. Understand the website’s “Family Tree” so your bot doesn’t get lost.
+
+Introduction: Becoming a Web Surgeon
+Imagine you are a surgeon preparing to operate on a patient. Before you even pick up a scalpel, you must understand human anatomy. You need to know exactly where the heart, lungs and arteries are located.
+
+In Web Scraping, the principle is exactly the same.
+
+Python doesn’t see a website as the beautiful, colorful interface that your human eyes see. Pyhton sees it as a stack of raw text code called HTML. If you don’t uderstand the structure of this code, your scraping script will be like a surgeon operating in the dark.
+
+In this article, we will dissect the anatomy of a website so we can give pricise intructions to our bot.
+
+1. How Browser Render Pages
+When you type google.com and hit Enter, your browser (Chrome/Firefox) receives a package of code from the server. The main component is HTML (HyperText Markup Language).
+
+HTML is the skeleton. Without CSS (skin/makeup) and Javascript (brain/movement), a website is just boring black-and-white text.
+
+As scrapers, we actually love a raw HTML. Why? Because that is where data lives. We don’t care how pretty website look like; we only care about the text inside it.
+
+2. Meet the DOM (Document Object Model)
+This is most important concept for today.
+
+Your browser organizer HTML not as flat text, but as a Tree. This tree structure is called the DOM.
+
+Imagine a large box. Inside it, there are two smaller boxes. Inside one of those small boxes, there is a doll.
+
+Large Box = <html>
+Small Box = <body>
+Doll = <h1> (Title) or <p> (Paragraph)
+Every element in this tree is called a Node. To extract data, we have to climb trough the branches of this tree.
+
+3. Family Matters: Parent, Child, & Sibling
+Because the DOM looks like a family tree, HTML elements have relationships. Understanding these relationships is crucial for navigating with the BeautifulSoup library later.
+
+Let’s look at this code snippet:
+
+<div id="main-content">
+    <h1>Breaking News</h1>
+    <p>This is the first paragraph of the news.</p>
+</div>
+Parent: The div is the parent of h1 and p (because it encloses them).
+Child: h1 and p are children of the div.
+Sibling: h1 is a sibling of p (because they are on the same level, sharing the same parent).
+Why is this important? Often, the data you want doesn’t have a unique name. So, your strategy will be: “Find the Father first (div), then grab his second Child (p).”
+
+4. The Building Blocks: <div> and <span>
+You will see these two tags everywhere.
+
+<div> (Division): This is a Cardboard Box. It is used to group larger elements together. It usually wraps an entire article, a sidebar, or a header.
+<span>: This is a Highlighter. It is used to mark small pieces of text inside a sentence. For example, highlighting a discount price inside a product description.
+E-commerce example:
+
+<div> 
+  <h2>iPhone 15</h2>
+  <span>$999</span>
+</div>
+5. GPS for Scrapers: id and class
+How do we tell Python: “Get the price, but ignore the title”? We use attributes, specifically id and class.
+
+a. ID (id=”….”)
+
+Think of this as a Passport Number. It is unique. In a single HTML page, there can only be ONE element with a specific ID.
+
+Example: <div id="main-title">
+Strategy: If your target data has an ID, you are lucky! You can target it directly, and you will get the data instantly.
+b. class (class=”….”)
+
+Think of this as a School Uniform. It represents a group. Many elements can wear the same class.
+
+Example: <div class="product-item">
+Strategy: Use this if you want to grab multiple items at once (e.g., getting a list of prices from 50 products on a search result page).
+6. Secret Weapon: Inspect Element
+You don’t need to memorize a website’s code. Your browser has a built-in “X-Ray” tool for you.
+
+How to use it:
+
+Open your target website (e.g., a news site or online store).
+Hover your mouse over the data you want (like a headline).
+Right Click -> Select Inspect Element.
+Or Ctrl + shift + i if you using Chrome browser
+A panel will open on the right or bottom of your screen. It will highlight the exact line of HTML code containing that data. This is where you peek behind the curtain: “Aha! The price is wrapped in a span tag with the class price-tag!"
+
+Conclusion
+You now hold the map.
+
+You know a website is a DOM Tree.
+You know how to navigate via Parent-Child relationships.
+You know your targets are marked by IDs and Classes.
+You know how to spy on them using Inspect Element.

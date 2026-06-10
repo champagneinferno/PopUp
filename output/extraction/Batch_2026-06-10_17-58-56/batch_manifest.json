@@ -1,0 +1,33 @@
+{
+  "batch_name": "BusinessBatch_2026-06-10_17-58-56",
+  "timestamp": "2026-06-10_17-58-56",
+  "target_type": "business_websites",
+  "total_sites": 5,
+  "results": [
+    {
+      "url": "https://www.metawatt.com",
+      "output": "..\\output\\BusinessBatch_2026-06-10_17-58-56\\www.metawatt.com.json",
+      "status": "success"
+    },
+    {
+      "url": "https://www.notion.so",
+      "output": "..\\output\\BusinessBatch_2026-06-10_17-58-56\\www.notion.so.json",
+      "status": "success"
+    },
+    {
+      "url": "https://www.shopify.com",
+      "output": "..\\output\\BusinessBatch_2026-06-10_17-58-56\\www.shopify.com.json",
+      "status": "success"
+    },
+    {
+      "url": "https://www.stripe.com",
+      "output": "..\\output\\BusinessBatch_2026-06-10_17-58-56\\www.stripe.com.json",
+      "status": "success"
+    },
+    {
+      "url": "https://www.wix.com",
+      "output": "..\\output\\BusinessBatch_2026-06-10_17-58-56\\www.wix.com.json",
+      "status": "success"
+    }
+  ]
+}

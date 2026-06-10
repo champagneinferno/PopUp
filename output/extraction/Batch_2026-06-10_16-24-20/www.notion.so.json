@@ -1,0 +1,1821 @@
+{
+  "website_profile": {
+    "url": "https://www.notion.so",
+    "title": "The AI workspace that works for you. | Notion",
+    "extraction_timestamp": "2026-06-10T16:24:50.711542",
+    "extraction_metadata": {
+      "code_version": "aaff174",
+      "extractor_version": "1.0"
+    },
+    "brand_dna": {
+      "color_palette": [
+        "rgba(0, 0, 0, 0.95)",
+        "rgb(255, 255, 255)",
+        "rgb(0, 0, 0)",
+        "rgb(25, 25, 24)",
+        "rgb(246, 245, 244)",
+        "rgb(2, 9, 58)",
+        "rgba(0, 0, 0, 0.898)",
+        "rgba(0, 0, 0, 0.54)",
+        "rgb(156, 112, 84)",
+        "rgb(252, 248, 245)"
+      ],
+      "fonts": [
+        "Times New Roman",
+        "Lyon Text",
+        "NotionInter"
+      ],
+      "style_vibe": [
+        "hero-focused",
+        "interactive"
+      ]
+    },
+    "structure": {
+      "navigation": [
+        {
+          "text": "NotionYour AI workspace",
+          "url": "https://www.notion.so/product",
+          "location": "nav"
+        },
+        {
+          "text": "Notion Calendar",
+          "url": "https://www.notion.so/product/calendar",
+          "location": "nav"
+        },
+        {
+          "text": "Notion Mail",
+          "url": "https://www.notion.so/product/mail",
+          "location": "nav"
+        },
+        {
+          "text": "Notion AIAI tools for work",
+          "url": "https://www.notion.so/product/ai",
+          "location": "nav"
+        },
+        {
+          "text": "AgentsAutomate busywork",
+          "url": "https://www.notion.so/product/agents",
+          "location": "nav"
+        },
+        {
+          "text": "AI Meeting NotesPerfectly written by AI",
+          "url": "https://www.notion.so/product/ai-meeting-notes",
+          "location": "nav"
+        },
+        {
+          "text": "Enterprise SearchFind answers instantly",
+          "url": "https://www.notion.so/product/enterprise-search",
+          "location": "nav"
+        },
+        {
+          "text": "Knowledge BaseCentralize your knowledge",
+          "url": "https://www.notion.so/product/wikis",
+          "location": "nav"
+        },
+        {
+          "text": "DocsSimple and powerful",
+          "url": "https://www.notion.so/product/docs",
+          "location": "nav"
+        },
+        {
+          "text": "ProjectsManage any project",
+          "url": "https://www.notion.so/product/projects",
+          "location": "nav"
+        },
+        {
+          "text": "ConnectionsConnect your apps",
+          "url": "https://www.notion.so/connections",
+          "location": "nav"
+        },
+        {
+          "text": "SecuritySafe and scalable",
+          "url": "https://www.notion.so/security",
+          "location": "nav"
+        },
+        {
+          "text": "See what\u2019s new\u2192",
+          "url": "https://www.notion.so/releases",
+          "location": "nav"
+        },
+        {
+          "text": "Notion App\u2192",
+          "url": "https://www.notion.so/download",
+          "location": "nav"
+        },
+        {
+          "text": "For work",
+          "url": "https://www.notion.so/product/ai/use-cases?type=work",
+          "location": "nav"
+        }
+      ],
+      "hero_section": {
+        "heading": "Meet the night shift.",
+        "selector": "header",
+        "cta_buttons": [
+          {
+            "text": "Get Notion free",
+            "href": "/signup"
+          },
+          {
+            "text": "Request a demo",
+            "href": "/contact-sales"
+          }
+        ]
+      },
+      "sections": [
+        {
+          "id": "section_3",
+          "heading": "Meet the night shift.",
+          "class": [
+            "isCampaignAgentsHomepageHero",
+            "homepage_main__sRG4_",
+            "homepage_heroSection__m69Ry",
+            "homepage_heroSectionAgents__f8l5y"
+          ],
+          "text_full": "Meet the night shift.Notion agents keep work moving 24/7. They capture knowledge, answer questions, and push projects forward\u2014all while you sleep.Get Notion freeRequest a demoPlayTrusted by 98% of the Forbes Cloud 100",
+          "text_preview": "Meet the night shift.Notion agents keep work moving 24/7. They capture knowledge, answer questions, and push projects forward\u2014all while you sleep.Get Notion freeRequest a demoPlayTrusted by 98% of the",
+          "html_snippet": "<div class=\"isCampaignAgentsHomepageHero homepage_main__sRG4_ homepage_heroSection__m69Ry homepage_heroSectionAgents__f8l5y\"><div class=\"homepage_section___Tv7x homepage_heroAndLogowall__p2DiO homepage_sectionAgents__PDnF0\"><div class=\"HomepageHeroAgents_hero__PgXPj\"><svg class=\"Illustrations_illustrationFilter__sUg2d\" fill=\"none\" height=\"0\" width=\"0\" xmlns=\"http://www.w3.org/2000/svg\"><defs><filter height=\"150%\" id=\"hph-illustration-filter\" width=\"150%\" x=\"-25%\" y=\"-25%\"><feturbulence basefrequ"
+        },
+        {
+          "id": "section_21",
+          "heading": "Keep work moving 24/7.",
+          "class": [
+            "homepage_section___Tv7x"
+          ],
+          "text_full": "Keep work moving 24/7.Custom AgentsAutomate repetitive work for your team.\u2192Q&A agentsAnswers questions instantly using knowledge you already have.Task routing agentsAssigns, prioritizes, and routes tasks on its own.Reporting agentsSummarizes, writes, and sends reports for you.Create your ownMake a Custom Agent for any work that repeats.Q&A agentsAnswers questions instantly using knowledge you already have.See what Custom Agents can doTriage product feedback\u2192Resolve support tickets in Slack\u2192Respond to security alerts faster\u2192Automate weekly reporting\u2192Create your own Custom Agent\u2192Ask your on-demand assistants.Notion AgentYou assign the tasks. Notion Agent does the work.\u2192Enterprise SearchOne search for everything.\u2192AI Meeting NotesPerfect notes, every time.\u2192Bring all your work together.DocsSimple and powerful.\u2192Knowledge BaseOne source of truth for teams and agents.\u2192ProjectsLess tracking. More progress.\u2192",
+          "text_preview": "Keep work moving 24/7.Custom AgentsAutomate repetitive work for your team.\u2192Q&A agentsAnswers questions instantly using knowledge you already have.Task routing agentsAssigns, prioritizes, and routes ta",
+          "html_snippet": "<div class=\"homepage_section___Tv7x\"><div class=\"homepage_bentoContainer__x8Gz_ homepage_bentoContainerAgents__MSUK9\"><div class=\"homepage_customAgentsSection__m_WOD\"><section class=\"homepageBentoCarousel_root__XEVDN\" data-analytics-name=\"BentoCarousel\" data-analytics-scroll-point=\"true\" data-bento-box=\"true\"><div class=\"sectionHeader_header__7hACT sectionHeader_alignStart__JDnog sectionHeader_noMargin__MGHWk\"><h2 class=\"sectionHeader_heading__tJvSy\">Keep work moving 24/7.</h2></div><section ari"
+        },
+        {
+          "id": "section_24",
+          "heading": "Ask your on-demand assistants.",
+          "class": [
+            "bentos_bentoSection__5jULI"
+          ],
+          "text_full": "Ask your on-demand assistants.Notion AgentYou assign the tasks. Notion Agent does the work.\u2192Enterprise SearchOne search for everything.\u2192AI Meeting NotesPerfect notes, every time.\u2192",
+          "text_preview": "Ask your on-demand assistants.Notion AgentYou assign the tasks. Notion Agent does the work.\u2192Enterprise SearchOne search for everything.\u2192AI Meeting NotesPerfect notes, every time.\u2192",
+          "html_snippet": "<section class=\"bentos_bentoSection__5jULI\" data-analytics-name=\"HomepageAgentBentos\" data-analytics-scroll-point=\"true\" id=\":R15pabm:\"><div class=\"sectionHeader_header__7hACT sectionHeader_alignStart__JDnog sectionHeader_noMargin__MGHWk\"><h2 class=\"sectionHeader_heading__tJvSy\">Ask your on-demand assistants.</h2></div><div class=\"bentos_bentoGrid__LBfZl\"><article class=\"bento_bento__IFnc_ base_theme__K5IIh yellow_palette_theme__mOb5L theme_theme__XHAvb bentos_bentoWide__XtuBE bento_layoutWide__"
+        },
+        {
+          "id": "section_26",
+          "heading": "Bring all your work together.",
+          "class": [
+            "bentos_bentoSection__5jULI"
+          ],
+          "text_full": "Bring all your work together.DocsSimple and powerful.\u2192Knowledge BaseOne source of truth for teams and agents.\u2192ProjectsLess tracking. More progress.\u2192",
+          "text_preview": "Bring all your work together.DocsSimple and powerful.\u2192Knowledge BaseOne source of truth for teams and agents.\u2192ProjectsLess tracking. More progress.\u2192",
+          "html_snippet": "<section class=\"bentos_bentoSection__5jULI\" data-analytics-name=\"HomepageProductBentos\" data-analytics-scroll-point=\"true\" id=\":R15pabmH1:\"><div class=\"sectionHeader_header__7hACT sectionHeader_alignStart__JDnog sectionHeader_noMargin__MGHWk\"><h2 class=\"sectionHeader_heading__tJvSy\">Bring all your work together.</h2></div><div class=\"bentos_bentoGrid__LBfZl\"><article class=\"bento_bento__IFnc_ base_theme__K5IIh teal_palette_theme__Ge39K theme_theme__XHAvb\"><div class=\"bento_bentoInner__luLfd\"><a "
+        },
+        {
+          "id": "section_28",
+          "heading": "More productivity. Fewer tools.",
+          "class": [
+            "homepage_section___Tv7x",
+            "homepage_sectionNoSpacing__8_HPd"
+          ],
+          "text_full": "More productivity. Fewer tools.Bring all your tools and teams under one roof. Calculate savings below.See pricing plans\u2192AI Search$35/userAI Chatbot$20/userAI Meeting Notes$18/userAI Writing Assistant$20/userAI Email App$30/userAI Research$40/userCalendar Scheduling$15/userTeam Wiki$10/userProject Management Tool$24/userBasic CRM$20/userSite Builder$20/userForms$15/userTeam sizeMonthly savings$0Annual savings$0",
+          "text_preview": "More productivity. Fewer tools.Bring all your tools and teams under one roof. Calculate savings below.See pricing plans\u2192AI Search$35/userAI Chatbot$20/userAI Meeting Notes$18/userAI Writing Assistant$",
+          "html_snippet": "<div class=\"homepage_section___Tv7x homepage_sectionNoSpacing__8_HPd\"><div class=\"sectionHeader_header__7hACT sectionHeader_alignStart__JDnog\" id=\":RbmH2:\"><div class=\"sectionHeader_content__CrL0O\"><h2 class=\"sectionHeader_heading__tJvSy\" id=\":RbmH2:\">More productivity. Fewer tools.</h2><p class=\"sectionHeader_subheading__51ZJh\">Bring all your tools and teams under one roof. Calculate savings below.</p><div class=\"sectionHeader_ctas__WiORJ\"><a class=\"semanticTypography_semanticTypography__mWJkv "
+        },
+        {
+          "id": "section_33",
+          "heading": "Trusted by teams that ship.",
+          "class": [
+            "homepage_section___Tv7x"
+          ],
+          "text_full": "Trusted by teams that ship.There\u2019s power in a single platform where you can do all your work. Notion is that single place.Read the full story\u2192View the videoStreamlined workflows to reduce timelines by 3x.\u2192\u201cAgents get created in three minutes between meetings, then hours of manual operational work disappear.\u201d\u2192\u201cNotion understands that you can solve a lot of problems with one tool.\u201d\u2192\u201cNotion has been the most powerful and impactful way to streamline our workflow.\u201d\u2192\u201cUsing the most AI-native tools like Notion is an important competitive advantage for us.\u201d\u2192One hub for work and AI keeps everyone informed and work flowing.\u2192Over 100M users worldwide#1 knowledge base 3 years running (G2)#1 AI enterprise search (G2)#1 rated AI writing (G2)62% of Fortune 100Over 50% of YC companies1.4M+ community membersOver 100M users worldwide#1 knowledge base 3 years running (G2)#1 AI enterprise search (G2)#1 rated AI writing (G2)62% of Fortune 100Over 50% of YC companies1.4M+ community membersOver 100M users worldwide#1 knowledge base 3 years running (G2)#1 AI enterprise search (G2)#1 rated AI writing (G2)62% of Fortune 100Over 50% of YC companies1.4M+ community members",
+          "text_preview": "Trusted by teams that ship.There\u2019s power in a single platform where you can do all your work. Notion is that single place.Read the full story\u2192View the videoStreamlined workflows to reduce timelines by",
+          "html_snippet": "<div class=\"homepage_section___Tv7x\"><section data-analytics-name=\"HomepageSocialProof\" data-analytics-scroll-point=\"true\"><div class=\"sectionHeader_header__7hACT sectionHeader_alignStart__JDnog\"><h2 class=\"sectionHeader_heading__tJvSy\">Trusted by teams that ship.</h2></div><div class=\"Block_block__Q3GQF socialProof_block__KTw4s\"><div class=\"socialProof_container__iiaW7\" layout=\"medium\" variant=\"normal\"><div class=\"socialProof_featuredTestimonial__UBbOo\"><div class=\"socialProof_featuredTestimoni"
+        }
+      ],
+      "footer": {
+        "links": [
+          {
+            "text": "English (US)",
+            "url": "https://www.notion.so/en-US"
+          },
+          {
+            "text": "Bahasa Indonesia",
+            "url": "https://www.notion.so/id"
+          },
+          {
+            "text": "Dansk",
+            "url": "https://www.notion.so/da"
+          },
+          {
+            "text": "Deutsch",
+            "url": "https://www.notion.so/de"
+          },
+          {
+            "text": "English (UK)",
+            "url": "https://www.notion.so/en-GB"
+          },
+          {
+            "text": "Espa\u00f1ol (Espa\u00f1a)",
+            "url": "https://www.notion.so/es-ES"
+          },
+          {
+            "text": "Espa\u00f1ol (Latinoam\u00e9rica)",
+            "url": "https://www.notion.so/es"
+          },
+          {
+            "text": "Fran\u00e7ais (France)",
+            "url": "https://www.notion.so/fr"
+          },
+          {
+            "text": "Italiano",
+            "url": "https://www.notion.so/it"
+          }
+        ],
+        "text": "English (US)English (US)Bahasa IndonesiaDanskDeutschEnglish (UK)Espa\u00f1ol (Espa\u00f1a)Espa\u00f1ol (Latinoam\u00e9rica)Fran\u00e7ais (France)ItalianoNederlandsNorskPortugu\u00eas (Brasil)SuomiSvenskaTi\u1ebfng Vi\u1ec7t\u05e2\u05d1\u05e8\u05d9\u05ea\u0627\u0644\u0639\u0631\u0628\u064a\u0629\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22\ud55c\uad6d\uc5b4\u65e5\u672c\u8a9e\u7b80\u4f53\u4e2d\u6587\u7e41\u9ad4\u4e2d\u6587Cookie settings\u00a9 2026 Notion Labs, Inc.CompanyAbout usCareersSecurityStatusTerms & privacyYour privacy rightsDownloadiOS & AndroidMac & WindowsMailCalendarWeb ClipperResourcesHelp centerPricingBlogCommunityConnectionsTemplatesPartner programsNotion forEnterpriseSmall businessPersonal",
+        "social_links": [
+          {
+            "platform": "https://www.instagram.com/notionhq/",
+            "url": "https://www.instagram.com/notionhq/"
+          },
+          {
+            "platform": "https://twitter.com/NotionHQ",
+            "url": "https://twitter.com/NotionHQ"
+          },
+          {
+            "platform": "https://www.linkedin.com/company/notionhq/",
+            "url": "https://www.linkedin.com/company/notionhq/"
+          },
+          {
+            "platform": "https://www.facebook.com/NotionHQ/",
+            "url": "https://www.facebook.com/NotionHQ/"
+          },
+          {
+            "platform": "https://www.youtube.com/channel/UCoSvlWS5XcwaSzIcbuJ-Ysg",
+            "url": "https://www.youtube.com/channel/UCoSvlWS5XcwaSzIcbuJ-Ysg"
+          }
+        ]
+      },
+      "buttons": [
+        {
+          "text": "Product",
+          "tag": "button",
+          "classes": [
+            "globalNavigation_link__ofzIw",
+            "globalNavigation_dropdownTrigger__Vd0Te"
+          ],
+          "href": ""
+        },
+        {
+          "text": "NotionYour AI workspace",
+          "tag": "a",
+          "classes": [
+            "inline-full",
+            "menuList_menuListItemAnchor__dEwSU",
+            "menuList_sizeLarge__gpJH5",
+            "menuList_variantSecondary__13hDk"
+          ],
+          "href": "https://www.notion.so/product"
+        },
+        {
+          "text": "Notion Calendar",
+          "tag": "a",
+          "classes": [
+            "inline-full",
+            "menuList_menuListItemAnchor__dEwSU",
+            "menuList_variantSecondary__13hDk"
+          ],
+          "href": "https://www.notion.so/product/calendar"
+        },
+        {
+          "text": "Notion Mail",
+          "tag": "a",
+          "classes": [
+            "inline-full",
+            "menuList_menuListItemAnchor__dEwSU",
+            "menuList_variantSecondary__13hDk"
+          ],
+          "href": "https://www.notion.so/product/mail"
+        },
+        {
+          "text": "Notion AIAI tools for work",
+          "tag": "a",
+          "classes": [
+            "inline-full",
+            "menuList_menuListItemAnchor__dEwSU",
+            "menuList_variantPrimary__XdPVz"
+          ],
+          "href": "https://www.notion.so/product/ai"
+        },
+        {
+          "text": "AgentsAutomate busywork",
+          "tag": "a",
+          "classes": [
+            "inline-full",
+            "menuList_menuListItemAnchor__dEwSU",
+            "menuList_variantPrimary__XdPVz"
+          ],
+          "href": "https://www.notion.so/product/agents"
+        },
+        {
+          "text": "AI Meeting NotesPerfectly written by AI",
+          "tag": "a",
+          "classes": [
+            "inline-full",
+            "menuList_menuListItemAnchor__dEwSU",
+            "menuList_variantPrimary__XdPVz"
+          ],
+          "href": "https://www.notion.so/product/ai-meeting-notes"
+        },
+        {
+          "text": "Enterprise SearchFind answers instantly",
+          "tag": "a",
+          "classes": [
+            "inline-full",
+            "menuList_menuListItemAnchor__dEwSU",
+            "menuList_variantPrimary__XdPVz"
+          ],
+          "href": "https://www.notion.so/product/enterprise-search"
+        },
+        {
+          "text": "Knowledge BaseCentralize your knowledge",
+          "tag": "a",
+          "classes": [
+            "inline-full",
+            "menuList_menuListItemAnchor__dEwSU",
+            "menuList_variantPrimary__XdPVz"
+          ],
+          "href": "https://www.notion.so/product/wikis"
+        },
+        {
+          "text": "DocsSimple and powerful",
+          "tag": "a",
+          "classes": [
+            "inline-full",
+            "menuList_menuListItemAnchor__dEwSU",
+            "menuList_variantPrimary__XdPVz"
+          ],
+          "href": "https://www.notion.so/product/docs"
+        },
+        {
+          "text": "ProjectsManage any project",
+          "tag": "a",
+          "classes": [
+            "inline-full",
+            "menuList_menuListItemAnchor__dEwSU",
+            "menuList_variantPrimary__XdPVz"
+          ],
+          "href": "https://www.notion.so/product/projects"
+        },
+        {
+          "text": "ConnectionsConnect your apps",
+          "tag": "a",
+          "classes": [
+            "inline-full",
+            "menuList_menuListItemAnchor__dEwSU",
+            "menuList_variantPrimary__XdPVz"
+          ],
+          "href": "https://www.notion.so/connections"
+        },
+        {
+          "text": "SecuritySafe and scalable",
+          "tag": "a",
+          "classes": [
+            "inline-full",
+            "menuList_menuListItemAnchor__dEwSU",
+            "menuList_variantPrimary__XdPVz"
+          ],
+          "href": "https://www.notion.so/security"
+        },
+        {
+          "text": "See what\u2019s new\u2192",
+          "tag": "a",
+          "classes": [
+            "semanticTypography_semanticTypography__mWJkv",
+            "linkText_linkText__527kz",
+            "linkText_colorVariantPrimary__h6Nef",
+            "linkText_hasArrow__2BwWV"
+          ],
+          "href": "https://www.notion.so/releases"
+        },
+        {
+          "text": "Notion App\u2192",
+          "tag": "a",
+          "classes": [
+            "semanticTypography_semanticTypography__mWJkv",
+            "linkText_linkText__527kz",
+            "linkText_colorVariantPrimary__h6Nef",
+            "linkText_hasArrow__2BwWV"
+          ],
+          "href": "https://www.notion.so/download"
+        },
+        {
+          "text": "AI",
+          "tag": "button",
+          "classes": [
+            "globalNavigation_link__ofzIw",
+            "globalNavigation_dropdownTrigger__Vd0Te"
+          ],
+          "href": ""
+        },
+        {
+          "text": "For work",
+          "tag": "a",
+          "classes": [
+            "inline-full",
+            "menuList_menuListItemAnchor__dEwSU",
+            "menuList_variantPrimary__XdPVz"
+          ],
+          "href": "https://www.notion.so/product/ai/use-cases?type=work"
+        },
+        {
+          "text": "For life",
+          "tag": "a",
+          "classes": [
+            "inline-full",
+            "menuList_menuListItemAnchor__dEwSU",
+            "menuList_variantPrimary__XdPVz"
+          ],
+          "href": "https://www.notion.so/product/ai/use-cases?type=life"
+        },
+        {
+          "text": "Solutions",
+          "tag": "button",
+          "classes": [
+            "globalNavigation_link__ofzIw",
+            "globalNavigation_dropdownTrigger__Vd0Te"
+          ],
+          "href": ""
+        },
+        {
+          "text": "Eng & Product",
+          "tag": "a",
+          "classes": [
+            "inline-full",
+            "menuList_menuListItemAnchor__dEwSU",
+            "menuList_sizeLarge__gpJH5",
+            "menuList_variantPrimary__XdPVz"
+          ],
+          "href": "https://www.notion.so/product/notion-for-product-development"
+        }
+      ]
+    },
+    "visual_dna": {
+      "hero_background": {
+        "background_image": null,
+        "background_color": "rgb(25, 25, 24)",
+        "element": "BODY"
+      },
+      "background_images": [],
+      "computed_colors": [
+        "rgba(0, 0, 0, 0.95)",
+        "rgb(255, 255, 255)",
+        "rgb(0, 0, 0)",
+        "rgb(25, 25, 24)",
+        "rgb(246, 245, 244)",
+        "rgb(2, 9, 58)",
+        "rgba(0, 0, 0, 0.898)",
+        "rgba(0, 0, 0, 0.54)",
+        "rgb(156, 112, 84)",
+        "rgb(252, 248, 245)",
+        "rgb(255, 109, 0)",
+        "rgb(255, 245, 237)",
+        "rgb(246, 73, 50)",
+        "rgb(254, 243, 241)",
+        "rgb(152, 73, 232)"
+      ],
+      "button_styles": [
+        {
+          "text": "Product",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(246, 245, 244)",
+          "border_radius": "4px",
+          "border": "0px none rgb(246, 245, 244)",
+          "padding": "5px 10px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "90.3906px",
+          "height": "30px",
+          "class": "globalNavigation_link__ofzIw globalNavigation_dropdownTrigger__Vd0Te",
+          "tag": "button"
+        },
+        {
+          "text": "AI",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(246, 245, 244)",
+          "border_radius": "4px",
+          "border": "0px none rgb(246, 245, 244)",
+          "padding": "5px 10px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "52.3906px",
+          "height": "30px",
+          "class": "globalNavigation_link__ofzIw globalNavigation_dropdownTrigger__Vd0Te",
+          "tag": "button"
+        },
+        {
+          "text": "Solutions",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(246, 245, 244)",
+          "border_radius": "4px",
+          "border": "0px none rgb(246, 245, 244)",
+          "padding": "5px 10px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "98.3906px",
+          "height": "30px",
+          "class": "globalNavigation_link__ofzIw globalNavigation_dropdownTrigger__Vd0Te",
+          "tag": "button"
+        },
+        {
+          "text": "Resources",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(246, 245, 244)",
+          "border_radius": "4px",
+          "border": "0px none rgb(246, 245, 244)",
+          "padding": "5px 10px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "108.391px",
+          "height": "30px",
+          "class": "globalNavigation_link__ofzIw globalNavigation_dropdownTrigger__Vd0Te",
+          "tag": "button"
+        },
+        {
+          "text": "Get Notion free",
+          "background_color": "rgb(69, 93, 211)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "8px",
+          "border": "1px solid rgba(255, 255, 255, 0)",
+          "padding": "4px 14px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "500",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "129px",
+          "height": "36px",
+          "class": "button_button__atjat button_buttonVariantPrimary__mUFQZ button_buttonSizeM__NexGD globalNavigation_tryFreeCta__mNYk6",
+          "tag": "a"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(246, 245, 244)",
+          "border_radius": "0px",
+          "border": "0px none rgb(246, 245, 244)",
+          "padding": "11px",
+          "margin": "-11px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "auto",
+          "height": "auto",
+          "class": "mobileTrigger_menuToggle__rtUmp",
+          "tag": "button"
+        },
+        {
+          "text": "Get Notion free",
+          "background_color": "rgb(69, 93, 211)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "8px",
+          "border": "1px solid rgba(255, 255, 255, 0)",
+          "padding": "6px 15px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "500",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "155px",
+          "height": "38px",
+          "class": "semanticTypography_semanticTypography__mWJkv semanticTypography_variantInteractionButtonMedium__HCJEu button_button__bge_I HeroCTA_cta__hOE_c button_primary__k0d3I button_medium__VXS2i",
+          "tag": "a"
+        },
+        {
+          "text": "Request a demo",
+          "background_color": "rgb(33, 49, 131)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "8px",
+          "border": "1px solid rgba(255, 255, 255, 0)",
+          "padding": "6px 15px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "500",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "155px",
+          "height": "38px",
+          "class": "semanticTypography_semanticTypography__mWJkv semanticTypography_variantInteractionButtonMedium__HCJEu button_button__bge_I HeroCTA_cta__hOE_c button_secondary__0_CV3 button_medium__VXS2i",
+          "tag": "a"
+        },
+        {
+          "text": "Pause",
+          "background_color": "rgba(0, 0, 0, 0.05)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "50%",
+          "border": "0px none rgb(255, 255, 255)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "32px",
+          "height": "32px",
+          "class": "HeroMedia_playPauseController__3hTu3",
+          "tag": "button"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(255, 255, 255, 0)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "8px",
+          "border": "1px solid rgba(255, 255, 255, 0)",
+          "padding": "6px 15px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "500",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "116px",
+          "height": "36px",
+          "class": "semanticTypography_semanticTypography__mWJkv semanticTypography_variantInteractionButtonMedium__HCJEu button_button__bge_I logoWallMarquee_logoWallMarqueeItem__Y3_iz logoWallMarquee_logoWallMarqueeItemDot__tx_vZ button_ghost__npAbk button_medium__VXS2i",
+          "tag": "a"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(255, 255, 255, 0)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "8px",
+          "border": "1px solid rgba(255, 255, 255, 0)",
+          "padding": "6px 15px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "500",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "116px",
+          "height": "36px",
+          "class": "semanticTypography_semanticTypography__mWJkv semanticTypography_variantInteractionButtonMedium__HCJEu button_button__bge_I logoWallMarquee_logoWallMarqueeItem__Y3_iz logoWallMarquee_logoWallMarqueeItemDot__tx_vZ button_ghost__npAbk button_medium__VXS2i",
+          "tag": "a"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(255, 255, 255, 0)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "8px",
+          "border": "1px solid rgba(255, 255, 255, 0)",
+          "padding": "6px 15px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "500",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "116px",
+          "height": "36px",
+          "class": "semanticTypography_semanticTypography__mWJkv semanticTypography_variantInteractionButtonMedium__HCJEu button_button__bge_I logoWallMarquee_logoWallMarqueeItem__Y3_iz logoWallMarquee_logoWallMarqueeItemDot__tx_vZ button_ghost__npAbk button_medium__VXS2i",
+          "tag": "a"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(255, 255, 255, 0)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "8px",
+          "border": "1px solid rgba(255, 255, 255, 0)",
+          "padding": "6px 15px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "500",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "116px",
+          "height": "36px",
+          "class": "semanticTypography_semanticTypography__mWJkv semanticTypography_variantInteractionButtonMedium__HCJEu button_button__bge_I logoWallMarquee_logoWallMarqueeItem__Y3_iz logoWallMarquee_logoWallMarqueeItemDot__tx_vZ button_ghost__npAbk button_medium__VXS2i",
+          "tag": "a"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(255, 255, 255, 0)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "8px",
+          "border": "1px solid rgba(255, 255, 255, 0)",
+          "padding": "6px 15px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "500",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "116px",
+          "height": "36px",
+          "class": "semanticTypography_semanticTypography__mWJkv semanticTypography_variantInteractionButtonMedium__HCJEu button_button__bge_I logoWallMarquee_logoWallMarqueeItem__Y3_iz logoWallMarquee_logoWallMarqueeItemDot__tx_vZ button_ghost__npAbk button_medium__VXS2i",
+          "tag": "a"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(255, 255, 255, 0)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "8px",
+          "border": "1px solid rgba(255, 255, 255, 0)",
+          "padding": "6px 15px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "500",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "116px",
+          "height": "36px",
+          "class": "semanticTypography_semanticTypography__mWJkv semanticTypography_variantInteractionButtonMedium__HCJEu button_button__bge_I logoWallMarquee_logoWallMarqueeItem__Y3_iz logoWallMarquee_logoWallMarqueeItemDot__tx_vZ button_ghost__npAbk button_medium__VXS2i",
+          "tag": "a"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(255, 255, 255, 0)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "8px",
+          "border": "1px solid rgba(255, 255, 255, 0)",
+          "padding": "6px 15px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "500",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "116px",
+          "height": "36px",
+          "class": "semanticTypography_semanticTypography__mWJkv semanticTypography_variantInteractionButtonMedium__HCJEu button_button__bge_I logoWallMarquee_logoWallMarqueeItem__Y3_iz logoWallMarquee_logoWallMarqueeItemDot__tx_vZ button_ghost__npAbk button_medium__VXS2i",
+          "tag": "a"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(255, 255, 255, 0)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "8px",
+          "border": "1px solid rgba(255, 255, 255, 0)",
+          "padding": "6px 15px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "500",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "116px",
+          "height": "36px",
+          "class": "semanticTypography_semanticTypography__mWJkv semanticTypography_variantInteractionButtonMedium__HCJEu button_button__bge_I logoWallMarquee_logoWallMarqueeItem__Y3_iz logoWallMarquee_logoWallMarqueeItemDot__tx_vZ button_ghost__npAbk button_medium__VXS2i",
+          "tag": "a"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(255, 255, 255, 0)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "8px",
+          "border": "1px solid rgba(255, 255, 255, 0)",
+          "padding": "6px 15px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "500",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "116px",
+          "height": "36px",
+          "class": "semanticTypography_semanticTypography__mWJkv semanticTypography_variantInteractionButtonMedium__HCJEu button_button__bge_I logoWallMarquee_logoWallMarqueeItem__Y3_iz logoWallMarquee_logoWallMarqueeItemDot__tx_vZ button_ghost__npAbk button_medium__VXS2i",
+          "tag": "a"
+        },
+        {
+          "text": "Q&A agentsAnswers questions instantly using knowle",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgba(0, 0, 0, 0.95)",
+          "border_radius": "8px",
+          "border": "0px none rgba(0, 0, 0, 0.95)",
+          "padding": "12px 16px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "477.203px",
+          "height": "96px",
+          "class": "bentoCarouselHeader_accordionTrigger__RlTsv bentoCarouselHeader_accordionTriggerActive__MBl3g",
+          "tag": "button"
+        },
+        {
+          "text": "Task routing agentsAssigns, prioritizes, and route",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgba(0, 0, 0, 0.54)",
+          "border_radius": "8px",
+          "border": "0px none rgba(0, 0, 0, 0.54)",
+          "padding": "12px 16px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "477.203px",
+          "height": "64px",
+          "class": "bentoCarouselHeader_accordionTrigger__RlTsv",
+          "tag": "button"
+        },
+        {
+          "text": "Reporting agentsSummarizes, writes, and sends repo",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgba(0, 0, 0, 0.54)",
+          "border_radius": "8px",
+          "border": "0px none rgba(0, 0, 0, 0.54)",
+          "padding": "12px 16px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "477.203px",
+          "height": "64px",
+          "class": "bentoCarouselHeader_accordionTrigger__RlTsv",
+          "tag": "button"
+        },
+        {
+          "text": "Create your ownMake a Custom Agent for any work th",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgba(0, 0, 0, 0.54)",
+          "border_radius": "8px",
+          "border": "0px none rgba(0, 0, 0, 0.54)",
+          "padding": "12px 16px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "477.203px",
+          "height": "64px",
+          "class": "bentoCarouselHeader_accordionTrigger__RlTsv",
+          "tag": "button"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(0, 0, 0, 0.3)",
+          "color": "rgba(0, 0, 0, 0.898)",
+          "border_radius": "9999px",
+          "border": "0px none rgba(0, 0, 0, 0.898)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "block",
+          "width": "8px",
+          "height": "8px",
+          "class": "responsiveAccordionCarousel_dot__dD7WB bentoCarouselHeader_dot__3aLXF bentoCarouselHeader_dotActive__HnKxR",
+          "tag": "button"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(0, 0, 0, 0.1)",
+          "color": "rgba(0, 0, 0, 0.898)",
+          "border_radius": "9999px",
+          "border": "0px none rgba(0, 0, 0, 0.898)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "block",
+          "width": "8px",
+          "height": "8px",
+          "class": "responsiveAccordionCarousel_dot__dD7WB bentoCarouselHeader_dot__3aLXF",
+          "tag": "button"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(0, 0, 0, 0.1)",
+          "color": "rgba(0, 0, 0, 0.898)",
+          "border_radius": "9999px",
+          "border": "0px none rgba(0, 0, 0, 0.898)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "block",
+          "width": "8px",
+          "height": "8px",
+          "class": "responsiveAccordionCarousel_dot__dD7WB bentoCarouselHeader_dot__3aLXF",
+          "tag": "button"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(0, 0, 0, 0.1)",
+          "color": "rgba(0, 0, 0, 0.898)",
+          "border_radius": "9999px",
+          "border": "0px none rgba(0, 0, 0, 0.898)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "block",
+          "width": "8px",
+          "height": "8px",
+          "class": "responsiveAccordionCarousel_dot__dD7WB bentoCarouselHeader_dot__3aLXF",
+          "tag": "button"
+        },
+        {
+          "text": "",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.95)",
+          "border_radius": "9999px",
+          "border": "0px none rgba(0, 0, 0, 0.95)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "20px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "rgba(0, 0, 0, 0.01) 0px 0.175px 1.041px 0px, rgba(0, 0, 0, 0.02) 0px 0.8px 2.925px 0px, rgba(0, 0, 0, 0.027) 0px 2.025px 7.847px 0px, rgba(0, 0, 0, 0.04) 0px 4px 18px 0px",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "40px",
+          "height": "40px",
+          "class": "flex items-center justify-center actionButton_actionButton__wgfeI actionButton_primary__kHcxb actionButton_circle__5pYaw bentoCarouselSlides_arrowButton__luIqD bentoCarouselSlides_arrowButtonNext__DUD8L",
+          "tag": "button"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(0, 0, 0, 0.1)",
+          "color": "rgba(0, 0, 0, 0.95)",
+          "border_radius": "9999px",
+          "border": "0px none rgba(0, 0, 0, 0.95)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "20px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "40px",
+          "height": "40px",
+          "class": "flex items-center justify-center actionButton_actionButton__wgfeI actionButton_alpha__8Bq7Q actionButton_circle__5pYaw bentoCarouselPlayPause_playPauseButton__UKWFu",
+          "tag": "button"
+        },
+        {
+          "text": "View the video",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgba(0, 0, 0, 0.898)",
+          "border_radius": "12px",
+          "border": "0px none rgba(0, 0, 0, 0.898)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "block",
+          "width": "393.344px",
+          "height": "237.719px",
+          "class": "socialProof_videoButtonContainer___2Bfb",
+          "tag": "button"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(163, 158, 152)",
+          "border_radius": "0px",
+          "border": "0px none rgb(163, 158, 152)",
+          "padding": "12px",
+          "margin": "0px -8px",
+          "font_size": "20px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "inline-flex",
+          "width": "auto",
+          "height": "auto",
+          "class": "iconButton_iconButton__wbWve iconButton_edgeHorizontalBackground__i7fwl",
+          "tag": "button"
+        },
+        {
+          "text": "Download for Windows",
+          "background_color": "rgb(25, 25, 24)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "8px",
+          "border": "1px solid rgba(255, 255, 255, 0)",
+          "padding": "4px 14px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "500",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "inline-flex",
+          "width": "234px",
+          "height": "36px",
+          "class": "button_button__atjat button_buttonVariantPrimary__mUFQZ button_buttonSizeM__NexGD downloadButton desktopDownloadButton_msPersistUnthemedColors__z_y2R",
+          "tag": "a"
+        },
+        {
+          "text": "",
+          "background_color": "rgb(25, 25, 24)",
+          "color": "rgb(25, 25, 24)",
+          "border_radius": "8px",
+          "border": "1px solid rgba(255, 255, 255, 0)",
+          "padding": "0px",
+          "margin": "10px 0px 0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "block",
+          "width": "234px",
+          "height": "57px",
+          "class": "button_button__atjat button_buttonVariantPrimary__mUFQZ desktopDownloadButton_msPersistUnthemedColors__z_y2R desktopDownloadButton_msStoreButton__NORVf",
+          "tag": "a"
+        },
+        {
+          "text": "Download",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.95)",
+          "border_radius": "8px",
+          "border": "1px solid rgba(0, 0, 0, 0.1)",
+          "padding": "4px 14px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "500",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "108px",
+          "height": "36px",
+          "class": "button_button__atjat button_buttonVariantTertiary__lrfOH button_buttonSizeM__NexGD",
+          "tag": "a"
+        },
+        {
+          "text": "Download",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.95)",
+          "border_radius": "8px",
+          "border": "1px solid rgba(0, 0, 0, 0.1)",
+          "padding": "4px 14px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "500",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "108px",
+          "height": "36px",
+          "class": "button_button__atjat button_buttonVariantTertiary__lrfOH button_buttonSizeM__NexGD",
+          "tag": "a"
+        },
+        {
+          "text": "English (US)",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.95)",
+          "border_radius": "9999px",
+          "border": "1px solid rgba(0, 0, 0, 0.1)",
+          "padding": "8px 16px",
+          "margin": "0px",
+          "font_size": "14px",
+          "font_weight": "500",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "164px",
+          "height": "38px",
+          "class": "semanticTypography_semanticTypography__mWJkv semanticTypography_variantInteractionMenuButton__ZWXnH menuButton_menuButton__Siywy menuButton_variantPrimary__emkX3 languagePicker_menuButton___I2KV",
+          "tag": "button"
+        },
+        {
+          "text": "Cookie settings",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgba(0, 0, 0, 0.54)",
+          "border_radius": "0px",
+          "border": "0px none rgba(0, 0, 0, 0.54)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "14px",
+          "font_weight": "400",
+          "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "block",
+          "width": "166px",
+          "height": "20px",
+          "class": "semanticTypography_semanticTypography__mWJkv linkText_linkText__527kz",
+          "tag": "button"
+        }
+      ],
+      "layout_structure": {
+        "has_nav": true,
+        "has_footer": true,
+        "has_hero": true,
+        "section_count": 7,
+        "div_count": 243,
+        "image_count": 69,
+        "link_count": 135
+      },
+      "text_styles": {
+        "headings": {
+          "h1": {
+            "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+            "font_size": "64px",
+            "font_weight": "700",
+            "color": "rgb(255, 255, 255)",
+            "line_height": "64px",
+            "letter_spacing": "-2.125px",
+            "text_transform": "none",
+            "margin": "0px 185.312px",
+            "padding": "0px"
+          },
+          "h2": {
+            "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+            "font_size": "54px",
+            "font_weight": "700",
+            "color": "rgba(0, 0, 0, 0.95)",
+            "line_height": "56px",
+            "letter_spacing": "-1.875px",
+            "text_transform": "none",
+            "margin": "0px",
+            "padding": "0px"
+          },
+          "h3": {
+            "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+            "font_size": "14px",
+            "font_weight": "400",
+            "color": "rgba(0, 0, 0, 0.54)",
+            "line_height": "20px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "margin": "0px",
+            "padding": "0px"
+          }
+        },
+        "paragraphs": {
+          "p": {
+            "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+            "font_size": "16px",
+            "font_weight": "400",
+            "color": "rgba(255, 255, 255, 0.75)",
+            "line_height": "24px",
+            "margin": "0px 180px"
+          }
+        },
+        "links": {
+          "a": {
+            "font_family": "NotionInter, Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, \"Apple Color Emoji\", Arial, sans-serif, \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+            "font_size": "16px",
+            "font_weight": "400",
+            "color": "rgba(0, 0, 0, 0.95)",
+            "text_decoration": "none"
+          }
+        },
+        "buttons": {}
+      },
+      "enhanced_images": [
+        {
+          "src": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fshared%2Fnavigation%2Fai_group.png&w=384&q=75",
+          "alt": "",
+          "width": 192,
+          "height": 161,
+          "natural_width": 256,
+          "natural_height": 215,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://www.notion.com/front-static/agents/tasks/check.svg",
+          "alt": "",
+          "width": 48.24761962890625,
+          "height": 48.24761962890625,
+          "natural_width": 35,
+          "natural_height": 35,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fagents%2Fbook.png&w=96&q=75",
+          "alt": "",
+          "width": 60.22125244140625,
+          "height": 60.22126770019531,
+          "natural_width": 48,
+          "natural_height": 48,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://www.notion.com/front-static/agents/tasks/gmail.svg",
+          "alt": "",
+          "width": 48.83099365234375,
+          "height": 48.8310546875,
+          "natural_width": 35,
+          "natural_height": 35,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fagents%2Fglobe.png&w=96&q=75",
+          "alt": "",
+          "width": 59.7562255859375,
+          "height": 59.7562255859375,
+          "natural_width": 48,
+          "natural_height": 48,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://www.notion.com/front-static/agents/tasks/hubspot.svg",
+          "alt": "",
+          "width": 39.09014892578125,
+          "height": 39.090087890625,
+          "natural_width": 35,
+          "natural_height": 35,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fagents%2Ffiles-v2.png&w=96&q=75",
+          "alt": "",
+          "width": 52.1968994140625,
+          "height": 52.19696044921875,
+          "natural_width": 48,
+          "natural_height": 48,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://www.notion.com/front-static/agents/tasks/amplitude.svg",
+          "alt": "",
+          "width": 44.265869140625,
+          "height": 44.265869140625,
+          "natural_width": 35,
+          "natural_height": 35,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fagents%2Fmailbox.png&w=96&q=75",
+          "alt": "",
+          "width": 59.2783203125,
+          "height": 59.2783203125,
+          "natural_width": 48,
+          "natural_height": 48,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://www.notion.com/front-static/agents/tasks/github.svg",
+          "alt": "",
+          "width": 43.0460205078125,
+          "height": 43.04608154296875,
+          "natural_width": 35,
+          "natural_height": 35,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fagents%2Fcheckmark.png&w=96&q=75",
+          "alt": "",
+          "width": 49.0423583984375,
+          "height": 49.042388916015625,
+          "natural_width": 48,
+          "natural_height": 48,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://www.notion.com/front-static/agents/tasks/slack.svg",
+          "alt": "",
+          "width": 41.5877685546875,
+          "height": 41.587738037109375,
+          "natural_width": 35,
+          "natural_height": 35,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fagents%2Flight_bulb.png&w=96&q=75",
+          "alt": "",
+          "width": 59.03466796875,
+          "height": 59.03460693359375,
+          "natural_width": 48,
+          "natural_height": 48,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://www.notion.com/front-static/agents/tasks/chart.svg",
+          "alt": "",
+          "width": 45.3643798828125,
+          "height": 45.3643798828125,
+          "natural_width": 35,
+          "natural_height": 35,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fagents%2Fapple.png&w=96&q=75",
+          "alt": "",
+          "width": 59.7562255859375,
+          "height": 59.7562255859375,
+          "natural_width": 48,
+          "natural_height": 48,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://www.notion.com/front-static/agents/tasks/branch.svg",
+          "alt": "",
+          "width": 43.0460205078125,
+          "height": 43.04608154296875,
+          "natural_width": 35,
+          "natural_height": 35,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fagents%2Fsign.png&w=96&q=75",
+          "alt": "",
+          "width": 49.7242431640625,
+          "height": 49.7242431640625,
+          "natural_width": 48,
+          "natural_height": 48,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://images.ctfassets.net/spoqsaf9291f/4MHGeZRO6fDOLPVyJsLoyQ/73cf5bcef2edb384dc8989ebddd7975e/Company_openai__Colorway_White.svg",
+          "alt": "OpenAI",
+          "width": 66,
+          "height": 24,
+          "natural_width": 66,
+          "natural_height": 24,
+          "object_fit": "contain",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://images.ctfassets.net/spoqsaf9291f/5JgmuggsW4KO8pYqbKUUeW/9d4781445ff35516224384dc1c4f417c/figma-white.svg",
+          "alt": "Figma",
+          "width": 56,
+          "height": 24,
+          "natural_width": 47,
+          "natural_height": 24,
+          "object_fit": "contain",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://images.ctfassets.net/spoqsaf9291f/1DEacqNIZ316cGgB4hhZRL/d77ff0228469f25ee2c76af41ef2e6ac/Company_Ramp__Colorway_White.svg",
+          "alt": "Ramp",
+          "width": 71,
+          "height": 22.71875,
+          "natural_width": 75,
+          "natural_height": 24,
+          "object_fit": "contain",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ]
+    },
+    "assets": {
+      "favicon": "https://www.notion.so/front-static/favicon.ico",
+      "logo": "https://images.ctfassets.net/spoqsaf9291f/4MHGeZRO6fDOLPVyJsLoyQ/73cf5bcef2edb384dc8989ebddd7975e/Company_openai__Colorway_White.svg",
+      "images": [
+        {
+          "src": "https://www.notion.so/_next/image?url=%2Ffront-static%2Fshared%2Fnavigation%2Fai_group.png&w=384&q=75",
+          "alt": "",
+          "class": [
+            "next-image"
+          ],
+          "type": "ui"
+        },
+        {
+          "src": "https://www.notion.so/front-static/agents/tasks/check.svg",
+          "alt": "",
+          "class": [
+            "next-image"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://www.notion.so/_next/image?url=%2Ffront-static%2Fagents%2Fbook.png&w=96&q=75",
+          "alt": "",
+          "class": [
+            "next-image"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://www.notion.so/front-static/agents/tasks/gmail.svg",
+          "alt": "",
+          "class": [
+            "next-image"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://www.notion.so/_next/image?url=%2Ffront-static%2Fagents%2Fglobe.png&w=96&q=75",
+          "alt": "",
+          "class": [
+            "next-image"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://www.notion.so/front-static/agents/tasks/hubspot.svg",
+          "alt": "",
+          "class": [
+            "next-image"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://www.notion.so/_next/image?url=%2Ffront-static%2Fagents%2Ffiles-v2.png&w=96&q=75",
+          "alt": "",
+          "class": [
+            "next-image"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://www.notion.so/front-static/agents/tasks/amplitude.svg",
+          "alt": "",
+          "class": [
+            "next-image"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://www.notion.so/_next/image?url=%2Ffront-static%2Fagents%2Fmailbox.png&w=96&q=75",
+          "alt": "",
+          "class": [
+            "next-image"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://www.notion.so/front-static/agents/tasks/github.svg",
+          "alt": "",
+          "class": [
+            "next-image"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://www.notion.so/_next/image?url=%2Ffront-static%2Fagents%2Fcheckmark.png&w=96&q=75",
+          "alt": "",
+          "class": [
+            "next-image"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://www.notion.so/front-static/agents/tasks/slack.svg",
+          "alt": "",
+          "class": [
+            "next-image"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://www.notion.so/_next/image?url=%2Ffront-static%2Fagents%2Flight_bulb.png&w=96&q=75",
+          "alt": "",
+          "class": [
+            "next-image"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://www.notion.so/front-static/agents/tasks/chart.svg",
+          "alt": "",
+          "class": [
+            "next-image"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://www.notion.so/_next/image?url=%2Ffront-static%2Fagents%2Fapple.png&w=96&q=75",
+          "alt": "",
+          "class": [
+            "next-image"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://www.notion.so/front-static/agents/tasks/branch.svg",
+          "alt": "",
+          "class": [
+            "next-image"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://www.notion.so/_next/image?url=%2Ffront-static%2Fagents%2Fsign.png&w=96&q=75",
+          "alt": "",
+          "class": [
+            "next-image"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://images.ctfassets.net/spoqsaf9291f/4MHGeZRO6fDOLPVyJsLoyQ/73cf5bcef2edb384dc8989ebddd7975e/Company_openai__Colorway_White.svg",
+          "alt": "OpenAI",
+          "class": [
+            "next-image",
+            "logo_logo__xQVjz",
+            "logo_heightConstrained__wFlX5"
+          ],
+          "type": "ui"
+        },
+        {
+          "src": "https://images.ctfassets.net/spoqsaf9291f/5JgmuggsW4KO8pYqbKUUeW/9d4781445ff35516224384dc1c4f417c/figma-white.svg",
+          "alt": "Figma",
+          "class": [
+            "next-image",
+            "logo_logo__xQVjz",
+            "logo_heightConstrained__wFlX5"
+          ],
+          "type": "ui"
+        },
+        {
+          "src": "https://images.ctfassets.net/spoqsaf9291f/1DEacqNIZ316cGgB4hhZRL/d77ff0228469f25ee2c76af41ef2e6ac/Company_Ramp__Colorway_White.svg",
+          "alt": "Ramp",
+          "class": [
+            "next-image",
+            "logo_logo__xQVjz",
+            "logo_heightConstrained__wFlX5"
+          ],
+          "type": "ui"
+        }
+      ],
+      "stylesheets": [
+        "https://www.notion.so/_next/static/css/a19632fa6bdcf4ae.css",
+        "https://www.notion.so/_next/static/css/8d2d90e1352a1149.css",
+        "https://www.notion.so/_next/static/css/d8d4aca52a52fdd4.css",
+        "https://www.notion.so/_next/static/css/b2fda4b2c214547e.css",
+        "https://www.notion.so/_next/static/css/7484de895952d93b.css",
+        "https://www.notion.so/_next/static/css/683ac63ad9545c19.css",
+        "https://www.notion.so/_next/static/css/655afb2971653b6c.css",
+        "https://www.notion.so/_next/static/css/8904fd6e0e94a9fe.css",
+        "https://www.notion.so/_next/static/css/0e1cbaed7ec46014.css",
+        "https://www.notion.so/_next/static/css/493e7f8800676b93.css"
+      ]
+    },
+    "meta": {
+      "description": "Build Custom Agents, search across all your apps, and automate busywork. The AI workspace where teams get more done, faster.",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@NotionHQ",
+      "twitter:title": "The AI workspace that works for you. | Notion",
+      "twitter:description": "Build Custom Agents, search across all your apps, and automate busywork. The AI workspace where teams get more done, faster.",
+      "viewport": "width=device-width, initial-scale=1",
+      "twitter:url": "/",
+      "twitter:image": "https://www.notion.com/front-static/meta/custom-agents-og.png",
+      "og:url": "https://www.notion.com/",
+      "og:title": "The AI workspace that works for you. | Notion",
+      "og:description": "Build Custom Agents, search across all your apps, and automate busywork. The AI workspace where teams get more done, faster.",
+      "og:image": "https://www.notion.com/front-static/meta/custom-agents-og.png",
+      "og:locale": "en-US",
+      "og:site_name": "Notion",
+      "og:type": "website",
+      "mobile-web-app-capable": "yes",
+      "apple-itunes-app": "1232780281",
+      "referrer": "strict-origin",
+      "naver-site-verification": "ad5c9c7e4607a86395226000f5fe1e4223ce3348",
+      "next-head-count": "50"
+    },
+    "analysis": {
+      "has_dynamic_content": false,
+      "complexity_score": 10,
+      "recommended_3d_style": "cinematic-flythrough"
+    }
+  }
+}

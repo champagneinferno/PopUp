@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PopUp Batch Evaluator</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, sans-serif; background: #0f0f0f; color: #e0e0e0; display: flex; height: 100vh; overflow: hidden; }
+
+/* Sidebar */
+.sidebar { width: 300px; min-width: 300px; background: #1a1a2e; display: flex; flex-direction: column; border-right: 1px solid #2a2a4a; }
+.sidebar-header { padding: 16px; background: #16213e; border-bottom: 1px solid #2a2a4a; }
+.sidebar-header h2 { font-size: 15px; color: #c084fc; margin-bottom: 4px; }
+.sidebar-header .sub { font-size: 11px; color: #888; }
+
+#searchInput { width: 100%; padding: 8px 12px; margin-top: 10px; background: #0f0f23; border: 1px solid #2a2a4a; border-radius: 6px; color: #e0e0e0; font-size: 13px; outline: none; }
+#searchInput:focus { border-color: #c084fc; }
+
+.batch-list { flex: 1; overflow-y: auto; padding: 10px; }
+.batch-item { margin-bottom: 8px; border: 1px solid #2a2a4a; border-radius: 8px; background: #16213e; overflow: hidden; }
+.batch-header { padding: 12px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: background 0.2s; }
+.batch-header:hover { background: #1a2745; }
+.batch-header .name { font-size: 13px; font-weight: 600; color: #c084fc; }
+.batch-header .date { font-size: 11px; color: #888; margin-top: 2px; }
+.badge-count { background: #1e3a5f; padding: 2px 8px; border-radius: 10px; font-size: 11px; color: #93c5fd; white-space: nowrap; }
+.badge-new { background: #059669; color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700; margin-left: 6px; }
+
+.website-list { display: none; }
+.website-list.expanded { display: block; }
+.site-item { padding: 8px 16px; cursor: pointer; display: flex; align-items: center; gap: 8px; border-left: 3px solid transparent; transition: all 0.15s; font-size: 12px; }
+.site-item:hover { background: #1a2745; border-left-color: #c084fc; }
+.site-item.active { background: #1e3a5f; border-left-color: #c084fc; }
+.site-item .favicon { width: 16px; height: 16px; border-radius: 3px; flex-shrink: 0; }
+.site-item .domain { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.site-item .status { font-size: 10px; padding: 2px 6px; border-radius: 4px; }
+.status-success { background: #065f46; color: #6ee7b7; }
+.status-error { background: #7f1d1d; color: #fca5a5; }
+
+/* Main Content */
+.main-content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+.content-header { padding: 14px 20px; background: #1a1a2e; border-bottom: 1px solid #2a2a4a; display: flex; align-items: center; gap: 12px; }
+.content-header h2 { font-size: 16px; color: #c084fc; }
+.content-header .domain-badge { font-size: 12px; color: #93c5fd; }
+
+#dataDisplay { flex: 1; overflow-y: auto; padding: 20px; }
+
+/* Cards */
+.card { margin-bottom: 16px; border: 1px solid #2a2a4a; border-radius: 10px; background: #1a1a2e; overflow: hidden; }
+.card h3 { padding: 10px 14px; font-size: 13px; color: #c084fc; background: #16213e; border-bottom: 1px solid #2a2a4a; display: flex; align-items: center; gap: 6px; }
+.card-body { padding: 14px; }
+.card-body pre { font-size: 12px; line-height: 1.5; color: #ccc; white-space: pre-wrap; word-break: break-word; overflow-x: auto; max-height: 400px; overflow-y: auto; }
+
+/* Screenshot */
+.screenshot-container { text-align: center; padding: 0; }
+.screenshot-container img { width: 100%; max-width: 100%; border-radius: 6px; display: block; cursor: zoom-in; }
+.screenshot-placeholder { padding: 40px; text-align: center; color: #666; font-size: 13px; background: #0f0f23; border-radius: 6px; }
+
+/* Hero section highlight */
+.hero-card { border-color: #7c3aed; }
+.hero-card h3 { background: #2e1065; color: #c084fc; }
+
+/* Tags */
+.tag { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 11px; margin: 2px; }
+.tag-nav { background: #1e3a5f; color: #93c5fd; }
+.tag-button { background: #065f46; color: #6ee7b7; }
+.tag-color { display: inline-block; width: 20px; height: 20px; border-radius: 4px; border: 1px solid #444; vertical-align: middle; margin: 2px; }
+
+/* Grid */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.stat { background: #0f0f23; padding: 12px; border-radius: 8px; border: 1px solid #2a2a4a; }
+.stat-label { font-size: 11px; color: #888; }
+.stat-value { font-size: 18px; font-weight: 700; color: #c084fc; margin-top: 4px; }
+
+/* Welcome */
+.welcome { text-align: center; padding: 60px 20px; }
+.welcome h2 { color: #c084fc; margin-bottom: 10px; font-size: 20px; }
+.welcome p { color: #888; font-size: 14px; }
+
+/* Loading & Errors */
+.loading { text-align: center; padding: 20px; color: #888; }
+.error-msg { color: #fca5a5; padding: 12px; background: #7f1d1d; border-radius: 6px; margin: 8px; border: 1px solid #fca5a5; font-size: 13px; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/* Responsive table for images */
+.img-list { display: flex; flex-wrap: wrap; gap: 4px; }
+.img-list img { width: 60px; height: 60px; object-fit: cover; border-radius: 4px; border: 1px solid #333; cursor: pointer; }
+.img-list img:hover { border-color: #c084fc; }
+
+/* Full-screen image modal */
+.modal { display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); cursor: zoom-out; }
+.modal img { max-width: 90%; max-height: 90%; margin: auto; position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+.modal.show { display: flex; align-items: center; justify-content: center; }
+</style>
+</head>
+<body>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h2>🧬 PopUp Evaluator</h2>
+    <div class="sub">Batch DNA Extractor</div>
+    <input type="text" id="searchInput" placeholder="🔍 Search batches..." onkeyup="filterBatches()">
+  </div>
+  <div class="batch-list" id="batchList">
+    <div class="loading">Loading batches...</div>
+  </div>
+</div>
+<div class="main-content">
+  <div class="content-header" id="contentHeader">
+    <h2>Select a website</h2>
+    <span class="domain-badge" id="domainBadge"></span>
+  </div>
+  <div id="dataDisplay">
+    <div class="welcome">
+      <h2>🧬 PopUp Batch Evaluator</h2>
+      <p>Select a batch on the left, then click a website to view its extracted DNA profile including screenshots, structure, and visual data.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Image modal -->
+<div class="modal" id="imageModal" onclick="this.classList.remove('show')">
+  <img id="modalImage" src="" alt="">
+</div>
+
+<script>
+let batches = [];
+
+async function loadBatches() {
+  try {
+    const resp = await fetch('../output/batch_index.json');
+    if (!resp.ok) throw new Error('batch_index.json not found');
+    const data = await resp.json();
+    const folders = Array.isArray(data) ? data : (data.batches || []);
+    
+    batches = [];
+    
+    for (const folder of folders) {
+      try {
+        const manifestResp = await fetch(`../output/${folder}/batch_manifest.json`);
+        if (!manifestResp.ok) continue;
+        const manifest = await manifestResp.json();
+        
+        const websites = (manifest.results || []).map(r => ({
+          domain: r.url ? r.url.replace('https://', '').replace('http://', '').replace(/\/$/, '') : r.url,
+          url: r.url,
+          status: r.status || (r.error ? 'error' : 'success'),
+          error: r.error || null,
+          output: r.output || null
+        }));
+        
+        batches.push({
+          id: folder,
+          name: manifest.batch_name || folder,
+          timestamp: manifest.timestamp || '',
+          websites: websites,
+          path: `../output/${folder}`
+        });
+      } catch (e) {
+        console.log('Skipping folder:', folder, e);
+      }
+    }
+    
+    batches.sort((a, b) => b.timestamp.localeCompare(a.timestamp));
+    renderBatches();
+  } catch (err) {
+    document.getElementById('batchList').innerHTML = `<div class="error-msg">Failed to load batches: ${err.message}</div>`;
+  }
+}
+
+function renderBatches() {
+  const el = document.getElementById('batchList');
+  if (batches.length === 0) {
+    el.innerHTML = '<div class="loading">No batches found</div>';
+    return;
+  }
+  
+  const newestId = batches.length > 0 ? batches[0].id : null;
+  
+  el.innerHTML = batches.map(b => {
+    const dateStr = b.timestamp ? b.timestamp.replace(/_/g, ' ').replace(/-/g, '/') : '';
+    const isNew = b.id === newestId;
+    const siteCount = b.websites.length;
+    const successCount = b.websites.filter(w => w.status === 'success').length;
+    
+    return `
+      <div class="batch-item">
+        <div class="batch-header" onclick="toggleBatch('${b.id}')">
+          <div>
+            <div class="name">${b.name}${isNew ? '<span class="badge-new">NEW</span>' : ''}</div>
+            <div class="date">${dateStr}</div>
+          </div>
+          <span class="badge-count">${siteCount} sites (${successCount}✓)</span>
+        </div>
+        <div class="website-list" id="sites-${CSS.escape(b.id)}">
+          ${b.websites.map((site, i) => `
+            <div class="site-item ${site.status === 'error' ? 'status-error' : ''}" onclick="loadWebsite('${b.id}', ${i})">
+              <img class="favicon" src="https://www.google.com/s2/favicons?domain=${site.domain}&sz=32" alt="" onerror="this.style.display='none'">
+              <span class="domain">${site.domain}</span>
+              <span class="status status-${site.status === 'error' ? 'error' : 'success'}">${site.status === 'success' ? '✓' : '✗'}</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function toggleBatch(id) {
+  const el = document.getElementById(`sites-${CSS.escape(id)}`);
+  if (!el) return;
+  const expanded = el.classList.contains('expanded');
+  document.querySelectorAll('.website-list.expanded').forEach(e => e.classList.remove('expanded'));
+  if (!expanded) el.classList.add('expanded');
+}
+
+function filterBatches() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  document.querySelectorAll('.batch-item').forEach(item => {
+    item.style.display = item.textContent.toLowerCase().includes(q) ? 'block' : 'none';
+  });
+}
+
+async function loadWebsite(batchId, siteIndex) {
+  document.querySelectorAll('.site-item.active').forEach(e => e.classList.remove('active'));
+  const clicked = event.currentTarget;
+  if (clicked) clicked.classList.add('active');
+  
+  const batch = batches.find(b => b.id === batchId);
+  if (!batch) return;
+  
+  const site = batch.websites[siteIndex];
+  if (!site) return;
+  
+  document.getElementById('contentHeader').querySelector('h2').textContent = `📄 ${site.domain}`;
+  document.getElementById('domainBadge').textContent = `${batch.name}`;
+  
+  const display = document.getElementById('dataDisplay');
+  display.innerHTML = '<div class="loading">Loading extraction data...</div>';
+  
+  try {
+    // Load the JSON extraction file
+    let dataPath;
+    if (site.output) {
+      // output is relative path like ../output/batch/site.json
+      dataPath = site.output.startsWith('../') ? site.output : `../output/${batchId}/${site.output}`;
+    } else {
+      // Try to guess the file path
+      const domainFile = site.url.replace('https://', '').replace('http://', '').replace('/', '_') + '.json';
+      dataPath = `../output/${batchId}/${domainFile}`;
+    }
+    
+    const resp = await fetch(dataPath);
+    if (!resp.ok) {
+      // Try alternative path
+      dataPath = `../output/${batchId}/${site.domain}.json`;
+      const resp2 = await fetch(dataPath);
+      if (!resp2.ok) throw new Error(`Could not find extraction data for ${site.domain}`);
+      renderData(await resp2.json(), site);
+    } else {
+      renderData(await resp.json(), site);
+    }
+  } catch (err) {
+    display.innerHTML = `<div class="error-msg">Error: ${err.message}</div>`;
+  }
+}
+
+function renderData(profile, site) {
+  const wp = profile.website_profile || profile;
+  const display = document.getElementById('dataDisplay');
+  
+  const url = wp.url || site.url || '';
+  const title = wp.title || '';
+  const timestamp = wp.extraction_timestamp || '';
+  const screenshotPath = wp.screenshot_path || '';
+  const hero = wp.hero || null;
+  const nav = wp.navigation || wp.rendered_nav || [];
+  const buttons = wp.buttons || wp.cta_buttons || [];
+  const sections = wp.sections || [];
+  const images = wp.images || wp.rendered_images || [];
+  const colors = wp.colors || wp.computed_colors || [];
+  const metadata = wp.extraction_metadata || {};
+  
+  let html = '';
+  
+  // SCREENSHOT
+  html += `<div class="card">
+    <h3>📷 Homepage Screenshot</h3>
+    <div class="screenshot-container">
+  `;
+  
+  if (screenshotPath) {
+    // screenshot_path is absolute path on disk, we need to serve it via HTTP
+    // Try to derive a relative URL from the batch path
+    const scRelative = screenshotPath.replace(/\\/g, '/');
+    // Extract just the batch-relative portion
+    const scUrl = scRelative.replace(/^.*\/output\/(BusinessBatch_[^/]+)\/(.*)$/, '../output/$1/$2');
+    if (scUrl.startsWith('../output/')) {
+      html += `<img src="${scUrl}" alt="Screenshot of ${url}" onclick="showImage(this.src)">`;
+    } else {
+      html += `<div class="screenshot-placeholder">Screenshot path: ${screenshotPath}</div>`;
+    }
+  } else {
+    html += `<div class="screenshot-placeholder">No screenshot available</div>`;
+  }
+  
+  html += `</div></div>`;
+  
+  // HERO SECTION (highlighted)
+  if (hero) {
+    html += `<div class="card hero-card">
+      <h3>⭐ Hero Section</h3>
+      <div class="card-body">
+    `;
+    if (hero.heading) html += `<p><strong>Heading:</strong> ${hero.heading}</p>`;
+    if (hero.subheading) html += `<p><strong>Subheading:</strong> ${hero.subheading}</p>`;
+    if (hero.description) html += `<p><strong>Description:</strong> ${hero.description}</p>`;
+    if (hero.cta_buttons && hero.cta_buttons.length > 0) {
+      html += `<p><strong>CTA Buttons:</strong></p>`;
+      hero.cta_buttons.forEach(btn => {
+        html += `<span class="tag tag-button">${btn.text || btn}</span> `;
+      });
+    }
+    if (hero.background_image) {
+      html += `<p><strong>Background:</strong> ${hero.background_image}</p>`;
+    }
+    html += `</div></div>`;
+  }
+  
+  // OVERVIEW STATS
+  html += `<div class="card">
+    <h3>📊 Overview</h3>
+    <div class="card-body"><div class="grid-2">
+      <div class="stat"><div class="stat-label">URL</div><div class="stat-value" style="font-size: 14px; word-break: break-all;">${url}</div></div>
+      <div class="stat"><div class="stat-label">Title</div><div class="stat-value" style="font-size: 14px;">${title || 'N/A'}</div></div>
+      <div class="stat"><div class="stat-label">Extracted</div><div class="stat-value" style="font-size: 13px;">${timestamp}</div></div>
+      <div class="stat"><div class="stat-label">Nav Items</div><div class="stat-value">${nav.length}</div></div>
+      <div class="stat"><div class="stat-label">Sections</div><div class="stat-value">${sections.length}</div></div>
+      <div class="stat"><div class="stat-label">Images</div><div class="stat-value">${images.length}</div></div>
+    </div></div></div>`;
+  
+  // NAVIGATION
+  if (nav.length > 0) {
+    html += `<div class="card">
+      <h3>🧭 Navigation (${nav.length})</h3>
+      <div class="card-body">`;
+    nav.forEach(item => {
+      const text = item.text || item;
+      const href = item.href || '';
+      html += `<span class="tag tag-nav">${text}</span> `;
+    });
+    html += `</div></div>`;
+  }
+  
+  // CTA BUTTONS
+  if (buttons.length > 0) {
+    html += `<div class="card">
+      <h3>🔘 CTA Buttons (${buttons.length})</h3>
+      <div class="card-body">`;
+    buttons.forEach(btn => {
+      const text = btn.text || btn;
+      html += `<span class="tag tag-button">${text}</span> `;
+    });
+    html += `</div></div>`;
+  }
+  
+  // COLORS
+  if (colors.length > 0) {
+    html += `<div class="card">
+      <h3>🎨 Color Palette (${colors.length})</h3>
+      <div class="card-body">`;
+    colors.forEach(c => {
+      // Try to show color swatch
+      const colorVal = c.rgb || c.hex || c;
+      html += `<span class="tag-color" style="background: ${colorVal}" title="${colorVal}"></span>`;
+    });
+    html += `</div></div>`;
+  }
+  
+  // IMAGES
+  if (images.length > 0) {
+    html += `<div class="card">
+      <h3>🖼️ Images (${images.length})</h3>
+      <div class="card-body"><div class="img-list">`;
+    images.slice(0, 20).forEach(img => {
+      const src = img.src || img;
+      html += `<img src="${src}" alt="${img.alt || ''}" onclick="showImage(this.src)" onerror="this.style.display='none'">`;
+    });
+    html += `</div></div></div>`;
+  }
+  
+  // SECTIONS
+  if (sections.length > 0) {
+    html += `<div class="card">
+      <h3>📐 Sections (${sections.length})</h3>
+      <div class="card-body"><pre>${JSON.stringify(sections.slice(0, 10), null, 2)}</pre></div>
+    </div>`;
+  }
+  
+  // FULL HTML (if available)
+  if (wp.full_html || wp.page_html) {
+    html += `<div class="card">
+      <h3>🔧 Full HTML (${(wp.full_html || wp.page_html).length} chars)</h3>
+      <div class="card-body"><pre>${escapeHtml((wp.full_html || wp.page_html).substring(0, 5000))}</pre></div>
+    </div>`;
+  }
+  
+  // RAW METADATA
+  html += `<div class="card">
+    <h3>📋 Raw Metadata</h3>
+    <div class="card-body"><pre>${JSON.stringify(metadata, null, 2)}</pre></div>
+  </div>`;
+  
+  display.innerHTML = html;
+}
+
+function showImage(src) {
+  document.getElementById('modalImage').src = src;
+  document.getElementById('imageModal').classList.add('show');
+}
+
+function escapeHtml(str) {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+// Load on page start
+loadBatches();
+</script>
+</body>
+</html>

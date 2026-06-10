@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopUp Extractor - Data Viewer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f0f2f5; display: flex; height: 100vh; overflow: hidden; }
+        
+        .sidebar { width: 280px; background: white; border-right: 1px solid #ddd; display: flex; flex-direction: column; overflow: hidden; box-shadow: 2px 0 4px rgba(0,0,0,0.1); }
+        .sidebar-header { padding: 15px; border-bottom: 1px solid #ddd; background: #1976d2; }
+        .sidebar-header h2 { margin: 0 0 10px 0; font-size: 18px; color: white; }
+        .sidebar-header a { color: white; text-decoration: none; font-size: 12px; opacity: 0.9; }
+        .sidebar-header a:hover { opacity: 1; text-decoration: underline; }
+
+        .add-website-section { padding: 10px 15px; background: #f8f9fa; border-bottom: 1px solid #ddd; }
+        .add-website-header { display: flex; align-items: center; gap: 5px; margin-bottom: 8px; }
+        .add-website-header button { width: 36px; height: 36px; border-radius: 50%; background: #28a745; color: white; border: none; cursor: pointer; font-size: 18px; font-weight: bold; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s; }
+        .add-website-header button:hover { background: #218838; }
+        .add-website-header span { font-size: 13px; color: #666; }
+        
+        .url-input-row { display: flex; gap: 5px; align-items: center; margin-bottom: 8px; }
+        .url-input-row input { flex: 1; padding: 8px 12px; border: 1px solid #ddd; border-radius: 20px; font-size: 13px; background: white; color: #333; }
+        .url-input-row input:focus { outline: none; border-color: #1976d2; box-shadow: 0 0 0 2px rgba(25,118,210,0.2); }
+        .url-input-row button.remove-btn { width: 32px; height: 32px; background: #dc3545; color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s; }
+        .url-input-row button.remove-btn:hover { background: #c82333; }
+        .extract-all-btn { width: 100%; padding: 10px; background: #1976d2; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: bold; margin-top: 8px; transition: background 0.2s; }
+        .extract-all-btn:hover { background: #1565c0; }
+        .extract-all-btn:disabled { background: #ccc; cursor: not-allowed; }
+
+        #searchInput { width: 100%; padding: 8px; margin-top: 10px; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px; color: white; font-size: 13px; }
+        #searchInput::placeholder { color: rgba(255,255,255,0.7); }
+        #searchInput:focus { outline: none; background: rgba(255,255,255,0.3); }
+        
+        .batch-list { flex: 1; overflow-y: auto; padding: 10px; }
+        
+        .batch-item { margin-bottom: 8px; border: 1px solid #ddd; border-radius: 6px; background: white; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .batch-header { padding: 10px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; background: #f8f9fa; transition: background 0.2s; }
+        .batch-header:hover { background: #e9ecef; }
+        .batch-header h3 { margin: 0; font-size: 14px; color: #333; display: flex; align-items: center; gap: 6px; flex-wrap: nowrap; }
+        .batch-date { font-size: 11px; color: #666; margin-top: 2px; }
+        
+        .badge-new { background: #4caf50; color: white; padding: 2px 6px; border-radius: 3px; font-size: 10px; font-weight: bold; white-space: nowrap; }
+        .badge-count { background: #1976d2; color: white; padding: 2px 6px; border-radius: 3px; font-size: 11px; white-space: nowrap; margin-left: 8px; }
+        
+        .website-list { display: none; padding: 5px 0; background: white; }
+        .website-list.expanded { display: block; }
+        
+        .tree-item { padding: 8px 15px; cursor: pointer; display: flex; align-items: center; gap: 8px; border-left: 3px solid transparent; transition: all 0.2s; margin: 2px 5px; border-radius: 4px; border: 1px solid #28a745; background: rgba(40, 167, 69, 0.05); }
+        
+        .tree-item:hover { background: rgba(255, 165, 0, 0.2); border-color: #ff8c00; border-left: 3px solid #ff8c00; box-shadow: 0 0 8px rgba(255, 165, 0, 0.3); }
+        .tree-item.active { background: rgba(25, 118, 210, 0.2); border-color: #1976d2; border-left: 3px solid #1976d2; }
+        
+        .tree-item .favicon { width: 16px; height: 16px; flex-shrink: 0; }
+        .tree-item .site-url { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; color: #333; }
+        
+        .main-content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+        .content-header { padding: 15px 20px; background: white; border-bottom: 1px solid #ddd; display: flex; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .content-header h2 { margin: 0; font-size: 18px; color: #1976d2; }
+        
+        .data-display { flex: 1; overflow-y: auto; padding: 20px; }
+        
+        .data-section { margin-bottom: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background: white; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+                .data-section h3 { padding: 12px 16px; margin: 0; background: #f8f9fa; font-size: 13px; color: #333; border-bottom: 1px solid #e0e0e0; font-weight: 600; }
+                .data-section pre { padding: 15px; margin: 0; background: #f8f9fa; overflow-x: auto; font-size: 12px; line-height: 1.5; white-space: pre-wrap; word-wrap: break-word; max-width: 100%; color: #333; }
+        
+        .welcome-message { text-align: center; padding: 50px 20px; color: #666; }
+        .welcome-message h2 { color: #1976d2; margin-bottom: 10px; }
+        
+        ::-webkit-scrollbar { width: 8px; }
+                ::-webkit-scrollbar-track { background: #1a1a2e; }
+                ::-webkit-scrollbar-thumb { background: #2a2a4a; border-radius: 4px; }
+                ::-webkit-scrollbar-thumb:hover { background: #3a3a5a; }
+        
+                /* Image Modal */
+                .img-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999; cursor: zoom-out; align-items: center; justify-content: center; }
+                .img-modal.show { display: flex; }
+                .img-modal img { max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 4px; }
+                .img-modal .close { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 30px; cursor: pointer; }
+                .img-clickable { cursor: zoom-in; transition: opacity 0.2s; }
+                        .img-clickable:hover { opacity: 0.8; }
+                        #dataDisplay img { cursor: zoom-in; }
+        
+                .loading { text-align: center; padding: 20px; color: #888; }
+                .error { color: #f44336; padding: 15px; background: #2a1a1a; border-radius: 4px; margin: 10px; border: 1px solid #f44336; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>📁 PopUp Extractor</h2>
+            <a href="dashboard.html">📊 View Dashboard</a>
+            <input type="text" id="searchInput" placeholder="🔍 Search batches..." onkeyup="filterBatches()">
+        </div>
+        <div class="add-website-section">
+            <div class="add-website-header">
+                <button onclick="addUrlInput()" title="Add Website">+</button>
+                <span>Add websites to extract</span>
+            </div>
+            <div id="urlInputsContainer"></div>
+            <button class="extract-all-btn" onclick="extractAllWebsites()">🚀 Extract All Websites</button>
+        </div>
+        <div class="batch-list" id="batchList">
+            <div class="loading">Loading batches...</div>
+        </div>
+    </div>
+    
+    <div class="main-content">
+            <div class="content-header">
+                <h2 id="contentTitle">Select a website to view extraction data</h2>
+            </div>
+        
+            <div class="data-display" id="dataDisplay">
+                <div class="welcome-message">
+                    <h2>🎯 Welcome to PopUp Extractor</h2>
+                    <p>Select a batch from the sidebar to view extracted website DNA</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Image Zoom Modal -->
+        <div class="img-modal" id="imgModal" onclick="closeZoom()">
+            <span class="close" onclick="closeZoom()">&times;</span>
+            <img id="modalImg" src="" alt="Zoomed image">
+        </div>
+
+        <script>
+            function zoomImage(src) {
+                            document.getElementById('modalImg').src = src;
+                            document.getElementById('imgModal').classList.add('show');
+                        }
+                        function closeZoom() {
+                            document.getElementById('imgModal').classList.remove('show');
+                        }
+                        // Global click-to-zoom for all images in data display
+                        document.addEventListener('DOMContentLoaded', () => {
+                            document.getElementById('dataDisplay').addEventListener('click', function(e) {
+                                if (e.target.tagName === 'IMG' && e.target.src && !e.target.src.startsWith('data:') && !e.target.closest('.img-modal')) {
+                                    zoomImage(e.target.src);
+                                }
+                            });
+                        });
+        let batches = [];
+        let currentBatchId = null;
+        let urlInputCounter = 0;
+        
+        // Auto-add first URL input on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            addUrlInput();
+            loadBatches();
+        });
+        
+        function addUrlInput() {
+            urlInputCounter++;
+            const container = document.getElementById('urlInputsContainer');
+            const rowId = `urlRow${urlInputCounter}`;
+            
+            const row = document.createElement('div');
+            row.className = 'url-input-row';
+            row.id = rowId;
+            row.innerHTML = `
+                <input type="url" id="urlInput${urlInputCounter}" placeholder="https://example.com">
+                <button class="remove-btn" onclick="removeUrlInput('${rowId}')">×</button>
+            `;
+            
+            container.appendChild(row);
+            document.getElementById(`urlInput${urlInputCounter}`).focus();
+        }
+        
+        function removeUrlInput(rowId) {
+            const row = document.getElementById(rowId);
+            if (row) row.remove();
+        }
+        
+        function extractAllWebsites() {
+            const inputs = document.querySelectorAll('#urlInputsContainer input[type="url"]');
+            const urls = [];
+            
+            inputs.forEach(input => {
+                if (input.value.trim()) {
+                    urls.push(input.value.trim());
+                }
+            });
+            
+            if (urls.length === 0) {
+                alert('Please add at least one URL');
+                return;
+            }
+            
+            // Disable button during extraction
+            const extractBtn = document.querySelector('.extract-all-btn');
+            extractBtn.disabled = true;
+            extractBtn.textContent = '⏳ Extracting...';
+            
+            // Call backend API
+            fetch('/api/extract', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ urls: urls })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to start extraction');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('✅ Extraction started:', data);
+                // Start polling for job status
+                if (data.job_ids && data.job_ids.length > 0) {
+                    pollJobStatus(data.job_ids);
+                } else {
+                    // No job IDs, just reload after delay
+                    setTimeout(() => {
+                        loadBatches();
+                        extractBtn.disabled = false;
+                        extractBtn.textContent = '🚀 Extract All Websites';
+                    }, 180000); // 3 minutes
+                }
+            })
+            .catch(error => {
+                alert('❌ Error starting extraction: ' + error.message);
+                extractBtn.disabled = false;
+                extractBtn.textContent = '🚀 Extract All Websites';
+            });
+        }
+        
+        function pollJobStatus(jobIds) {
+            const extractBtn = document.querySelector('.extract-all-btn');
+            let completed = 0;
+            const total = jobIds.length;
+            
+            function checkJob(index) {
+                if (index >= total) {
+                    // All jobs checked, now poll until completed
+                    checkCompletion(jobIds);
+                    return;
+                }
+                
+                const jobId = jobIds[index];
+                fetch(`/api/job/${jobId}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(`Job ${jobId}: ${data.status}`);
+                    if (data.status === 'completed' || data.status === 'failed') {
+                        completed++;
+                        if (completed === total) {
+                            // All jobs finished
+                            loadBatches();
+                            extractBtn.disabled = false;
+                            extractBtn.textContent = '🚀 Extract All Websites';
+                            alert('✅ Extraction completed! Check the sidebar for new batches.');
+                        }
+                    }
+                    // Check next job
+                    checkJob(index + 1);
+                })
+                .catch(error => {
+                    console.error('Error checking job status:', error);
+                    completed++;
+                    if (completed === total) {
+                        loadBatches();
+                        extractBtn.disabled = false;
+                        extractBtn.textContent = '🚀 Extract All Websites';
+                    }
+                    checkJob(index + 1);
+                });
+            }
+            
+            checkJob(0);
+        }
+        
+        function checkCompletion(jobIds) {
+            // Poll every 5 seconds until all jobs are completed
+            const extractBtn = document.querySelector('.extract-all-btn');
+            let allDone = false;
+            
+            function poll() {
+                if (allDone) return;
+                
+                const promises = jobIds.map(jobId =>
+                    fetch(`/api/job/${jobId}`)
+                    .then(r => r.json())
+                    .catch(() => ({ status: 'unknown' }))
+                );
+                
+                Promise.all(promises)
+                .then(results => {
+                    const allCompleted = results.every(r => r.status === 'completed' || r.status === 'failed');
+                    if (allCompleted) {
+                        allDone = true;
+                        loadBatches();
+                        extractBtn.disabled = false;
+                        extractBtn.textContent = '🚀 Extract All Websites';
+                        alert('✅ Extraction completed! Check the sidebar for new batches.');
+                    } else {
+                        // Poll again in 5 seconds
+                        setTimeout(poll, 5000);
+                    }
+                })
+                .catch(() => {
+                    setTimeout(poll, 5000);
+                });
+            }
+            
+            poll();
+        }
+        
+        async function loadBatches() {
+                    try {
+                        const indexResponse = await fetch('../output/batch_index.json');
+                        if (!indexResponse.ok) throw new Error('batch_index.json not found');
+                
+                        const indexData = await indexResponse.json();
+                        const batchFolders = indexData.batches || indexData || [];
+                        batches = [];
+                
+                        for (const folder of batchFolders) {
+                            if (typeof folder !== 'string') continue;
+                            try {
+                                const manifestResponse = await fetch(`../output/extraction/${folder}/batch_manifest.json`);
+                                if (!manifestResponse.ok) continue;
+                        
+                                const data = await manifestResponse.json();
+                                const batchNum = batches.length + 1;
+                        
+                                // Map manifest results to website list
+                                const websites = (data.results || []).filter(r => r.status === 'success').map(r => {
+                                    let domain = r.url.replace('https://', '').replace('http://', '').split('/')[0];
+                                    let dataPath = r.output || '';
+                                    dataPath = dataPath.replace(/\\/g, '/').split('/').pop();
+                                    return { data_path: dataPath, domain: domain, url: r.url };
+                                });
+                        
+                                batches.push({
+                                    id: `batch${batchNum}`,
+                                    batchNumber: batchNum,
+                                    batchName: data.batch_name || folder,
+                                    timestamp: data.timestamp || new Date().toISOString(),
+                                    status: 'completed',
+                                    batchPath: `../output/extraction/${folder}`,
+                                    websites: websites
+                                });
+                            } catch (e) {
+                                console.log(`Failed to load ${folder}:`, e);
+                            }
+                        }
+                
+                        batches.sort((a, b) => b.batchNumber - a.batchNumber);
+                        displayBatches();
+                    } catch (error) {
+                        document.getElementById('batchList').innerHTML = `<div class="error">Error loading batches: ${error.message}</div>`;
+                    }
+                }
+        
+        function displayBatches() {
+            const batchList = document.getElementById('batchList');
+            if (batches.length === 0) {
+                batchList.innerHTML = '<div class="welcome-message"><p>No batches found</p></div>';
+                return;
+            }
+            
+            const mostRecentBatchId = batches.length > 0 ? batches[0].id : null;
+            
+            batchList.innerHTML = batches.map(batch => {
+                const date = new Date(batch.timestamp);
+                const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                const timeStr = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+                const isNew = batch.id === mostRecentBatchId;
+                
+                return `
+                    <div class="batch-item">
+                        <div class="batch-header" onclick="toggleBatch('${batch.id}')">
+                            <div>
+                                <h3>
+                                    ${batch.batchName}
+                                    ${isNew ? '<span class="badge-new">NEW</span>' : ''}
+                                </h3>
+                                <div class="batch-date">${dateStr} at ${timeStr}</div>
+                            </div>
+                            <span class="badge-count">${batch.websites.length} sites</span>
+                        </div>
+                        <div class="website-list" id="websites-${batch.id}">
+                            ${batch.websites.map(site => `
+                                <div class="tree-item" data-domain="${site.domain}" onclick="event.stopPropagation(); loadWebsite('${batch.batchPath}', '${site.data_path}', '${site.domain}')">
+                                    <img class="favicon" src="https://www.google.com/s2/favicons?domain=${site.domain}&sz=32" alt="">
+                                    <span class="site-url">${site.domain}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        function toggleBatch(batchId) {
+            const websiteList = document.getElementById(`websites-${batchId}`);
+            if (websiteList.classList.contains('expanded')) {
+                websiteList.classList.remove('expanded');
+            } else {
+                document.querySelectorAll('.website-list.expanded').forEach(el => el.classList.remove('expanded'));
+                websiteList.classList.add('expanded');
+            }
+        }
+        
+        function filterBatches() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            document.querySelectorAll('.batch-item').forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(searchTerm) ? 'block' : 'none';
+            });
+        }
+        
+        async function loadWebsite(batchPath, dataPath, domain) {
+                    try {
+                        document.querySelectorAll('.tree-item.active').forEach(el => el.classList.remove('active'));
+                        const targetEl = (typeof event !== 'undefined' && event && event.target)
+                            ? event.target.closest('.tree-item')
+                            : document.querySelector(`.tree-item[data-domain="${domain}"]`);
+                        if (targetEl) targetEl.classList.add('active');
+                        document.getElementById('contentTitle').textContent = `Viewing: ${domain}`;
+                        const fullPath = `${batchPath}/${dataPath}`;
+                console.log('Loading:', fullPath);
+                
+                const response = await fetch(fullPath);
+                if (!response.ok) throw new Error(`Failed to load ${fullPath} (status: ${response.status})`);
+                
+                const data = await response.json();
+                console.log('Loaded data:', data);
+                displayData(data);
+            } catch (error) {
+                console.error('Error loading website data:', error);
+                document.getElementById('dataDisplay').innerHTML = `<div class="error">Error loading website data: ${error.message}</div>`;
+            }
+        }
+        
+        function displayData(data) {
+                    const display = document.getElementById('dataDisplay');
+                    let html = `<div style="padding: 20px;">`;
+
+                    // Check if this is new layer-based format or old format
+                    const layers = data.layers;
+                    const isNewFormat = layers && (layers.hero || layers.background);
+
+                    if (isNewFormat) {
+                        // ===== NEW LAYER-BASED FORMAT =====
+                        const framework = data.framework || {};
+                        const bgLayer = layers.background || {};
+                        const branding = layers.branding || {};
+                        const hero = layers.hero || {};
+                        const content = layers.content || {};
+                        const iconsLayer = layers.icons || {};
+                        const footer = layers.footer || {};
+
+                        // ===== 0. SCREENSHOT COMPARISON =====
+                                        html += `
+                                            <div class="data-section" style="overflow: hidden;">
+                                                <h3>📸 SITE SCREENSHOT</h3>
+                                                <div style="padding: 15px;">
+                                                    <div style="background: #0f0f23; border-radius: 8px; border: 1px solid #2a2a4a; overflow: hidden;">
+                                                        ${data.screenshot_path ? `
+                                                        <div style="position: relative;">
+                                                            <img src="../${data.screenshot_path.replace(/\\\\/g, '/')}" alt="Website Screenshot" style="width: 100%; max-height: 500px; object-fit: contain; display: block;" onerror="this.parentElement.innerHTML='<div style=\\\"padding: 20px; text-align: center; color: #666;\\\">Screenshot not available - run extraction with output_dir set</div>'">
+                                                            <div style="position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,0.7); color: #93c5fd; padding: 4px 10px; border-radius: 6px; font-size: 11px;">🔍 Actual Site</div>
+                                                        </div>
+                                                        ` : '<div style="padding: 20px; text-align: center; color: #666;">No screenshot captured - run with output directory</div>'}
+                                                    </div>
+                                                </div>
+                                            </div>`;
+
+                                        // ===== 0b. FRAMEWORK INFO =====
+                                        html += `
+                                            <div style="margin-bottom: 15px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                                                <span style="background: #1a1a2e; color: #c084fc; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: bold; border: 1px solid #2a2a4a;">
+                                                    🏗️ ${framework.framework || 'unknown'} (${Math.round((framework.confidence || 0) * 100)}% confidence)
+                                                </span>
+                                                <span style="background: #1e3a5f; color: #93c5fd; padding: 4px 12px; border-radius: 12px; font-size: 12px; border: 1px solid #2a2a4a;">
+                                                    📦 ${data.assets ? data.assets.length : 0} assets
+                                                </span>
+                                                <span style="background: #1e3a5f; color: #93c5fd; padding: 4px 12px; border-radius: 12px; font-size: 12px; border: 1px solid #2a2a4a;">
+                                                    📐 v2 layer-based
+                                                </span>
+                                            </div>`;
+
+                        // ===== 1. HERO SECTION (image as background, text overlaid like real site) =====
+                                        if (hero.headline || hero.hero_image) {
+                                            const heroImg = hero.hero_image || {};
+                                            const ctaButtons = hero.cta_buttons || [];
+                                            const hStyle = hero.heading_style || {};
+                                            const subStyle = hero.subheading_style || {};
+                                            const heroBgColor = hero.background_color || '#0a0a1a';
+
+                                            html += `
+                                                <div class="data-section" style="overflow: hidden; position: relative;">
+                                                    <h3 style="position: absolute; top: 12px; left: 12px; z-index: 10; background: rgba(0,0,0,0.6); padding: 4px 12px; border-radius: 6px; font-size: 13px; color: #c084fc;">🎯 HERO SECTION</h3>
+                                                    <div style="position: relative; min-height: 400px; background: ${heroImg.src ? `url(${heroImg.src}) center/cover no-repeat` : heroBgColor}; display: flex; align-items: center; justify-content: center;${heroImg.src ? '' : ''}">
+                                                        ${heroImg.src ? `<div style="position: absolute; inset: 0; background: rgba(0,0,0,0.3);"></div>` : ''}
+                                                        <div style="position: relative; z-index: 2; padding: 60px 40px; text-align: center; max-width: 800px; width: 100%;">
+                                                            ${hero.headline ? `
+                                                            <div style="font-family: '${hStyle.font_family || 'inherit'}'; font-size: ${hStyle.font_size || '36px'}; font-weight: ${hStyle.font_weight || '700'}; color: ${hStyle.color || '#fff'}; line-height: ${hStyle.line_height || '1.2'}; letter-spacing: ${hStyle.letter_spacing || 'normal'}; text-transform: ${hStyle.text_transform || 'none'}; margin-bottom: 16px; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">
+                                                                ${hero.headline}
+                                                            </div>` : ''}
+                                                            ${hero.subheading ? `
+                                                            <div style="font-family: '${subStyle.font_family || 'inherit'}'; font-size: ${subStyle.font_size || '18px'}; font-weight: ${subStyle.font_weight || '400'}; color: ${subStyle.color || '#ddd'}; line-height: ${subStyle.line_height || '1.5'}; margin-bottom: 24px; text-shadow: 0 1px 5px rgba(0,0,0,0.3);">
+                                                                ${hero.subheading}
+                                                            </div>` : ''}
+                                                            ${ctaButtons.length > 0 ? `
+                                                            <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+                                                                ${ctaButtons.map(btn => {
+                                                                    const s = btn.style || {};
+                                                                    return `<button style="background: ${s.bg || '#c084fc'}; color: ${s.color || 'white'}; border: ${s.border || 'none'}; border-radius: ${s.radius || '8px'}; padding: ${s.padding || '14px 28px'}; font-family: '${s.font || 'inherit'}'; font-size: ${s.font_size || '16px'}; font-weight: ${s.weight || '600'}; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">${btn.text}</button>`;
+                                                                }).join('')}
+                                                            </div>` : ''}
+                                                        </div>
+                                                        ${heroImg.src ? `
+                                                        <div style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.6); color: #93c5fd; padding: 4px 10px; border-radius: 6px; font-size: 10px; z-index: 10; cursor: pointer;" onclick="this.parentElement.querySelector('img').style.display='block'; this.style.display='none';">
+                                                            🔍 View hero image
+                                                        </div>
+                                                        <img src="${heroImg.src}" style="display:none; position: absolute; bottom: 30px; right: 8px; max-width: 90vw; max-height: 80vh; z-index: 100; border-radius: 8px; border: 2px solid #2a2a4a;" onclick="this.style.display='none'" onerror="this.style.display='none'">` : ''}
+                                                    </div>
+                                                </div>`;
+                                        }
+
+                        // ===== 2. BACKGROUND LAYER =====
+                                                const bgImages = bgLayer.background_images || [];
+                                                if (bgImages.length > 0) {
+                                                    html += `
+                                                        <div class="data-section">
+                                                            <h3>🎨 BACKGROUND IMAGES (${bgImages.length})</h3>
+                                                            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; padding: 15px;">
+                                                                ${bgImages.slice(0, 12).map(img => `
+                                                                    <div style="background: #f8f9fa; border-radius: 8px; overflow: hidden; border: 1px solid #e0e0e0;">
+                                                                        <img src="${img.url}" style="width: 100%; height: 130px; object-fit: cover;" onerror="this.style.display='none'">
+                                                                        <div style="padding: 8px; font-size: 10px; color: #888;">
+                                                                            ${Math.round(img.width || 0)}×${Math.round(img.height || 0)}
+                                                                        </div>
+                                                                    </div>
+                                                                `).join('')}
+                                                            </div>
+                                                        </div>`;
+                                                }
+
+                        // ===== 3. BRANDING LAYER =====
+                                        if (branding.logo || branding.navigation.length > 0 || branding.brand_colors.length > 0) {
+                                            const navS = branding.nav_styles || {};
+                                            const navBg = navS.background_color || '#ffffff';
+                                            const linkColor = navS.link_color || '#333333';
+                                            const linkFont = navS.link_font || 'Arial, sans-serif';
+                    
+                                            html += `<div class="data-section" style="overflow: hidden;">
+                                                <h3>🏷️ BRANDING & NAVIGATION</h3>
+                                                <div style="padding: 0;">`;
+
+                                            // Logo
+                                            if (branding.logo) {
+                                                html += `
+                                                    <div style="padding: 20px 20px 0 20px;">
+                                                        <img src="${branding.logo}" style="max-width: 200px; max-height: 60px; object-fit: contain;" onerror="this.style.display='none'">
+                                                    </div>`;
+                                            }
+
+                                            // Navigation bar - RECONSTRUCTED with real site styles
+                                            if (branding.navigation.length > 0) {
+                                                html += `
+                                                    <div style="margin: 15px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.1);">
+                                                        <div style="display: flex; flex-wrap: wrap; gap: 0; background: ${navBg}; padding: 12px 20px;">
+                                                            ${branding.navigation.map(n => `
+                                                                <a href="${n.href || '#'}" style="color: ${linkColor}; font-family: '${linkFont}', sans-serif; font-weight: ${navS.link_weight || '400'}; text-transform: ${navS.link_transform || 'none'}; padding: 8px 18px; text-decoration: none; font-size: 14px; white-space: nowrap; transition: background 0.2s;" 
+                                                                   onmouseover="this.style.background='rgba(0,0,0,0.05)'" onmouseout="this.style.background='transparent'">
+                                                                    ${n.text}
+                                                                </a>
+                                                            `).join('')}
+                                                        </div>
+                                                        <div style="background: #f8f9fa; padding: 8px 20px; font-size: 11px; color: #666; font-family: monospace; border-top: 1px solid rgba(0,0,0,0.05);">
+                                                            nav bg: ${navBg} | link: ${linkColor} | font: ${linkFont} | weight: ${navS.link_weight || '400'}
+                                                        </div>
+                                                    </div>`;
+                                            }
+
+                                            // Brand colors as professional swatches
+                                            if (branding.brand_colors.length > 0) {
+                                                html += `
+                                                    <div style="padding: 0 20px 15px 20px;">
+                                                        <div style="font-size: 11px; color: #888; margin-bottom: 8px; font-weight: 600;">COLOR PALETTE</div>
+                                                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                                            ${branding.brand_colors.map(c => {
+                                                                // Determine if text should be white or black based on brightness
+                                                                const rgb = c.match(/\d+/g);
+                                                                const brightness = rgb ? (parseInt(rgb[0])*299 + parseInt(rgb[1])*587 + parseInt(rgb[2])*114) / 1000 : 128;
+                                                                const textColor = brightness > 128 ? '#000' : '#fff';
+                                                                return `
+                                                                <div style="width: 70px; text-align: center;">
+                                                                    <div style="width: 70px; height: 50px; border-radius: 6px; background: ${c}; border: 1px solid rgba(0,0,0,0.1);"></div>
+                                                                    <div style="font-size: 9px; color: #888; margin-top: 3px; font-family: monospace; overflow: hidden; text-overflow: ellipsis;">${c}</div>
+                                                                </div>`;
+                                                            }).join('')}
+                                                        </div>
+                                                    </div>`;
+                                            }
+
+                                            // Brand fonts
+                                            if (branding.brand_fonts.length > 0) {
+                                                html += `
+                                                    <div style="padding: 0 20px 20px 20px; border-top: 1px solid rgba(0,0,0,0.05);">
+                                                        <div style="font-size: 11px; color: #888; margin-top: 15px; margin-bottom: 8px; font-weight: 600;">TYPOGRAPHY</div>
+                                                        ${branding.brand_fonts.map(f => {
+                                                            // Try to use Google Fonts
+                                                            const fontName = f.replace(/\s+/g, '+');
+                                                            return `
+                                                            <div style="margin-bottom: 8px;">
+                                                                <link href="https://fonts.googleapis.com/css2?family=${fontName}:wght@400;700&display=swap" rel="stylesheet">
+                                                                <div style="font-family: '${f}', sans-serif; font-size: 18px; padding: 10px 14px; background: #f8f9fa; border-radius: 6px; border: 1px solid rgba(0,0,0,0.05); color: #333;">
+                                                                    ${f} — The quick brown fox jumps over the lazy dog
+                                                                </div>
+                                                                <div style="font-family: '${f}', sans-serif; font-size: 14px; padding: 8px 14px; color: #666;">
+                                                                    ${f} — ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789
+                                                                </div>
+                                                            </div>`;
+                                                        }).join('')}
+                                                    </div>`;
+                                            }
+
+                                            html += `</div></div>`;
+                                        }
+
+                        // ===== 4. CONTENT LAYER =====
+                                                const sections = content.sections || [];
+                                                if (sections.length > 0) {
+                                                    html += `<div class="data-section"><h3>📄 CONTENT (${sections.length} sections)</h3>`;
+                                                    sections.forEach((sec, idx) => {
+                                                        html += `
+                                                            <div style="background: #fafbfc; padding: 16px; margin: 0; border-bottom: 1px solid #eee; border-left: 3px solid #1976d2;">
+                                                                <h4 style="margin: 0 0 6px 0; color: #1a1a2e; font-size: 14px;">${sec.heading || `Section ${idx + 1}`}</h4>
+                                                                <p style="color: #555; font-size: 13px; line-height: 1.5; margin: 0;">${(sec.text_preview || '').substring(0, 300)}</p>
+                                                                ${sec.images && sec.images.length > 0 ? `
+                                                                    <div style="display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap;">
+                                                                        ${sec.images.map(img => `<img src="${img.src}" alt="${img.alt}" style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px; border: 1px solid #ddd;" onerror="this.style.display='none'">`).join('')}
+                                                                    </div>` : ''}
+                                                            </div>`;
+                                                    });
+                                                    html += `</div>`;
+                                                }
+
+                        // ===== 5. ICONS =====
+                                                const icons = iconsLayer.icons || [];
+                                                if (icons.length > 0) {
+                                                    html += `
+                                                        <div class="data-section">
+                                                            <h3>🔣 ICONS (${icons.length})</h3>
+                                                            <div style="display: flex; flex-wrap: wrap; gap: 10px; padding: 15px;">
+                                                                ${icons.map(icon => `
+                                                                    <div style="background: #f8f9fa; padding: 8px; border-radius: 8px; border: 1px solid #e0e0e0; text-align: center;">
+                                                                        <img src="${icon.src}" alt="${icon.alt}" style="width: 32px; height: 32px; object-fit: contain;" onerror="this.style.display='none'">
+                                                                        <div style="font-size: 10px; color: #888; margin-top: 4px;">${icon.alt || icon.type || ''}</div>
+                                                                    </div>
+                                                                `).join('')}
+                                                            </div>
+                                                        </div>`;
+                                                }
+
+                                                // ===== 6. FOOTER =====
+                                                if (footer.links.length > 0 || footer.copyright) {
+                                                    html += `
+                                                        <div class="data-section">
+                                                            <h3>📍 FOOTER</h3>
+                                                            <div style="padding: 15px;">
+                                                                ${footer.copyright ? `<p style="color: #666; font-size: 12px; margin: 0 0 10px 0;">${footer.copyright}</p>` : ''}
+                                                                ${footer.links.length > 0 ? `
+                                                                    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+                                                                        ${footer.links.map(l => `<a href="${l.url}" style="color: #1976d2; font-size: 12px; text-decoration: none;">${l.text}</a>`).join('')}
+                                                                    </div>` : ''}
+                                                                ${footer.social_links.length > 0 ? `
+                                                                    <div style="margin-top: 10px; display: flex; gap: 10px;">
+                                                                        ${footer.social_links.map(s => `<span style="color: #888; font-size: 11px;">🔗 ${s.text || s.platform}</span>`).join('')}
+                                                                    </div>` : ''}
+                                                            </div>
+                                                        </div>`;
+                                                }
+
+                        // ===== 7. ALL ASSETS TABLE =====
+                        const assets = data.assets || [];
+                        if (assets.length > 0) {
+                            html += `
+                                <div class="data-section">
+                                    <h3>📦 ALL ASSETS (${assets.length})</h3>
+                                    <div style="padding: 15px; max-height: 400px; overflow-y: auto;">
+                                        <table style="width: 100%; border-collapse: collapse; font-size: 11px;">
+                                            <tr style="color: #c084fc; border-bottom: 1px solid #2a2a4a;">
+                                                <th style="padding: 8px; text-align: left;">Type</th>
+                                                <th style="padding: 8px; text-align: left;">Layer</th>
+                                                <th style="padding: 8px; text-align: left;">Preview</th>
+                                                <th style="padding: 8px; text-align: left;">URL</th>
+                                            </tr>
+                                            ${assets.slice(0, 30).map(a => `
+                                                <tr style="border-bottom: 1px solid #1a1a2e;">
+                                                    <td style="padding: 6px;"><span style="background: #1e3a5f; color: #93c5fd; padding: 2px 6px; border-radius: 4px; font-size: 10px;">${a.type || 'unknown'}</span></td>
+                                                    <td style="padding: 6px; color: #888;">${a.layer || ''}</td>
+                                                    <td style="padding: 6px;"><img src="${a.src}" style="width: 40px; height: 30px; object-fit: cover; border-radius: 4px;" onerror="this.style.display='none'"></td>
+                                                    <td style="padding: 6px; color: #666; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${a.src.substring(0, 60)}</td>
+                                                </tr>
+                                            `).join('')}
+                                        </table>
+                                    </div>
+                                </div>`;
+                        }
+
+                    } else {
+                        // ===== OLD FORMAT (backward compatible) =====
+                        const profile = data.website_profile || data;
+                        const structure = profile.structure || {};
+                        const assets = profile.assets || {};
+                        const visualDna = profile.visual_dna || {};
+
+                        // Framework badge if available
+                        if (profile.framework) {
+                            html += `
+                                <div style="margin-bottom: 15px;">
+                                    <span style="background: #1a1a2e; color: #c084fc; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: bold;">
+                                        🏗️ ${profile.framework.framework || 'unknown'}
+                                    </span>
+                                </div>`;
+                        }
+
+                        // Hero Section
+                        if (structure.hero_section) {
+                            html += `
+                                <div class="data-section" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 30px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #2a2a4a;">
+                                    <h3 style="color: #c084fc; margin-top: 0;">🎯 Hero Section</h3>
+                                    <h1 style="font-size: 28px; margin: 10px 0; font-weight: 700; color: white;">${structure.hero_section.heading || 'No heading'}</h1>
+                                    ${structure.hero_section.cta_buttons && structure.hero_section.cta_buttons.length > 0 ?
+                                        `<button style="background: #c084fc; color: white; border: none; padding: 12px 24px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer;">${structure.hero_section.cta_buttons[0].text || 'CTA'}</button>`
+                                        : ''}
+                                </div>`;
+                        }
+
+                        // Navigation
+                        if (structure.navigation && structure.navigation.length > 0) {
+                            const navS = visualDna.nav_styles || {};
+                            html += `
+                                <div class="data-section">
+                                    <h3>🧭 Navigation (${structure.navigation.length} items)</h3>
+                                    <div style="display: flex; flex-wrap: wrap; gap: 10px; padding: 15px; background: ${navS.background_color || '#1a1a2e'}; border-radius: 8px;">
+                                        ${structure.navigation.map(n =>
+                                            `<a href="${n.url || '#'}" style="color: ${navS.link_style?.color || '#93c5fd'}; padding: 8px 16px; text-decoration: none; font-size: 14px;">${n.text}</a>`
+                                        ).join('')}
+                                    </div>
+                                </div>`;
+                        }
+
+                        // Content Sections
+                        if (structure.sections && structure.sections.length > 0) {
+                            html += `<div class="data-section"><h3>📄 Content Sections (${structure.sections.length})</h3>`;
+                            structure.sections.forEach((sec, idx) => {
+                                if (sec.heading || sec.text_preview) {
+                                    html += `
+                                        <div style="background: #0f0f23; padding: 15px; margin: 10px; border-radius: 8px; border-left: 4px solid #c084fc; border: 1px solid #2a2a4a;">
+                                            <h4 style="margin-top: 0; color: #c084fc;">${sec.heading || `Section ${idx + 1}`}</h4>
+                                            <p style="color: #aaa; line-height: 1.5;">${(sec.text_preview || sec.text_full || '').substring(0, 300)}</p>
+                                        </div>`;
+                                }
+                            });
+                            html += `</div>`;
+                        }
+
+                        // Logo
+                        if (assets.logo) {
+                            html += `
+                                <div class="data-section">
+                                    <h3>🖼️ Logo</h3>
+                                    <div style="padding: 15px;">
+                                        <img src="${assets.logo}" style="max-width: 200px; max-height: 60px; object-fit: contain; background: white; padding: 10px; border-radius: 8px;" onerror="this.style.display='none'">
+                                    </div>
+                                </div>`;
+                        }
+
+                        // Visual DNA sections
+                        if (visualDna.enhanced_images && visualDna.enhanced_images.length > 0) {
+                            const types = ['hero', 'logo', 'icon', 'background', 'content'];
+                            types.forEach(type => {
+                                const imgs = visualDna.enhanced_images.filter(i => i.type === type);
+                                if (imgs.length > 0) {
+                                    html += `
+                                        <div class="data-section">
+                                            <h3>🖼️ ${type.toUpperCase()} Images (${imgs.length})</h3>
+                                            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; padding: 15px;">
+                                                ${imgs.slice(0, 8).map(img => `
+                                                    <div style="background: #0f0f23; border-radius: 8px; overflow: hidden; border: 1px solid #2a2a4a;">
+                                                        <img src="${img.src}" alt="${img.alt}" style="width: 100%; height: 100px; object-fit: cover;" onerror="this.style.display='none'">
+                                                        <div style="padding: 6px; font-size: 10px; color: #666;">${Math.round(img.width || 0)}×${Math.round(img.height || 0)}</div>
+                                                    </div>
+                                                `).join('')}
+                                            </div>
+                                        </div>`;
+                                }
+                            });
+                        }
+
+                        // Button styles
+                        if (visualDna.button_styles && visualDna.button_styles.length > 0) {
+                            html += `<div class="data-section"><h3>🔘 Buttons</h3><div style="display: flex; flex-wrap: wrap; gap: 15px; padding: 15px;">`;
+                            visualDna.button_styles.slice(0, 6).forEach(btn => {
+                                html += `
+                                    <div style="background: #0f0f23; padding: 15px; border-radius: 8px; border: 1px solid #2a2a4a;">
+                                        <button style="background: ${btn.background_color || '#c084fc'}; color: ${btn.color || 'white'}; border-radius: ${btn.border_radius || '4px'}; border: ${btn.border || 'none'}; padding: ${btn.padding || '10px 20px'}; font-size: ${btn.font_size || '14px'}; cursor: pointer;">${btn.text || 'Button'}</button>
+                                    </div>`;
+                            });
+                            html += `</div></div>`;
+                        }
+
+                        // Footer
+                        if (structure.footer) {
+                            html += `
+                                <div class="data-section" style="background: #0f0f23; border: 1px solid #2a2a4a;">
+                                    <h3>📍 Footer</h3>
+                                    <div style="padding: 15px;">
+                                        <p style="color: #888; font-size: 12px;">${structure.footer.text || structure.footer.copyright || ''}</p>
+                                        ${structure.footer.links && structure.footer.links.length > 0 ?
+                                            `<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+                                                ${structure.footer.links.map(l => `<a href="${l.url}" style="color: #93c5fd; font-size: 12px; text-decoration: none;">${l.text}</a>`).join('')}
+                                            </div>` : ''}
+                                    </div>
+                                </div>`;
+                        }
+                    }
+
+                    html += `</div>`;
+                    display.innerHTML = html;
+                }
+    </script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+{
+  "website_profile": {
+    "url": "https://docs.python.org",
+    "title": "3.14.5 Documentation",
+    "extraction_timestamp": "2026-06-05T23:03:47.252961",
+    "extraction_metadata": {
+      "code_version": "7cb9ca1",
+      "extractor_version": "1.0"
+    },
+    "brand_dna": {
+      "color_palette": [],
+      "fonts": [],
+      "style_vibe": [
+        "minimalist"
+      ]
+    },
+    "structure": {
+      "navigation": [
+        {
+          "text": "Download these documents",
+          "url": "https://docs.python.org/download.html",
+          "location": "nav"
+        },
+        {
+          "text": "Python 3.16 (in development)",
+          "url": "https://docs.python.org/3.16/",
+          "location": "nav"
+        },
+        {
+          "text": "Python 3.15 (pre-release)",
+          "url": "https://docs.python.org/3.15/",
+          "location": "nav"
+        },
+        {
+          "text": "Python 3.14 (stable)",
+          "url": "https://docs.python.org/3.14/",
+          "location": "nav"
+        },
+        {
+          "text": "Python 3.13 (stable)",
+          "url": "https://docs.python.org/3.13/",
+          "location": "nav"
+        },
+        {
+          "text": "Python 3.12 (security-fixes)",
+          "url": "https://docs.python.org/3.12/",
+          "location": "nav"
+        },
+        {
+          "text": "Python 3.11 (security-fixes)",
+          "url": "https://docs.python.org/3.11/",
+          "location": "nav"
+        },
+        {
+          "text": "Python 3.10 (security-fixes)",
+          "url": "https://docs.python.org/3.10/",
+          "location": "nav"
+        },
+        {
+          "text": "Python 3.9 (EOL)",
+          "url": "https://docs.python.org/3.9/",
+          "location": "nav"
+        },
+        {
+          "text": "Python 3.8 (EOL)",
+          "url": "https://docs.python.org/3.8/",
+          "location": "nav"
+        },
+        {
+          "text": "Python 3.7 (EOL)",
+          "url": "https://docs.python.org/3.7/",
+          "location": "nav"
+        },
+        {
+          "text": "Python 3.6 (EOL)",
+          "url": "https://docs.python.org/3.6/",
+          "location": "nav"
+        },
+        {
+          "text": "Python 3.5 (EOL)",
+          "url": "https://docs.python.org/3.5/",
+          "location": "nav"
+        },
+        {
+          "text": "Python 3.4 (EOL)",
+          "url": "https://docs.python.org/3.4/",
+          "location": "nav"
+        },
+        {
+          "text": "Python 3.3 (EOL)",
+          "url": "https://docs.python.org/3.3/",
+          "location": "nav"
+        }
+      ],
+      "hero_section": {
+        "heading": "Python 3.14.5 documentation",
+        "selector": "h1 (fallback)",
+        "cta_buttons": []
+      },
+      "sections": [
+        {
+          "id": "section_dynamic_0",
+          "heading": "Download",
+          "class": [
+            "mobile-nav"
+          ],
+          "text_full": "ThemeAutoLightDarkDownloadDownload these documentsDocs by versionPython 3.16 (in development)Python 3.15 (pre-release)Python 3.14 (stable)Python 3.13 (stable)Python 3.12 (security-fixes)Python 3.11 (security-fixes)Python 3.10 (security-fixes)Python 3.9 (EOL)Python 3.8 (EOL)Python 3.7 (EOL)Python 3.6 (EOL)Python 3.5 (EOL)Python 3.4 (EOL)Python 3.3 (EOL)Python 3.2 (EOL)Python 3.1 (EOL)Python 3.0 (EOL)Python 2.7 (EOL)Python 2.6 (EOL)All versionsOther resourcesPEP IndexBeginner's GuideBook ListAudio/Visual TalksPython Developerâs Guide",
+          "text_preview": "ThemeAutoLightDarkDownloadDownload these documentsDocs by versionPython 3.16 (in development)Python 3.15 (pre-release)Python 3.14 (stable)Python 3.13 (stable)Python 3.12 (security-fixes)Python 3.11 (s",
+          "html_snippet": "<div class=\"mobile-nav\">\n<input aria-controls=\"navigation\" aria-expanded=\"false\" aria-label=\"Menu\" aria-pressed=\"false\" class=\"toggler__input\" id=\"menuToggler\" role=\"button\" type=\"checkbox\"/>\n<nav class=\"nav-content\" role=\"navigation\">\n<label class=\"toggler__label\" for=\"menuToggler\">\n<span></span>\n</label>\n<span class=\"nav-items-wrapper\">\n<a class=\"nav-logo\" href=\"https://www.python.org/\">\n<img alt=\"Python logo\" src=\"_static/py.svg\"/>\n</a>\n<span class=\"version_switcher_placeholder\"></span>\n<form"
+        },
+        {
+          "id": "section_dynamic_1",
+          "heading": "Download",
+          "class": [
+            "menu-wrapper"
+          ],
+          "text_full": "ThemeAutoLightDarkDownloadDownload these documentsDocs by versionPython 3.16 (in development)Python 3.15 (pre-release)Python 3.14 (stable)Python 3.13 (stable)Python 3.12 (security-fixes)Python 3.11 (security-fixes)Python 3.10 (security-fixes)Python 3.9 (EOL)Python 3.8 (EOL)Python 3.7 (EOL)Python 3.6 (EOL)Python 3.5 (EOL)Python 3.4 (EOL)Python 3.3 (EOL)Python 3.2 (EOL)Python 3.1 (EOL)Python 3.0 (EOL)Python 2.7 (EOL)Python 2.6 (EOL)All versionsOther resourcesPEP IndexBeginner's GuideBook ListAudio/Visual TalksPython Developerâs Guide",
+          "text_preview": "ThemeAutoLightDarkDownloadDownload these documentsDocs by versionPython 3.16 (in development)Python 3.15 (pre-release)Python 3.14 (stable)Python 3.13 (stable)Python 3.12 (security-fixes)Python 3.11 (s",
+          "html_snippet": "<div class=\"menu-wrapper\">\n<nav aria-label=\"main navigation\" class=\"menu\" role=\"navigation\">\n<div class=\"language_switcher_placeholder\"></div>\n<label class=\"theme-selector-label\">\n    Theme\n    <select class=\"theme-selector\" oninput=\"activateTheme(this.value)\">\n<option selected=\"\" value=\"auto\">Auto</option>\n<option value=\"light\">Light</option>\n<option value=\"dark\">Dark</option>\n</select>\n</label><h3>Download</h3>\n<p><a href=\"download.html\">Download these documents</a></p>\n<h3>Docs by version</h3"
+        },
+        {
+          "id": "section_dynamic_3",
+          "heading": "Navigation",
+          "class": [
+            "related"
+          ],
+          "text_full": "Navigationindexmodules|Python»3.14.5 Documentation»|ThemeAutoLightDark|",
+          "text_preview": "Navigationindexmodules|Python»3.14.5 Documentation»|ThemeAutoLightDark|",
+          "html_snippet": "<div aria-label=\"Related\" class=\"related\" role=\"navigation\">\n<h3>Navigation</h3>\n<ul>\n<li class=\"right\" style=\"margin-right: 10px\">\n<a accesskey=\"I\" href=\"genindex.html\" title=\"General Index\">index</a></li>\n<li class=\"right\">\n<a href=\"py-modindex.html\" title=\"Python Module Index\">modules</a> |</li>\n<li><img alt=\"Python logo\" src=\"_static/py.svg\" style=\"vertical-align: middle; margin-top: -1px\"/></li>\n<li><a href=\"https://www.python.org/\">Python</a> »</li>\n<li class=\"switchers\">\n<div class=\"langu"
+        },
+        {
+          "id": "section_dynamic_7",
+          "heading": "Python 3.14.5 documentation",
+          "class": [
+            "document"
+          ],
+          "text_full": "Python 3.14.5 documentationWelcome! This is the official documentation for Python 3.14.5.Documentation sections:What's new in Python 3.14?Orall \"What's new\" documents since Python 2.0TutorialStart here: a tour of Python's syntax and featuresLibrary referenceStandard library and builtinsLanguage referenceSyntax and language elementsPython setup and usageHow to install, configure, and use PythonPython HOWTOsIn-depth topic manualsInstalling Python modulesThird-party modules and PyPI.orgExtending and embeddingFor C/C++ programmersPython's C APIC API referenceFAQsFrequently asked questions (with answers!)DeprecationsDeprecated functionalityOther resources:Python Packaging User GuideResources relating to Python packagingStatic Typing with PythonInformation and guides about Python type safetyIndices, glossary, and search:Global module indexAll modules and librariesGeneral indexAll functions, classes, and termsGlossaryTerms explainedSearch pageSearch this documentationComplete table of contentsAll sections and subsectionsProject information:Reporting issuesContributing to docsDownload the documentationHistory and license of PythonCopyrightAbout the documentationDownloadDownload these documentsDocs by versionPython 3.16 (in development)Python 3.15 (pre-release)Python 3.14 (stable)Python 3.13 (stable)Python 3.12 (security-fixes)Python 3.11 (security-fixes)Python 3.10 (security-fixes)Python 3.9 (EOL)Python 3.8 (EOL)Python 3.7 (EOL)Python 3.6 (EOL)Python 3.5 (EOL)Python 3.4 (EOL)Python 3.3 (EOL)Python 3.2 (EOL)Python 3.1 (EOL)Python 3.0 (EOL)Python 2.7 (EOL)Python 2.6 (EOL)All versionsOther resourcesPEP IndexBeginner's GuideBook ListAudio/Visual TalksPython Developerâs GuideÂ«",
+          "text_preview": "Python 3.14.5 documentationWelcome! This is the official documentation for Python 3.14.5.Documentation sections:What's new in Python 3.14?Orall \"What's new\" documents since Python 2.0TutorialStart her",
+          "html_snippet": "<div class=\"document\">\n<div class=\"documentwrapper\">\n<div class=\"bodywrapper\">\n<div class=\"body\" role=\"main\">\n<h1>Python 3.14.5 documentation</h1>\n<p>\n  Welcome! This is the official documentation for Python 3.14.5.\n  </p>\n<p><strong>Documentation sections:</strong></p>\n<div class=\"contentstable\">\n<ul>\n<li class=\"biglink\"><a class=\"biglink\" href=\"whatsnew/3.14.html\">What's new in Python 3.14?</a><br/>\n<span class=\"linkdescr\"> Or <a href=\"whatsnew/index.html\">all \"What's new\" documents since Pyth"
+        },
+        {
+          "id": "section_dynamic_8",
+          "heading": "Python 3.14.5 documentation",
+          "class": [
+            "documentwrapper"
+          ],
+          "text_full": "Python 3.14.5 documentationWelcome! This is the official documentation for Python 3.14.5.Documentation sections:What's new in Python 3.14?Orall \"What's new\" documents since Python 2.0TutorialStart here: a tour of Python's syntax and featuresLibrary referenceStandard library and builtinsLanguage referenceSyntax and language elementsPython setup and usageHow to install, configure, and use PythonPython HOWTOsIn-depth topic manualsInstalling Python modulesThird-party modules and PyPI.orgExtending and embeddingFor C/C++ programmersPython's C APIC API referenceFAQsFrequently asked questions (with answers!)DeprecationsDeprecated functionalityOther resources:Python Packaging User GuideResources relating to Python packagingStatic Typing with PythonInformation and guides about Python type safetyIndices, glossary, and search:Global module indexAll modules and librariesGeneral indexAll functions, classes, and termsGlossaryTerms explainedSearch pageSearch this documentationComplete table of contentsAll sections and subsectionsProject information:Reporting issuesContributing to docsDownload the documentationHistory and license of PythonCopyrightAbout the documentation",
+          "text_preview": "Python 3.14.5 documentationWelcome! This is the official documentation for Python 3.14.5.Documentation sections:What's new in Python 3.14?Orall \"What's new\" documents since Python 2.0TutorialStart her",
+          "html_snippet": "<div class=\"documentwrapper\">\n<div class=\"bodywrapper\">\n<div class=\"body\" role=\"main\">\n<h1>Python 3.14.5 documentation</h1>\n<p>\n  Welcome! This is the official documentation for Python 3.14.5.\n  </p>\n<p><strong>Documentation sections:</strong></p>\n<div class=\"contentstable\">\n<ul>\n<li class=\"biglink\"><a class=\"biglink\" href=\"whatsnew/3.14.html\">What's new in Python 3.14?</a><br/>\n<span class=\"linkdescr\"> Or <a href=\"whatsnew/index.html\">all \"What's new\" documents since Python 2.0</a></span></li>\n"
+        },
+        {
+          "id": "section_dynamic_9",
+          "heading": "Python 3.14.5 documentation",
+          "class": [
+            "bodywrapper"
+          ],
+          "text_full": "Python 3.14.5 documentationWelcome! This is the official documentation for Python 3.14.5.Documentation sections:What's new in Python 3.14?Orall \"What's new\" documents since Python 2.0TutorialStart here: a tour of Python's syntax and featuresLibrary referenceStandard library and builtinsLanguage referenceSyntax and language elementsPython setup and usageHow to install, configure, and use PythonPython HOWTOsIn-depth topic manualsInstalling Python modulesThird-party modules and PyPI.orgExtending and embeddingFor C/C++ programmersPython's C APIC API referenceFAQsFrequently asked questions (with answers!)DeprecationsDeprecated functionalityOther resources:Python Packaging User GuideResources relating to Python packagingStatic Typing with PythonInformation and guides about Python type safetyIndices, glossary, and search:Global module indexAll modules and librariesGeneral indexAll functions, classes, and termsGlossaryTerms explainedSearch pageSearch this documentationComplete table of contentsAll sections and subsectionsProject information:Reporting issuesContributing to docsDownload the documentationHistory and license of PythonCopyrightAbout the documentation",
+          "text_preview": "Python 3.14.5 documentationWelcome! This is the official documentation for Python 3.14.5.Documentation sections:What's new in Python 3.14?Orall \"What's new\" documents since Python 2.0TutorialStart her",
+          "html_snippet": "<div class=\"bodywrapper\">\n<div class=\"body\" role=\"main\">\n<h1>Python 3.14.5 documentation</h1>\n<p>\n  Welcome! This is the official documentation for Python 3.14.5.\n  </p>\n<p><strong>Documentation sections:</strong></p>\n<div class=\"contentstable\">\n<ul>\n<li class=\"biglink\"><a class=\"biglink\" href=\"whatsnew/3.14.html\">What's new in Python 3.14?</a><br/>\n<span class=\"linkdescr\"> Or <a href=\"whatsnew/index.html\">all \"What's new\" documents since Python 2.0</a></span></li>\n<li class=\"biglink\"><a class=\""
+        },
+        {
+          "id": "section_dynamic_10",
+          "heading": "Python 3.14.5 documentation",
+          "class": [
+            "body"
+          ],
+          "text_full": "Python 3.14.5 documentationWelcome! This is the official documentation for Python 3.14.5.Documentation sections:What's new in Python 3.14?Orall \"What's new\" documents since Python 2.0TutorialStart here: a tour of Python's syntax and featuresLibrary referenceStandard library and builtinsLanguage referenceSyntax and language elementsPython setup and usageHow to install, configure, and use PythonPython HOWTOsIn-depth topic manualsInstalling Python modulesThird-party modules and PyPI.orgExtending and embeddingFor C/C++ programmersPython's C APIC API referenceFAQsFrequently asked questions (with answers!)DeprecationsDeprecated functionalityOther resources:Python Packaging User GuideResources relating to Python packagingStatic Typing with PythonInformation and guides about Python type safetyIndices, glossary, and search:Global module indexAll modules and librariesGeneral indexAll functions, classes, and termsGlossaryTerms explainedSearch pageSearch this documentationComplete table of contentsAll sections and subsectionsProject information:Reporting issuesContributing to docsDownload the documentationHistory and license of PythonCopyrightAbout the documentation",
+          "text_preview": "Python 3.14.5 documentationWelcome! This is the official documentation for Python 3.14.5.Documentation sections:What's new in Python 3.14?Orall \"What's new\" documents since Python 2.0TutorialStart her",
+          "html_snippet": "<div class=\"body\" role=\"main\">\n<h1>Python 3.14.5 documentation</h1>\n<p>\n  Welcome! This is the official documentation for Python 3.14.5.\n  </p>\n<p><strong>Documentation sections:</strong></p>\n<div class=\"contentstable\">\n<ul>\n<li class=\"biglink\"><a class=\"biglink\" href=\"whatsnew/3.14.html\">What's new in Python 3.14?</a><br/>\n<span class=\"linkdescr\"> Or <a href=\"whatsnew/index.html\">all \"What's new\" documents since Python 2.0</a></span></li>\n<li class=\"biglink\"><a class=\"biglink\" href=\"tutorial/in"
+        },
+        {
+          "id": "section_dynamic_16",
+          "heading": "Download",
+          "class": [
+            "sphinxsidebar"
+          ],
+          "text_full": "DownloadDownload these documentsDocs by versionPython 3.16 (in development)Python 3.15 (pre-release)Python 3.14 (stable)Python 3.13 (stable)Python 3.12 (security-fixes)Python 3.11 (security-fixes)Python 3.10 (security-fixes)Python 3.9 (EOL)Python 3.8 (EOL)Python 3.7 (EOL)Python 3.6 (EOL)Python 3.5 (EOL)Python 3.4 (EOL)Python 3.3 (EOL)Python 3.2 (EOL)Python 3.1 (EOL)Python 3.0 (EOL)Python 2.7 (EOL)Python 2.6 (EOL)All versionsOther resourcesPEP IndexBeginner's GuideBook ListAudio/Visual TalksPython Developerâs GuideÂ«",
+          "text_preview": "DownloadDownload these documentsDocs by versionPython 3.16 (in development)Python 3.15 (pre-release)Python 3.14 (stable)Python 3.13 (stable)Python 3.12 (security-fixes)Python 3.11 (security-fixes)Pyth",
+          "html_snippet": "<div aria-label=\"Main\" class=\"sphinxsidebar\" role=\"navigation\">\n<div class=\"sphinxsidebarwrapper\"><h3>Download</h3>\n<p><a href=\"download.html\">Download these documents</a></p>\n<h3>Docs by version</h3>\n<ul>\n<li><a href=\"https://docs.python.org/3.16/\">Python 3.16 (in development)</a></li>\n<li><a href=\"https://docs.python.org/3.15/\">Python 3.15 (pre-release)</a></li>\n<li><a href=\"https://docs.python.org/3.14/\">Python 3.14 (stable)</a></li>\n<li><a href=\"https://docs.python.org/3.13/\">Python 3.13 (st"
+        },
+        {
+          "id": "section_dynamic_17",
+          "heading": "Download",
+          "class": [
+            "sphinxsidebarwrapper"
+          ],
+          "text_full": "DownloadDownload these documentsDocs by versionPython 3.16 (in development)Python 3.15 (pre-release)Python 3.14 (stable)Python 3.13 (stable)Python 3.12 (security-fixes)Python 3.11 (security-fixes)Python 3.10 (security-fixes)Python 3.9 (EOL)Python 3.8 (EOL)Python 3.7 (EOL)Python 3.6 (EOL)Python 3.5 (EOL)Python 3.4 (EOL)Python 3.3 (EOL)Python 3.2 (EOL)Python 3.1 (EOL)Python 3.0 (EOL)Python 2.7 (EOL)Python 2.6 (EOL)All versionsOther resourcesPEP IndexBeginner's GuideBook ListAudio/Visual TalksPython Developerâs Guide",
+          "text_preview": "DownloadDownload these documentsDocs by versionPython 3.16 (in development)Python 3.15 (pre-release)Python 3.14 (stable)Python 3.13 (stable)Python 3.12 (security-fixes)Python 3.11 (security-fixes)Pyth",
+          "html_snippet": "<div class=\"sphinxsidebarwrapper\"><h3>Download</h3>\n<p><a href=\"download.html\">Download these documents</a></p>\n<h3>Docs by version</h3>\n<ul>\n<li><a href=\"https://docs.python.org/3.16/\">Python 3.16 (in development)</a></li>\n<li><a href=\"https://docs.python.org/3.15/\">Python 3.15 (pre-release)</a></li>\n<li><a href=\"https://docs.python.org/3.14/\">Python 3.14 (stable)</a></li>\n<li><a href=\"https://docs.python.org/3.13/\">Python 3.13 (stable)</a></li>\n<li><a href=\"https://docs.python.org/3.12/\">Pytho"
+        },
+        {
+          "id": "section_dynamic_20",
+          "heading": "Navigation",
+          "class": [
+            "related"
+          ],
+          "text_full": "Navigationindexmodules|Python»3.14.5 Documentation»|ThemeAutoLightDark|",
+          "text_preview": "Navigationindexmodules|Python»3.14.5 Documentation»|ThemeAutoLightDark|",
+          "html_snippet": "<div aria-label=\"Related\" class=\"related\" role=\"navigation\">\n<h3>Navigation</h3>\n<ul>\n<li class=\"right\" style=\"margin-right: 10px\">\n<a href=\"genindex.html\" title=\"General Index\">index</a></li>\n<li class=\"right\">\n<a href=\"py-modindex.html\" title=\"Python Module Index\">modules</a> |</li>\n<li><img alt=\"Python logo\" src=\"_static/py.svg\" style=\"vertical-align: middle; margin-top: -1px\"/></li>\n<li><a href=\"https://www.python.org/\">Python</a> »</li>\n<li class=\"switchers\">\n<div class=\"language_switcher_p"
+        }
+      ],
+      "footer": {
+        "links": [
+          {
+            "text": "Copyright",
+            "url": "https://docs.python.org/copyright.html"
+          },
+          {
+            "text": "History and License",
+            "url": "https://docs.python.org/license.html"
+          },
+          {
+            "text": "Please donate.",
+            "url": "https://www.python.org/psf/donations/"
+          },
+          {
+            "text": "Found a bug",
+            "url": "https://docs.python.org/bugs.html"
+          },
+          {
+            "text": "Sphinx",
+            "url": "https://www.sphinx-doc.org/"
+          }
+        ],
+        "text": "©Copyright2001 Python Software Foundation.This page is licensed under the Python Software Foundation License Version 2.Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.SeeHistory and Licensefor more information.The Python Software Foundation is a non-profit corporation.Please donate.Last updated on Jun 05, 2026 (12:50 UTC).Found a bug?Created usingSphinx8.2.3.",
+        "social_links": []
+      },
+      "buttons": [
+        {
+          "text": "Download these documents",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/download.html"
+        },
+        {
+          "text": "Python 3.16 (in development)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/3.16/"
+        },
+        {
+          "text": "Python 3.15 (pre-release)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/3.15/"
+        },
+        {
+          "text": "Python 3.14 (stable)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/3.14/"
+        },
+        {
+          "text": "Python 3.13 (stable)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/3.13/"
+        },
+        {
+          "text": "Python 3.12 (security-fixes)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/3.12/"
+        },
+        {
+          "text": "Python 3.11 (security-fixes)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/3.11/"
+        },
+        {
+          "text": "Python 3.10 (security-fixes)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/3.10/"
+        },
+        {
+          "text": "Python 3.9 (EOL)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/3.9/"
+        },
+        {
+          "text": "Python 3.8 (EOL)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/3.8/"
+        },
+        {
+          "text": "Python 3.7 (EOL)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/3.7/"
+        },
+        {
+          "text": "Python 3.6 (EOL)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/3.6/"
+        },
+        {
+          "text": "Python 3.5 (EOL)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/3.5/"
+        },
+        {
+          "text": "Python 3.4 (EOL)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/3.4/"
+        },
+        {
+          "text": "Python 3.3 (EOL)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/3.3/"
+        },
+        {
+          "text": "Python 3.2 (EOL)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/3.2/"
+        },
+        {
+          "text": "Python 3.1 (EOL)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/3.1/"
+        },
+        {
+          "text": "Python 3.0 (EOL)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/3.0/"
+        },
+        {
+          "text": "Python 2.7 (EOL)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/2.7/"
+        },
+        {
+          "text": "Python 2.6 (EOL)",
+          "tag": "a",
+          "classes": [],
+          "href": "https://docs.python.org/2.6/"
+        }
+      ]
+    },
+    "visual_dna": {
+      "hero_background": null,
+      "background_images": [],
+      "computed_colors": [],
+      "button_styles": [],
+      "layout_structure": {}
+    },
+    "assets": {
+      "favicon": "https://docs.python.org/_static/py.svg",
+      "logo": "https://docs.python.org/_static/py.svg",
+      "images": [
+        {
+          "src": "https://docs.python.org/_static/py.svg",
+          "alt": "Python logo",
+          "class": []
+        },
+        {
+          "src": "https://docs.python.org/_static/py.svg",
+          "alt": "Python logo",
+          "class": []
+        },
+        {
+          "src": "https://docs.python.org/_static/py.svg",
+          "alt": "Python logo",
+          "class": []
+        }
+      ],
+      "stylesheets": [
+        "https://docs.python.org/_static/pygments.css?v=b86133f3",
+        "https://docs.python.org/_static/classic.css?v=234b1a7c",
+        "https://docs.python.org/_static/pydoctheme.css?v=4365c8fe",
+        "https://docs.python.org/_static/pygments_dark.css?v=5349f25f",
+        "https://docs.python.org/_static/pydoctheme_dark.css"
+      ]
+    },
+    "meta": {
+      "viewport": "width=device-width, initial-scale=1.0",
+      "readthedocs-addons-api-version": "1",
+      "og:title": "Python 3.14 documentation",
+      "og:type": "website",
+      "og:url": "https://docs.python.org/3/",
+      "og:site_name": "Python documentation",
+      "og:description": "The official Python documentation.",
+      "og:image": "https://docs.python.org/3/_static/og-image.png",
+      "description": "The official Python documentation.",
+      "og:image:width": "200",
+      "og:image:height": "200",
+      "theme-color": "#3776ab"
+    },
+    "analysis": {
+      "has_dynamic_content": false,
+      "complexity_score": 8,
+      "recommended_3d_style": "clean-layered"
+    }
+  }
+}

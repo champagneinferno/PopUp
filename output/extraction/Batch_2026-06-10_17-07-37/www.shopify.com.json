@@ -1,0 +1,2992 @@
+{
+  "website_profile": {
+    "url": "https://www.shopify.com",
+    "title": "Shopify: The All-in-One Commerce Platform for Businesses - Shopify",
+    "extraction_timestamp": "2026-06-10T17:08:19.287893",
+    "extraction_metadata": {
+      "code_version": "aaff174",
+      "extractor_version": "1.0"
+    },
+    "screenshot_path": "..\\output\\BusinessBatch_2026-06-10_17-07-37\\www.shopify.com\\www_shopify_com_screenshot.png",
+    "brand_dna": {
+      "color_palette": [
+        "rgb(0, 0, 0)",
+        "rgb(229, 231, 235)",
+        "rgb(255, 255, 255)",
+        "rgb(2, 9, 10)",
+        "rgb(161, 161, 170)",
+        "rgb(54, 244, 164)",
+        "rgb(16, 38, 32)",
+        "rgba(255, 255, 255, 0.3)",
+        "rgb(113, 113, 122)",
+        "rgb(6, 26, 28)"
+      ],
+      "fonts": [
+        "Times New Roman",
+        "ui-monospace",
+        "Inter-Variable",
+        "NeueHaasGrotesk"
+      ],
+      "style_vibe": [
+        "hero-focused",
+        "interactive"
+      ]
+    },
+    "structure": {
+      "navigation": [
+        {
+          "text": "Get started fastYou could be selling by tomorrow.",
+          "url": "https://www.shopify.com/start",
+          "location": "nav"
+        },
+        {
+          "text": "World's best checkoutProven to convert better.",
+          "url": "https://www.shopify.com/checkout",
+          "location": "nav"
+        },
+        {
+          "text": "SidekickYour commerce-obsessed AI assistant.",
+          "url": "https://www.shopify.com/sidekick",
+          "location": "nav"
+        },
+        {
+          "text": "Website Builder",
+          "url": "https://www.shopify.com/website/builder",
+          "location": "nav"
+        },
+        {
+          "text": "Themes",
+          "url": "https://themes.shopify.com/",
+          "location": "nav"
+        },
+        {
+          "text": "Domains",
+          "url": "https://www.shopify.com/domains",
+          "location": "nav"
+        },
+        {
+          "text": "Customer Accounts",
+          "url": "https://www.shopify.com/customer-accounts",
+          "location": "nav"
+        },
+        {
+          "text": "Sidekick",
+          "url": "https://www.shopify.com/sidekick",
+          "location": "nav"
+        },
+        {
+          "text": "Online",
+          "url": "https://www.shopify.com/online",
+          "location": "nav"
+        },
+        {
+          "text": "AI Chats",
+          "url": "https://www.shopify.com/agentic-storefronts",
+          "location": "nav"
+        },
+        {
+          "text": "Point of Sale",
+          "url": "https://www.shopify.com/pos",
+          "location": "nav"
+        },
+        {
+          "text": "Shop App",
+          "url": "https://www.shopify.com/shop",
+          "location": "nav"
+        },
+        {
+          "text": "Social & Marketplaces",
+          "url": "https://www.shopify.com/channels",
+          "location": "nav"
+        },
+        {
+          "text": "Global",
+          "url": "https://www.shopify.com/international",
+          "location": "nav"
+        },
+        {
+          "text": "B2B",
+          "url": "https://www.shopify.com/plus/solutions/b2b-ecommerce",
+          "location": "nav"
+        }
+      ],
+      "hero_section": {
+        "heading": "Be the nextAI all-star",
+        "selector": "[class*='hero']",
+        "cta_buttons": [
+          {
+            "text": "Start for free",
+            "href": "https://admin.shopify.com/signup?locale=en&language=en&signup_page=https%3A%2F%2Fwww.shopify.com%2F&signup_types%5B%5D=paid_trial_experience"
+          }
+        ]
+      },
+      "sections": [
+        {
+          "id": "section_0",
+          "heading": "Be the nextAI all-star",
+          "class": [
+            "grid",
+            "grid-cols-full",
+            "pb-0",
+            "bg-section-dark-bg",
+            "text-section-dark-text",
+            "relative",
+            "pt-hero-top",
+            "bg-cover",
+            "bg-center",
+            "bg-no-repeat",
+            "gap-y-0",
+            "after:relative",
+            "after:z-10",
+            "after:inset-x-0",
+            "after:bottom-[-1px]",
+            "after:bg-coal-black",
+            "after:h-3xl",
+            "after:mt-auto",
+            "after:rounded-t-5xl",
+            "after:box-content",
+            "after:shadow-hero-ab-card-edge",
+            "overflow-hidden",
+            "max-[480px]:bg-[length:auto_101.5%]",
+            "max-[480px]:bg-[54.8%_center]"
+          ],
+          "text_full": "Be the nextAI all-starBe the nextstore they line up forAIall-starhouseholdnamesolo-preneurcategorycreatorglobalempirestoretheylineupforbigthingDream big and build fast on Shopify. The world\u2019s best commerce platform.Start for free",
+          "text_preview": "Be the nextAI all-starBe the nextstore they line up forAIall-starhouseholdnamesolo-preneurcategorycreatorglobalempirestoretheylineupforbigthingDream big and build fast on Shopify. The world\u2019s best com",
+          "html_snippet": "<section class=\"grid grid-cols-full pb-0 bg-section-dark-bg text-section-dark-text relative pt-hero-top bg-cover bg-center bg-no-repeat gap-y-0 after:relative after:z-10 after:inset-x-0 after:bottom-[-1px] after:bg-coal-black after:h-3xl after:mt-auto after:rounded-t-5xl after:box-content after:shadow-hero-ab-card-edge overflow-hidden max-[480px]:bg-[length:auto_101.5%] max-[480px]:bg-[54.8%_center]\" data-component-extra-variant=\"redesign-2024\" data-component-name=\"hero\" data-mode=\"dark\" data-se"
+        },
+        {
+          "id": "section_2",
+          "heading": "Your brand has entered the\u00a0chat",
+          "class": [
+            "grid",
+            "gap-y-2xl",
+            "grid-cols-full",
+            "pb-2xl",
+            "bg-section-dark-bg",
+            "text-section-dark-text",
+            "pt-2xl"
+          ],
+          "text_full": "Your brand has entered the\u00a0chatYour products get discovered across AI channels. Shoppers check out right in the chat. You keep track of every order. All powered byAgentic Storefronts.",
+          "text_preview": "Your brand has entered the\u00a0chatYour products get discovered across AI channels. Shoppers check out right in the chat. You keep track of every order. All powered byAgentic Storefronts.",
+          "html_snippet": "<section class=\"grid gap-y-2xl grid-cols-full pb-2xl bg-section-dark-bg text-section-dark-text pt-2xl\" data-component-name=\"home-agentic-section\" data-mode=\"dark\" data-section-name=\"agentic\" data-viewable-component=\"true\"><div class=\"container\"><div class=\"relative overflow-hidden rounded-2xl bg-[#061A1C] md:bg-[linear-gradient(290.7deg,#061A1C_58.79%,#0D3A2D_100%)] after:pointer-events-none after:absolute after:inset-0 after:z-10 after:rounded-2xl after:shadow-[inset_0_1px_0_0_rgba(64,71,77,0.4"
+        },
+        {
+          "id": "section_3",
+          "heading": "Sell more in more places",
+          "class": [
+            "grid",
+            "gap-y-2xl",
+            "grid-cols-full",
+            "pb-2xl",
+            "bg-section-dark-bg",
+            "text-section-dark-text",
+            "pt-2xl"
+          ],
+          "text_full": "Sell more in more placesGet a stunning storethat's built to sell. Design fast with AI. Pick a prebuilt theme. Or go totally custom.Sell on every\u00a0channelPut your products where shoppers search, shop, and scroll withmultichannel integration.Sell face to\u00a0faceSell in person and keep online and in-store sales in sync withShopify POS.Sell to 250M+ shoppers with\u00a0ShopAutomatically show up on theShop app. Reach millions of pre-verified shoppers.",
+          "text_preview": "Sell more in more placesGet a stunning storethat's built to sell. Design fast with AI. Pick a prebuilt theme. Or go totally custom.Sell on every\u00a0channelPut your products where shoppers search, shop, a",
+          "html_snippet": "<section class=\"grid gap-y-2xl grid-cols-full pb-2xl bg-section-dark-bg text-section-dark-text pt-2xl\" data-component-name=\"home-online-section\" data-mode=\"dark\" data-section-name=\"online-and-in-person\" data-viewable-component=\"true\"><div class=\"container\"><div class=\"pb-2xl\"><div class=\"flex flex-wrap sm:flex-nowrap sm:items-baseline\"><div class=\"w-full pb-md sm:w-2/3 lg:w-3/5 sm:pb-0 sm:pr-lg\"><h3 class=\"richtext text-t3 inline-block text-pretty\">Sell more in more places</h3></div><div class=\""
+        },
+        {
+          "id": "section_4",
+          "heading": "Grow around the\u00a0world",
+          "class": [
+            "grid",
+            "gap-y-2xl",
+            "grid-cols-full",
+            "pb-2xl",
+            "bg-section-dark-bg",
+            "text-section-dark-text",
+            "pt-2xl"
+          ],
+          "text_full": "Grow around the\u00a0worldBuy now\ud83c\uddfa\ud83c\uddf8Order for$125.00Buy now\ud83c\uddfa\ud83c\uddf8Order for$125.00Buy now\ud83c\uddfa\ud83c\uddf8Order for$125.00Buy now\ud83c\uddfa\ud83c\uddf8Order for$125.00Buy now\ud83c\uddfa\ud83c\uddf8Order for$125.00Buy now\ud83c\uddfa\ud83c\uddf8Order for$125.00Sell across\u00a0bordersTake the complexity out of international selling withShopify Markets. Deliver products faster and more affordably withbuilt-in shipping tools.",
+          "text_preview": "Grow around the\u00a0worldBuy now\ud83c\uddfa\ud83c\uddf8Order for$125.00Buy now\ud83c\uddfa\ud83c\uddf8Order for$125.00Buy now\ud83c\uddfa\ud83c\uddf8Order for$125.00Buy now\ud83c\uddfa\ud83c\uddf8Order for$125.00Buy now\ud83c\uddfa\ud83c\uddf8Order for$125.00Buy now\ud83c\uddfa\ud83c\uddf8Order for$125.00Sell across\u00a0bordersTake the c",
+          "html_snippet": "<section class=\"grid gap-y-2xl grid-cols-full pb-2xl bg-section-dark-bg text-section-dark-text pt-2xl\" data-component-name=\"data-localglobal-section\" data-mode=\"dark\" data-section-name=\"local-and-global\" data-viewable-component=\"true\"><div class=\"container\"><div class=\"pb-xl\"><h3 class=\"richtext text-t3\">Grow around the\u00a0world</h3></div><div class=\"rounded-xl overflow-hidden flex flex-col justify-between border-t border-hairline-green shadow-card bg-deep-green relative p-lg md:gap-md lg:pt-md car"
+        },
+        {
+          "id": "section_6",
+          "heading": "For anyone from entrepreneurs to enterprise",
+          "class": [
+            "grid",
+            "gap-y-2xl",
+            "grid-cols-full",
+            "pb-4xl",
+            "bg-section-dark-bg",
+            "text-section-dark-text",
+            "pt-2xl"
+          ],
+          "text_full": "For anyone from entrepreneurs to enterpriseGet started\u00a0fastJackie Prince launchedGuests on Earthout of her home. Now it's a $4M+ business.Grow as big as you\u00a0wantOur Placegrew from a one-product shop into a cookware empire.Raise the\u00a0barIconic toymakerMattelsells direct to shoppers all around the world. All powered by Shopify.Pick a plan that fits",
+          "text_preview": "For anyone from entrepreneurs to enterpriseGet started\u00a0fastJackie Prince launchedGuests on Earthout of her home. Now it's a $4M+ business.Grow as big as you\u00a0wantOur Placegrew from a one-product shop i",
+          "html_snippet": "<section class=\"grid gap-y-2xl grid-cols-full pb-4xl bg-section-dark-bg text-section-dark-text pt-2xl\" data-component-name=\"home-foreveryone-section\" data-mode=\"dark\" data-section-name=\"for-everyone\" data-viewable-component=\"true\"><div class=\"container\"><div class=\"pb-2xl\"><div class=\"flex flex-wrap sm:flex-nowrap sm:items-baseline\"><div class=\"w-full pb-md sm:w-2/3 lg:w-3/5 sm:pb-0 sm:pr-lg\"><h3 class=\"richtext text-t3 inline-block text-pretty\">For anyone from entrepreneurs to enterprise</h3></"
+        },
+        {
+          "id": "section_7",
+          "heading": "Meet your secret weapon,\u00a0Sidekick",
+          "class": [
+            "grid",
+            "gap-y-2xl",
+            "grid-cols-full",
+            "bg-section-dark-bg",
+            "text-section-dark-text",
+            "rounded-t-4xl",
+            "md:rounded-t-5xl",
+            "bg-gradient-to-b",
+            "from-[#2C007F]",
+            "from-[42.49%]",
+            "to-[#000A1D]",
+            "py-16",
+            "md:py-25"
+          ],
+          "text_full": "Meet your secret weapon,\u00a0SidekickYour very own commerce AISpot opportunities for growth and automate tedious tasks withSidekick. Built right into your Shopify admin.What winning looks likeHear how brands use Sidekick to build faster and smarter.",
+          "text_preview": "Meet your secret weapon,\u00a0SidekickYour very own commerce AISpot opportunities for growth and automate tedious tasks withSidekick. Built right into your Shopify admin.What winning looks likeHear how bra",
+          "html_snippet": "<section class=\"grid gap-y-2xl grid-cols-full bg-section-dark-bg text-section-dark-text rounded-t-4xl md:rounded-t-5xl bg-gradient-to-b from-[#2C007F] from-[42.49%] to-[#000A1D] py-16 md:py-25\" data-component-name=\"home-sidekick-section\" data-mode=\"dark\" data-section-name=\"sidekick\" data-viewable-component=\"true\"><div class=\"container\"><div class=\"pb-xl md:pb-3xl text-pretty\"><h2 class=\"richtext text-t3\">Meet your secret weapon,\u00a0Sidekick</h2></div><div class=\"flex flex-col md:grid md:grid-cols-["
+        },
+        {
+          "id": "section_8",
+          "heading": "Customize everything with\u00a0apps",
+          "class": [
+            "grid",
+            "gap-y-2xl",
+            "grid-cols-full",
+            "text-section-dark-text",
+            "pt-0",
+            "bg-deep-navy",
+            "pb-3xl",
+            "overflow-hidden"
+          ],
+          "text_full": "Customize everything with\u00a0appsThe Shopify App Store has21,000+ commerce appsfor whatever specialized features your business might need.",
+          "text_preview": "Customize everything with\u00a0appsThe Shopify App Store has21,000+ commerce appsfor whatever specialized features your business might need.",
+          "html_snippet": "<section class=\"grid gap-y-2xl grid-cols-full text-section-dark-text pt-0 bg-deep-navy pb-3xl overflow-hidden\" data-component-name=\"home-apps-section\" data-mode=\"dark\" data-section-name=\"apps\" data-viewable-component=\"true\"><div class=\"overflow-container relative w-screen overflow-clip\"><div class=\"container relative z-10\"><div class=\"apps-heading-group max-w-[33rem] pb-0 mt-2xl transition-opacity duration-1000 md:absolute md:max-w-[38rem] md:motion-safe:opacity-100\"><h3 class=\"richtext text-t3 "
+        },
+        {
+          "id": "section_9",
+          "heading": "Hyperdriven by AI. Commerce to the\u00a0core.",
+          "class": [
+            "grid",
+            "gap-y-2xl",
+            "grid-cols-full",
+            "pb-4xl",
+            "text-section-dark-text",
+            "pt-0",
+            "bg-deep-navy"
+          ],
+          "text_full": "Hyperdriven by AI. Commerce to the\u00a0core.Shopify'sUniversal Commerce ProtocolandAPIs, tools, and primitivesgive devs the power to build agentic commerce experiences that businesses are looking for.Hydrogen: Shopify\u2019s headless commerce frameworkBuild custom storefrontsBuild for AIBuild appsshopify.dev",
+          "text_preview": "Hyperdriven by AI. Commerce to the\u00a0core.Shopify'sUniversal Commerce ProtocolandAPIs, tools, and primitivesgive devs the power to build agentic commerce experiences that businesses are looking for.Hydr",
+          "html_snippet": "<section class=\"grid gap-y-2xl grid-cols-full pb-4xl text-section-dark-text pt-0 bg-deep-navy\" data-component-name=\"home-dev-section\" data-mode=\"dark\" data-section-name=\"developer\" data-viewable-component=\"true\"><div class=\"container\"><div class=\"pb-xl max-w-[85ch] text-balance\"><h3 class=\"richtext text-t3\">Hyperdriven by AI. Commerce to the\u00a0core.</h3><p class=\"richtext text-body-sm !text-b3 text-gray-d mt-md\">Shopify's <a data-component-name=\"cta-ucp\" href=\"/ucp\">Universal Commerce Protocol</a>"
+        },
+        {
+          "id": "section_10",
+          "heading": "There\u2019s no better place for you to\u00a0build",
+          "class": [
+            "grid",
+            "gap-y-2xl",
+            "grid-cols-full",
+            "text-section-dark-text",
+            "rounded-t-4xl",
+            "md:rounded-t-5xl",
+            "bg-deep-pine",
+            "pt-2xl",
+            "pb-2",
+            "sm:pt-3xl",
+            "sm:pb-0"
+          ],
+          "text_full": "There\u2019s no better place for you to\u00a0build",
+          "text_preview": "There\u2019s no better place for you to\u00a0build",
+          "html_snippet": "<section class=\"grid gap-y-2xl grid-cols-full text-section-dark-text rounded-t-4xl md:rounded-t-5xl bg-deep-pine pt-2xl pb-2 sm:pt-3xl sm:pb-0\" data-component-name=\"home-heading-section\" data-mode=\"dark\" data-section-name=\"no-better-place\" data-viewable-component=\"true\"><div class=\"container\"><div class=\"pb-0\"><h2 class=\"richtext text-t2 sm:mx-auto sm:text-center md:w-3/4 lg:w-2/3 xl:w-1/2 text-pretty pb-[3px]\">There\u2019s no better place for you to\u00a0build</h2></div></div></section>"
+        },
+        {
+          "id": "section_11",
+          "heading": "The world\u2019s best-converting\u00a0checkout",
+          "class": [
+            "grid",
+            "gap-y-2xl",
+            "grid-cols-full",
+            "text-section-dark-text",
+            "overflow-x-clip",
+            "bg-deep-pine",
+            "pt-xl",
+            "pb-0",
+            "sm:pt-4xl",
+            "sm:pb-3xl",
+            "xl:pb-4xl",
+            "with-blurred-ellipse",
+            "before:left-[-12.5%]",
+            "before:rotate-[-20deg]",
+            "before:top-[25%]"
+          ],
+          "text_full": "The world\u2019s best-converting\u00a0checkoutHigher conversions15%High-intent shoppers250M+Shopify CheckoutwithShop Payconverts up to 50% higher than guest checkout and exposes your brand to hundreds of millions of buyers.Based on external study with a Big Three global consulting firm in April, 2023.",
+          "text_preview": "The world\u2019s best-converting\u00a0checkoutHigher conversions15%High-intent shoppers250M+Shopify CheckoutwithShop Payconverts up to 50% higher than guest checkout and exposes your brand to hundreds of millio",
+          "html_snippet": "<section class=\"grid gap-y-2xl grid-cols-full text-section-dark-text overflow-x-clip bg-deep-pine pt-xl pb-0 sm:pt-4xl sm:pb-3xl xl:pb-4xl with-blurred-ellipse before:left-[-12.5%] before:rotate-[-20deg] before:top-[25%]\" data-component-name=\"home-stats-section\" data-mode=\"dark\" data-section-name=\"checkout-stats\" data-viewable-component=\"true\"><div class=\"container grid grid-cols-4 sm:grid-cols-8 md:grid-cols-12 gap-x-gutter gap-y-xl items-center z-20\"><div class=\"col-span-4 xs:col-span-4 md:col"
+        }
+      ],
+      "footer": {
+        "links": [
+          {
+            "text": "Hell Babes",
+            "url": "https://hellbabes.co/"
+          }
+        ],
+        "text": "Jessica WiseCEO,Hell Babes",
+        "social_links": []
+      },
+      "buttons": [
+        {
+          "text": "Skip to Content",
+          "tag": "a",
+          "classes": [
+            "inline-block",
+            "self-center",
+            "overflow-hidden",
+            "max-w-full",
+            "px-button-px",
+            "py-button-py",
+            "ring-inset",
+            "rounded-button",
+            "text-button-size",
+            "font-button-font",
+            "font-button-weight",
+            "tracking-button-tracking",
+            "focus-visible:outline-2",
+            "focus-visible:outline-offset-2",
+            "focus-visible:outline-state-focus",
+            "focus-visible:outline",
+            "border-2",
+            "text-button-dark-primary-text",
+            "bg-button-dark-primary-bg",
+            "border-button-dark-primary-border",
+            "ring-button-dark-primary-border",
+            "hover:text-button-dark-primary-text-hover",
+            "hover:bg-button-dark-primary-bg-hover",
+            "hover:border-button-dark-primary-border-hover",
+            "hover:ring-button-dark-primary-border-hover",
+            "focus:text-button-dark-primary-text-focus",
+            "focus:bg-button-dark-primary-bg-focus",
+            "focus:border-button-dark-primary-border-focus",
+            "focus:ring-button-dark-primary-border-focus",
+            "active:text-button-dark-primary-text-active",
+            "active:bg-button-dark-primary-bg-active",
+            "active:border-button-dark-primary-border-active",
+            "active:ring-button-dark-primary-border-active",
+            "disabled:text-button-dark-primary-text-disabled",
+            "disabled:bg-button-dark-primary-bg-disabled",
+            "disabled:border-button-dark-primary-border-disabled",
+            "disabled:ring-button-dark-primary-border-disabled",
+            "transition-transform",
+            "duration-300",
+            "translate-y-[-200%]",
+            "motion-reduce:transition-none",
+            "focus:translate-y-0"
+          ],
+          "href": "https://www.shopify.com#main"
+        },
+        {
+          "text": "Get started fastYou could be selling by tomorrow.",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "max-sm:pe-4",
+            "max-md:grid",
+            "max-md:grid-cols-[min-content_1fr]",
+            "max-md:grid-rows-[min-content]",
+            "max-md:gap-x-3",
+            "max-md:py-6",
+            "max-md:ps-4",
+            "max-md:rounded-2xl",
+            "sm:max-md:pe-12",
+            "max-md:relative",
+            "max-md:overflow-clip",
+            "max-md:bg-[#051517]",
+            "max-md:border",
+            "max-md:border-[#142024]",
+            "max-md:before:absolute",
+            "max-md:before:pointer-events-none",
+            "max-md:before:w-[327px]",
+            "max-md:before:h-[85px]",
+            "max-md:before:rounded-full",
+            "max-md:before:bg-linear-[91deg]",
+            "max-md:before:from-[#113439]",
+            "max-md:before:from-[2.27%]",
+            "max-md:before:to-[#0F2931]",
+            "max-md:before:to-[98.62%]",
+            "max-md:before:opacity-[.8]",
+            "max-md:before:blur-[40px]",
+            "max-md:before:left-1/2",
+            "max-md:before:-translate-x-1/2",
+            "max-md:before:bottom-[-20px]"
+          ],
+          "href": "https://www.shopify.com/start"
+        },
+        {
+          "text": "World's best checkoutProven to convert better.",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "gap-y-1",
+            "max-sm:flex",
+            "max-sm:flex-col",
+            "max-sm:min-h-[176px]",
+            "sm:max-lg:grid",
+            "sm:max-lg:grid-cols-[1.5fr_1fr]",
+            "sm:max-lg:grid-rows-[auto]",
+            "sm:max-lg:gap-x-3",
+            "sm:max-lg:min-h-[129px]",
+            "max-lg:border",
+            "max-lg:rounded-2xl",
+            "max-lg:h-full",
+            "max-lg:p-6",
+            "lg:flex",
+            "lg:flex-col",
+            "lg:w-[190px]",
+            "max-lg:relative",
+            "max-lg:overflow-clip",
+            "max-lg:bg-[#0e0e10]",
+            "max-lg:border",
+            "max-lg:border-[#19272A]",
+            "max-sm:before:w-[213px]",
+            "max-sm:before:h-[115px]",
+            "max-sm:before:start-0",
+            "max-sm:before:top-0",
+            "max-sm:before:-translate-y-1/2",
+            "sm:max-lg:before:-start-1/4",
+            "sm:max-lg:before:top-1/4",
+            "sm:max-lg:before:w-[289px]",
+            "sm:max-lg:before:h-[231px]",
+            "max-lg:before:absolute",
+            "max-lg:before:pointer-events-none",
+            "max-lg:before:rounded-289px",
+            "max-lg:before:bg-linear-[91deg]",
+            "max-lg:before:from-[rgba(17,52,57,0.50)]",
+            "max-lg:before:from-[2.27%]",
+            "max-lg:before:to-[rgba(15,41,49,0.50)]",
+            "max-lg:before:to-[98.62%]",
+            "max-lg:before:mix-blend-mode-exclusion",
+            "max-lg:before:blur-[100px]",
+            "max-sm:ltr:after:-translate-x-1/4",
+            "max-sm:rtl:after:translate-x-1/4",
+            "max-sm:after:start-0",
+            "max-sm:after:bottom-0",
+            "max-sm:after:translate-y-1/2",
+            "sm:max-lg:after:top-1/2",
+            "sm:max-lg:after:-translate-y-1/2",
+            "max-lg:after:absolute",
+            "max-lg:after:pointer-events-none",
+            "max-lg:after:w-[174px]",
+            "max-lg:after:h-[193px]",
+            "max-lg:after:bg-radial-[156.58%_114.72%_at_50%_100%]",
+            "max-lg:[li:first-child_&]:after:from-[rgba(9,78,255,0.30)]",
+            "max-lg:after:from-[0%]",
+            "max-lg:[li:last-child_&]:after:from-[rgba(115,55,232,0.43)]",
+            "max-lg:after:to-[rgba(0,0,0,0.00)]",
+            "max-lg:after:to-[100%]",
+            "max-lg:after:mix-blend-mode-exclusion",
+            "max-lg:after:blur-[50px]",
+            "max-lg:after:end-0"
+          ],
+          "href": "https://www.shopify.com/checkout"
+        },
+        {
+          "text": "SidekickYour commerce-obsessed AI assistant.",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "gap-y-1",
+            "max-sm:flex",
+            "max-sm:flex-col",
+            "max-sm:min-h-[176px]",
+            "sm:max-lg:grid",
+            "sm:max-lg:grid-cols-[1.5fr_1fr]",
+            "sm:max-lg:grid-rows-[auto]",
+            "sm:max-lg:gap-x-3",
+            "sm:max-lg:min-h-[129px]",
+            "max-lg:border",
+            "max-lg:rounded-2xl",
+            "max-lg:h-full",
+            "max-lg:p-6",
+            "lg:flex",
+            "lg:flex-col",
+            "lg:w-[190px]",
+            "max-lg:relative",
+            "max-lg:overflow-clip",
+            "max-lg:bg-[#0e0e10]",
+            "max-lg:border",
+            "max-lg:border-[#19272A]",
+            "max-sm:before:w-[213px]",
+            "max-sm:before:h-[115px]",
+            "max-sm:before:start-0",
+            "max-sm:before:top-0",
+            "max-sm:before:-translate-y-1/2",
+            "sm:max-lg:before:-start-1/4",
+            "sm:max-lg:before:top-1/4",
+            "sm:max-lg:before:w-[289px]",
+            "sm:max-lg:before:h-[231px]",
+            "max-lg:before:absolute",
+            "max-lg:before:pointer-events-none",
+            "max-lg:before:rounded-289px",
+            "max-lg:before:bg-linear-[91deg]",
+            "max-lg:before:from-[rgba(17,52,57,0.50)]",
+            "max-lg:before:from-[2.27%]",
+            "max-lg:before:to-[rgba(15,41,49,0.50)]",
+            "max-lg:before:to-[98.62%]",
+            "max-lg:before:mix-blend-mode-exclusion",
+            "max-lg:before:blur-[100px]",
+            "max-sm:ltr:after:-translate-x-1/4",
+            "max-sm:rtl:after:translate-x-1/4",
+            "max-sm:after:start-0",
+            "max-sm:after:bottom-0",
+            "max-sm:after:translate-y-1/2",
+            "sm:max-lg:after:top-1/2",
+            "sm:max-lg:after:-translate-y-1/2",
+            "max-lg:after:absolute",
+            "max-lg:after:pointer-events-none",
+            "max-lg:after:w-[174px]",
+            "max-lg:after:h-[193px]",
+            "max-lg:after:bg-radial-[156.58%_114.72%_at_50%_100%]",
+            "max-lg:[li:first-child_&]:after:from-[rgba(9,78,255,0.30)]",
+            "max-lg:after:from-[0%]",
+            "max-lg:[li:last-child_&]:after:from-[rgba(115,55,232,0.43)]",
+            "max-lg:after:to-[rgba(0,0,0,0.00)]",
+            "max-lg:after:to-[100%]",
+            "max-lg:after:mix-blend-mode-exclusion",
+            "max-lg:after:blur-[50px]",
+            "max-lg:after:end-0"
+          ],
+          "href": "https://www.shopify.com/sidekick"
+        },
+        {
+          "text": "Website Builder",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "flex",
+            "items-center",
+            "sm:items-start",
+            "gap-x-4",
+            "py-2.5",
+            "will-change-[opacity]",
+            "max-sm:text-base",
+            "[@media(max-height:771px)_and_(min-width:1200px)]:py-1.5"
+          ],
+          "href": "https://www.shopify.com/website/builder"
+        },
+        {
+          "text": "Themes",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "flex",
+            "items-center",
+            "sm:items-start",
+            "gap-x-4",
+            "py-2.5",
+            "will-change-[opacity]",
+            "max-sm:text-base",
+            "[@media(max-height:771px)_and_(min-width:1200px)]:py-1.5"
+          ],
+          "href": "https://themes.shopify.com/"
+        },
+        {
+          "text": "Domains",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "flex",
+            "items-center",
+            "sm:items-start",
+            "gap-x-4",
+            "py-2.5",
+            "will-change-[opacity]",
+            "max-sm:text-base",
+            "[@media(max-height:771px)_and_(min-width:1200px)]:py-1.5"
+          ],
+          "href": "https://www.shopify.com/domains"
+        },
+        {
+          "text": "Customer Accounts",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "flex",
+            "items-center",
+            "sm:items-start",
+            "gap-x-4",
+            "py-2.5",
+            "will-change-[opacity]",
+            "max-sm:text-base",
+            "[@media(max-height:771px)_and_(min-width:1200px)]:py-1.5"
+          ],
+          "href": "https://www.shopify.com/customer-accounts"
+        },
+        {
+          "text": "Sidekick",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "flex",
+            "items-center",
+            "sm:items-start",
+            "gap-x-4",
+            "py-2.5",
+            "will-change-[opacity]",
+            "max-sm:text-base",
+            "[@media(max-height:771px)_and_(min-width:1200px)]:py-1.5"
+          ],
+          "href": "https://www.shopify.com/sidekick"
+        },
+        {
+          "text": "Online",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "flex",
+            "items-center",
+            "sm:items-start",
+            "gap-x-4",
+            "py-2.5",
+            "will-change-[opacity]",
+            "max-sm:text-base",
+            "[@media(max-height:771px)_and_(min-width:1200px)]:py-1.5"
+          ],
+          "href": "https://www.shopify.com/online"
+        },
+        {
+          "text": "AI Chats",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "flex",
+            "items-center",
+            "sm:items-start",
+            "gap-x-4",
+            "py-2.5",
+            "will-change-[opacity]",
+            "max-sm:text-base",
+            "[@media(max-height:771px)_and_(min-width:1200px)]:py-1.5"
+          ],
+          "href": "https://www.shopify.com/agentic-storefronts"
+        },
+        {
+          "text": "Point of Sale",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "flex",
+            "items-center",
+            "sm:items-start",
+            "gap-x-4",
+            "py-2.5",
+            "will-change-[opacity]",
+            "max-sm:text-base",
+            "[@media(max-height:771px)_and_(min-width:1200px)]:py-1.5"
+          ],
+          "href": "https://www.shopify.com/pos"
+        },
+        {
+          "text": "Shop App",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "flex",
+            "items-center",
+            "sm:items-start",
+            "gap-x-4",
+            "py-2.5",
+            "will-change-[opacity]",
+            "max-sm:text-base",
+            "[@media(max-height:771px)_and_(min-width:1200px)]:py-1.5"
+          ],
+          "href": "https://www.shopify.com/shop"
+        },
+        {
+          "text": "Social & Marketplaces",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "flex",
+            "items-center",
+            "sm:items-start",
+            "gap-x-4",
+            "py-2.5",
+            "will-change-[opacity]",
+            "max-sm:text-base",
+            "[@media(max-height:771px)_and_(min-width:1200px)]:py-1.5"
+          ],
+          "href": "https://www.shopify.com/channels"
+        },
+        {
+          "text": "Global",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "flex",
+            "items-center",
+            "sm:items-start",
+            "gap-x-4",
+            "py-2.5",
+            "will-change-[opacity]",
+            "max-sm:text-base",
+            "[@media(max-height:771px)_and_(min-width:1200px)]:py-1.5"
+          ],
+          "href": "https://www.shopify.com/international"
+        },
+        {
+          "text": "B2B",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "flex",
+            "items-center",
+            "sm:items-start",
+            "gap-x-4",
+            "py-2.5",
+            "will-change-[opacity]",
+            "max-sm:text-base",
+            "[@media(max-height:771px)_and_(min-width:1200px)]:py-1.5"
+          ],
+          "href": "https://www.shopify.com/plus/solutions/b2b-ecommerce"
+        },
+        {
+          "text": "Across Markets",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "flex",
+            "items-center",
+            "sm:items-start",
+            "gap-x-4",
+            "py-2.5",
+            "will-change-[opacity]",
+            "max-sm:text-base",
+            "[@media(max-height:771px)_and_(min-width:1200px)]:py-1.5"
+          ],
+          "href": "https://www.shopify.com/markets"
+        },
+        {
+          "text": "Advertising & Campaigns",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "flex",
+            "items-center",
+            "sm:items-start",
+            "gap-x-4",
+            "py-2.5",
+            "will-change-[opacity]",
+            "max-sm:text-base",
+            "[@media(max-height:771px)_and_(min-width:1200px)]:py-1.5"
+          ],
+          "href": "https://www.shopify.com/marketing"
+        },
+        {
+          "text": "Email & Customer Chat",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "flex",
+            "items-center",
+            "sm:items-start",
+            "gap-x-4",
+            "py-2.5",
+            "will-change-[opacity]",
+            "max-sm:text-base",
+            "[@media(max-height:771px)_and_(min-width:1200px)]:py-1.5"
+          ],
+          "href": "https://www.shopify.com/marketing-automation-tools"
+        },
+        {
+          "text": "Discounts",
+          "tag": "a",
+          "classes": [
+            "level3-link",
+            "flex",
+            "items-center",
+            "sm:items-start",
+            "gap-x-4",
+            "py-2.5",
+            "will-change-[opacity]",
+            "max-sm:text-base",
+            "[@media(max-height:771px)_and_(min-width:1200px)]:py-1.5"
+          ],
+          "href": "https://www.shopify.com/discounts"
+        }
+      ]
+    },
+    "visual_dna": {
+      "hero_background": {
+        "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c286d3c96e94b18cd1192ada3807c359.jpg?originalWidth=575&originalHeight=745\")",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "element": "DIV.grid-images-container"
+      },
+      "background_images": [
+        {
+          "element": "HTML > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/966c4fe15bc05cfe25422b7c25e981ec.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "HTML > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/b5695aa84d13d681040a1f792102db4c.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "HTML > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/8c2c23882c250ec4a2b9e4e8bb2db7ed.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "HTML > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/bc86cf8bb923173525f0463b4ede64f3.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "HTML > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/2f7cc9cc755fdf8b468557953320b3f5.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "HTML > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/34c79ed6726fca9045a7e6549b56a204.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "HTML > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c759c61b160a763d6a93ef1aebd07d6a.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "HTML > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/0c0c5226a7fa616d89d03874a2308670.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "HTML > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/833df85b2f84dbf6e98d06acd5483591.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "HTML > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/a0f6ba5d1baeabed82145e0a4975de93.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "HTML > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/e01306d7c9407822b98b4558ae74b768.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "HTML > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c7bad325aac87c1f7954a84084796d3d.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "HTML > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/69a7c03004c5e297be41b9249bb79f62.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "HTML > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/9b3e46ff5c451d6a8af038b1c1d5b185.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "HTML > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/6850f6e5d31fae2377f152c6ae29557a.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "HTML > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c286d3c96e94b18cd1192ada3807c359.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "BODY > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/966c4fe15bc05cfe25422b7c25e981ec.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "BODY > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/b5695aa84d13d681040a1f792102db4c.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "BODY > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/8c2c23882c250ec4a2b9e4e8bb2db7ed.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "BODY > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/bc86cf8bb923173525f0463b4ede64f3.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "BODY > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/2f7cc9cc755fdf8b468557953320b3f5.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "BODY > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/34c79ed6726fca9045a7e6549b56a204.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "BODY > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c759c61b160a763d6a93ef1aebd07d6a.svg\")",
+          "background_color": "rgb(0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "BODY > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/0c0c5226a7fa616d89d03874a2308670.svg\")",
+          "background_color": "rgb(0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "BODY > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/833df85b2f84dbf6e98d06acd5483591.svg\")",
+          "background_color": "rgb(0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "BODY > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/a0f6ba5d1baeabed82145e0a4975de93.svg\")",
+          "background_color": "rgb(0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "BODY > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/e01306d7c9407822b98b4558ae74b768.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgb(0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "BODY > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c7bad325aac87c1f7954a84084796d3d.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgb(0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "BODY > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/69a7c03004c5e297be41b9249bb79f62.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgb(0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "BODY > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/9b3e46ff5c451d6a8af038b1c1d5b185.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgb(0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "BODY > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/6850f6e5d31fae2377f152c6ae29557a.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgb(0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "BODY > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c286d3c96e94b18cd1192ada3807c359.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgb(0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/966c4fe15bc05cfe25422b7c25e981ec.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/b5695aa84d13d681040a1f792102db4c.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/8c2c23882c250ec4a2b9e4e8bb2db7ed.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/bc86cf8bb923173525f0463b4ede64f3.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/2f7cc9cc755fdf8b468557953320b3f5.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/34c79ed6726fca9045a7e6549b56a204.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c759c61b160a763d6a93ef1aebd07d6a.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/0c0c5226a7fa616d89d03874a2308670.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/833df85b2f84dbf6e98d06acd5483591.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/a0f6ba5d1baeabed82145e0a4975de93.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/e01306d7c9407822b98b4558ae74b768.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c7bad325aac87c1f7954a84084796d3d.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/69a7c03004c5e297be41b9249bb79f62.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/9b3e46ff5c451d6a8af038b1c1d5b185.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/6850f6e5d31fae2377f152c6ae29557a.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c286d3c96e94b18cd1192ada3807c359.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "MAIN > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/966c4fe15bc05cfe25422b7c25e981ec.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "MAIN > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/b5695aa84d13d681040a1f792102db4c.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "MAIN > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/8c2c23882c250ec4a2b9e4e8bb2db7ed.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "MAIN > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/bc86cf8bb923173525f0463b4ede64f3.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "MAIN > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/2f7cc9cc755fdf8b468557953320b3f5.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "MAIN > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/34c79ed6726fca9045a7e6549b56a204.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "MAIN > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c759c61b160a763d6a93ef1aebd07d6a.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "MAIN > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/0c0c5226a7fa616d89d03874a2308670.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "MAIN > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/833df85b2f84dbf6e98d06acd5483591.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "MAIN > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/a0f6ba5d1baeabed82145e0a4975de93.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "MAIN > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/e01306d7c9407822b98b4558ae74b768.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "MAIN > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c7bad325aac87c1f7954a84084796d3d.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "MAIN > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/69a7c03004c5e297be41b9249bb79f62.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "MAIN > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/9b3e46ff5c451d6a8af038b1c1d5b185.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "MAIN > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/6850f6e5d31fae2377f152c6ae29557a.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "MAIN > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c286d3c96e94b18cd1192ada3807c359.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "SECTION.grid",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/7ecd57f2fa3d7b997d29181a62c954ee.png?originalWidth=1920&originalHeight=1080\")",
+          "background_color": "rgb(2, 9, 10)",
+          "source": "computed_style"
+        },
+        {
+          "element": "SECTION (inline-style)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/7ecd57f2fa3d7b997d29181a62c954ee.png?originalWidth=1920&originalHeight=1080\")",
+          "background_color": "rgb(2, 9, 10)",
+          "source": "inline_style"
+        },
+        {
+          "element": "DIV.bg-clip-text",
+          "background_image": "linear-gradient(126.17deg, rgb(95, 213, 182) 32.74%, rgb(134, 92, 255) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.relative",
+          "background_image": "linear-gradient(290.7deg, rgb(6, 26, 28) 58.79%, rgb(13, 58, 45) 100%)",
+          "background_color": "rgb(6, 26, 28)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.bg-[linear-gradient(0deg,#061518_20%,#0a2c30)]",
+          "background_image": "linear-gradient(rgb(10, 44, 48), rgb(6, 21, 24) 80%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.absolute",
+          "background_image": "radial-gradient(rgb(28, 78, 80), rgb(19, 48, 50) 34%, rgb(9, 26, 28) 70%, rgb(6, 26, 28) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.absolute",
+          "background_image": "radial-gradient(rgb(62, 70, 70), rgb(15, 51, 53) 40%, rgb(6, 26, 28) 70%, rgb(6, 26, 28) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.absolute",
+          "background_image": "radial-gradient(rgb(42, 67, 68), rgb(6, 26, 28) 70%, rgb(6, 26, 28))",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "SECTION > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/966c4fe15bc05cfe25422b7c25e981ec.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(2, 9, 10)",
+          "source": "img_child"
+        },
+        {
+          "element": "SECTION > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/b5695aa84d13d681040a1f792102db4c.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(2, 9, 10)",
+          "source": "img_child"
+        },
+        {
+          "element": "SECTION > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/8c2c23882c250ec4a2b9e4e8bb2db7ed.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(2, 9, 10)",
+          "source": "img_child"
+        },
+        {
+          "element": "SECTION > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/bc86cf8bb923173525f0463b4ede64f3.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(2, 9, 10)",
+          "source": "img_child"
+        },
+        {
+          "element": "SECTION > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/2f7cc9cc755fdf8b468557953320b3f5.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(2, 9, 10)",
+          "source": "img_child"
+        },
+        {
+          "element": "SECTION > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/34c79ed6726fca9045a7e6549b56a204.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(2, 9, 10)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/966c4fe15bc05cfe25422b7c25e981ec.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/b5695aa84d13d681040a1f792102db4c.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/8c2c23882c250ec4a2b9e4e8bb2db7ed.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/bc86cf8bb923173525f0463b4ede64f3.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/2f7cc9cc755fdf8b468557953320b3f5.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/34c79ed6726fca9045a7e6549b56a204.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/966c4fe15bc05cfe25422b7c25e981ec.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(6, 26, 28)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/b5695aa84d13d681040a1f792102db4c.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(6, 26, 28)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/8c2c23882c250ec4a2b9e4e8bb2db7ed.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(6, 26, 28)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/bc86cf8bb923173525f0463b4ede64f3.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(6, 26, 28)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/2f7cc9cc755fdf8b468557953320b3f5.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(6, 26, 28)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/34c79ed6726fca9045a7e6549b56a204.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(6, 26, 28)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV.absolute",
+          "background_image": "radial-gradient(rgb(21, 112, 118), rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0))",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.absolute",
+          "background_image": "radial-gradient(rgb(21, 112, 118), rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0))",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.absolute",
+          "background_image": "radial-gradient(rgba(21, 112, 118, 0.4), rgb(6, 26, 28) 75%, rgb(6, 26, 28))",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/966c4fe15bc05cfe25422b7c25e981ec.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/b5695aa84d13d681040a1f792102db4c.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/8c2c23882c250ec4a2b9e4e8bb2db7ed.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/bc86cf8bb923173525f0463b4ede64f3.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/2f7cc9cc755fdf8b468557953320b3f5.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/34c79ed6726fca9045a7e6549b56a204.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/966c4fe15bc05cfe25422b7c25e981ec.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/b5695aa84d13d681040a1f792102db4c.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/8c2c23882c250ec4a2b9e4e8bb2db7ed.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/bc86cf8bb923173525f0463b4ede64f3.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/2f7cc9cc755fdf8b468557953320b3f5.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/34c79ed6726fca9045a7e6549b56a204.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/966c4fe15bc05cfe25422b7c25e981ec.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/b5695aa84d13d681040a1f792102db4c.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/8c2c23882c250ec4a2b9e4e8bb2db7ed.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/bc86cf8bb923173525f0463b4ede64f3.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/2f7cc9cc755fdf8b468557953320b3f5.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/34c79ed6726fca9045a7e6549b56a204.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/966c4fe15bc05cfe25422b7c25e981ec.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/b5695aa84d13d681040a1f792102db4c.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/8c2c23882c250ec4a2b9e4e8bb2db7ed.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/bc86cf8bb923173525f0463b4ede64f3.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/2f7cc9cc755fdf8b468557953320b3f5.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/34c79ed6726fca9045a7e6549b56a204.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/966c4fe15bc05cfe25422b7c25e981ec.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(255, 255, 255)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/966c4fe15bc05cfe25422b7c25e981ec.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "oklab(0.202157 -0.0241444 -0.0107363 / 0.2)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/b5695aa84d13d681040a1f792102db4c.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(255, 255, 255)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/b5695aa84d13d681040a1f792102db4c.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "oklab(0.202157 -0.0241444 -0.0107363 / 0.2)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/8c2c23882c250ec4a2b9e4e8bb2db7ed.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(255, 255, 255)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/8c2c23882c250ec4a2b9e4e8bb2db7ed.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "oklab(0.202157 -0.0241444 -0.0107363 / 0.2)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV.p-1",
+          "background_image": "linear-gradient(rgb(36, 71, 73) 0%, rgb(24, 46, 47) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/bc86cf8bb923173525f0463b4ede64f3.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(255, 255, 255)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/bc86cf8bb923173525f0463b4ede64f3.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "oklab(0.202157 -0.0241444 -0.0107363 / 0.2)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/2f7cc9cc755fdf8b468557953320b3f5.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(255, 255, 255)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/2f7cc9cc755fdf8b468557953320b3f5.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "oklab(0.202157 -0.0241444 -0.0107363 / 0.2)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/34c79ed6726fca9045a7e6549b56a204.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "rgb(255, 255, 255)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/34c79ed6726fca9045a7e6549b56a204.jpg?originalWidth=812&originalHeight=904\")",
+          "background_color": "oklab(0.202157 -0.0241444 -0.0107363 / 0.2)",
+          "source": "img_child"
+        },
+        {
+          "element": "SECTION.grid",
+          "background_image": "linear-gradient(in oklab, rgb(44, 0, 127) 42.49%, rgb(0, 10, 29) 100%)",
+          "background_color": "rgb(2, 9, 10)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.absolute",
+          "background_image": "linear-gradient(145deg, rgb(0, 10, 30) 52%, rgba(0, 10, 30, 0.9) 66%, rgba(0, 10, 30, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.absolute",
+          "background_image": "radial-gradient(circle at 0px 0px, rgb(255, 255, 255), rgb(0, 10, 30) 30%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.pointer-events-none",
+          "background_image": "linear-gradient(in oklab, rgb(0, 10, 30) 0%, rgba(0, 0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.pointer-events-none",
+          "background_image": "linear-gradient(to top in oklab, rgb(0, 10, 30) 0%, rgba(0, 0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "SECTION > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c759c61b160a763d6a93ef1aebd07d6a.svg\")",
+          "background_color": "rgb(0, 10, 30)",
+          "source": "img_child"
+        },
+        {
+          "element": "SECTION > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/0c0c5226a7fa616d89d03874a2308670.svg\")",
+          "background_color": "rgb(0, 10, 30)",
+          "source": "img_child"
+        },
+        {
+          "element": "SECTION > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/833df85b2f84dbf6e98d06acd5483591.svg\")",
+          "background_color": "rgb(0, 10, 30)",
+          "source": "img_child"
+        },
+        {
+          "element": "SECTION > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/a0f6ba5d1baeabed82145e0a4975de93.svg\")",
+          "background_color": "rgb(0, 10, 30)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c759c61b160a763d6a93ef1aebd07d6a.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/0c0c5226a7fa616d89d03874a2308670.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/833df85b2f84dbf6e98d06acd5483591.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/a0f6ba5d1baeabed82145e0a4975de93.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c759c61b160a763d6a93ef1aebd07d6a.svg\")",
+          "background_color": "rgb(1, 6, 36)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/0c0c5226a7fa616d89d03874a2308670.svg\")",
+          "background_color": "rgb(1, 6, 36)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/833df85b2f84dbf6e98d06acd5483591.svg\")",
+          "background_color": "rgb(1, 6, 36)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/a0f6ba5d1baeabed82145e0a4975de93.svg\")",
+          "background_color": "rgb(1, 6, 36)",
+          "source": "img_child"
+        },
+        {
+          "element": "A.grid",
+          "background_image": "linear-gradient(rgb(48, 222, 238) 0%, rgb(48, 192, 238) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c759c61b160a763d6a93ef1aebd07d6a.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/0c0c5226a7fa616d89d03874a2308670.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/833df85b2f84dbf6e98d06acd5483591.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/a0f6ba5d1baeabed82145e0a4975de93.svg\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV.absolute",
+          "background_image": "radial-gradient(rgba(18, 96, 255, 0.35), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0))",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.absolute",
+          "background_image": "radial-gradient(rgba(18, 96, 255, 0.35), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0))",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.absolute",
+          "background_image": "radial-gradient(rgba(18, 96, 255, 0.35), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0))",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "A.grid",
+          "background_image": "linear-gradient(rgb(107, 38, 255) 0%, rgb(81, 38, 255) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.bg-devCard",
+          "background_image": "linear-gradient(170deg, rgb(0, 0, 0), rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0))",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/e01306d7c9407822b98b4558ae74b768.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgb(4, 30, 24)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c7bad325aac87c1f7954a84084796d3d.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgb(4, 30, 24)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/69a7c03004c5e297be41b9249bb79f62.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgb(4, 30, 24)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/9b3e46ff5c451d6a8af038b1c1d5b185.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgb(4, 30, 24)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/6850f6e5d31fae2377f152c6ae29557a.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgb(4, 30, 24)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c286d3c96e94b18cd1192ada3807c359.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgb(4, 30, 24)",
+          "source": "img_child"
+        },
+        {
+          "element": "SECTION.grid",
+          "background_image": "linear-gradient(rgba(2, 8, 8, 0.5), rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 90%, rgba(2, 8, 8, 0.5)), radial-gradient(at 87% 84%, rgba(2, 8, 8, 0.9) 0px, rgba(0, 0, 0, 0) 50%), radial-gradient(at 10% 8%, rgba(2, 8, 8, 0.9) 0px, rgba(0, 0, 0, 0) 50%), radial-gradient(at 65% 36%, rgba(63, 63, 75, 0.5) 0px, rgba(0, 0, 0, 0) 50%), radial-gradient(at 38% 61%, rgba(63, 63, 75, 0.5) 0px, rgba(0, 0, 0, 0) 50%), radial-gradient(at 99% 36%, rgba(63, 63, 75, 0.5) 0px, rgba(0, 0, 0, 0) 50%), radial-gradient(at 0px 62%, rgba(63, 63, 75, 0.5) 0px, rgba(0, 0, 0, 0) 50%), linear-gradient(rgb(9, 9, 10), rgb(9, 9, 10))",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/e01306d7c9407822b98b4558ae74b768.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c7bad325aac87c1f7954a84084796d3d.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/69a7c03004c5e297be41b9249bb79f62.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/9b3e46ff5c451d6a8af038b1c1d5b185.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/6850f6e5d31fae2377f152c6ae29557a.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c286d3c96e94b18cd1192ada3807c359.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/e01306d7c9407822b98b4558ae74b768.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c7bad325aac87c1f7954a84084796d3d.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/69a7c03004c5e297be41b9249bb79f62.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/9b3e46ff5c451d6a8af038b1c1d5b185.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/6850f6e5d31fae2377f152c6ae29557a.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c286d3c96e94b18cd1192ada3807c359.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/e01306d7c9407822b98b4558ae74b768.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c7bad325aac87c1f7954a84084796d3d.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/69a7c03004c5e297be41b9249bb79f62.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/9b3e46ff5c451d6a8af038b1c1d5b185.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/6850f6e5d31fae2377f152c6ae29557a.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c286d3c96e94b18cd1192ada3807c359.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/e01306d7c9407822b98b4558ae74b768.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c7bad325aac87c1f7954a84084796d3d.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/69a7c03004c5e297be41b9249bb79f62.jpg?originalWidth=575&originalHeight=794\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/9b3e46ff5c451d6a8af038b1c1d5b185.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/6850f6e5d31fae2377f152c6ae29557a.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        },
+        {
+          "element": "DIV > IMG (likely-bg)",
+          "background_image": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c286d3c96e94b18cd1192ada3807c359.jpg?originalWidth=575&originalHeight=745\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "img_child"
+        }
+      ],
+      "computed_colors": [
+        "rgb(0, 0, 0)",
+        "rgb(229, 231, 235)",
+        "rgb(255, 255, 255)",
+        "rgb(2, 9, 10)",
+        "rgb(161, 161, 170)",
+        "rgb(54, 244, 164)",
+        "rgb(16, 38, 32)",
+        "rgba(255, 255, 255, 0.3)",
+        "rgb(113, 113, 122)",
+        "rgb(6, 26, 28)",
+        "rgb(157, 171, 173)",
+        "rgb(151, 151, 162)",
+        "rgb(30, 44, 49)",
+        "rgb(244, 244, 245)",
+        "rgb(228, 228, 231)"
+      ],
+      "button_styles": [
+        {
+          "text": "Skip to Content",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "9999px",
+          "border": "2px solid rgba(0, 0, 0, 0)",
+          "padding": "8px 20px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "550",
+          "font_family": "Inter-Variable, Helvetica, Arial, sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "inline-block",
+          "width": "164px",
+          "height": "44px",
+          "class": "inline-block self-center overflow-hidden max-w-full px-button-px py-button-py ring-inset rounded-button text-button-size font-button-font font-button-weight tracking-button-tracking focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-state-focus focus-visible:outline border-2 text-button-dark-primary-text bg-button-dark-primary-bg border-button-dark-primary-border ring-button-dark-primary-border hover:text-button-dark-primary-text-hover hover:bg-button-dark-primary-bg-hover hover:border-button-dark-primary-border-hover hover:ring-button-dark-primary-border-hover focus:text-button-dark-primary-text-focus focus:bg-button-dark-primary-bg-focus focus:border-button-dark-primary-border-focus focus:ring-button-dark-primary-border-focus active:text-button-dark-primary-text-active active:bg-button-dark-primary-bg-active active:border-button-dark-primary-border-active active:ring-button-dark-primary-border-active disabled:text-button-dark-primary-text-disabled disabled:bg-button-dark-primary-bg-disabled disabled:border-button-dark-primary-border-disabled disabled:ring-button-dark-primary-border-disabled transition-transform duration-300 translate-y-[-200%] motion-reduce:transition-none focus:translate-y-0",
+          "tag": "a"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "0px",
+          "border": "0px solid rgb(229, 231, 235)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "Inter-Variable, Helvetica, Arial, sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "none",
+          "width": "50px",
+          "height": "100%",
+          "class": "flex flex-col items-center justify-center gap-y-1 h-full w-[50px] shrink-0 cursor-pointer select-none z-20 before:h-0.5 before:w-[18px] before:bg-component-header-content before:ease-out-in before:duration-500 before:transition-transform before:origin-top-left peer-checked/l1Mobile:before:rotate-45 peer-checked/l1Mobile:before:translate-x-1 peer-checked/l1Mobile:[&_span]:opacity-0 peer-checked/l1Mobile:[&_span]:delay-0 after:h-0.5 after:w-[18px] after:bg-component-header-content after:ease-out-in after:duration-500 after:transition-transform after:origin-bottom-left peer-checked/l1Mobile:after:-rotate-45 peer-checked/l1Mobile:after:translate-x-1 lg:hidden",
+          "tag": "label"
+        },
+        {
+          "text": "Log in",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "9999px",
+          "border": "2px solid rgb(255, 255, 255)",
+          "padding": "8px 20px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "550",
+          "font_family": "Inter-Variable, Helvetica, Arial, sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "inline-block",
+          "width": "auto",
+          "height": "auto",
+          "class": "inline-block self-center overflow-hidden max-w-full px-button-px py-button-py ring-inset rounded-component-button transition-all duration-150 focus-visible:outline-offset-2 focus-visible:outline-state-focus border-2 focus-visible:outline bg-component-button-secondary-bg hover:bg-component-button-secondary-bg-hover active:bg-component-button-secondary-bg-active disabled:bg-component-button-secondary-bg-disabled border-component-button-secondary-border hover:border-component-button-secondary-border-hover active:border-component-button-secondary-border-active disabled:border-component-button-secondary-border-disabled ring-component-button-secondary-border hover:ring-component-button-secondary-border-hover active:ring-component-button-secondary-border-active disabled:ring-component-button-secondary-border-disabled text-component-button-secondary-content hover:text-component-button-secondary-content-hover active:text-component-button-secondary-content-active disabled:text-component-button-secondary-content-disabled font-component-button-secondary hover:ring-1 disabled:hover-ring-0 text-component-button-secondary-sm max-lg:w-full whitespace-nowrap",
+          "tag": "a"
+        },
+        {
+          "text": "Start for free",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "9999px",
+          "border": "2px solid rgba(0, 0, 0, 0)",
+          "padding": "8px 20px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "550",
+          "font_family": "Inter-Variable, Helvetica, Arial, sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "inline-block",
+          "width": "140px",
+          "height": "44px",
+          "class": "inline-block self-center overflow-hidden max-w-full px-button-px py-button-py ring-inset rounded-component-button transition-all duration-150 focus-visible:outline-offset-2 focus-visible:outline-state-focus border-2 focus-visible:outline bg-component-button-primary-bg hover:bg-component-button-primary-bg-hover active:bg-component-button-primary-bg-active disabled:bg-component-button-primary-bg-disabled border-component-button-primary-border hover:border-component-button-primary-border-hover active:border-component-button-primary-border-active disabled:border-component-button-primary-border-disabled ring-component-button-primary-border hover:ring-component-button-primary-border-hover active:ring-component-button-primary-border-active disabled:ring-component-button-primary-border-disabled text-component-button-primary-content hover:text-component-button-primary-content-hover active:text-component-button-primary-content-active disabled:text-component-button-primary-content-disabled font-component-button-primary text-component-button-primary-sm max-lg:w-full whitespace-nowrap",
+          "tag": "a"
+        },
+        {
+          "text": "Start for free",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "9999px",
+          "border": "2px solid rgba(0, 0, 0, 0)",
+          "padding": "12px 24px",
+          "margin": "0px",
+          "font_size": "18px",
+          "font_weight": "550",
+          "font_family": "Inter-Variable, Helvetica, Arial, sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "block",
+          "width": "162px",
+          "height": "56px",
+          "class": "self-center overflow-hidden max-w-full px-button-px py-button-py ring-inset rounded-button font-button-font font-button-weight tracking-button-tracking transition-all duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-state-focus focus-visible:outline md:px-button-lg-px md:py-button-lg-py text-button-lg-size border-2 text-button-dark-primary-text bg-button-dark-primary-bg border-button-dark-primary-border ring-button-dark-primary-border hover:text-button-dark-primary-text-hover hover:bg-button-dark-primary-bg-hover hover:border-button-dark-primary-border-hover hover:ring-button-dark-primary-border-hover focus:text-button-dark-primary-text-focus focus:bg-button-dark-primary-bg-focus focus:border-button-dark-primary-border-focus focus:ring-button-dark-primary-border-focus active:text-button-dark-primary-text-active active:bg-button-dark-primary-bg-active active:border-button-dark-primary-border-active active:ring-button-dark-primary-border-active disabled:text-button-dark-primary-text-disabled disabled:bg-button-dark-primary-bg-disabled disabled:border-button-dark-primary-border-disabled disabled:ring-button-dark-primary-border-disabled block w-full text-center sm:w-auto sm:text-left",
+          "tag": "a"
+        },
+        {
+          "text": "Why we build Shopify",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "9999px",
+          "border": "2px solid rgb(255, 255, 255)",
+          "padding": "12px 26px 12px 16px",
+          "margin": "0px",
+          "font_size": "18px",
+          "font_weight": "550",
+          "font_family": "Inter-Variable, Helvetica, Arial, sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "inline-flex",
+          "width": "271px",
+          "height": "56px",
+          "class": "self-center max-w-full px-button-px py-button-py ring-inset rounded-button font-button-font font-button-weight tracking-button-tracking transition-all duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-state-focus focus-visible:outline hover:ring-1 disabled:hover-ring-0 md:px-button-lg-px md:py-button-lg-py text-button-lg-size border-2 text-button-dark-secondary-text bg-button-dark-secondary-bg border-button-dark-secondary-border ring-current hover:text-button-dark-secondary-text-hover hover:bg-button-dark-secondary-bg-hover hover:border-button-dark-secondary-border-hover hover:ring-button-dark-secondary-border-hover focus:text-button-dark-secondary-text-focus focus:bg-button-dark-secondary-bg-focus focus:border-button-dark-secondary-border-focus focus:ring-button-dark-secondary-border-focus active:text-button-dark-secondary-text-active active:bg-button-dark-secondary-bg-active active:border-button-dark-secondary-border-active active:ring-button-dark-secondary-border-active disabled:text-button-dark-secondary-text-disabled disabled:bg-button-dark-secondary-bg-disabled disabled:border-button-dark-secondary-border-disabled disabled:ring-button-dark-secondary-border-disabled w-full sm:w-auto justify-center relative overflow-hidden z-10 inline-flex items-center gap-x-[8px] sm:gap-x-[8px] sm:pl-[16px] md:pl-[16px] lg:pl-[16px] sm:pr-[26px] md:pr-[26px] lg:pr-[26px]",
+          "tag": "button"
+        },
+        {
+          "text": "Why we build Shopify",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "12px",
+          "border": "1px solid rgba(255, 255, 255, 0.3)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "NeueHaasGrotesk, Helvetica, Arial, sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px",
+          "cursor": "pointer",
+          "display": "none",
+          "width": "190px",
+          "height": "auto",
+          "class": "fixed bottom-[80px] right-margin z-50 group w-[190px] overflow-hidden shadow-xl transition-all duration-500 ease-out animate-slide-up-fade-in cursor-pointer group rounded-[12px] border border-[rgba(255,255,255,0.3)] hover:border-[rgba(255,255,255,0.5)] focus-within:border-white bg-[linear-gradient(0deg,rgba(0,0,0,0.10)_0%,rgba(0,0,0,0.10)_100%)] shadow-none hover:shadow-[rgba(255,255,255,.3)_0px_0px_14px_3px] focus-within:shadow-[rgba(255,255,255,.3)_0px_0px_14px_3px] opacity-100",
+          "tag": "button"
+        },
+        {
+          "text": "Pick a plan that fits",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "9999px",
+          "border": "2px solid rgb(255, 255, 255)",
+          "padding": "12px 24px",
+          "margin": "0px",
+          "font_size": "18px",
+          "font_weight": "550",
+          "font_family": "Inter-Variable, Helvetica, Arial, sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "inline-block",
+          "width": "216px",
+          "height": "56px",
+          "class": "inline-block self-center overflow-hidden max-w-full px-button-px py-button-py ring-inset rounded-button font-button-font font-button-weight tracking-button-tracking transition-all duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-state-focus focus-visible:outline hover:ring-1 disabled:hover-ring-0 md:px-button-lg-px md:py-button-lg-py text-button-lg-size border-2 text-button-dark-secondary-text bg-button-dark-secondary-bg border-button-dark-secondary-border ring-current hover:text-button-dark-secondary-text-hover hover:bg-button-dark-secondary-bg-hover hover:border-button-dark-secondary-border-hover hover:ring-button-dark-secondary-border-hover focus:text-button-dark-secondary-text-focus focus:bg-button-dark-secondary-bg-focus focus:border-button-dark-secondary-border-focus focus:ring-button-dark-secondary-border-focus active:text-button-dark-secondary-text-active active:bg-button-dark-secondary-bg-active active:border-button-dark-secondary-border-active active:ring-button-dark-secondary-border-active disabled:text-button-dark-secondary-text-disabled disabled:bg-button-dark-secondary-bg-disabled disabled:border-button-dark-secondary-border-disabled disabled:ring-button-dark-secondary-border-disabled w-full sm:w-auto !tracking-button-tracking",
+          "tag": "a"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "0px",
+          "border": "0px solid rgb(229, 231, 235)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "NeueHaasGrotesk, Helvetica, Arial, sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "465.344px",
+          "height": "414.297px",
+          "class": "absolute inset-0 flex items-center justify-center cursor-pointer z-10 group",
+          "tag": "button"
+        },
+        {
+          "text": "Take your shot",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "9999px",
+          "border": "2px solid rgba(0, 0, 0, 0)",
+          "padding": "12px 24px",
+          "margin": "0px",
+          "font_size": "18px",
+          "font_weight": "550",
+          "font_family": "Inter-Variable, Helvetica, Arial, sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "inline-block",
+          "width": "180px",
+          "height": "56px",
+          "class": "inline-block self-center overflow-hidden max-w-full px-button-px py-button-py ring-inset rounded-button font-button-font font-button-weight tracking-button-tracking transition-all duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-state-focus focus-visible:outline md:px-button-lg-px md:py-button-lg-py text-button-lg-size border-2 text-button-dark-primary-text bg-button-dark-primary-bg border-button-dark-primary-border ring-button-dark-primary-border hover:text-button-dark-primary-text-hover hover:bg-button-dark-primary-bg-hover hover:border-button-dark-primary-border-hover hover:ring-button-dark-primary-border-hover focus:text-button-dark-primary-text-focus focus:bg-button-dark-primary-bg-focus focus:border-button-dark-primary-border-focus focus:ring-button-dark-primary-border-focus active:text-button-dark-primary-text-active active:bg-button-dark-primary-bg-active active:border-button-dark-primary-border-active active:ring-button-dark-primary-border-active disabled:text-button-dark-primary-text-disabled disabled:bg-button-dark-primary-bg-disabled disabled:border-button-dark-primary-border-disabled disabled:ring-button-dark-primary-border-disabled w-full sm:w-auto !tracking-button-tracking",
+          "tag": "a"
+        },
+        {
+          "text": "Philippines | English",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(224, 224, 224)",
+          "border_radius": "0px",
+          "border": "0px solid rgb(229, 231, 235)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "Inter-Variable, Helvetica, Arial, sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "inline-block",
+          "width": "188px",
+          "height": "26px",
+          "class": "bg-transparent mx-auto md:inline-block text-[#E0E0E0] hover:text-white",
+          "tag": "button"
+        },
+        {
+          "text": "Philippines | English",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(224, 224, 224)",
+          "border_radius": "0px",
+          "border": "0px solid rgb(229, 231, 235)",
+          "padding": "0px",
+          "margin": "0px auto",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "Inter-Variable, Helvetica, Arial, sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "inline-block",
+          "width": "auto",
+          "height": "auto",
+          "class": "bg-transparent mx-auto md:inline-block text-[#E0E0E0] hover:text-white",
+          "tag": "button"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "border_radius": "0px",
+          "border": "0px solid rgb(229, 231, 235)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "16px",
+          "font_weight": "400",
+          "font_family": "Inter-Variable, Helvetica, Arial, sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "block",
+          "width": "20px",
+          "height": "20px",
+          "class": "h-5 w-5 fill-current",
+          "tag": "button"
+        }
+      ],
+      "layout_structure": {
+        "has_nav": true,
+        "has_footer": true,
+        "has_hero": true,
+        "section_count": 13,
+        "div_count": 518,
+        "image_count": 57,
+        "link_count": 304
+      },
+      "text_styles": {
+        "headings": {
+          "h1": {
+            "font_family": "NeueHaasGrotesk, Helvetica, Arial, sans-serif",
+            "font_size": "96px",
+            "font_weight": "400",
+            "color": "rgb(255, 255, 255)",
+            "line_height": "96px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "margin": "0px 0px 64px",
+            "padding": "0px"
+          },
+          "h2": {
+            "font_family": "NeueHaasGrotesk, Helvetica, Arial, sans-serif",
+            "font_size": "96px",
+            "font_weight": "400",
+            "color": "rgb(255, 255, 255)",
+            "line_height": "96px",
+            "letter_spacing": "2.4px",
+            "text_transform": "none",
+            "margin": "0px 0px 32px",
+            "padding": "0px"
+          },
+          "h3": {
+            "font_family": "NeueHaasGrotesk, Helvetica, Arial, sans-serif",
+            "font_size": "55px",
+            "font_weight": "330",
+            "color": "rgb(255, 255, 255)",
+            "line_height": "64px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "margin": "0px",
+            "padding": "0px"
+          }
+        },
+        "paragraphs": {
+          "p": {
+            "font_family": "Inter-Variable, Helvetica, Arial, sans-serif",
+            "font_size": "16px",
+            "font_weight": "420",
+            "color": "rgb(255, 255, 255)",
+            "line_height": "24px",
+            "margin": "0px 0px 2px"
+          }
+        },
+        "links": {
+          "a": {
+            "font_family": "Inter-Variable, Helvetica, Arial, sans-serif",
+            "font_size": "16px",
+            "font_weight": "550",
+            "color": "rgb(0, 0, 0)",
+            "text_decoration": "none"
+          }
+        },
+        "buttons": {}
+      },
+      "enhanced_images": [
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/d9340911ca8c679b148dd4a205ad2ffa.svg",
+          "alt": "Shopify",
+          "width": 126.046875,
+          "height": 36,
+          "natural_width": 300,
+          "natural_height": 86,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/35d24a52160348807e95f1d335e9e295.png?width=421",
+          "alt": "Get started fast",
+          "width": 336.71875,
+          "height": 320.984375,
+          "natural_width": 421,
+          "natural_height": 399,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/b4995abc3f73dd8442f579e10023a4df.png?width=421",
+          "alt": "Switch to Shopify",
+          "width": 336.71875,
+          "height": 320.984375,
+          "natural_width": 421,
+          "natural_height": 399,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/91fd2e27323b7a94d9fdb2a7973e668e.png?width=421",
+          "alt": "Trusted by enterprise brands",
+          "width": 336.71875,
+          "height": 320.984375,
+          "natural_width": 421,
+          "natural_height": 399,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/ecabe88f01662a8048799d22f2c6aa99.svg",
+          "alt": "World's best checkout",
+          "width": 0,
+          "height": 0,
+          "natural_width": 300,
+          "natural_height": 90,
+          "object_fit": "fill",
+          "position": "relative",
+          "display": "none",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/bed4594e2c394553b2f03d9da43cb685.png?width=80",
+          "alt": "Sidekick",
+          "width": 0,
+          "height": 0,
+          "natural_width": 80,
+          "natural_height": 80,
+          "object_fit": "fill",
+          "position": "relative",
+          "display": "none",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/67e4b3ae607f6a12adb615c0ec0af3b4.jpg?originalWidth=1046&originalHeight=800",
+          "alt": "Image of Steve Madden website selling shoes and accessories",
+          "width": 563.671875,
+          "height": 431.203125,
+          "natural_width": 567,
+          "natural_height": 433,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/a011f79527438e06c77694dc9e48f9b2.jpg?originalWidth=454&originalHeight=800",
+          "alt": "Image of Ornot website selling cycling apparel",
+          "width": 244.65625,
+          "height": 431.203125,
+          "natural_width": 246,
+          "natural_height": 433,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/4f34cdb8ec9c120b80b8be143d0791d7.jpg?originalWidth=1046&originalHeight=800",
+          "alt": "Image of Glossier website selling beauty products",
+          "width": 563.671875,
+          "height": 431.203125,
+          "natural_width": 567,
+          "natural_height": 433,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/65fb7b5622f4b0019084cbffc4afdbd8.png?originalWidth=2292&originalHeight=1080",
+          "alt": "",
+          "width": 1324,
+          "height": 623.59375,
+          "natural_width": 1920,
+          "natural_height": 904,
+          "object_fit": "fill",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/9ee183767e71060d239525789fbeff9a.png?originalWidth=1632&originalHeight=1936",
+          "alt": "",
+          "width": 457.328125,
+          "height": 558.96875,
+          "natural_width": 633,
+          "natural_height": 751,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px 0px 8px 8px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/e9b1787b05cc3141b4aec50b024ad68c.png",
+          "alt": "",
+          "width": 40,
+          "height": 28.796875,
+          "natural_width": 85,
+          "natural_height": 60,
+          "object_fit": "fill",
+          "position": "relative",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/c87d3ea84d6b07cc56c44653ed8911f5.png",
+          "alt": "",
+          "width": 40,
+          "height": 28.796875,
+          "natural_width": 0,
+          "natural_height": 0,
+          "object_fit": "fill",
+          "position": "relative",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/b1debcf2c15172ecfe86b0d30d664ad3.png",
+          "alt": "",
+          "width": 40,
+          "height": 28.796875,
+          "natural_width": 0,
+          "natural_height": 0,
+          "object_fit": "fill",
+          "position": "relative",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/7fd378060668fbb746a61d562bd40dc9.png",
+          "alt": "",
+          "width": 40,
+          "height": 28.796875,
+          "natural_width": 0,
+          "natural_height": 0,
+          "object_fit": "fill",
+          "position": "relative",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/48c3fa7e8d48a8a316f818f7ab8c3335.png",
+          "alt": "",
+          "width": 40,
+          "height": 28.796875,
+          "natural_width": 0,
+          "natural_height": 0,
+          "object_fit": "fill",
+          "position": "relative",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/7aa525b00d5c1f6ca1db1f7d8030e493.png",
+          "alt": "",
+          "width": 40,
+          "height": 28.796875,
+          "natural_width": 0,
+          "natural_height": 0,
+          "object_fit": "fill",
+          "position": "relative",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/dfe62984c290cac4d9ab1f6d64d56990.png",
+          "alt": "",
+          "width": 40,
+          "height": 28.796875,
+          "natural_width": 0,
+          "natural_height": 0,
+          "object_fit": "fill",
+          "position": "relative",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/0f899d067f8fd6d3de6df6dc072a9f95.png",
+          "alt": "",
+          "width": 40,
+          "height": 28.796875,
+          "natural_width": 0,
+          "natural_height": 0,
+          "object_fit": "fill",
+          "position": "relative",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/ea64c5d6352869143ca123c102a436e8.png",
+          "alt": "",
+          "width": 40,
+          "height": 28.796875,
+          "natural_width": 0,
+          "natural_height": 0,
+          "object_fit": "fill",
+          "position": "relative",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ]
+    },
+    "assets": {
+      "favicon": "https://cdn.shopify.com/shopifycloud/web/assets/v1/favicon-default-6cbad9de243dbae3.ico",
+      "logo": "https://cdn.shopify.com/b/shopify-brochure2-assets/d9340911ca8c679b148dd4a205ad2ffa.svg",
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/d9340911ca8c679b148dd4a205ad2ffa.svg",
+          "alt": "Shopify",
+          "class": [
+            "h-9",
+            "w-full"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/35d24a52160348807e95f1d335e9e295.png?width=421",
+          "alt": "Get started fast",
+          "class": [
+            "w-full",
+            "h-full",
+            "object-cover",
+            "lg:hover:scale-125",
+            "lg:transition-transform",
+            "lg:duration-500"
+          ],
+          "type": "background"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/b4995abc3f73dd8442f579e10023a4df.png?width=421",
+          "alt": "Switch to Shopify",
+          "class": [
+            "w-full",
+            "h-full",
+            "object-cover",
+            "lg:hover:scale-125",
+            "lg:transition-transform",
+            "lg:duration-500"
+          ],
+          "type": "background"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/91fd2e27323b7a94d9fdb2a7973e668e.png?width=421",
+          "alt": "Trusted by enterprise brands",
+          "class": [
+            "w-full",
+            "h-full",
+            "object-cover",
+            "lg:hover:scale-125",
+            "lg:transition-transform",
+            "lg:duration-500"
+          ],
+          "type": "background"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/ecabe88f01662a8048799d22f2c6aa99.svg",
+          "alt": "World's best checkout",
+          "class": [
+            "relative",
+            "z-10",
+            "w-[118px]",
+            "aspect-[3.333]",
+            "rounded",
+            "max-sm:mt-auto",
+            "sm:row-start-[span_2]",
+            "sm:self-center",
+            "sm:justify-self-end",
+            "sm:w-[100px]",
+            "sm:max-lg:justify-self-center",
+            "max-lg:shadow-[0_8px_48px_0_rgba(24,24,27,0.24),_0_4px_8px_0_rgba(24,24,27,0.16)]",
+            "md:w-[133px]",
+            "lg:hidden"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/bed4594e2c394553b2f03d9da43cb685.png?width=80",
+          "alt": "Sidekick",
+          "class": [
+            "relative",
+            "z-10",
+            "w-[70px]",
+            "aspect-square",
+            "max-sm:translate-y-2.5",
+            "max-sm:-mt-2.5",
+            "sm:w-[80px]",
+            "sm:self-center",
+            "sm:justify-self-end",
+            "sm:row-start-[span_2]",
+            "sm:max-lg:justify-self-center",
+            "lg:hidden"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/67e4b3ae607f6a12adb615c0ec0af3b4.jpg?originalWidth=1046&originalHeight=800",
+          "alt": "Image of Steve Madden website selling shoes and accessories",
+          "class": [
+            "[transform:_translateZ(0px)]",
+            "max-lg:h-full",
+            "max-lg:w-auto"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/a011f79527438e06c77694dc9e48f9b2.jpg?originalWidth=454&originalHeight=800",
+          "alt": "Image of Ornot website selling cycling apparel",
+          "class": [
+            "[transform:_translateZ(0px)]",
+            "max-lg:h-full",
+            "max-lg:w-auto"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/4f34cdb8ec9c120b80b8be143d0791d7.jpg?originalWidth=1046&originalHeight=800",
+          "alt": "Image of Glossier website selling beauty products",
+          "class": [
+            "[transform:_translateZ(0px)]",
+            "max-lg:h-full",
+            "max-lg:w-auto"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/e9b1787b05cc3141b4aec50b024ad68c.png",
+          "alt": "",
+          "class": [
+            "relative",
+            "z-[1]",
+            "w-6",
+            "h-[1.1rem]",
+            "transition-opacity",
+            "sm:w-10",
+            "sm:h-[1.8rem]",
+            "md:w-8",
+            "md:h-[1.4rem]",
+            "lg:w-10",
+            "lg:h-[1.8rem]",
+            "transition-transform",
+            "ease-in",
+            "opacity-60"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/c87d3ea84d6b07cc56c44653ed8911f5.png",
+          "alt": "",
+          "class": [
+            "relative",
+            "z-[1]",
+            "w-6",
+            "h-[1.1rem]",
+            "transition-opacity",
+            "sm:w-10",
+            "sm:h-[1.8rem]",
+            "md:w-8",
+            "md:h-[1.4rem]",
+            "lg:w-10",
+            "lg:h-[1.8rem]",
+            "transition-transform",
+            "ease-in",
+            "opacity-60"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/b1debcf2c15172ecfe86b0d30d664ad3.png",
+          "alt": "",
+          "class": [
+            "relative",
+            "z-[1]",
+            "w-6",
+            "h-[1.1rem]",
+            "transition-opacity",
+            "sm:w-10",
+            "sm:h-[1.8rem]",
+            "md:w-8",
+            "md:h-[1.4rem]",
+            "lg:w-10",
+            "lg:h-[1.8rem]",
+            "transition-transform",
+            "ease-in",
+            "opacity-60"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/7fd378060668fbb746a61d562bd40dc9.png",
+          "alt": "",
+          "class": [
+            "relative",
+            "z-[1]",
+            "w-6",
+            "h-[1.1rem]",
+            "transition-opacity",
+            "sm:w-10",
+            "sm:h-[1.8rem]",
+            "md:w-8",
+            "md:h-[1.4rem]",
+            "lg:w-10",
+            "lg:h-[1.8rem]",
+            "transition-transform",
+            "ease-in",
+            "opacity-60"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/48c3fa7e8d48a8a316f818f7ab8c3335.png",
+          "alt": "",
+          "class": [
+            "relative",
+            "z-[1]",
+            "w-6",
+            "h-[1.1rem]",
+            "transition-opacity",
+            "sm:w-10",
+            "sm:h-[1.8rem]",
+            "md:w-8",
+            "md:h-[1.4rem]",
+            "lg:w-10",
+            "lg:h-[1.8rem]",
+            "transition-transform",
+            "ease-in",
+            "opacity-60"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/7aa525b00d5c1f6ca1db1f7d8030e493.png",
+          "alt": "",
+          "class": [
+            "relative",
+            "z-[1]",
+            "w-6",
+            "h-[1.1rem]",
+            "transition-opacity",
+            "sm:w-10",
+            "sm:h-[1.8rem]",
+            "md:w-8",
+            "md:h-[1.4rem]",
+            "lg:w-10",
+            "lg:h-[1.8rem]",
+            "transition-transform",
+            "ease-in",
+            "opacity-60"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/dfe62984c290cac4d9ab1f6d64d56990.png",
+          "alt": "",
+          "class": [
+            "relative",
+            "z-[1]",
+            "w-6",
+            "h-[1.1rem]",
+            "transition-opacity",
+            "sm:w-10",
+            "sm:h-[1.8rem]",
+            "md:w-8",
+            "md:h-[1.4rem]",
+            "lg:w-10",
+            "lg:h-[1.8rem]",
+            "transition-transform",
+            "ease-in",
+            "opacity-60"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/0f899d067f8fd6d3de6df6dc072a9f95.png",
+          "alt": "",
+          "class": [
+            "relative",
+            "z-[1]",
+            "w-6",
+            "h-[1.1rem]",
+            "transition-opacity",
+            "sm:w-10",
+            "sm:h-[1.8rem]",
+            "md:w-8",
+            "md:h-[1.4rem]",
+            "lg:w-10",
+            "lg:h-[1.8rem]",
+            "transition-transform",
+            "ease-in",
+            "opacity-60"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/ea64c5d6352869143ca123c102a436e8.png",
+          "alt": "",
+          "class": [
+            "relative",
+            "z-[1]",
+            "w-6",
+            "h-[1.1rem]",
+            "transition-opacity",
+            "sm:w-10",
+            "sm:h-[1.8rem]",
+            "md:w-8",
+            "md:h-[1.4rem]",
+            "lg:w-10",
+            "lg:h-[1.8rem]",
+            "transition-transform",
+            "ease-in",
+            "opacity-60"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/dc2669381c95b83588445a4aa4401214.png",
+          "alt": "",
+          "class": [
+            "relative",
+            "z-[1]",
+            "w-6",
+            "h-[1.1rem]",
+            "transition-opacity",
+            "sm:w-10",
+            "sm:h-[1.8rem]",
+            "md:w-8",
+            "md:h-[1.4rem]",
+            "lg:w-10",
+            "lg:h-[1.8rem]",
+            "transition-transform",
+            "ease-in",
+            "opacity-60"
+          ],
+          "type": "content"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/4142eddf07530c57040f91cc1bb2b5d0.png",
+          "alt": "",
+          "class": [
+            "relative",
+            "z-[1]",
+            "w-6",
+            "h-[1.1rem]",
+            "transition-opacity",
+            "sm:w-10",
+            "sm:h-[1.8rem]",
+            "md:w-8",
+            "md:h-[1.4rem]",
+            "lg:w-10",
+            "lg:h-[1.8rem]",
+            "transition-transform",
+            "ease-in",
+            "opacity-60"
+          ],
+          "type": "content"
+        }
+      ],
+      "stylesheets": [
+        "https://cdn.shopify.com/shopifycloud/world/brochure/production-homepage/assets/home-OJ64s_42.css"
+      ]
+    },
+    "meta": {
+      "viewport": "width=device-width,initial-scale=1",
+      "description": "Try Shopify free. Build or grow your business fast with AI. Get more than ecommerce software with tools to manage every part of your business.",
+      "fb:pages": "20409006880",
+      "fb:app_id": "847460188612391",
+      "og:type": "website",
+      "og:site_name": "Shopify",
+      "og:title": "Shopify: The All-in-One Commerce Platform for Businesses - Shopify",
+      "og:description": "Try Shopify free. Build or grow your business fast with AI. Get more than ecommerce software with tools to manage every part of your business.",
+      "og:image": "https://cdn.shopify.com/b/shopify-brochure2-assets/d617483c5e5cdd01ae8b4f2571c76f34.png?originalWidth=2400&originalHeight=1260",
+      "twitter:image": "https://cdn.shopify.com/b/shopify-brochure2-assets/d617483c5e5cdd01ae8b4f2571c76f34.png?originalWidth=2400&originalHeight=1260",
+      "og:url": "https://www.shopify.com/",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "Shopify",
+      "twitter:account_id": "17136315",
+      "twitter:title": "Shopify: The All-in-One Commerce Platform for Businesses - Shopify",
+      "twitter:description": "Try Shopify free. Build or grow your business fast with AI. Get more than ecommerce software with tools to manage every part of your business.",
+      "ssr": "false"
+    },
+    "analysis": {
+      "has_dynamic_content": false,
+      "complexity_score": 10,
+      "recommended_3d_style": "cinematic-flythrough"
+    }
+  }
+}

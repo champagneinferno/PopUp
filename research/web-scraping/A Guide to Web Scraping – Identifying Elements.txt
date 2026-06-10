@@ -1,0 +1,48 @@
+A Guide to Web Scraping – Identifying Elements
+
+Web scraping is an automated method for extracting data from websites. It’s a powerful tool that’s indispensable for data scientists, programmers, and business analysts alike. In essence, web scraping involves a sequence of steps:
+
+Identifying the data you wish to extract.
+Discerning the website’s HTML pattern to facilitate automated extraction.
+Sending a request to retrieve the website’s HTML.
+Writing a script to pinpoint and extract the needed information.
+Storing the extracted data in your preferred format, such as CSV or JSON.
+This blog will cover the first 2 steps to web scraping which covers the essentials of identifying the structure of the data to scrape.
+
+Step 1: Pinpoint the Data
+This initial step is straightforward: decide what data you aim to retrieve from a website. For this guide, I’ll be harvesting nutritional information of Starbucks beverages from their website.
+
+Step 1.5: The Critical Robots.txt
+Before proceeding, heed this vital step. Every website has a robots.txt file (e.g., https://www.example.com/robots.txt). It’s a set of guidelines for bots, outlining which parts of the site should not be processed or scanned. Here’s how to navigate it:
+
+User-agent: Identifies the bot the rule applies to (* stands for all bots, which includes you!).
+Disallow: Lists the URLs that are off-limits.
+Allow: Specifies pages that can be accessed, despite broader Disallow rules.
+While ignoring robots.txt isn’t illegal, it’s considered unethical to scrape disallowed parts of a website. Take Starbucks, for instance – their robots.txt permits all bots to access all areas of their site. Here is an example of the robots.txt from the starbucks website:
+
+
+Step 2: Detect the Pattern
+Arguably the most challenging part of web scraping is identifying the HTML pattern. There’s no one-size-fits-all approach, but here’s my recommended strategy. Using Google Chrome, navigate to the page containing your data, right-click on the relevant section, and select ‘Inspect’. This opens the developer tools window, which displays the webpage’s HTML. Now, the specifics will vary by site, but here are some HTML fundamentals to know:
+
+HTML Tags:
+<div>: Sections or containers on a webpage.
+<p>: Paragraphs of text.
+<h1>, <h2>, <h3>…: Headings, with the number indicating the level.
+<a>: Links, often leading to other pages.
+<ul>, <ol>: Lists, with <ul> for bullets and <ol> for numbers.
+<li>: List items within lists.
+<table>: The beginning of a table, usually containing <tr> (table rows) and <td> (table data cells), which likely hold the information you’re after.
+
+Tag Attributes:
+Tags may contain attributes that help you zero in on the specific data for scraping. Once you get the hang of recognizing tags and their attributes, the next step is to identify a unique combination that encapsulates the data you need. Here’s the process I used on the Starbucks website. I started by locating the menu section. It was divided by category, with each category page displaying a grid of drink images and links to their nutritional information.
+
+My task was to scrape the links to each drink’s specific page from every category page. Upon inspecting an image, I discovered it was nested within a div with the class product-grid-item, itself inside another div with the class menu-index–grid product-grid. Within the menu-index-grid I found numerous divs with the class product-grid-item – my cue to where all the drinks were listed on the page.
+
+
+Digging into an individual product-grid-item, I located both the product link and the image link I wanted for my dataset. The product link was nested directly within the item, and a little deeper, I found two image links – one with a higher resolution than the other.
+
+With this mapped out, my next step was to examine an individual product page for a pattern in the nutritional information.
+
+Nutritional details were presented in a table, but with dropdowns and buttons to select size and temperature, which could complicate matters if they were dynamically generated with JavaScript. However, a right-click and ‘Inspect’ revealed a table with the class nutrition-table – a straightforward indicator. The table also included helpful comments indicating where each configuration began and ended. Each table row had data-size and data-temp attributes correlating to the drink’s size and temperature, respectively. The rows contained two cells: the first listed the type of nutrient (e.g., Trans Fat), and the second provided the numerical value.
+
+Having gathered everything i need, I was ready to embark on the actual web scraping process, which can be performed with any programming language or tools like Alteryx

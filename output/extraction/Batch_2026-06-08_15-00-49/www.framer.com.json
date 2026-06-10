@@ -1,0 +1,2440 @@
+{
+  "website_profile": {
+    "url": "https://www.framer.com",
+    "title": "Framer: Create a professional website, free. No code website builder loved by designers.",
+    "extraction_timestamp": "2026-06-08T15:01:40.123997",
+    "extraction_metadata": {
+      "code_version": "634fbc9",
+      "extractor_version": "1.0"
+    },
+    "brand_dna": {
+      "color_palette": [
+        "rgb(0, 0, 0)",
+        "rgba(0, 0, 0, 0.7)",
+        "rgb(0, 0, 238)",
+        "rgb(255, 255, 255)",
+        "rgb(18, 18, 18)",
+        "rgba(255, 255, 255, 0.05)",
+        "rgba(255, 255, 255, 0.6)",
+        "rgba(255, 255, 255, 0.15)",
+        "rgba(255, 255, 255, 0.4)",
+        "rgb(8, 8, 8)"
+      ],
+      "fonts": [
+        "mona sans",
+        "GT Walsheim Framer Medium",
+        "Inter Framer Regular",
+        "Times New Roman",
+        "Inter Framer SemiBold",
+        "GT Walsheim Medium",
+        "Inter Variable",
+        "Inter",
+        "Mona Sans",
+        "sans-serif"
+      ],
+      "style_vibe": [
+        "interactive"
+      ]
+    },
+    "structure": {
+      "navigation": [
+        {
+          "text": "Log in",
+          "url": "https://framer.com/r/login",
+          "location": "nav"
+        },
+        {
+          "text": "Sign up",
+          "url": "https://www.framer.com/r/signup/",
+          "location": "nav"
+        },
+        {
+          "text": "BrandGuidelines",
+          "url": "https://www.framer.com/brand",
+          "location": "nav"
+        },
+        {
+          "text": "Enterprise",
+          "url": "https://www.framer.com/enterprise/",
+          "location": "nav"
+        },
+        {
+          "text": "Pricing",
+          "url": "https://www.framer.com/pricing",
+          "location": "nav"
+        },
+        {
+          "text": "Overview",
+          "url": "https://www.framer.com/developers/",
+          "location": "nav"
+        },
+        {
+          "text": "Compare",
+          "url": "https://www.framer.com/developers/comparison",
+          "location": "nav"
+        },
+        {
+          "text": "FAQ",
+          "url": "https://www.framer.com/developers/faq",
+          "location": "nav"
+        },
+        {
+          "text": "Plugins",
+          "url": "https://www.framer.com/",
+          "location": "nav"
+        },
+        {
+          "text": "Introduction",
+          "url": "https://www.framer.com/developers/plugins-introduction",
+          "location": "nav"
+        },
+        {
+          "text": "Quick Start",
+          "url": "https://www.framer.com/developers/plugins-quick-start",
+          "location": "nav"
+        },
+        {
+          "text": "Publishing",
+          "url": "https://www.framer.com/developers/publishing",
+          "location": "nav"
+        },
+        {
+          "text": "Changelog",
+          "url": "https://www.framer.com/developers/changelog",
+          "location": "nav"
+        },
+        {
+          "text": "Reference",
+          "url": "https://www.framer.com/developers/reference",
+          "location": "nav"
+        },
+        {
+          "text": "Introduction",
+          "url": "https://www.framer.com/developers/server-api-introduction",
+          "location": "nav"
+        }
+      ],
+      "hero_section": {
+        "heading": "Build bettersites, faster",
+        "selector": "header",
+        "cta_buttons": [
+          {
+            "text": "Join us live June 16 10AM PDT for something big",
+            "href": "./events/"
+          },
+          {
+            "text": "Start for free",
+            "href": "https://framer.com/r/signup"
+          },
+          {
+            "text": "Start for free",
+            "href": "https://framer.com/r/signup"
+          },
+          {
+            "text": "Start with AI",
+            "href": "./ai/"
+          },
+          {
+            "text": "Start with AI",
+            "href": "./ai/"
+          }
+        ]
+      },
+      "sections": [
+        {
+          "id": "section_dynamic_0",
+          "heading": "Build bettersites, faster",
+          "class": [],
+          "text_full": "Log inSign upCopyLogo as SVGBrandGuidelinesProductTeamsResourcesCommunitySupportEnterprisePricingSearch...Get StartedOverviewCompareFAQPluginsIntroductionQuick StartPublishingChangelogReferenceGuidesServer APIIntroductionQuick StartReferenceFAQFetchIntroductionExamplesComponentsIntroductionExamplesAsset SharingAuto-SizingProperty ControlsReferenceOverridesIntroductionExamplesDevelopersSearchSearch...Get StartedOverviewCompareFAQPluginsIntroductionQuick StartPublishingChangelogReferenceGuidesServer APIIntroductionQuick StartReferenceFAQFetchIntroductionExamplesComponentsIntroductionExamplesAsset SharingAuto-SizingProperty ControlsReferenceOverridesIntroductionExamplesJoin us live June 16 10AM PDT for something bigBuild bettersites, fasterFramer is the site builder trusted by leading startups and Fortune 500 companies. Build fast and scale more easily with an integrated CMS, analytics, localization, and SEO.Start for freeStart for freeStart with AIStart with AIMeet our customersMeet our customersCreate, collaborate, and go liveAIGenerate site layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.DesignCraft responsive layouts and bring them to life with smooth effects, interactions, and animations. Build exactly what you imagine, visually.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCollaborateWhether youâre collaborating on the canvas or editing copy directly on the page, updates are seamless and handoff-free.Learn moreWireframerIcreatedthreeuniquelandingpagesindarkmodeforyourmoderndesignstartup:amainlandingpage,acreative-focusedpage,andastudioshowcasepage.Landing Page 1Landing Page 2Landing Page 3100%BenjaminPaul100%PublishTitleHolo ShaderSlugholo-shaderframer.com/update/holo-shaderStatusLiveDate16/04/2026SectionSection descriptionImageTint35E2EBFeaturedContentIntroducing a brand new addition to our Shader library: Holo. A gradient shader that simulates how light splits into rainbows on holographic surfaces. Instead of colors, you control the math that shapes the colors, and the way the shader warps and flows. Holo is now available in the Insert Panel, under Shaders.Watch the videoto learn more about how to customize Holo.CMSSiteÂ·framer.comInvitePublishCollectionsFieldsAcademyUpdatesArticles320Categories18DevelopersStartupsHelpAdd...TitleStatusImageCategoriesForms AntispamLiveSpectrum and CrystalLiveCMS PluginsLiveLogo ShadersLiveCMS 3.0LiveHolo ShaderLiveAuto TranslateLiveMarch Update: BentoLiveChromatic AberrationLiveShadersLiveStatic FilesLiveCustom DistributionLiveFramer ConvertLivebaseform.framer.websiteBaseformÂ®Art DirectionVisual DesignWork,Archive,Profile,JournalLet's TalkLatest NewsView All PostsâClick to editÂ·Changes are auto-savedSite savedÂ·Collaborators are notified. Changes will be visible once the project is published.Open in FramerFinish EditingAIGenerate page layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.Learn moreAIGenerate page layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.Learn moreDesignCraft responsive layouts and bring them to life with smooth effects, interactions, and animations. Build exactly what you imagine, visually.Learn moreDesignCraft responsive layouts and bring them to life with smooth effects, interactions, and animations. Build exactly what you imagine, visually.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCollaborateWhether youâre collaborating on the canvas or editing copy directly on the page, updates are seamless and handoff-free.Learn moreCollaborateWhether youâre collaborating on the canvas or editing copy directly on the page, updates are seamless and handoff-free.Learn moreScale without switching toolsAnalytics & insightsTrack traffic, measure performance, and monitor conversions.Learn moreLearn moreJune 5, 2026Pageviews258,156Visitors85,458OverviewLive Visitors400Unique Visitors1.7MTotal Pageviews3.2M330kSourcesReferrergoogle.com436Kchatgpt.com189Klinkedin.com96Kyoutube.com82Kbing.com71Kx.com49KPagesAllHome1.8M/pricing156K/gallery91K/updates44K/features/design39K/features/cms27KA/B Testing & optimizationA/B testing, funnels, and built-in growth insights.Learn moreLearn morePagesLayersAssetsDesignPagesHomeAControlBVersion BCVersion C/pricingAB/features/blog/about/404DesktopÂ·1200SEO & performanceOptimize every page with built-in SEO settings, metadata, and blazing-fast hosting.Learn moreLearn moreGoogle Lighthouse0SEO0Performance0AccessibilityPowering ambitious teams worldwideâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead morePerplexityFloraBiographCradleMiroâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead morePerplexityFloraBiographCradleMiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroGet pro help from handpicked expertsGet matchedGet matchedFind an ExpertFind an ExpertView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertLaunch faster with community resourcesTemplatesTemplatesPluginsPluginsComponentsComponentsView ComponentImage SliderComponentBefore and after imagesView TemplateMiloTemplateFurniture shop websiteView PluginNotionPluginSync with NotionView ComponentHover ZoomComponentZoom and pan on hoverView TemplateArcherTemplateCreative portfolioView PluginWorkshopPluginTurn ideas into componentsView ComponentDigital Rotary RadioComponentFully functional radioView TemplateApex FilmsTemplateMultimedia portfolioView ComponentFlip CardComponentDrag to flip cardsView ComponentAnimated GradientsComponentImage reveal effectView PluginJSON SyncPluginImport & export CMS with JSONView TemplateBaseformTemplateModern design portfolioView ComponentImage SliderComponentBefore and after imagesView TemplateMiloTemplateFurniture shop websiteView PluginNotionPluginSync with NotionView ComponentHover ZoomComponentZoom and pan on hoverView TemplateArcherTemplateCreative portfolioView PluginWorkshopPluginTurn ideas into componentsView ComponentDigital Rotary RadioComponentFully functional radioView ComponentImage SliderComponentBefore and after imagesView TemplateMiloTemplateFurniture shop websiteView PluginNotionPluginSync with NotionView ComponentHover ZoomComponentZoom and pan on hoverView TemplateArcherTemplateCreative portfolioView PluginWorkshopPluginTurn ideas into componentsView ComponentDigital Rotary RadioComponentFully functional radioView TemplateApex FilmsTemplateMultimedia portfolioView ComponentFlip CardComponentDrag to flip cardsView ComponentAnimated GradientsComponentImage reveal effectView PluginJSON SyncPluginImport & export CMS with JSONView TemplateBaseformTemplateModern design portfolioView PluginAsset ManagerPluginManage your site's assetsView ComponentVideo PlayerComponentBeautiful video playerView TemplateApex FilmsTemplateMultimedia portfolioView ComponentFlip CardComponentDrag to flip cardsView ComponentAnimated GradientsComponentImage reveal effectView PluginJSON SyncPluginImport & export CMS with JSONView TemplateBaseformTemplateModern design portfolioView PluginAsset ManagerPluginManage your site's assetsView ComponentVideo PlayerComponentBeautiful video playerDesign bold. Launch fast.Start for freeStart with AILoading statusloadingDownloadsMacWindowsCCPAProductAIDesignPublishCollaborateConvertCMSSEOHostingPerformanceUpdatesBusinessPricingSwitchStartupsAgenciesEnterpriseSolutionsFigma to HTMLWebsite builderPortfolio makerLanding pagesUI/UX designNo-codeCompareAEMSanityClaude CodeSquarespaceWordPressWebflowLovableFigmaWixCodexUnbounceContentfulCerosReadymagResourcesMarketplaceTemplatesComponentsPluginsVectorsFree domainsAEO scannerNewState of SitesCase studiesDevelopersNewsletterSupportContactGuidesBrandBlogCompanyMeetupsCareersSecurityAbuseMediaLegalStoreNewTrust centerProgramsExpertsCreatorsStudentsAmbassadorsGet an AI summary of FramerÂ© Framer B.V.2026Loading statusloadingDownloadsMacWindowsCCPAProductAIDesignPublishCollaborateConvertCMSSEOHostingPerformanceUpdatesBusinessPricingSwitchStartupsAgenciesEnterpriseSolutionsFigma to HTMLWebsite builderPortfolio makerLanding pagesUI/UX designNo-codeCompareAEMSanityClaude CodeSquarespaceWordPressWebflowLovableFigmaWixCodexUnbounceContentfulCerosReadymagResourcesMarketplaceTemplatesComponentsPluginsVectorsFree domainsAEO scannerNewState of SitesCase studiesDevelopersNewsletterSupportContactGuidesBrandBlogCompanyMeetupsCareersSecurityAbuseMediaLegalStoreNewTrust centerProgramsExpertsCreatorsStudentsAmbassadorsGet an AI summary of FramerÂ© Framer B.V.2026Loading statusloadingProductAIDesignPublishCollaborateConvertCMSSEOHostingPerformanceUpdatesBusinessPricingSwitchStartupsAgenciesEnterpriseSolutionsFigma to HTMLWebsite builderPortfolio makerLanding pagesUI/UX designNo-codeCompareAEMSanityClaude CodeSquarespaceWordPressWebflowLovableFigmaWixCodexUnbounceContentfulCerosReadymagResourcesMarketplaceTemplatesComponentsPluginsVectorsFree domainsAEO scannerNewState of SitesCase studiesDevelopersNewsletterSupportContactGuidesBrandBlogCompanyMeetupsCareersSecurityAbuseMediaLegalStoreNewTrust centerProgramsExpertsCreatorsStudentsAmbassadorsCCPAGet an AI summary of FramerÂ© Framer B.V.2026",
+          "text_preview": "Log inSign upCopyLogo as SVGBrandGuidelinesProductTeamsResourcesCommunitySupportEnterprisePricingSearch...Get StartedOverviewCompareFAQPluginsIntroductionQuick StartPublishingChangelogReferenceGuidesS",
+          "html_snippet": "<div data-framer-generated-page=\"\" data-framer-hydrate-v2='{\"routeId\":\"Zw20hns9v\",\"localeId\":\"default\",\"breakpoints\":[{\"hash\":\"2ngqvi\",\"mediaQuery\":\"(min-width: 1200px)\"},{\"hash\":\"11ziuji\",\"mediaQuery\":\"(min-width: 810px) and (max-width: 1199.98px)\"},{\"hash\":\"1jlwr9e\",\"mediaQuery\":\"(max-width: 809.98px)\"},{\"hash\":\"14kk00e\",\"mediaQuery\":\"(max-width: 809.98px)\"},{\"hash\":\"u6pua3\",\"mediaQuery\":\"(min-width: 810px) and (max-width: 1199.98px)\"},{\"hash\":\"ygh7jx\",\"mediaQuery\":\"(min-width: 1200px)\"}]}' da"
+        },
+        {
+          "id": "section_dynamic_1",
+          "heading": "Build bettersites, faster",
+          "class": [
+            "framer-irf8i",
+            "framer-XryXI",
+            "framer-UOVvb",
+            "framer-ygh7jx"
+          ],
+          "text_full": "Log inSign upCopyLogo as SVGBrandGuidelinesProductTeamsResourcesCommunitySupportEnterprisePricingSearch...Get StartedOverviewCompareFAQPluginsIntroductionQuick StartPublishingChangelogReferenceGuidesServer APIIntroductionQuick StartReferenceFAQFetchIntroductionExamplesComponentsIntroductionExamplesAsset SharingAuto-SizingProperty ControlsReferenceOverridesIntroductionExamplesDevelopersSearchSearch...Get StartedOverviewCompareFAQPluginsIntroductionQuick StartPublishingChangelogReferenceGuidesServer APIIntroductionQuick StartReferenceFAQFetchIntroductionExamplesComponentsIntroductionExamplesAsset SharingAuto-SizingProperty ControlsReferenceOverridesIntroductionExamplesJoin us live June 16 10AM PDT for something bigBuild bettersites, fasterFramer is the site builder trusted by leading startups and Fortune 500 companies. Build fast and scale more easily with an integrated CMS, analytics, localization, and SEO.Start for freeStart for freeStart with AIStart with AIMeet our customersMeet our customersCreate, collaborate, and go liveAIGenerate site layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.DesignCraft responsive layouts and bring them to life with smooth effects, interactions, and animations. Build exactly what you imagine, visually.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCollaborateWhether youâre collaborating on the canvas or editing copy directly on the page, updates are seamless and handoff-free.Learn moreWireframerIcreatedthreeuniquelandingpagesindarkmodeforyourmoderndesignstartup:amainlandingpage,acreative-focusedpage,andastudioshowcasepage.Landing Page 1Landing Page 2Landing Page 3100%BenjaminPaul100%PublishTitleHolo ShaderSlugholo-shaderframer.com/update/holo-shaderStatusLiveDate16/04/2026SectionSection descriptionImageTint35E2EBFeaturedContentIntroducing a brand new addition to our Shader library: Holo. A gradient shader that simulates how light splits into rainbows on holographic surfaces. Instead of colors, you control the math that shapes the colors, and the way the shader warps and flows. Holo is now available in the Insert Panel, under Shaders.Watch the videoto learn more about how to customize Holo.CMSSiteÂ·framer.comInvitePublishCollectionsFieldsAcademyUpdatesArticles320Categories18DevelopersStartupsHelpAdd...TitleStatusImageCategoriesForms AntispamLiveSpectrum and CrystalLiveCMS PluginsLiveLogo ShadersLiveCMS 3.0LiveHolo ShaderLiveAuto TranslateLiveMarch Update: BentoLiveChromatic AberrationLiveShadersLiveStatic FilesLiveCustom DistributionLiveFramer ConvertLivebaseform.framer.websiteBaseformÂ®Art DirectionVisual DesignWork,Archive,Profile,JournalLet's TalkLatest NewsView All PostsâClick to editÂ·Changes are auto-savedSite savedÂ·Collaborators are notified. Changes will be visible once the project is published.Open in FramerFinish EditingAIGenerate page layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.Learn moreAIGenerate page layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.Learn moreDesignCraft responsive layouts and bring them to life with smooth effects, interactions, and animations. Build exactly what you imagine, visually.Learn moreDesignCraft responsive layouts and bring them to life with smooth effects, interactions, and animations. Build exactly what you imagine, visually.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCollaborateWhether youâre collaborating on the canvas or editing copy directly on the page, updates are seamless and handoff-free.Learn moreCollaborateWhether youâre collaborating on the canvas or editing copy directly on the page, updates are seamless and handoff-free.Learn moreScale without switching toolsAnalytics & insightsTrack traffic, measure performance, and monitor conversions.Learn moreLearn moreJune 5, 2026Pageviews258,156Visitors85,458OverviewLive Visitors400Unique Visitors1.7MTotal Pageviews3.2M330kSourcesReferrergoogle.com436Kchatgpt.com189Klinkedin.com96Kyoutube.com82Kbing.com71Kx.com49KPagesAllHome1.8M/pricing156K/gallery91K/updates44K/features/design39K/features/cms27KA/B Testing & optimizationA/B testing, funnels, and built-in growth insights.Learn moreLearn morePagesLayersAssetsDesignPagesHomeAControlBVersion BCVersion C/pricingAB/features/blog/about/404DesktopÂ·1200SEO & performanceOptimize every page with built-in SEO settings, metadata, and blazing-fast hosting.Learn moreLearn moreGoogle Lighthouse0SEO0Performance0AccessibilityPowering ambitious teams worldwideâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead morePerplexityFloraBiographCradleMiroâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead morePerplexityFloraBiographCradleMiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroGet pro help from handpicked expertsGet matchedGet matchedFind an ExpertFind an ExpertView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertLaunch faster with community resourcesTemplatesTemplatesPluginsPluginsComponentsComponentsView ComponentImage SliderComponentBefore and after imagesView TemplateMiloTemplateFurniture shop websiteView PluginNotionPluginSync with NotionView ComponentHover ZoomComponentZoom and pan on hoverView TemplateArcherTemplateCreative portfolioView PluginWorkshopPluginTurn ideas into componentsView ComponentDigital Rotary RadioComponentFully functional radioView TemplateApex FilmsTemplateMultimedia portfolioView ComponentFlip CardComponentDrag to flip cardsView ComponentAnimated GradientsComponentImage reveal effectView PluginJSON SyncPluginImport & export CMS with JSONView TemplateBaseformTemplateModern design portfolioView ComponentImage SliderComponentBefore and after imagesView TemplateMiloTemplateFurniture shop websiteView PluginNotionPluginSync with NotionView ComponentHover ZoomComponentZoom and pan on hoverView TemplateArcherTemplateCreative portfolioView PluginWorkshopPluginTurn ideas into componentsView ComponentDigital Rotary RadioComponentFully functional radioView ComponentImage SliderComponentBefore and after imagesView TemplateMiloTemplateFurniture shop websiteView PluginNotionPluginSync with NotionView ComponentHover ZoomComponentZoom and pan on hoverView TemplateArcherTemplateCreative portfolioView PluginWorkshopPluginTurn ideas into componentsView ComponentDigital Rotary RadioComponentFully functional radioView TemplateApex FilmsTemplateMultimedia portfolioView ComponentFlip CardComponentDrag to flip cardsView ComponentAnimated GradientsComponentImage reveal effectView PluginJSON SyncPluginImport & export CMS with JSONView TemplateBaseformTemplateModern design portfolioView PluginAsset ManagerPluginManage your site's assetsView ComponentVideo PlayerComponentBeautiful video playerView TemplateApex FilmsTemplateMultimedia portfolioView ComponentFlip CardComponentDrag to flip cardsView ComponentAnimated GradientsComponentImage reveal effectView PluginJSON SyncPluginImport & export CMS with JSONView TemplateBaseformTemplateModern design portfolioView PluginAsset ManagerPluginManage your site's assetsView ComponentVideo PlayerComponentBeautiful video playerDesign bold. Launch fast.Start for freeStart with AILoading statusloadingDownloadsMacWindowsCCPAProductAIDesignPublishCollaborateConvertCMSSEOHostingPerformanceUpdatesBusinessPricingSwitchStartupsAgenciesEnterpriseSolutionsFigma to HTMLWebsite builderPortfolio makerLanding pagesUI/UX designNo-codeCompareAEMSanityClaude CodeSquarespaceWordPressWebflowLovableFigmaWixCodexUnbounceContentfulCerosReadymagResourcesMarketplaceTemplatesComponentsPluginsVectorsFree domainsAEO scannerNewState of SitesCase studiesDevelopersNewsletterSupportContactGuidesBrandBlogCompanyMeetupsCareersSecurityAbuseMediaLegalStoreNewTrust centerProgramsExpertsCreatorsStudentsAmbassadorsGet an AI summary of FramerÂ© Framer B.V.2026Loading statusloadingDownloadsMacWindowsCCPAProductAIDesignPublishCollaborateConvertCMSSEOHostingPerformanceUpdatesBusinessPricingSwitchStartupsAgenciesEnterpriseSolutionsFigma to HTMLWebsite builderPortfolio makerLanding pagesUI/UX designNo-codeCompareAEMSanityClaude CodeSquarespaceWordPressWebflowLovableFigmaWixCodexUnbounceContentfulCerosReadymagResourcesMarketplaceTemplatesComponentsPluginsVectorsFree domainsAEO scannerNewState of SitesCase studiesDevelopersNewsletterSupportContactGuidesBrandBlogCompanyMeetupsCareersSecurityAbuseMediaLegalStoreNewTrust centerProgramsExpertsCreatorsStudentsAmbassadorsGet an AI summary of FramerÂ© Framer B.V.2026Loading statusloadingProductAIDesignPublishCollaborateConvertCMSSEOHostingPerformanceUpdatesBusinessPricingSwitchStartupsAgenciesEnterpriseSolutionsFigma to HTMLWebsite builderPortfolio makerLanding pagesUI/UX designNo-codeCompareAEMSanityClaude CodeSquarespaceWordPressWebflowLovableFigmaWixCodexUnbounceContentfulCerosReadymagResourcesMarketplaceTemplatesComponentsPluginsVectorsFree domainsAEO scannerNewState of SitesCase studiesDevelopersNewsletterSupportContactGuidesBrandBlogCompanyMeetupsCareersSecurityAbuseMediaLegalStoreNewTrust centerProgramsExpertsCreatorsStudentsAmbassadorsCCPAGet an AI summary of FramerÂ© Framer B.V.2026",
+          "text_preview": "Log inSign upCopyLogo as SVGBrandGuidelinesProductTeamsResourcesCommunitySupportEnterprisePricingSearch...Get StartedOverviewCompareFAQPluginsIntroductionQuick StartPublishingChangelogReferenceGuidesS",
+          "html_snippet": "<div class=\"framer-irf8i framer-XryXI framer-UOVvb framer-ygh7jx\" data-layout-template=\"true\" data-selection=\"true\" style=\"--1moyfq9:64px 0px 0px 0px;--1r5dcfs:var(--overflow-clip-fallback, clip);--u410qi:var(--token-958e2cd1-b113-4aa3-9235-7a2b959c8feb, rgb(0, 0, 0));min-height:100vh;width:auto\"><div class=\"framer-16gj5ov-container\"><div class=\"ssr-variant hidden-u6pua3 hidden-14kk00e\"><nav class=\"framer-MZyqb framer-s0tzel framer-v-s0tzel\" data-framer-name=\"Desktop Nav\" data-hide-scrollbars=\"t"
+        },
+        {
+          "id": "section_dynamic_253",
+          "heading": "Build bettersites, faster",
+          "class": [
+            "framer-ocXXe",
+            "framer-Qwwc1",
+            "framer-PORLY",
+            "framer-UOVvb",
+            "framer-L7H1r",
+            "framer-PUTvR",
+            "framer-mfXCq",
+            "framer-zNLMT",
+            "framer-2ngqvi"
+          ],
+          "text_full": "Join us live June 16 10AM PDT for something bigBuild bettersites, fasterFramer is the site builder trusted by leading startups and Fortune 500 companies. Build fast and scale more easily with an integrated CMS, analytics, localization, and SEO.Start for freeStart for freeStart with AIStart with AIMeet our customersMeet our customersCreate, collaborate, and go liveAIGenerate site layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.DesignCraft responsive layouts and bring them to life with smooth effects, interactions, and animations. Build exactly what you imagine, visually.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCollaborateWhether youâre collaborating on the canvas or editing copy directly on the page, updates are seamless and handoff-free.Learn moreWireframerIcreatedthreeuniquelandingpagesindarkmodeforyourmoderndesignstartup:amainlandingpage,acreative-focusedpage,andastudioshowcasepage.Landing Page 1Landing Page 2Landing Page 3100%BenjaminPaul100%PublishTitleHolo ShaderSlugholo-shaderframer.com/update/holo-shaderStatusLiveDate16/04/2026SectionSection descriptionImageTint35E2EBFeaturedContentIntroducing a brand new addition to our Shader library: Holo. A gradient shader that simulates how light splits into rainbows on holographic surfaces. Instead of colors, you control the math that shapes the colors, and the way the shader warps and flows. Holo is now available in the Insert Panel, under Shaders.Watch the videoto learn more about how to customize Holo.CMSSiteÂ·framer.comInvitePublishCollectionsFieldsAcademyUpdatesArticles320Categories18DevelopersStartupsHelpAdd...TitleStatusImageCategoriesForms AntispamLiveSpectrum and CrystalLiveCMS PluginsLiveLogo ShadersLiveCMS 3.0LiveHolo ShaderLiveAuto TranslateLiveMarch Update: BentoLiveChromatic AberrationLiveShadersLiveStatic FilesLiveCustom DistributionLiveFramer ConvertLivebaseform.framer.websiteBaseformÂ®Art DirectionVisual DesignWork,Archive,Profile,JournalLet's TalkLatest NewsView All PostsâClick to editÂ·Changes are auto-savedSite savedÂ·Collaborators are notified. Changes will be visible once the project is published.Open in FramerFinish EditingAIGenerate page layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.Learn moreAIGenerate page layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.Learn moreDesignCraft responsive layouts and bring them to life with smooth effects, interactions, and animations. Build exactly what you imagine, visually.Learn moreDesignCraft responsive layouts and bring them to life with smooth effects, interactions, and animations. Build exactly what you imagine, visually.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCollaborateWhether youâre collaborating on the canvas or editing copy directly on the page, updates are seamless and handoff-free.Learn moreCollaborateWhether youâre collaborating on the canvas or editing copy directly on the page, updates are seamless and handoff-free.Learn moreScale without switching toolsAnalytics & insightsTrack traffic, measure performance, and monitor conversions.Learn moreLearn moreJune 5, 2026Pageviews258,156Visitors85,458OverviewLive Visitors400Unique Visitors1.7MTotal Pageviews3.2M330kSourcesReferrergoogle.com436Kchatgpt.com189Klinkedin.com96Kyoutube.com82Kbing.com71Kx.com49KPagesAllHome1.8M/pricing156K/gallery91K/updates44K/features/design39K/features/cms27KA/B Testing & optimizationA/B testing, funnels, and built-in growth insights.Learn moreLearn morePagesLayersAssetsDesignPagesHomeAControlBVersion BCVersion C/pricingAB/features/blog/about/404DesktopÂ·1200SEO & performanceOptimize every page with built-in SEO settings, metadata, and blazing-fast hosting.Learn moreLearn moreGoogle Lighthouse0SEO0Performance0AccessibilityPowering ambitious teams worldwideâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead morePerplexityFloraBiographCradleMiroâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead morePerplexityFloraBiographCradleMiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroGet pro help from handpicked expertsGet matchedGet matchedFind an ExpertFind an ExpertView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertLaunch faster with community resourcesTemplatesTemplatesPluginsPluginsComponentsComponentsView ComponentImage SliderComponentBefore and after imagesView TemplateMiloTemplateFurniture shop websiteView PluginNotionPluginSync with NotionView ComponentHover ZoomComponentZoom and pan on hoverView TemplateArcherTemplateCreative portfolioView PluginWorkshopPluginTurn ideas into componentsView ComponentDigital Rotary RadioComponentFully functional radioView TemplateApex FilmsTemplateMultimedia portfolioView ComponentFlip CardComponentDrag to flip cardsView ComponentAnimated GradientsComponentImage reveal effectView PluginJSON SyncPluginImport & export CMS with JSONView TemplateBaseformTemplateModern design portfolioView ComponentImage SliderComponentBefore and after imagesView TemplateMiloTemplateFurniture shop websiteView PluginNotionPluginSync with NotionView ComponentHover ZoomComponentZoom and pan on hoverView TemplateArcherTemplateCreative portfolioView PluginWorkshopPluginTurn ideas into componentsView ComponentDigital Rotary RadioComponentFully functional radioView ComponentImage SliderComponentBefore and after imagesView TemplateMiloTemplateFurniture shop websiteView PluginNotionPluginSync with NotionView ComponentHover ZoomComponentZoom and pan on hoverView TemplateArcherTemplateCreative portfolioView PluginWorkshopPluginTurn ideas into componentsView ComponentDigital Rotary RadioComponentFully functional radioView TemplateApex FilmsTemplateMultimedia portfolioView ComponentFlip CardComponentDrag to flip cardsView ComponentAnimated GradientsComponentImage reveal effectView PluginJSON SyncPluginImport & export CMS with JSONView TemplateBaseformTemplateModern design portfolioView PluginAsset ManagerPluginManage your site's assetsView ComponentVideo PlayerComponentBeautiful video playerView TemplateApex FilmsTemplateMultimedia portfolioView ComponentFlip CardComponentDrag to flip cardsView ComponentAnimated GradientsComponentImage reveal effectView PluginJSON SyncPluginImport & export CMS with JSONView TemplateBaseformTemplateModern design portfolioView PluginAsset ManagerPluginManage your site's assetsView ComponentVideo PlayerComponentBeautiful video player",
+          "text_preview": "Join us live June 16 10AM PDT for something bigBuild bettersites, fasterFramer is the site builder trusted by leading startups and Fortune 500 companies. Build fast and scale more easily with an integ",
+          "html_snippet": "<div class=\"framer-ocXXe framer-Qwwc1 framer-PORLY framer-UOVvb framer-L7H1r framer-PUTvR framer-mfXCq framer-zNLMT framer-2ngqvi\" data-framer-root=\"\" style=\"min-height:100vh;width:auto;display:contents\"><main class=\"framer-7cu4ay\" data-framer-name=\"Main\"><section class=\"framer-11d3otb\" data-framer-name=\"Hero\" id=\"hero\"><header class=\"framer-1kxsj99\" data-framer-name=\"Header\"><div class=\"framer-mx7pii\" data-framer-appear-id=\"mx7pii\" data-framer-component-type=\"RichTextContainer\" style=\"opacity:0"
+        },
+        {
+          "id": "section_dynamic_254",
+          "heading": "Build bettersites, faster",
+          "class": [
+            "framer-7cu4ay"
+          ],
+          "text_full": "Join us live June 16 10AM PDT for something bigBuild bettersites, fasterFramer is the site builder trusted by leading startups and Fortune 500 companies. Build fast and scale more easily with an integrated CMS, analytics, localization, and SEO.Start for freeStart for freeStart with AIStart with AIMeet our customersMeet our customersCreate, collaborate, and go liveAIGenerate site layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.DesignCraft responsive layouts and bring them to life with smooth effects, interactions, and animations. Build exactly what you imagine, visually.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCollaborateWhether youâre collaborating on the canvas or editing copy directly on the page, updates are seamless and handoff-free.Learn moreWireframerIcreatedthreeuniquelandingpagesindarkmodeforyourmoderndesignstartup:amainlandingpage,acreative-focusedpage,andastudioshowcasepage.Landing Page 1Landing Page 2Landing Page 3100%BenjaminPaul100%PublishTitleHolo ShaderSlugholo-shaderframer.com/update/holo-shaderStatusLiveDate16/04/2026SectionSection descriptionImageTint35E2EBFeaturedContentIntroducing a brand new addition to our Shader library: Holo. A gradient shader that simulates how light splits into rainbows on holographic surfaces. Instead of colors, you control the math that shapes the colors, and the way the shader warps and flows. Holo is now available in the Insert Panel, under Shaders.Watch the videoto learn more about how to customize Holo.CMSSiteÂ·framer.comInvitePublishCollectionsFieldsAcademyUpdatesArticles320Categories18DevelopersStartupsHelpAdd...TitleStatusImageCategoriesForms AntispamLiveSpectrum and CrystalLiveCMS PluginsLiveLogo ShadersLiveCMS 3.0LiveHolo ShaderLiveAuto TranslateLiveMarch Update: BentoLiveChromatic AberrationLiveShadersLiveStatic FilesLiveCustom DistributionLiveFramer ConvertLivebaseform.framer.websiteBaseformÂ®Art DirectionVisual DesignWork,Archive,Profile,JournalLet's TalkLatest NewsView All PostsâClick to editÂ·Changes are auto-savedSite savedÂ·Collaborators are notified. Changes will be visible once the project is published.Open in FramerFinish EditingAIGenerate page layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.Learn moreAIGenerate page layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.Learn moreDesignCraft responsive layouts and bring them to life with smooth effects, interactions, and animations. Build exactly what you imagine, visually.Learn moreDesignCraft responsive layouts and bring them to life with smooth effects, interactions, and animations. Build exactly what you imagine, visually.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCollaborateWhether youâre collaborating on the canvas or editing copy directly on the page, updates are seamless and handoff-free.Learn moreCollaborateWhether youâre collaborating on the canvas or editing copy directly on the page, updates are seamless and handoff-free.Learn moreScale without switching toolsAnalytics & insightsTrack traffic, measure performance, and monitor conversions.Learn moreLearn moreJune 5, 2026Pageviews258,156Visitors85,458OverviewLive Visitors400Unique Visitors1.7MTotal Pageviews3.2M330kSourcesReferrergoogle.com436Kchatgpt.com189Klinkedin.com96Kyoutube.com82Kbing.com71Kx.com49KPagesAllHome1.8M/pricing156K/gallery91K/updates44K/features/design39K/features/cms27KA/B Testing & optimizationA/B testing, funnels, and built-in growth insights.Learn moreLearn morePagesLayersAssetsDesignPagesHomeAControlBVersion BCVersion C/pricingAB/features/blog/about/404DesktopÂ·1200SEO & performanceOptimize every page with built-in SEO settings, metadata, and blazing-fast hosting.Learn moreLearn moreGoogle Lighthouse0SEO0Performance0AccessibilityPowering ambitious teams worldwideâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead morePerplexityFloraBiographCradleMiroâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead morePerplexityFloraBiographCradleMiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroRead moreâFramer gives us everything we need to move fast. We donât wait on dev. We donât compromise on design.âHenry ModisettHead of Design at PerplexityRead moreâAt FLORA, we care about flowâhow ideas move from imagination to interface. Framer gets that. It gives us the speed to iterate, the freedom to explore, and the power to execute.âEthan ProiaHead of Design at FLORARead moreâFramer gave us full creative freedom. No code limits, no handoffs. We shipped an immersive brand site in days.âAdam JiwaPartnerships at MetalabRead moreâWith Framer, our designers can ship updates daily. No dev handoff. No staging hassle.âJelle PrinsCo-Founder at CradleRead moreâFramer allowed us to ship high-performing, beautifully designed pages at record speed, all while keeping design control in-house.âRadoslav BaliDesign Lead at MiroGet pro help from handpicked expertsGet matchedGet matchedFind an ExpertFind an ExpertView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertTrueformSwitzerlandView ExpertAlex AperiosUnited KingdomView ExpertAnalogue AgencyNetherlandsView ExpertFabian AlbertUnited StatesView ExpertAllsite StudioGermanyView ExpertAerolabUnited StatesView ExpertAdriano ReisUnited StatesView ExpertDeserve StudioUnited StatesView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertView ExpertLaunch faster with community resourcesTemplatesTemplatesPluginsPluginsComponentsComponentsView ComponentImage SliderComponentBefore and after imagesView TemplateMiloTemplateFurniture shop websiteView PluginNotionPluginSync with NotionView ComponentHover ZoomComponentZoom and pan on hoverView TemplateArcherTemplateCreative portfolioView PluginWorkshopPluginTurn ideas into componentsView ComponentDigital Rotary RadioComponentFully functional radioView TemplateApex FilmsTemplateMultimedia portfolioView ComponentFlip CardComponentDrag to flip cardsView ComponentAnimated GradientsComponentImage reveal effectView PluginJSON SyncPluginImport & export CMS with JSONView TemplateBaseformTemplateModern design portfolioView ComponentImage SliderComponentBefore and after imagesView TemplateMiloTemplateFurniture shop websiteView PluginNotionPluginSync with NotionView ComponentHover ZoomComponentZoom and pan on hoverView TemplateArcherTemplateCreative portfolioView PluginWorkshopPluginTurn ideas into componentsView ComponentDigital Rotary RadioComponentFully functional radioView ComponentImage SliderComponentBefore and after imagesView TemplateMiloTemplateFurniture shop websiteView PluginNotionPluginSync with NotionView ComponentHover ZoomComponentZoom and pan on hoverView TemplateArcherTemplateCreative portfolioView PluginWorkshopPluginTurn ideas into componentsView ComponentDigital Rotary RadioComponentFully functional radioView TemplateApex FilmsTemplateMultimedia portfolioView ComponentFlip CardComponentDrag to flip cardsView ComponentAnimated GradientsComponentImage reveal effectView PluginJSON SyncPluginImport & export CMS with JSONView TemplateBaseformTemplateModern design portfolioView PluginAsset ManagerPluginManage your site's assetsView ComponentVideo PlayerComponentBeautiful video playerView TemplateApex FilmsTemplateMultimedia portfolioView ComponentFlip CardComponentDrag to flip cardsView ComponentAnimated GradientsComponentImage reveal effectView PluginJSON SyncPluginImport & export CMS with JSONView TemplateBaseformTemplateModern design portfolioView PluginAsset ManagerPluginManage your site's assetsView ComponentVideo PlayerComponentBeautiful video player",
+          "text_preview": "Join us live June 16 10AM PDT for something bigBuild bettersites, fasterFramer is the site builder trusted by leading startups and Fortune 500 companies. Build fast and scale more easily with an integ",
+          "html_snippet": "<main class=\"framer-7cu4ay\" data-framer-name=\"Main\"><section class=\"framer-11d3otb\" data-framer-name=\"Hero\" id=\"hero\"><header class=\"framer-1kxsj99\" data-framer-name=\"Header\"><div class=\"framer-mx7pii\" data-framer-appear-id=\"mx7pii\" data-framer-component-type=\"RichTextContainer\" style=\"opacity:0.001;transform:none\"><p class=\"framer-text\" dir=\"auto\" style=\"--font-selector:SW50ZXItVmFyaWFibGVWRj1JbTl3YzNvaUlESTBMQ0FpZDJkb2RDSWdORGt3;--framer-font-family:&quot;Inter Variable&quot;, &quot;Inter Vari"
+        },
+        {
+          "id": "section_dynamic_256",
+          "heading": "Build bettersites, faster",
+          "class": [
+            "framer-1knetyx"
+          ],
+          "text_full": "Build bettersites, fasterFramer is the site builder trusted by leading startups and Fortune 500 companies. Build fast and scale more easily with an integrated CMS, analytics, localization, and SEO.",
+          "text_preview": "Build bettersites, fasterFramer is the site builder trusted by leading startups and Fortune 500 companies. Build fast and scale more easily with an integrated CMS, analytics, localization, and SEO.",
+          "html_snippet": "<div class=\"framer-1knetyx\" data-framer-name=\"Text\"><div class=\"framer-1rel4c6\" data-framer-appear-id=\"1rel4c6\" data-framer-component-type=\"RichTextContainer\" style=\"opacity:0.001;transform:translateY(10px)\"><h1 class=\"framer-text framer-styles-preset-1iane25\" data-styles-preset=\"V_kfGv2cj\" dir=\"auto\" style=\"--framer-text-alignment:center;--framer-text-color:var(--token-26e3cb56-8447-4a64-9b7d-37f16a9909d4, rgb(255, 255, 255))\">Build better<br class=\"framer-text\"/>sites, faster</h1></div><div cl"
+        },
+        {
+          "id": "section_dynamic_664",
+          "heading": "AI",
+          "class": [
+            "framer-uueuzr",
+            "hidden-11ziuji",
+            "hidden-1jlwr9e"
+          ],
+          "text_full": "AIGenerate site layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.DesignCraft responsive layouts and bring them to life with smooth effects, interactions, and animations. Build exactly what you imagine, visually.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCollaborateWhether youâre collaborating on the canvas or editing copy directly on the page, updates are seamless and handoff-free.Learn moreWireframerIcreatedthreeuniquelandingpagesindarkmodeforyourmoderndesignstartup:amainlandingpage,acreative-focusedpage,andastudioshowcasepage.Landing Page 1Landing Page 2Landing Page 3100%BenjaminPaul100%PublishTitleHolo ShaderSlugholo-shaderframer.com/update/holo-shaderStatusLiveDate16/04/2026SectionSection descriptionImageTint35E2EBFeaturedContentIntroducing a brand new addition to our Shader library: Holo. A gradient shader that simulates how light splits into rainbows on holographic surfaces. Instead of colors, you control the math that shapes the colors, and the way the shader warps and flows. Holo is now available in the Insert Panel, under Shaders.Watch the videoto learn more about how to customize Holo.CMSSiteÂ·framer.comInvitePublishCollectionsFieldsAcademyUpdatesArticles320Categories18DevelopersStartupsHelpAdd...TitleStatusImageCategoriesForms AntispamLiveSpectrum and CrystalLiveCMS PluginsLiveLogo ShadersLiveCMS 3.0LiveHolo ShaderLiveAuto TranslateLiveMarch Update: BentoLiveChromatic AberrationLiveShadersLiveStatic FilesLiveCustom DistributionLiveFramer ConvertLivebaseform.framer.websiteBaseformÂ®Art DirectionVisual DesignWork,Archive,Profile,JournalLet's TalkLatest NewsView All PostsâClick to editÂ·Changes are auto-savedSite savedÂ·Collaborators are notified. Changes will be visible once the project is published.Open in FramerFinish Editing",
+          "text_preview": "AIGenerate site layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.DesignCraft responsive layouts and bring them to life with smoo",
+          "html_snippet": "<div class=\"framer-uueuzr hidden-11ziuji hidden-1jlwr9e\" data-framer-name=\"Desktop\" id=\"design-content\"><!--$--><div class=\"framer-114s7ff-container\" style=\"will-change:transform;opacity:0.25;transform:none\"><div class=\"framer-QJI3B framer-pqwif7 framer-v-pqwif7\" data-framer-name=\"AI\" style=\"max-width:100%;width:100%\"><!--$--><div class=\"framer-13ld4o6-container\"><div class=\"framer-MkG82 framer-XbCRp framer-Qwwc1 framer-1crIN framer-mfXCq framer-1yuthqp framer-v-1yuthqp\" data-border=\"true\" data-"
+        },
+        {
+          "id": "section_dynamic_665",
+          "heading": "AI",
+          "class": [
+            "framer-114s7ff-container"
+          ],
+          "text_full": "AIGenerate site layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.DesignCraft responsive layouts and bring them to life with smooth effects, interactions, and animations. Build exactly what you imagine, visually.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCollaborateWhether youâre collaborating on the canvas or editing copy directly on the page, updates are seamless and handoff-free.Learn more",
+          "text_preview": "AIGenerate site layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.DesignCraft responsive layouts and bring them to life with smoo",
+          "html_snippet": "<div class=\"framer-114s7ff-container\" style=\"will-change:transform;opacity:0.25;transform:none\"><div class=\"framer-QJI3B framer-pqwif7 framer-v-pqwif7\" data-framer-name=\"AI\" style=\"max-width:100%;width:100%\"><!--$--><div class=\"framer-13ld4o6-container\"><div class=\"framer-MkG82 framer-XbCRp framer-Qwwc1 framer-1crIN framer-mfXCq framer-1yuthqp framer-v-1yuthqp\" data-border=\"true\" data-framer-name=\"Open\" style=\"--border-bottom-width:1px;--border-color:var(--token-c534b380-e14e-4ddc-9802-ad88d1f94"
+        },
+        {
+          "id": "section_dynamic_666",
+          "heading": "AI",
+          "class": [
+            "framer-QJI3B",
+            "framer-pqwif7",
+            "framer-v-pqwif7"
+          ],
+          "text_full": "AIGenerate site layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.DesignCraft responsive layouts and bring them to life with smooth effects, interactions, and animations. Build exactly what you imagine, visually.Learn moreCMSManage and update your content effortlessly with a built-in CMS. Keep your site fresh without touching code.Learn moreCollaborateWhether youâre collaborating on the canvas or editing copy directly on the page, updates are seamless and handoff-free.Learn more",
+          "text_preview": "AIGenerate site layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.DesignCraft responsive layouts and bring them to life with smoo",
+          "html_snippet": "<div class=\"framer-QJI3B framer-pqwif7 framer-v-pqwif7\" data-framer-name=\"AI\" style=\"max-width:100%;width:100%\"><!--$--><div class=\"framer-13ld4o6-container\"><div class=\"framer-MkG82 framer-XbCRp framer-Qwwc1 framer-1crIN framer-mfXCq framer-1yuthqp framer-v-1yuthqp\" data-border=\"true\" data-framer-name=\"Open\" style=\"--border-bottom-width:1px;--border-color:var(--token-c534b380-e14e-4ddc-9802-ad88d1f94f8e, rgba(255, 255, 255, 0.1));--border-left-width:0px;--border-right-width:0px;--border-style:s"
+        },
+        {
+          "id": "section_dynamic_667",
+          "heading": "AI",
+          "class": [
+            "framer-13ld4o6-container"
+          ],
+          "text_full": "AIGenerate site layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.",
+          "text_preview": "AIGenerate site layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.",
+          "html_snippet": "<div class=\"framer-13ld4o6-container\"><div class=\"framer-MkG82 framer-XbCRp framer-Qwwc1 framer-1crIN framer-mfXCq framer-1yuthqp framer-v-1yuthqp\" data-border=\"true\" data-framer-name=\"Open\" style=\"--border-bottom-width:1px;--border-color:var(--token-c534b380-e14e-4ddc-9802-ad88d1f94f8e, rgba(255, 255, 255, 0.1));--border-left-width:0px;--border-right-width:0px;--border-style:solid;--border-top-width:0px;width:100%\"><div class=\"framer-mword8\" data-framer-name=\"Text\" style=\"--1pbg8xf:0px 0px 0px "
+        },
+        {
+          "id": "section_dynamic_668",
+          "heading": "AI",
+          "class": [
+            "framer-MkG82",
+            "framer-XbCRp",
+            "framer-Qwwc1",
+            "framer-1crIN",
+            "framer-mfXCq",
+            "framer-1yuthqp",
+            "framer-v-1yuthqp"
+          ],
+          "text_full": "AIGenerate site layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.",
+          "text_preview": "AIGenerate site layouts and advanced components in seconds with AI, so you can skip the blank canvas and start designing with confidence.",
+          "html_snippet": "<div class=\"framer-MkG82 framer-XbCRp framer-Qwwc1 framer-1crIN framer-mfXCq framer-1yuthqp framer-v-1yuthqp\" data-border=\"true\" data-framer-name=\"Open\" style=\"--border-bottom-width:1px;--border-color:var(--token-c534b380-e14e-4ddc-9802-ad88d1f94f8e, rgba(255, 255, 255, 0.1));--border-left-width:0px;--border-right-width:0px;--border-style:solid;--border-top-width:0px;width:100%\"><div class=\"framer-mword8\" data-framer-name=\"Text\" style=\"--1pbg8xf:0px 0px 0px 0px\"><div class=\"framer-11qlmz5\" data-"
+        }
+      ],
+      "footer": {
+        "links": [
+          {
+            "text": "Loading statusloading",
+            "url": "https://www.framerstatus.com/"
+          },
+          {
+            "text": "Mac",
+            "url": "https://updates.framer.com/electron/darwin/arm64/Framer.zip?_ga=2.113395847.1447313862.1646043056-273660571.1642151053"
+          },
+          {
+            "text": "Windows",
+            "url": "https://updates.framer.com/electron/win32/x64/Framer.exe?_ga=2.113395847.1447313862.1646043056-273660571.1642151053"
+          },
+          {
+            "text": "CCPA",
+            "url": "https://app.eu.vanta.com/framer.com/trust/ow67ujg7iav0t6qtd1o6r2"
+          },
+          {
+            "text": "AI",
+            "url": "https://www.framer.com/ai/"
+          },
+          {
+            "text": "Design",
+            "url": "https://www.framer.com/design/"
+          },
+          {
+            "text": "Publish",
+            "url": "https://www.framer.com/publish/"
+          },
+          {
+            "text": "Collaborate",
+            "url": "https://www.framer.com/collaborate/"
+          }
+        ],
+        "text": "Loading statusloadingDownloadsMacWindowsCCPAProductAIDesignPublishCollaborateConvertCMSSEOHostingPerformanceUpdatesBusinessPricingSwitchStartupsAgenciesEnterpriseSolutionsFigma to HTMLWebsite builderPortfolio makerLanding pagesUI/UX designNo-codeCompareAEMSanityClaude CodeSquarespaceWordPressWebflowLovableFigmaWixCodexUnbounceContentfulCerosReadymagResourcesMarketplaceTemplatesComponentsPluginsVectorsFree domainsAEO scannerNewState of SitesCase studiesDevelopersNewsletterSupportContactGuidesBran",
+        "social_links": [
+          {
+            "platform": "https://www.tiktok.com/@framer",
+            "url": "https://www.tiktok.com/@framer"
+          },
+          {
+            "platform": "https://www.instagram.com/framer/",
+            "url": "https://www.instagram.com/framer/"
+          },
+          {
+            "platform": "https://www.linkedin.com/company/framer/",
+            "url": "https://www.linkedin.com/company/framer/"
+          },
+          {
+            "platform": "https://www.youtube.com/@Framer",
+            "url": "https://www.youtube.com/@Framer"
+          }
+        ]
+      },
+      "buttons": [
+        {
+          "text": "Log in",
+          "tag": "a",
+          "classes": [
+            "framer-dTPNS",
+            "framer-uklsuu",
+            "framer-v-uklsuu",
+            "framer-1jsfcml"
+          ],
+          "href": "https://framer.com/r/login"
+        },
+        {
+          "text": "Sign up",
+          "tag": "a",
+          "classes": [
+            "framer-dTPNS",
+            "framer-uklsuu",
+            "framer-v-13324q3",
+            "framer-1jsfcml"
+          ],
+          "href": "https://www.framer.com/r/signup/"
+        },
+        {
+          "text": "CopyLogo as SVG",
+          "tag": "a",
+          "classes": [
+            "framer-LJOj3",
+            "framer-41m440",
+            "framer-v-41m440",
+            "framer-1lt2zmw"
+          ],
+          "href": ""
+        },
+        {
+          "text": "BrandGuidelines",
+          "tag": "a",
+          "classes": [
+            "framer-LJOj3",
+            "framer-41m440",
+            "framer-v-41m440",
+            "framer-1lt2zmw"
+          ],
+          "href": "https://www.framer.com/brand"
+        },
+        {
+          "text": "Product",
+          "tag": "a",
+          "classes": [
+            "framer-dTPNS",
+            "framer-uklsuu",
+            "framer-v-uklsuu",
+            "framer-1jsfcml"
+          ],
+          "href": ""
+        },
+        {
+          "text": "Teams",
+          "tag": "a",
+          "classes": [
+            "framer-dTPNS",
+            "framer-uklsuu",
+            "framer-v-uklsuu",
+            "framer-1jsfcml"
+          ],
+          "href": ""
+        },
+        {
+          "text": "Resources",
+          "tag": "a",
+          "classes": [
+            "framer-dTPNS",
+            "framer-uklsuu",
+            "framer-v-uklsuu",
+            "framer-1jsfcml"
+          ],
+          "href": ""
+        },
+        {
+          "text": "Community",
+          "tag": "a",
+          "classes": [
+            "framer-dTPNS",
+            "framer-uklsuu",
+            "framer-v-uklsuu",
+            "framer-1jsfcml"
+          ],
+          "href": ""
+        },
+        {
+          "text": "Support",
+          "tag": "a",
+          "classes": [
+            "framer-dTPNS",
+            "framer-uklsuu",
+            "framer-v-uklsuu",
+            "framer-1jsfcml"
+          ],
+          "href": ""
+        },
+        {
+          "text": "Enterprise",
+          "tag": "a",
+          "classes": [
+            "framer-dTPNS",
+            "framer-uklsuu",
+            "framer-v-uklsuu",
+            "framer-1jsfcml"
+          ],
+          "href": "https://www.framer.com/enterprise/"
+        },
+        {
+          "text": "Pricing",
+          "tag": "a",
+          "classes": [
+            "framer-dTPNS",
+            "framer-uklsuu",
+            "framer-v-uklsuu",
+            "framer-1jsfcml"
+          ],
+          "href": "https://www.framer.com/pricing"
+        },
+        {
+          "text": "Overview",
+          "tag": "a",
+          "classes": [
+            "framer-text",
+            "framer-styles-preset-1jhmnrw"
+          ],
+          "href": "https://www.framer.com/developers/"
+        },
+        {
+          "text": "Compare",
+          "tag": "a",
+          "classes": [
+            "framer-text",
+            "framer-styles-preset-1jhmnrw"
+          ],
+          "href": "https://www.framer.com/developers/comparison"
+        },
+        {
+          "text": "FAQ",
+          "tag": "a",
+          "classes": [
+            "framer-text",
+            "framer-styles-preset-1jhmnrw"
+          ],
+          "href": "https://www.framer.com/developers/faq"
+        },
+        {
+          "text": "Plugins",
+          "tag": "a",
+          "classes": [
+            "framer-text",
+            "framer-styles-preset-60u1z4"
+          ],
+          "href": "https://www.framer.com/"
+        },
+        {
+          "text": "Introduction",
+          "tag": "a",
+          "classes": [
+            "framer-text",
+            "framer-styles-preset-1jhmnrw"
+          ],
+          "href": "https://www.framer.com/developers/plugins-introduction"
+        },
+        {
+          "text": "Quick Start",
+          "tag": "a",
+          "classes": [
+            "framer-text",
+            "framer-styles-preset-1jhmnrw"
+          ],
+          "href": "https://www.framer.com/developers/plugins-quick-start"
+        },
+        {
+          "text": "Publishing",
+          "tag": "a",
+          "classes": [
+            "framer-text",
+            "framer-styles-preset-1jhmnrw"
+          ],
+          "href": "https://www.framer.com/developers/publishing"
+        },
+        {
+          "text": "Changelog",
+          "tag": "a",
+          "classes": [
+            "framer-text",
+            "framer-styles-preset-1jhmnrw"
+          ],
+          "href": "https://www.framer.com/developers/changelog"
+        },
+        {
+          "text": "Reference",
+          "tag": "a",
+          "classes": [
+            "framer-text",
+            "framer-styles-preset-1jhmnrw"
+          ],
+          "href": "https://www.framer.com/developers/reference"
+        }
+      ]
+    },
+    "visual_dna": {
+      "hero_background": {
+        "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+        "background_color": "rgba(0, 0, 0, 0)",
+        "element": "DIV.framer-533jkf"
+      },
+      "background_images": [
+        {
+          "element": "DIV.framer-1ksmmls",
+          "background_image": "linear-gradient(rgba(8, 8, 8, 0) 0%, rgb(8, 8, 8) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-12cry06",
+          "background_image": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-a8eo3y",
+          "background_image": "url(\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 1200 227%22><g><defs><linearGradient id=%22idss12238618870_1g854656089%22 x1=%220.49751243781094523%22 x2=%220.5022388059701492%22 y1=%220%22 y2=%220.9500000000000001%22><stop offset=%220%22 stop-color=%22rgba(0, 81, 255, 0.45)%22 stop-opacity=%220.45%22></stop><stop offset=%221%22 stop-color=%22rgba(0, 153, 255, 0)%22 stop-opacity=%220%22></stop></linearGradient></defs><path d=%22M 0.043 225.118 L 0.043 207.233 L 42.885 154.089 L 85.727 162.265 L 128.569 132.627 L 171.411 159.199 L 214.253 124.451 L 257.095 143.869 L 299.937 88.17 L 342.779 139.781 L 385.622 138.248 L 428.464 127.006 L 471.306 104.011 L 514.148 115.764 L 556.99 110.654 L 599.832 123.429 L 642.674 74.372 L 685.516 108.099 L 728.358 74.372 L 771.2 134.671 L 814.042 151.023 L 856.885 169.419 L 899.727 189.859 L 942.569 139.781 L 985.411 127.006 L 1028.253 77.95 L 1071.095 69.262 L 1113.937 85.615 L 1156.779 112.698 L 1199.621 154.089 L 1199.621 225.118 Z%22 fill=%22url(%23idss12238618870_1g854656089)%22></path></g><path d=%22M 1.013 225.629 C 0.71 225.629 0.464 225.384 0.464 225.081 L 0.464 207.938 C 0.464 207.812 0.507 207.691 0.586 207.593 L 43.1 154.856 C 43.227 154.698 43.431 154.624 43.629 154.662 L 85.923 162.733 C 86.067 162.76 86.216 162.729 86.337 162.645 L 128.695 133.342 C 128.874 133.218 129.11 133.212 129.296 133.327 L 171.501 159.504 C 171.699 159.627 171.954 159.611 172.135 159.464 L 214.411 125.175 C 214.573 125.044 214.794 125.016 214.983 125.102 L 257.121 144.2 C 257.353 144.305 257.626 144.237 257.782 144.035 L 299.94 89.225 C 300.155 88.946 300.572 88.938 300.797 89.209 L 343.029 140.084 C 343.137 140.215 343.3 140.288 343.47 140.282 L 385.982 138.761 C 386.023 138.76 386.063 138.754 386.102 138.743 L 428.822 127.533 C 428.864 127.522 428.904 127.506 428.942 127.486 L 471.534 104.625 C 471.658 104.559 471.803 104.542 471.938 104.58 L 514.466 116.246 C 514.534 116.265 514.605 116.27 514.676 116.262 L 557.299 111.178 C 557.373 111.169 557.448 111.176 557.52 111.197 L 599.92 123.839 C 600.126 123.9 600.349 123.836 600.49 123.674 L 642.753 75.276 C 642.945 75.056 643.276 75.025 643.505 75.206 L 685.598 108.343 C 685.797 108.499 686.078 108.499 686.277 108.343 L 728.327 75.24 C 728.573 75.046 728.932 75.098 729.113 75.353 L 771.526 135.046 C 771.588 135.135 771.676 135.202 771.777 135.241 L 814.453 151.53 C 814.46 151.533 814.467 151.535 814.474 151.538 L 857.296 169.926 C 857.303 169.929 857.309 169.932 857.316 169.935 L 899.769 190.189 C 899.992 190.296 900.26 190.239 900.421 190.051 L 942.885 140.415 C 942.954 140.334 943.044 140.276 943.145 140.246 L 985.68 127.562 C 985.78 127.532 985.868 127.475 985.937 127.397 L 1028.552 78.6 C 1028.631 78.51 1028.738 78.448 1028.856 78.424 L 1071.361 69.805 C 1071.462 69.784 1071.568 69.793 1071.665 69.83 L 1114.307 86.106 C 1114.341 86.119 1114.374 86.135 1114.405 86.155 L 1157.153 113.179 C 1157.185 113.199 1157.214 113.222 1157.241 113.248 L 1199.875 154.438 C 1199.982 154.542 1200.043 154.684 1200.043 154.833 L 1200.043 225.081 C 1200.043 225.384 1199.797 225.629 1199.494 225.629 Z%22 fill=%22transparent%22 stroke-width=%221.5%22 stroke=%22rgb(25, 125, 255)%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22></path></svg>\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV (inline-style)",
+          "background_image": "url(\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 1200 227%22><g><defs><linearGradient id=%22idss12238618870_1g854656089%22 x1=%220.49751243781094523%22 x2=%220.5022388059701492%22 y1=%220%22 y2=%220.9500000000000001%22><stop offset=%220%22 stop-color=%22rgba(0, 81, 255, 0.45)%22 stop-opacity=%220.45%22></stop><stop offset=%221%22 stop-color=%22rgba(0, 153, 255, 0)%22 stop-opacity=%220%22></stop></linearGradient></defs><path d=%22M 0.043 225.118 L 0.043 207.233 L 42.885 154.089 L 85.727 162.265 L 128.569 132.627 L 171.411 159.199 L 214.253 124.451 L 257.095 143.869 L 299.937 88.17 L 342.779 139.781 L 385.622 138.248 L 428.464 127.006 L 471.306 104.011 L 514.148 115.764 L 556.99 110.654 L 599.832 123.429 L 642.674 74.372 L 685.516 108.099 L 728.358 74.372 L 771.2 134.671 L 814.042 151.023 L 856.885 169.419 L 899.727 189.859 L 942.569 139.781 L 985.411 127.006 L 1028.253 77.95 L 1071.095 69.262 L 1113.937 85.615 L 1156.779 112.698 L 1199.621 154.089 L 1199.621 225.118 Z%22 fill=%22url(%23idss12238618870_1g854656089)%22></path></g><path d=%22M 1.013 225.629 C 0.71 225.629 0.464 225.384 0.464 225.081 L 0.464 207.938 C 0.464 207.812 0.507 207.691 0.586 207.593 L 43.1 154.856 C 43.227 154.698 43.431 154.624 43.629 154.662 L 85.923 162.733 C 86.067 162.76 86.216 162.729 86.337 162.645 L 128.695 133.342 C 128.874 133.218 129.11 133.212 129.296 133.327 L 171.501 159.504 C 171.699 159.627 171.954 159.611 172.135 159.464 L 214.411 125.175 C 214.573 125.044 214.794 125.016 214.983 125.102 L 257.121 144.2 C 257.353 144.305 257.626 144.237 257.782 144.035 L 299.94 89.225 C 300.155 88.946 300.572 88.938 300.797 89.209 L 343.029 140.084 C 343.137 140.215 343.3 140.288 343.47 140.282 L 385.982 138.761 C 386.023 138.76 386.063 138.754 386.102 138.743 L 428.822 127.533 C 428.864 127.522 428.904 127.506 428.942 127.486 L 471.534 104.625 C 471.658 104.559 471.803 104.542 471.938 104.58 L 514.466 116.246 C 514.534 116.265 514.605 116.27 514.676 116.262 L 557.299 111.178 C 557.373 111.169 557.448 111.176 557.52 111.197 L 599.92 123.839 C 600.126 123.9 600.349 123.836 600.49 123.674 L 642.753 75.276 C 642.945 75.056 643.276 75.025 643.505 75.206 L 685.598 108.343 C 685.797 108.499 686.078 108.499 686.277 108.343 L 728.327 75.24 C 728.573 75.046 728.932 75.098 729.113 75.353 L 771.526 135.046 C 771.588 135.135 771.676 135.202 771.777 135.241 L 814.453 151.53 C 814.46 151.533 814.467 151.535 814.474 151.538 L 857.296 169.926 C 857.303 169.929 857.309 169.932 857.316 169.935 L 899.769 190.189 C 899.992 190.296 900.26 190.239 900.421 190.051 L 942.885 140.415 C 942.954 140.334 943.044 140.276 943.145 140.246 L 985.68 127.562 C 985.78 127.532 985.868 127.475 985.937 127.397 L 1028.552 78.6 C 1028.631 78.51 1028.738 78.448 1028.856 78.424 L 1071.361 69.805 C 1071.462 69.784 1071.568 69.793 1071.665 69.83 L 1114.307 86.106 C 1114.341 86.119 1114.374 86.135 1114.405 86.155 L 1157.153 113.179 C 1157.185 113.199 1157.214 113.222 1157.241 113.248 L 1199.875 154.438 C 1199.982 154.542 1200.043 154.684 1200.043 154.833 L 1200.043 225.081 C 1200.043 225.384 1199.797 225.629 1199.494 225.629 Z%22 fill=%22transparent%22 stroke-width=%221.5%22 stroke=%22rgb(25, 125, 255)%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22></path></svg>\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "inline_style"
+        },
+        {
+          "element": "DIV.framer-1kglzr",
+          "background_image": "url(\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 1200 227%22><g><defs><linearGradient id=%22idss11647722297_1g1439524450%22 x1=%220.49751243781094523%22 x2=%220.5008051136490969%22 y1=%220%22 y2=%220.6618278434684685%22><stop offset=%220%22 stop-color=%22rgba(154, 105, 245, 0.5)%22 stop-opacity=%220.5%22></stop><stop offset=%221%22 stop-color=%22rgba(157, 102, 253, 0)%22 stop-opacity=%220%22></stop></linearGradient></defs><path d=%22M 0.085 225.747 L 1.444 173.096 L 44.237 144.634 L 87.031 130.395 L 129.825 116.156 L 172.618 130.349 L 215.412 87.677 L 258.205 108.967 L 300.999 78.357 L 343.793 89.803 L 386.586 75.25 L 429.38 97.211 L 472.173 75.25 L 514.967 106.835 L 557.76 95.444 L 600.552 68.87 L 643.348 63.231 L 686.141 72.662 L 728.935 61.27 L 771.728 75.25 L 814.522 102.389 L 857.315 100.104 L 900.109 143.458 L 942.903 122.948 L 985.696 116.156 L 1028.49 17.258 L 1071.283 61.27 L 1114.077 56.61 L 1156.87 86.493 L 1199.664 116.393 L 1199.664 225.747 Z%22 fill=%22url(%23idss11647722297_1g1439524450)%22></path></g><path d=%22M 1.928 226.747 L 3.287 174.096 L 46.08 145.634 L 88.874 131.395 L 131.667 117.156 L 174.461 131.349 L 217.255 88.677 L 260.048 109.967 L 302.842 79.357 L 345.635 90.803 L 388.429 76.25 L 431.223 98.211 L 474.016 76.25 L 516.81 107.835 L 559.603 96.444 L 602.399 69.87 L 645.19 64.231 L 687.984 73.662 L 730.778 62.27 L 773.571 76.25 L 816.365 103.389 L 859.158 101.104 L 901.952 144.458 L 944.745 123.948 L 987.539 117.156 L 1030.333 18.258 L 1073.126 62.27 L 1115.92 57.61 L 1158.713 87.493 L 1201.507 117.393 L 1201.507 226.747 Z%22 fill=%22transparent%22 stroke-width=%221.5%22 stroke=%22rgb(173, 133, 255)%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22></path></svg>\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV (inline-style)",
+          "background_image": "url(\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 1200 227%22><g><defs><linearGradient id=%22idss11647722297_1g1439524450%22 x1=%220.49751243781094523%22 x2=%220.5008051136490969%22 y1=%220%22 y2=%220.6618278434684685%22><stop offset=%220%22 stop-color=%22rgba(154, 105, 245, 0.5)%22 stop-opacity=%220.5%22></stop><stop offset=%221%22 stop-color=%22rgba(157, 102, 253, 0)%22 stop-opacity=%220%22></stop></linearGradient></defs><path d=%22M 0.085 225.747 L 1.444 173.096 L 44.237 144.634 L 87.031 130.395 L 129.825 116.156 L 172.618 130.349 L 215.412 87.677 L 258.205 108.967 L 300.999 78.357 L 343.793 89.803 L 386.586 75.25 L 429.38 97.211 L 472.173 75.25 L 514.967 106.835 L 557.76 95.444 L 600.552 68.87 L 643.348 63.231 L 686.141 72.662 L 728.935 61.27 L 771.728 75.25 L 814.522 102.389 L 857.315 100.104 L 900.109 143.458 L 942.903 122.948 L 985.696 116.156 L 1028.49 17.258 L 1071.283 61.27 L 1114.077 56.61 L 1156.87 86.493 L 1199.664 116.393 L 1199.664 225.747 Z%22 fill=%22url(%23idss11647722297_1g1439524450)%22></path></g><path d=%22M 1.928 226.747 L 3.287 174.096 L 46.08 145.634 L 88.874 131.395 L 131.667 117.156 L 174.461 131.349 L 217.255 88.677 L 260.048 109.967 L 302.842 79.357 L 345.635 90.803 L 388.429 76.25 L 431.223 98.211 L 474.016 76.25 L 516.81 107.835 L 559.603 96.444 L 602.399 69.87 L 645.19 64.231 L 687.984 73.662 L 730.778 62.27 L 773.571 76.25 L 816.365 103.389 L 859.158 101.104 L 901.952 144.458 L 944.745 123.948 L 987.539 117.156 L 1030.333 18.258 L 1073.126 62.27 L 1115.92 57.61 L 1158.713 87.493 L 1201.507 117.393 L 1201.507 226.747 Z%22 fill=%22transparent%22 stroke-width=%221.5%22 stroke=%22rgb(173, 133, 255)%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22></path></svg>\")",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "inline_style"
+        },
+        {
+          "element": "DIV.framer-17skbsj",
+          "background_image": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-hdxhz5",
+          "background_image": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 41.3464%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-1xe6ulm",
+          "background_image": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-ykI4E",
+          "background_image": "linear-gradient(rgba(5, 255, 159, 0) 0%, rgba(0, 0, 0, 0.06) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-ykI4E",
+          "background_image": "linear-gradient(rgba(5, 255, 159, 0) 0%, rgba(0, 0, 0, 0.06) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-ykI4E",
+          "background_image": "linear-gradient(rgba(5, 255, 159, 0) 0%, rgba(0, 0, 0, 0.06) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        },
+        {
+          "element": "DIV.framer-533jkf",
+          "background_image": "radial-gradient(100% 100% at 0% 0%, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%)",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "source": "computed_style"
+        }
+      ],
+      "computed_colors": [
+        "rgb(0, 0, 0)",
+        "rgba(0, 0, 0, 0.7)",
+        "rgb(0, 0, 238)",
+        "rgb(255, 255, 255)",
+        "rgb(18, 18, 18)",
+        "rgba(255, 255, 255, 0.05)",
+        "rgba(255, 255, 255, 0.6)",
+        "rgba(255, 255, 255, 0.15)",
+        "rgba(255, 255, 255, 0.4)",
+        "rgb(8, 8, 8)",
+        "rgb(36, 36, 36)",
+        "rgb(23, 23, 23)",
+        "rgb(0, 153, 255)",
+        "rgba(8, 8, 8, 0.7)",
+        "rgba(255, 255, 255, 0.1)"
+      ],
+      "button_styles": [
+        {
+          "text": "",
+          "background_color": "rgba(255, 255, 255, 0.1)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "40px",
+          "border": "0px none rgb(0, 0, 0)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "block",
+          "width": "30px",
+          "height": "30px",
+          "class": "",
+          "tag": "button"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(255, 255, 255, 0.1)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "40px",
+          "border": "0px none rgb(0, 0, 0)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "block",
+          "width": "30px",
+          "height": "30px",
+          "class": "",
+          "tag": "button"
+        },
+        {
+          "text": "Perplexity",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "0px",
+          "border": "0px none rgb(0, 0, 0)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "65.2031px",
+          "height": "16.7969px",
+          "class": "",
+          "tag": "button"
+        },
+        {
+          "text": "Flora",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "0px",
+          "border": "0px none rgb(0, 0, 0)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "32.6094px",
+          "height": "16.7969px",
+          "class": "",
+          "tag": "button"
+        },
+        {
+          "text": "Biograph",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "0px",
+          "border": "0px none rgb(0, 0, 0)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "58.7656px",
+          "height": "16.7969px",
+          "class": "",
+          "tag": "button"
+        },
+        {
+          "text": "Cradle",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "0px",
+          "border": "0px none rgb(0, 0, 0)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "43.3281px",
+          "height": "16.7969px",
+          "class": "",
+          "tag": "button"
+        },
+        {
+          "text": "Miro",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "0px",
+          "border": "0px none rgb(0, 0, 0)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "28.8906px",
+          "height": "16.7969px",
+          "class": "",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "View Expert",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 15px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "108.25px",
+          "height": "35px",
+          "class": "framer-i0nxyx",
+          "tag": "button"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(255, 255, 255, 0.1)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "40px",
+          "border": "0px none rgb(0, 0, 0)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "none",
+          "width": "30px",
+          "height": "30px",
+          "class": "",
+          "tag": "button"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(255, 255, 255, 0.1)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "40px",
+          "border": "0px none rgb(0, 0, 0)",
+          "padding": "0px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "none",
+          "width": "30px",
+          "height": "30px",
+          "class": "",
+          "tag": "button"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "0px",
+          "border": "0px none rgb(0, 0, 0)",
+          "padding": "20px 2.5px 20px 20px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "27.5px",
+          "height": "45px",
+          "class": "",
+          "tag": "button"
+        },
+        {
+          "text": "",
+          "background_color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "0px",
+          "border": "0px none rgb(0, 0, 0)",
+          "padding": "20px 20px 20px 2.5px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "flex",
+          "width": "27.5px",
+          "height": "45px",
+          "class": "",
+          "tag": "button"
+        },
+        {
+          "text": "View Component",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 14px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "138.094px",
+          "height": "34px",
+          "class": "framer-1bhvk11",
+          "tag": "button"
+        },
+        {
+          "text": "View Template",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 14px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "125.375px",
+          "height": "34px",
+          "class": "framer-1bhvk11",
+          "tag": "button"
+        },
+        {
+          "text": "View Plugin",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 14px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "104.922px",
+          "height": "34px",
+          "class": "framer-1bhvk11",
+          "tag": "button"
+        },
+        {
+          "text": "View Component",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 14px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "138.094px",
+          "height": "34px",
+          "class": "framer-1bhvk11",
+          "tag": "button"
+        },
+        {
+          "text": "View Template",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 14px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "125.375px",
+          "height": "34px",
+          "class": "framer-1bhvk11",
+          "tag": "button"
+        },
+        {
+          "text": "View Plugin",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 14px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "104.922px",
+          "height": "34px",
+          "class": "framer-1bhvk11",
+          "tag": "button"
+        },
+        {
+          "text": "View Component",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 14px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "138.094px",
+          "height": "34px",
+          "class": "framer-1bhvk11",
+          "tag": "button"
+        },
+        {
+          "text": "View Template",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 14px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "125.375px",
+          "height": "34px",
+          "class": "framer-1bhvk11",
+          "tag": "button"
+        },
+        {
+          "text": "View Component",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 14px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "138.094px",
+          "height": "34px",
+          "class": "framer-1bhvk11",
+          "tag": "button"
+        },
+        {
+          "text": "View Component",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 14px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "138.094px",
+          "height": "34px",
+          "class": "framer-1bhvk11",
+          "tag": "button"
+        },
+        {
+          "text": "View Plugin",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 14px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "104.922px",
+          "height": "34px",
+          "class": "framer-1bhvk11",
+          "tag": "button"
+        },
+        {
+          "text": "View Template",
+          "background_color": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "100px",
+          "border": "0px outset rgb(0, 0, 0)",
+          "padding": "10px 14px",
+          "margin": "0px",
+          "font_size": "12px",
+          "font_weight": "400",
+          "font_family": "sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "default",
+          "display": "flex",
+          "width": "125.375px",
+          "height": "34px",
+          "class": "framer-1bhvk11",
+          "tag": "button"
+        },
+        {
+          "text": "",
+          "background_color": "rgb(238, 238, 238)",
+          "color": "rgb(0, 0, 0)",
+          "border_radius": "8px",
+          "border": "0px none rgb(0, 0, 0)",
+          "padding": "10px",
+          "margin": "0px",
+          "font_size": "14px",
+          "font_weight": "600",
+          "font_family": "\"Inter Framer SemiBold\", \"Inter Framer SemiBold Placeholder\", sans-serif",
+          "text_transform": "none",
+          "letter_spacing": "normal",
+          "box_shadow": "none",
+          "cursor": "pointer",
+          "display": "block",
+          "width": "55px",
+          "height": "34px",
+          "class": "__framer-cookie-component-button",
+          "tag": "input"
+        }
+      ],
+      "layout_structure": {
+        "has_nav": true,
+        "has_footer": true,
+        "has_hero": false,
+        "section_count": 7,
+        "div_count": 2889,
+        "image_count": 283,
+        "link_count": 175
+      },
+      "text_styles": {
+        "headings": {
+          "h1": {
+            "font_family": "\"GT Walsheim Framer Medium\", \"GT Walsheim Framer Medium Placeholder\", sans-serif",
+            "font_size": "110px",
+            "font_weight": "500",
+            "color": "rgb(255, 255, 255)",
+            "line_height": "93.5px",
+            "letter_spacing": "-5.5px",
+            "text_transform": "none",
+            "margin": "0px",
+            "padding": "0px"
+          },
+          "h2": {
+            "font_family": "\"GT Walsheim Medium\", \"GT Walsheim Medium Placeholder\", sans-serif",
+            "font_size": "62px",
+            "font_weight": "500",
+            "color": "rgb(255, 255, 255)",
+            "line_height": "62px",
+            "letter_spacing": "-3.1px",
+            "text_transform": "none",
+            "margin": "0px",
+            "padding": "0px"
+          },
+          "h3": {
+            "font_family": "\"Inter Variable\", \"Inter Variable Placeholder\", sans-serif",
+            "font_size": "24px",
+            "font_weight": "400",
+            "color": "rgb(255, 255, 255)",
+            "line_height": "28.8px",
+            "letter_spacing": "-0.01px",
+            "text_transform": "none",
+            "margin": "0px",
+            "padding": "0px"
+          }
+        },
+        "paragraphs": {
+          "p": {
+            "font_family": "\"Inter Variable\", \"Inter Variable Placeholder\", sans-serif",
+            "font_size": "14px",
+            "font_weight": "400",
+            "color": "rgb(255, 255, 255)",
+            "line_height": "14px",
+            "margin": "0px"
+          }
+        },
+        "links": {
+          "a": {
+            "font_family": "sans-serif",
+            "font_size": "12px",
+            "font_weight": "400",
+            "color": "rgb(0, 0, 238)",
+            "text_decoration": "none"
+          }
+        },
+        "buttons": {}
+      },
+      "enhanced_images": [
+        {
+          "src": "https://framerusercontent.com/images/3Wul3zB87cbFlm05OhXiZaxxXg.jpg?width=720&height=660",
+          "alt": "Website made in Framer",
+          "width": 360,
+          "height": 330,
+          "natural_width": 360,
+          "natural_height": 329,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/vr4TXGHUM5WvKKKpdSi7NKoU.jpg?width=720&height=600",
+          "alt": "Website made in Framer",
+          "width": 360,
+          "height": 300,
+          "natural_width": 0,
+          "natural_height": 0,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/OiLWEMPHjsMaE1LpfCX7OYHI.jpg?width=720&height=800",
+          "alt": "Website made in Framer",
+          "width": 360,
+          "height": 400,
+          "natural_width": 0,
+          "natural_height": 0,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/3RGrfrckophlAobhfZlqf1MDPd0.jpg?width=720&height=720",
+          "alt": "Website made in Framer",
+          "width": 360,
+          "height": 360,
+          "natural_width": 360,
+          "natural_height": 360,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/hZ3ztUHQQ9Tn50mg184gLvKcy4E.jpg?width=720&height=1020",
+          "alt": "Website made in Framer",
+          "width": 360,
+          "height": 510,
+          "natural_width": 360,
+          "natural_height": 510,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/Tkq5qQlGiu0yhgjP3SrSQz7eog.jpg?width=720&height=840",
+          "alt": "Website made in Framer",
+          "width": 360,
+          "height": 420,
+          "natural_width": 360,
+          "natural_height": 420,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/8VfS5zuMmDchIpaCf767I8rX7Y.jpg?width=480&height=1040",
+          "alt": "Website made in Framer",
+          "width": 160,
+          "height": 346.65625,
+          "natural_width": 160,
+          "natural_height": 346,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/KCk7nP2M4mP1QclNxHPIrT1FvcA.jpg?width=480&height=1040",
+          "alt": "Website made in Framer",
+          "width": 160,
+          "height": 346.65625,
+          "natural_width": 160,
+          "natural_height": 346,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/6SXUv7jMAEkw8PabtmC6TXNIiM.jpg?width=480&height=1040",
+          "alt": "Website made in Framer",
+          "width": 160,
+          "height": 346.65625,
+          "natural_width": 160,
+          "natural_height": 346,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/PruQlxKuftAZHgOh7hJT3jaUbs.jpg?width=720&height=660",
+          "alt": "Website made in Framer",
+          "width": 360,
+          "height": 330,
+          "natural_width": 360,
+          "natural_height": 329,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/d4YjsL7yalSYZREJ1IdNPmw.jpg?width=720&height=840",
+          "alt": "Website made in Framer",
+          "width": 360,
+          "height": 420,
+          "natural_width": 360,
+          "natural_height": 420,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/W1Q88PlQfYXaGug9EBkmai9By4.jpg?width=720&height=960",
+          "alt": "Website made in Framer",
+          "width": 360,
+          "height": 480,
+          "natural_width": 360,
+          "natural_height": 480,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/uS0nUv30GToaflDaraI9qVUIwU.png?width=1068&height=1080",
+          "alt": "Elle Fanning website made in Framer",
+          "width": 360,
+          "height": 364.03125,
+          "natural_width": 360,
+          "natural_height": 364,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/gmhdX4XPuJvQqId9jDmFHb7cFE.jpg?width=720&height=780",
+          "alt": "Website made in Framer",
+          "width": 360,
+          "height": 390,
+          "natural_width": 360,
+          "natural_height": 390,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/4pTVxnxo0Bvii8xP7hCmmozqx7s.jpg?width=720&height=840",
+          "alt": "Website made in Framer",
+          "width": 360,
+          "height": 420,
+          "natural_width": 360,
+          "natural_height": 420,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/Hp4KG1pwKb6cl66bNB9b2pYWQ3Y.jpg?width=480&height=987",
+          "alt": "Website made in Framer",
+          "width": 160,
+          "height": 329,
+          "natural_width": 160,
+          "natural_height": 329,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/c8yQcxKjBlCZWoqWoRoBRvjcKo.jpg?width=400&height=864",
+          "alt": "Website made in Framer",
+          "width": 160,
+          "height": 345.59375,
+          "natural_width": 160,
+          "natural_height": 345,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/cx71XZYYWfIozOc1rn55Bw.jpg?width=480&height=1039",
+          "alt": "Website made in Framer",
+          "width": 160,
+          "height": 346.328125,
+          "natural_width": 160,
+          "natural_height": 346,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/pzsEcmp12GBybVJMMHJIQiRfEAQ.jpg?width=480&height=1040",
+          "alt": "Website made in Framer",
+          "width": 160,
+          "height": 346.65625,
+          "natural_width": 160,
+          "natural_height": 346,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "src": "https://framerusercontent.com/images/HnQI4uTAjbgziEmMMInd3R6o9c.jpg?width=720&height=600",
+          "alt": "Website made in Framer",
+          "width": 360,
+          "height": 300,
+          "natural_width": 360,
+          "natural_height": 300,
+          "object_fit": "cover",
+          "position": "static",
+          "display": "block",
+          "margin": "0px",
+          "padding": "0px",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ]
+    },
+    "assets": {
+      "favicon": "https://framerusercontent.com/images/Io89FonxEaWg4nxvQQllVLwPUUI.png",
+      "logo": "https://framerusercontent.com/images/Io89FonxEaWg4nxvQQllVLwPUUI.png",
+      "images": [
+        {
+          "src": "https://framerusercontent.com/images/X8K2iCW5Tob8sQuioDPe6TJEU.png?width=40&height=40",
+          "alt": "icon entry point for Site Search",
+          "class": [],
+          "type": "ui"
+        },
+        {
+          "src": "https://framerusercontent.com/images/3Wul3zB87cbFlm05OhXiZaxxXg.jpg?width=720&height=660",
+          "alt": "Website made in Framer",
+          "class": [],
+          "type": "content"
+        },
+        {
+          "src": "https://framerusercontent.com/images/vr4TXGHUM5WvKKKpdSi7NKoU.jpg?width=720&height=600",
+          "alt": "Website made in Framer",
+          "class": [],
+          "type": "content"
+        },
+        {
+          "src": "https://framerusercontent.com/images/OiLWEMPHjsMaE1LpfCX7OYHI.jpg?width=720&height=800",
+          "alt": "Website made in Framer",
+          "class": [],
+          "type": "content"
+        },
+        {
+          "src": "https://framerusercontent.com/images/3RGrfrckophlAobhfZlqf1MDPd0.jpg?width=720&height=720",
+          "alt": "Website made in Framer",
+          "class": [],
+          "type": "content"
+        },
+        {
+          "src": "https://framerusercontent.com/images/hZ3ztUHQQ9Tn50mg184gLvKcy4E.jpg?width=720&height=1020",
+          "alt": "Website made in Framer",
+          "class": [],
+          "type": "content"
+        },
+        {
+          "src": "https://framerusercontent.com/images/Tkq5qQlGiu0yhgjP3SrSQz7eog.jpg?width=720&height=840",
+          "alt": "Website made in Framer",
+          "class": [],
+          "type": "content"
+        },
+        {
+          "src": "https://framerusercontent.com/images/8VfS5zuMmDchIpaCf767I8rX7Y.jpg?width=480&height=1040",
+          "alt": "Website made in Framer",
+          "class": [],
+          "type": "content"
+        },
+        {
+          "src": "https://framerusercontent.com/images/KCk7nP2M4mP1QclNxHPIrT1FvcA.jpg?width=480&height=1040",
+          "alt": "Website made in Framer",
+          "class": [],
+          "type": "content"
+        },
+        {
+          "src": "https://framerusercontent.com/images/6SXUv7jMAEkw8PabtmC6TXNIiM.jpg?width=480&height=1040",
+          "alt": "Website made in Framer",
+          "class": [],
+          "type": "content"
+        },
+        {
+          "src": "https://framerusercontent.com/images/PruQlxKuftAZHgOh7hJT3jaUbs.jpg?width=720&height=660",
+          "alt": "Website made in Framer",
+          "class": [],
+          "type": "content"
+        },
+        {
+          "src": "https://framerusercontent.com/images/d4YjsL7yalSYZREJ1IdNPmw.jpg?width=720&height=840",
+          "alt": "Website made in Framer",
+          "class": [],
+          "type": "content"
+        },
+        {
+          "src": "https://framerusercontent.com/images/W1Q88PlQfYXaGug9EBkmai9By4.jpg?width=720&height=960",
+          "alt": "Website made in Framer",
+          "class": [],
+          "type": "content"
+        },
+        {
+          "src": "https://framerusercontent.com/images/uS0nUv30GToaflDaraI9qVUIwU.png?width=1068&height=1080",
+          "alt": "Elle Fanning website made in Framer",
+          "class": [],
+          "type": "content"
+        },
+        {
+          "src": "https://framerusercontent.com/images/gmhdX4XPuJvQqId9jDmFHb7cFE.jpg?width=720&height=780",
+          "alt": "Website made in Framer",
+          "class": [],
+          "type": "content"
+        },
+        {
+          "src": "https://framerusercontent.com/images/4pTVxnxo0Bvii8xP7hCmmozqx7s.jpg?width=720&height=840",
+          "alt": "Website made in Framer",
+          "class": [],
+          "type": "content"
+        },
+        {
+          "src": "https://framerusercontent.com/images/Hp4KG1pwKb6cl66bNB9b2pYWQ3Y.jpg?width=480&height=987",
+          "alt": "Website made in Framer",
+          "class": [],
+          "type": "content"
+        },
+        {
+          "src": "https://framerusercontent.com/images/c8yQcxKjBlCZWoqWoRoBRvjcKo.jpg?width=400&height=864",
+          "alt": "Website made in Framer",
+          "class": [],
+          "type": "content"
+        },
+        {
+          "src": "https://framerusercontent.com/images/cx71XZYYWfIozOc1rn55Bw.jpg?width=480&height=1039",
+          "alt": "Website made in Framer",
+          "class": [],
+          "type": "content"
+        },
+        {
+          "src": "https://framerusercontent.com/images/pzsEcmp12GBybVJMMHJIQiRfEAQ.jpg?width=480&height=1040",
+          "alt": "Website made in Framer",
+          "class": [],
+          "type": "content"
+        }
+      ],
+      "stylesheets": []
+    },
+    "meta": {
+      "viewport": "width=device-width",
+      "generator": "Framer 16e67f7",
+      "description": "Build a free website with Framerâenjoy full design freedom, powerful CMS, built-in SEO, and real-time collaboration. Create professional, fully custom sites with the no-code builder loved by designers and high-performing teams.",
+      "framer-search-index": "https://framerusercontent.com/sites/3BJ9zINIeWtEEVRMAcoTL8/searchIndex-t3RVuZPgpug6.json",
+      "framer-search-index-fallback": "https://framerusercontent.com/sites/3BJ9zINIeWtEEVRMAcoTL8/searchIndex-nBxFe6GJayCR.json",
+      "framer-html-plugin": "disable",
+      "og:type": "website",
+      "og:title": "Framer: Create a professional website, free. No code website builder loved by designers.",
+      "og:description": "Build a free website with Framerâenjoy full design freedom, powerful CMS, built-in SEO, and real-time collaboration. Create professional, fully custom sites with the no-code builder loved by designers and high-performing teams.",
+      "og:image": "https://framerusercontent.com/images/yyBL8MFizGZKUd27rQGHp30fyc.jpg",
+      "twitter:card": "summary_large_image",
+      "twitter:title": "Framer: Create a professional website, free. No code website builder loved by designers.",
+      "twitter:description": "Build a free website with Framerâenjoy full design freedom, powerful CMS, built-in SEO, and real-time collaboration. Create professional, fully custom sites with the no-code builder loved by designers and high-performing teams.",
+      "twitter:image": "https://framerusercontent.com/images/yyBL8MFizGZKUd27rQGHp30fyc.jpg",
+      "robots": "max-image-preview:large",
+      "og:url": "https://www.framer.com/",
+      "google-site-verification": "t_Pf3uagmJvH5BHJAM5bUDJ0PWiDxXE44USGXG00fwA"
+    },
+    "analysis": {
+      "has_dynamic_content": false,
+      "complexity_score": 10,
+      "recommended_3d_style": "interactive-explorer"
+    }
+  }
+}

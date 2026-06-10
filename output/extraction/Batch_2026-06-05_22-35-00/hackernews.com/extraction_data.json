@@ -1,0 +1,194 @@
+{
+  "website_profile": {
+    "url": "https://news.ycombinator.com",
+    "title": "Hacker News",
+    "extraction_timestamp": "2026-06-05T23:03:46.047799",
+    "extraction_metadata": {
+      "code_version": "7cb9ca1",
+      "extractor_version": "1.0"
+    },
+    "brand_dna": {
+      "color_palette": [],
+      "fonts": [],
+      "style_vibe": [
+        "minimalist"
+      ]
+    },
+    "structure": {
+      "navigation": [],
+      "hero_section": {},
+      "sections": [],
+      "footer": {
+        "links": [],
+        "text": "",
+        "social_links": []
+      },
+      "buttons": [
+        {
+          "text": "Hacker News",
+          "tag": "a",
+          "classes": [],
+          "href": "https://news.ycombinator.com/news"
+        },
+        {
+          "text": "new",
+          "tag": "a",
+          "classes": [],
+          "href": "https://news.ycombinator.com/newest"
+        },
+        {
+          "text": "past",
+          "tag": "a",
+          "classes": [],
+          "href": "https://news.ycombinator.com/front"
+        },
+        {
+          "text": "comments",
+          "tag": "a",
+          "classes": [],
+          "href": "https://news.ycombinator.com/newcomments"
+        },
+        {
+          "text": "ask",
+          "tag": "a",
+          "classes": [],
+          "href": "https://news.ycombinator.com/ask"
+        },
+        {
+          "text": "show",
+          "tag": "a",
+          "classes": [],
+          "href": "https://news.ycombinator.com/show"
+        },
+        {
+          "text": "jobs",
+          "tag": "a",
+          "classes": [],
+          "href": "https://news.ycombinator.com/jobs"
+        },
+        {
+          "text": "submit",
+          "tag": "a",
+          "classes": [],
+          "href": "https://news.ycombinator.com/submit"
+        },
+        {
+          "text": "login",
+          "tag": "a",
+          "classes": [],
+          "href": "https://news.ycombinator.com/login?goto=news"
+        },
+        {
+          "text": "mouseless.click",
+          "tag": "a",
+          "classes": [],
+          "href": "https://news.ycombinator.com/from?site=mouseless.click"
+        },
+        {
+          "text": "riddley",
+          "tag": "a",
+          "classes": [
+            "hnuser"
+          ],
+          "href": "https://news.ycombinator.com/user?id=riddley"
+        },
+        {
+          "text": "3 hours ago",
+          "tag": "a",
+          "classes": [],
+          "href": "https://news.ycombinator.com/item?id=48383667"
+        },
+        {
+          "text": "hide",
+          "tag": "a",
+          "classes": [],
+          "href": "https://news.ycombinator.com/hide?id=48383667&goto=news"
+        },
+        {
+          "text": "84 comments",
+          "tag": "a",
+          "classes": [],
+          "href": "https://news.ycombinator.com/item?id=48383667"
+        },
+        {
+          "text": "arxiv.org",
+          "tag": "a",
+          "classes": [],
+          "href": "https://news.ycombinator.com/from?site=arxiv.org"
+        },
+        {
+          "text": "mimorigasaka",
+          "tag": "a",
+          "classes": [
+            "hnuser"
+          ],
+          "href": "https://news.ycombinator.com/user?id=mimorigasaka"
+        },
+        {
+          "text": "6 hours ago",
+          "tag": "a",
+          "classes": [],
+          "href": "https://news.ycombinator.com/item?id=48409664"
+        },
+        {
+          "text": "hide",
+          "tag": "a",
+          "classes": [],
+          "href": "https://news.ycombinator.com/hide?id=48409664&goto=news"
+        },
+        {
+          "text": "103 comments",
+          "tag": "a",
+          "classes": [],
+          "href": "https://news.ycombinator.com/item?id=48409664"
+        },
+        {
+          "text": "Cooldown Support for Ruby Bundler",
+          "tag": "a",
+          "classes": [],
+          "href": "https://blog.rubygems.org/2026/06/03/cooldown-let-new-gems-be-vetted.html"
+        }
+      ]
+    },
+    "visual_dna": {
+      "hero_background": null,
+      "background_images": [],
+      "computed_colors": [],
+      "button_styles": [],
+      "layout_structure": {}
+    },
+    "assets": {
+      "favicon": "https://news.ycombinator.com/y18.svg",
+      "logo": "https://news.ycombinator.com/y18.svg",
+      "images": [
+        {
+          "src": "https://news.ycombinator.com/y18.svg",
+          "alt": "",
+          "class": []
+        },
+        {
+          "src": "https://news.ycombinator.com/s.gif",
+          "alt": "",
+          "class": []
+        },
+        {
+          "src": "https://news.ycombinator.com/s.gif",
+          "alt": "",
+          "class": []
+        }
+      ],
+      "stylesheets": [
+        "https://news.ycombinator.com/news.css?PdpCWAMdLoxw5B10hzWM"
+      ]
+    },
+    "meta": {
+      "referrer": "origin",
+      "viewport": "width=device-width, initial-scale=1.0"
+    },
+    "analysis": {
+      "has_dynamic_content": false,
+      "complexity_score": 0,
+      "recommended_3d_style": "clean-layered"
+    }
+  }
+}

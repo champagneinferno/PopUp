@@ -7,13 +7,24 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
 
-async function extractVisualDNA(url) {
+async function extractVisualDNA(url, outputDir = null) {
     const browser = await chromium.launch({ headless: true });
     const context = await browser.newContext({
         viewport: { width: 1920, height: 1080 },
         userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
     });
     const page = await context.newPage();
+    
+    // Setup screenshot path
+    let screenshotPath = null;
+    if (outputDir) {
+        const path = require('path');
+        const absoluteOutputDir = path.resolve(outputDir);
+        const urlObj = new URL(url);
+        const domain = urlObj.hostname.replace(/\./g, '_');
+        screenshotPath = path.join(absoluteOutputDir, `${domain}_screenshot.png`);
+        console.error(`[VisualExtractor] Screenshot will be saved to: ${screenshotPath}`);
+    }
 
     try {
         console.error(`[VisualExtractor] Navigating to: ${url}`);
@@ -339,93 +350,102 @@ async function extractVisualDNA(url) {
                 }
             });
             
-            // 3. Find background images (AGGRESSIVE - check MANY sources)
-            const bgElements = document.querySelectorAll('*');
-            let foundHeroBackground = false;
-            let bgImageCount = 0;
+            // 3. Find background images (AGGRESSIVE - DEDUPLICATED by URL)
+                        const bgElements = document.querySelectorAll('*');
+                        let foundHeroBackground = false;
+                        const seenBgUrls = new Set();  // DEDUP by URL
             
-            bgElements.forEach(el => {
-                try {
-                    const style = window.getComputedStyle(el);
-                    const bgImage = style.backgroundImage;
-                    const bgColor = style.backgroundColor;
+                        bgElements.forEach(el => {
+                            try {
+                                const style = window.getComputedStyle(el);
+                                const bgImage = style.backgroundImage;
+                                const bgColor = style.backgroundColor;
                     
-                    // Skip tiny elements
-                    const rect = el.getBoundingClientRect();
-                    if (rect.width < 50 || rect.height < 50) return;
+                                // Skip tiny elements
+                                const rect = el.getBoundingClientRect();
+                                if (rect.width < 50 || rect.height < 50) return;
                     
-                    // CHECK1: Inline style background-image
-                    let foundBg = false;
-                    if (bgImage && bgImage !== 'none') {
-                        result.background_images.push({
-                            element: el.tagName + (el.className ? `.${el.className.split(' ')[0]}` : ''),
-                            background_image: bgImage,
-                            background_color: bgColor,
-                            source: 'computed_style'
-                        });
-                        foundBg = true;
-                        bgImageCount++;
-                    }
+                                // CHECK1: Inline style background-image
+                                if (bgImage && bgImage !== 'none') {
+                                    const urlMatch = bgImage.match(/url\(["']?([^"')]+)["']?\)/);
+                                    const bgUrl = urlMatch ? urlMatch[1] : bgImage;
+                                    if (!seenBgUrls.has(bgUrl)) {
+                                        seenBgUrls.add(bgUrl);
+                                        result.background_images.push({
+                                            element: el.tagName + (el.className ? `.${el.className.split(' ')[0]}` : ''),
+                                            background_image: bgImage,
+                                            background_color: bgColor,
+                                            source: 'computed_style',
+                                            clean_url: bgUrl
+                                        });
+                                    }
+                                }
                     
-                    // CHECK2: Inline style attribute (Wix often uses this)
-                    const inlineStyle = el.getAttribute('style');
-                    if (inlineStyle && inlineStyle.includes('background')) {
-                        const urlMatch = inlineStyle.match(/url\(['"]?([^'"]+)['"]?\)/);
-                        if (urlMatch) {
-                            result.background_images.push({
-                                element: el.tagName + ' (inline-style)',
-                                background_image: `url("${urlMatch[1]}")`,
-                                background_color: bgColor,
-                                source: 'inline_style'
-                            });
-                            foundBg = true;
-                            bgImageCount++;
-                        }
-                    }
+                                // CHECK2: Inline style attribute (Wix often uses this)
+                                const inlineStyle = el.getAttribute('style');
+                                if (inlineStyle && inlineStyle.includes('background')) {
+                                    const urlMatch = inlineStyle.match(/url\(['"]?([^'"]+)['"]?\)/);
+                                    if (urlMatch && !seenBgUrls.has(urlMatch[1])) {
+                                        seenBgUrls.add(urlMatch[1]);
+                                        result.background_images.push({
+                                            element: el.tagName + ' (inline-style)',
+                                            background_image: `url("${urlMatch[1]}")`,
+                                            background_color: bgColor,
+                                            source: 'inline_style',
+                                            clean_url: urlMatch[1]
+                                        });
+                                    }
+                                }
                     
-                    // CHECK3: Data attributes (some sites store bg in data-bg)
-                    const dataBg = el.getAttribute('data-bg') || el.getAttribute('data-background');
-                    if (dataBg) {
-                        result.background_images.push({
-                            element: el.tagName + ' (data-attr)',
-                            background_image: `url("${dataBg}")`,
-                            background_color: bgColor,
-                            source: 'data_attribute'
-                        });
-                        foundBg = true;
-                        bgImageCount++;
-                    }
+                                // CHECK3: Data attributes
+                                const dataBg = el.getAttribute('data-bg') || el.getAttribute('data-background');
+                                if (dataBg && !seenBgUrls.has(dataBg)) {
+                                    seenBgUrls.add(dataBg);
+                                    result.background_images.push({
+                                        element: el.tagName + ' (data-attr)',
+                                        background_image: `url("${dataBg}")`,
+                                        background_color: bgColor,
+                                        source: 'data_attribute',
+                                        clean_url: dataBg
+                                    });
+                                }
                     
-                    // CHECK4: Look for img tags that might be backgrounds (positioned absolutely)
-                    if (!foundBg && el.querySelector('img')) {
-                        const imgs = el.querySelectorAll('img');
-                        imgs.forEach(img => {
-                            const imgStyle = window.getComputedStyle(img);
-                            if (imgStyle.position === 'absolute' || 
-                                imgStyle.zIndex === '-1' ||
-                                el.classList.contains('background') ||
-                                el.classList.contains('bg')) {
-                                result.background_images.push({
-                                    element: el.tagName + ' > IMG (likely-bg)',
-                                    background_image: `url("${img.src}")`,
-                                    background_color: bgColor,
-                                    source: 'img_child'
+                                // CHECK4: Look for img tags that might be backgrounds (positioned absolutely)
+                                const imgs = el.querySelectorAll(':scope > img');
+                                imgs.forEach(img => {
+                                    if (!img.src || img.src.startsWith('data:')) return;
+                                    const imgStyle = window.getComputedStyle(img);
+                                    if (imgStyle.position === 'absolute' || 
+                                        imgStyle.zIndex === '-1' ||
+                                        el.classList.contains('background') ||
+                                        el.classList.contains('bg')) {
+                                        if (!seenBgUrls.has(img.src)) {
+                                            seenBgUrls.add(img.src);
+                                            result.background_images.push({
+                                                element: `${el.tagName} > IMG (likely-bg)`,
+                                                background_image: `url("${img.src}")`,
+                                                background_color: bgColor,
+                                                source: 'img_child',
+                                                clean_url: img.src
+                                            });
+                                        }
+                                    }
                                 });
-                                foundBg = true;
-                                bgImageCount++;
-                            }
-                        });
-                    }
                     
-                    // Mark as hero if it's a large element with background
-                    if (foundBg && rect.width > window.innerWidth * 0.3 && rect.height > 200) {
-                        result.hero_background = {
-                            background_image: result.background_images[result.background_images.length - 1].background_image,
-                            background_color: bgColor,
-                            element: el.tagName + (el.className ? `.${el.className.split(' ')[0]}` : '')
-                        };
-                        foundHeroBackground = true;
-                    }
+                    // Track if this element had a background
+                                        const hadBg = result.background_images.length > 0;
+                    
+                                        // Mark as hero if it's a large element with background
+                                        if (hadBg && rect.width > window.innerWidth * 0.3 && rect.height > 200) {
+                                            const bg = result.background_images[result.background_images.length - 1];
+                                            result.hero_background = {
+                                                background_image: bg.background_image,
+                                                background_color: bgColor,
+                                                element: el.tagName + (el.className ? `.${el.className.split(' ')[0]}` : ''),
+                                                clean_url: bg.clean_url || null
+                                            };
+                                            foundHeroBackground = true;
+                                        }
                     
                     // Also check for hero/banner classes
                     if (el.classList.contains('hero') || el.classList.contains('banner') || 
@@ -456,16 +476,17 @@ async function extractVisualDNA(url) {
                         }
                         
                         result.hero_background = {
-                            background_image: finalBg,
-                            background_color: finalColor,
-                            element: el.tagName + (el.className ? `.${el.className.split(' ')[0]}` : '')
-                        };
-                        foundHeroBackground = true;
-                    }
-                } catch (e) {}
-            });
+                                                    background_image: finalBg,
+                                                    background_color: finalColor,
+                                                    element: el.tagName + (el.className ? `.${el.className.split(' ')[0]}` : ''),
+                                                    clean_url: finalBg ? (finalBg.match(/url\(["']?([^"')]+)["']?\)/) || [null, null])[1] || null : null
+                                                };
+                                                foundHeroBackground = true;
+                                            }
+                                        } catch (e) {}
+                                    });
             
-            console.error(`[VisualExtractor] Found ${bgImageCount} background images`);
+                                    console.error(`[VisualExtractor] Found ${result.background_images.length} unique background images`);
             
             // 4. Extract images from rendered page (IMPROVED)
             document.querySelectorAll('img[src]').forEach(img => {
@@ -535,6 +556,41 @@ async function extractVisualDNA(url) {
                 link_count: document.querySelectorAll('a').length
             };
             
+            // 6b. NEW: Extract NAVIGATION styles
+            result.nav_styles = {};
+            const navEl = document.querySelector('nav, header, [role="navigation"], .nav, .navbar');
+            if (navEl) {
+                try {
+                    const navStyle = window.getComputedStyle(navEl);
+                    result.nav_styles = {
+                        background_color: navStyle.backgroundColor,
+                        color: navStyle.color,
+                        font_family: navStyle.fontFamily,
+                        font_size: navStyle.fontSize,
+                        padding: navStyle.padding,
+                        height: navStyle.height,
+                        border_bottom: navStyle.borderBottom
+                    };
+                    
+                    // Also capture first link style inside nav
+                    const firstLink = navEl.querySelector('a');
+                    if (firstLink) {
+                        const linkStyle = window.getComputedStyle(firstLink);
+                        const linkHoverStyle = {};
+                        result.nav_styles.link_style = {
+                            color: linkStyle.color,
+                            font_family: linkStyle.fontFamily,
+                            font_size: linkStyle.fontSize,
+                            font_weight: linkStyle.fontWeight,
+                            text_transform: linkStyle.textTransform,
+                            letter_spacing: linkStyle.letterSpacing,
+                            padding: linkStyle.padding,
+                            margin: linkStyle.margin
+                        };
+                    }
+                } catch (e) {}
+            }
+            
             // 6b. NEW: Capture text styling per element type
             result.text_styles = {
                 headings: {},
@@ -589,30 +645,101 @@ async function extractVisualDNA(url) {
                 };
             }
             
-            // 6c. NEW: Enhanced image properties
-            result.enhanced_images = [];
-            document.querySelectorAll('img[src]').forEach(img => {
+            // 6c. NEW: Enhanced image properties with CLASSIFICATION
+                        result.enhanced_images = [];
+                        const heroBgUrls = new Set(result.background_images.map(bg => bg.clean_url).filter(Boolean));
+                        const logoUrl = result.rendered_logo ? result.rendered_logo.src : null;
+            
+                        document.querySelectorAll('img[src]').forEach(img => {
+                            try {
+                                const style = window.getComputedStyle(img);
+                                const rect = img.getBoundingClientRect();
+                                const src = img.src || img.getAttribute('src') || '';
+                                const alt = (img.alt || '').toLowerCase();
+                                const classes = (img.className || '').toLowerCase();
+                                const naturalW = img.naturalWidth || rect.width;
+                                const naturalH = img.naturalHeight || rect.height;
+                                const parentClasses = img.parentElement ? (img.parentElement.className || '').toLowerCase() : '';
+                    
+                                // Skip data URIs
+                                if (src.startsWith('data:')) return;
+                    
+                                // CLASSIFY the image
+                                let imageType = 'content';
+                                let isIcon = false;
+                    
+                                // 1. Logo detection
+                                if (logoUrl && src === logoUrl) {
+                                    imageType = 'logo';
+                                } else if (/logo/.test(alt) || /logo/.test(classes) || /logo/.test(src)) {
+                                    imageType = 'logo';
+                                }
+                                // 2. Icon detection (small images, social media icons)
+                                else if ((naturalW <= 64 && naturalH <= 64) || 
+                                         (naturalW <= 50 && naturalH <= 50)) {
+                                    if (alt.includes('instagram') || alt.includes('facebook') || 
+                                        alt.includes('twitter') || alt.includes('linkedin') || 
+                                        alt.includes('tiktok') || alt.includes('social') ||
+                                        /icon/.test(classes) || /icon/.test(src) ||
+                                        /svg/.test(src)) {
+                                        imageType = 'icon';
+                                        isIcon = true;
+                                    }
+                                }
+                                // 3. Background image (positioned absolutely or in bg list)
+                                else if (heroBgUrls.has(src) || style.position === 'absolute' || 
+                                         style.zIndex === '-1' || parentClasses.includes('background') ||
+                                         parentClasses.includes('bg')) {
+                                    imageType = 'background';
+                                }
+                                // 4. Hero image (large image, first on page, in hero section)
+                                else if (rect.width > window.innerWidth * 0.5 && rect.height > 300) {
+                                    imageType = 'hero';
+                                }
+                    
+                                result.enhanced_images.push({
+                                    src: src,
+                                    alt: img.alt || '',
+                                    width: rect.width,
+                                    height: rect.height,
+                                    natural_width: naturalW,
+                                    natural_height: naturalH,
+                                    object_fit: style.objectFit,
+                                    position: style.position,
+                                    display: style.display,
+                                    margin: style.margin,
+                                    padding: style.padding,
+                                    border_radius: style.borderRadius,
+                                    box_shadow: style.boxShadow,
+                                    type: imageType
+                                });
+                            } catch (e) {}
+                        });
+                        result.enhanced_images = result.enhanced_images.slice(0, 30);
+            
+            // 6d. NEW: Detect the primary HERO IMAGE (first large image at page top)
+            result.hero_image = null;
+            const allImages = document.querySelectorAll('img[src]');
+            for (const img of allImages) {
                 try {
-                    const style = window.getComputedStyle(img);
                     const rect = img.getBoundingClientRect();
-                    result.enhanced_images.push({
-                        src: img.src,
-                        alt: img.alt || '',
-                        width: rect.width,
-                        height: rect.height,
-                        natural_width: img.naturalWidth,
-                        natural_height: img.naturalHeight,
-                        object_fit: style.objectFit,
-                        position: style.position,
-                        display: style.display,
-                        margin: style.margin,
-                        padding: style.padding,
-                        border_radius: style.borderRadius,
-                        box_shadow: style.boxShadow
-                    });
+                    const src = img.src || '';
+                    if (src.startsWith('data:')) continue;
+                    // Hero image is usually: large (>300px wide), near top (<800px from top), visible
+                    if (rect.width > 300 && rect.top < 800 && rect.top >= 0) {
+                        const style = window.getComputedStyle(img);
+                        result.hero_image = {
+                            src: src,
+                            alt: img.alt || '',
+                            width: rect.width,
+                            height: rect.height,
+                            position: style.position,
+                            object_fit: style.objectFit
+                        };
+                        break; // First large image = the hero image
+                    }
                 } catch (e) {}
-            });
-            result.enhanced_images = result.enhanced_images.slice(0, 20);
+            }
             
             // 7. NEW: Detect if page has meaningful content
             result.page_text_length = document.body ? document.body.innerText.length : 0;
@@ -625,6 +752,21 @@ async function extractVisualDNA(url) {
             console.error(`[VisualExtractor] WARNING: Page seems empty (${result.page_text_length} chars). JS may not have loaded.`);
         } else {
             console.error(`[VisualExtractor] Page loaded OK (${result.page_text_length} chars)`);
+        }
+        
+        // TAKE SCREENSHOT if outputDir was provided
+        if (screenshotPath) {
+            try {
+                await page.screenshot({ 
+                    path: screenshotPath,
+                    fullPage: false,
+                    type: 'png'
+                });
+                result.screenshot_path = screenshotPath;
+                console.error(`[VisualExtractor] Screenshot saved: ${screenshotPath}`);
+            } catch (e) {
+                console.error(`[VisualExtractor] Screenshot failed: ${e.message}`);
+            }
         }
         
         await browser.close();
@@ -640,8 +782,9 @@ async function extractVisualDNA(url) {
 // Main execution
 if (require.main === module) {
     const url = process.argv[2] || 'https://www.metawatt.com/';
+    const outputDir = process.argv[3] || null;
     
-    extractVisualDNA(url)
+    extractVisualDNA(url, outputDir)
         .then(result => {
             console.log(JSON.stringify(result, null, 2));
         })

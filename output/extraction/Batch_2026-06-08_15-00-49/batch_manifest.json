@@ -1,0 +1,21 @@
+{
+  "batch_name": "Batch3_Efficient_2026-06-08_15-00-49",
+  "timestamp": "2026-06-08_15-00-49",
+  "websites": [
+    {
+      "url": "https://www.shopify.com",
+      "success": true,
+      "output_file": "www.shopify.com.json"
+    },
+    {
+      "url": "https://www.notion.so",
+      "success": true,
+      "output_file": "www.notion.so.json"
+    },
+    {
+      "url": "https://www.framer.com",
+      "success": true,
+      "output_file": "www.framer.com.json"
+    }
+  ]
+}
