@@ -1,13 +1,13 @@
 {
   "scene_metadata": {
-    "source_url": "https://www.shopify.com",
-    "title": "Shopify: The All-in-One Commerce Platform for Businesses - Shopify",
-    "style": "creative-playful",
-    "theme": "e-commerce",
-    "focal_point": "Be the nextAI all-star",
+    "source_url": "https://www.metawatt.com",
+    "title": "Metawatt. | Your All-in-One AI Innovation Hub",
+    "style": "bold-cinematic",
+    "theme": "ai-technology",
+    "focal_point": "Your All-in-OneInnovation Hub",
     "complexity": 2.5,
     "token_cost_estimate": 200,
-    "max_3d_objects": 4,
+    "max_3d_objects": 5,
     "token_usage": {
       "base_cost": 50,
       "complexity_multiplier": 2.5,
@@ -18,37 +18,35 @@
   "environment": {
     "background": {
       "type": "image",
-      "source": "url(\"https://cdn.shopify.com/b/shopify-brochure2-assets/c286d3c96e94b18cd1192ada3807c359.jpg?originalWidth=575&originalHeight=745\")",
+      "source": "url(\"https://static.wixstatic.com/media/e54946_1150c8a96bb8401d96d9b7651e8e8bdd~mv2.webp/v1/fill/w_474,h_267,al_c,q_90,enc_avif,quality_auto/e54946_1150c8a96bb8401d96d9b7651e8e8bdd~mv2.webp\")",
       "note": "Extracted from website hero background"
     },
     "lighting": {
-      "type": "hemisphere",
-      "intensity": 0.5,
+      "type": "spotlight",
+      "intensity": 1.0,
       "color": "#ffffff"
     },
     "fog": {
-      "enabled": true,
-      "color": "#1a1a2e",
-      "density": 0.02
+      "enabled": false
     }
   },
   "3d_objects": [
     {
       "type": "hero_text",
-      "content": "Be the nextAI all-star",
+      "content": "Your All-in-OneInnovation Hub",
       "cta_buttons": [],
       "position": {
         "x": 0,
         "y": 0,
         "z": 0
       },
-      "scale": 1.0,
+      "scale": 1.5,
       "priority": "high"
     },
     {
       "type": "content_panel",
-      "heading": "Be the nextAI all-star",
-      "preview": "Be the nextAI all-starBe the nextstore they line up forAIall-starhouseholdnamesolo-preneurcategorycreatorglobalempirestoretheylineupforbigthingDream big and build fast on Shopify. The world’s best com",
+      "heading": "Your All-in-OneInnovation Hub",
+      "preview": "Your All-in-OneInnovation HubThe Complete Journey: From Learning to Business ImpactApply NowSubmit Your Application TodayAre you a student, individual, or business owner*RequiredStudentIndividualBusin",
       "position": {
         "x": 0,
         "y": -2.0,
@@ -58,8 +56,8 @@
     },
     {
       "type": "content_panel",
-      "heading": "Your brand has entered the chat",
-      "preview": "Your brand has entered the chatYour products get discovered across AI channels. Shoppers check out right in the chat. You keep track of every order. All powered byAgentic Storefronts.",
+      "heading": "About METAWATT",
+      "preview": "About METAWATTAI Solutions. Real-World Experience. Future-Ready Innovation.At MetaWatt, we bridge the gap between AI-driven technology and real-world application. Our cutting-edge solutions empower in",
       "position": {
         "x": 0,
         "y": -3.5,
