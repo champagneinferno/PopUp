@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluator Viewer - PopUp AI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #38bdf8;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        
+        .upload-section {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .upload-section input[type="file"] {
+            background: #334155;
+            color: #e2e8f0;
+            padding: 10px;
+            border: 1px solid #475569;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        
+        .decision-panel {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .decision-panel h2 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .metadata {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .meta-item {
+            background: #334155;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        
+        .meta-label {
+            color: #94a3b8;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        
+        .meta-value {
+            color: #e2e8f0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .objects-section {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .object-card {
+            background: #334155;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border-left: 4px solid #38bdf8;
+        }
+        
+        .object-card.high-priority {
+            border-left-color: #10b981;
+        }
+        
+        .object-card.medium-priority {
+            border-left-color: #f59e0b;
+        }
+        
+        .object-card.low-priority {
+            border-left-color: #64748b;
+        }
+        
+        .object-type {
+            color: #38bdf8;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .object-content {
+            color: #e2e8f0;
+            margin-bottom: 5px;
+        }
+        
+        .object-priority {
+            color: #94a3b8;
+            font-size: 12px;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #64748b;
+        }
+        
+        .empty-state h2 {
+            color: #475569;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Evaluator Viewer</h1>
+        
+        <div class="upload-section">
+            <input type="file" id="fileInput" accept=".json" />
+            <p style="margin-top: 10px; color: #94a3b8;">Upload a 3d_scene_blueprint.json file to visualize evaluator decisions</p>
+        </div>
+        
+        <div id="viewerContent" class="empty-state">
+            <h2>No File Loaded</h2>
+            <p>Upload a 3d_scene_blueprint.json file to see what the evaluator decided</p>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    renderEvaluatorData(data);
+                } catch (err) {
+                    alert('Error parsing JSON: ' + err.message);
+                }
+            };
+            reader.readAsText(file);
+        });
+        
+        function renderEvaluatorData(data) {
+            const container = document.getElementById('viewerContent');
+            
+            // Check if it's valid evaluator output
+            if (!data.scene_metadata || !data['3d_objects']) {
+                container.innerHTML = '<div class="empty-state"><h2>Invalid Format</h2><p>This doesn\'t look like evaluator output (3d_scene_blueprint.json)</p></div>';
+                return;
+            }
+            
+            const metadata = data.scene_metadata;
+            const objects = data['3d_objects'];
+            
+            container.innerHTML = `
+                <div class="decision-panel">
+                    <h2>📊 Evaluator Decisions</h2>
+                    <div class="metadata">
+                        <div class="meta-item">
+                            <div class="meta-label">Focal Point</div>
+                            <div class="meta-value">${metadata.focal_point || 'Not detected'}</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Theme</div>
+                            <div class="meta-value">${metadata.theme || 'generic'}</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Max 3D Objects</div>
+                            <div class="meta-value">${metadata.max_3d_objects || 0}</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Token Cost Estimate</div>
+                            <div class="meta-value">${metadata.token_cost_estimate || 0}</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="objects-section">
+                    <h2>🎨 3D Objects Decided</h2>
+                    <div id="objectsList"></div>
+                </div>
+            `;
+            
+            const objectsList = document.getElementById('objectsList');
+            
+            if (objects && objects.length > 0) {
+                objects.forEach(obj => {
+                    const card = document.createElement('div');
+                    card.className = `object-card ${obj.priority}-priority`;
+                    card.innerHTML = `
+                        <div class="object-type">${obj.type || 'unknown'}</div>
+                        <div class="object-content">${obj.content || obj.text || 'No content'}</div>
+                        <div class="object-priority">Priority: ${obj.priority || 'unknown'}</div>
+                        ${obj.reason ? `<div style="color: #94a3b8; font-size: 12px; margin-top: 5px;">Reason: ${obj.reason}</div>` : ''}
+                    `;
+                    objectsList.appendChild(card);
+                });
+            } else {
+                objectsList.innerHTML = '<p style="color: #64748b;">No 3D objects decided yet</p>';
+            }
+        }
+    </script>
+</body>
+</html>
