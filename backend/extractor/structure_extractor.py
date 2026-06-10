@@ -525,14 +525,15 @@ class StructureExtractor:
         return nav_elements[:15]  # Limit to 15 items
     
     def _extract_hero(self):
-        """Find hero/main section AND capture CTA buttons"""
+        """Find hero/main section AND capture CTA buttons (AGGRESSIVE version)"""
         hero = {}
         hero_elem = None
         
-        # Look for common hero selectors
+        # Strategy 1: Standard hero selectors
         hero_selectors = [
             "section.hero", "div.hero", ".jumbotron", 
-            "header", "section.banner", ".banner"
+            "header", "section.banner", ".banner",
+            "[class*='hero']", "[class*='Hero']", "[class*='banner']"
         ]
         
         for selector in hero_selectors:
@@ -545,46 +546,62 @@ class StructureExtractor:
                     hero_elem = elem
                     break
         
-        # Fallback: first h1 on page
+        # Strategy 2: Find first h1 and get its parent section (AGGRESSIVE - go up multiple levels)
         if not hero.get("heading"):
             h1 = self.soup.find("h1")
             if h1:
                 hero["heading"] = h1.get_text(strip=True)
                 hero["selector"] = "h1 (fallback)"
-                # Try to find parent section/div as hero element
-                hero_elem = h1.find_parent(['section', 'div', 'header'])
+                # AGGRESSIVE: Go up multiple levels to find the main container
+                hero_elem = h1
+                for _ in range(5):  # Go up to 5 levels up
+                    hero_elem = hero_elem.find_parent(['section', 'div', 'header', 'main', 'article'])
+                    if hero_elem:
+                        # Check if this element has multiple children (likely a section container)
+                        if len(hero_elem.find_all(['a', 'button'])) > 0:
+                            break  # Found a container with buttons
+                print(f"[Hero] Traversed up to find container: {hero_elem.name if hero_elem else 'None'}")
         
-        # CAPTURE CTA BUTTONS FROM HERO SECTION
+        # Strategy 3: If still no hero, use the first section with content
+        if not hero_elem:
+            for section in self.soup.find_all(['section', 'div']):
+                if section.find('h1'):
+                    hero_elem = section
+                    hero["heading"] = section.find('h1').get_text(strip=True)
+                    hero["selector"] = "first-section-with-h1"
+                    break
+        
+        # CAPTURE CTA BUTTONS FROM HERO SECTION (AGGRESSIVE)
         cta_buttons = []
         
         if hero_elem:
-            # Look for buttons/links within hero section
+            print(f"[Hero] Found hero element: {hero_elem.name} with classes {hero_elem.get('class', [])}")
+            
+            # Method 1: Direct buttons and links
             for btn in hero_elem.select("a, button, input[type='button'], input[type='submit']"):
                 text = btn.get_text(strip=True)
                 if text and len(text) < 50:
-                    href = btn.get('href', '') or btn.get('onclick', '(js-handled)')
+                    href = btn.get('href', '') or ''
                     cta_buttons.append({
                         "text": text,
-                        "href": href if href != '(js-handled)' else ''
+                        "href": href
                     })
             
-            # Also check for links with button-like classes
-            for link in hero_elem.select("a[class*='btn'], a[class*='button'], a[class*='cta']"):
-                text = link.get_text(strip=True)
-                if text and len(text) < 50:
-                    cta_buttons.append({
-                        "text": text,
-                        "href": link.get('href', '')
-                    })
+            # Method 2: Look for any clickable element with text
+            if len(cta_buttons) == 0:
+                for elem in hero_elem.find_all(['a', 'button', 'div', 'span'], string=True):
+                    text = elem.get_text(strip=True)
+                    if text and 5 < len(text) < 30:
+                        # Likely a CTA button
+                        href = elem.get('href', '') or ''
+                        cta_buttons.append({
+                            "text": text,
+                            "href": href
+                        })
+            
+            print(f"[Hero] Found {len(cta_buttons)} CTA buttons")
         else:
-            # Fallback: look for CTA-like buttons anywhere on page
-            for btn in self.soup.find_all(["a", "button"], class_=re.compile("btn|cta|action", re.I)):
-                text = btn.get_text(strip=True)
-                if text and len(text) < 30:
-                    cta_buttons.append({
-                        "text": text,
-                        "href": btn.get('href', '') or '(js-handled)'
-                    })
+            print("[Hero] WARNING: No hero element found")
         
         hero["cta_buttons"] = cta_buttons[:5]
         return hero
