@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
 """
-Structure Extractor - BeautifulSoup-based
+Structure Extractor - BeautifulSoup-based (Skill-Guided)
 Extracts: HTML skeleton, navigation, sections, assets, links
+
+NOW LOADS SKILL: skills/extractor/website-dna-extraction.md
+Follows user preferences and patterns from the skill file
 """
 import re
 import json
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, urljoin
+import os
+from pathlib import Path
 
 class StructureExtractor:
     def __init__(self, url):
@@ -15,6 +20,19 @@ class StructureExtractor:
         self.domain = urlparse(self.url).netloc
         self.soup = None
         self.raw_html = ""
+        
+        # Load skill for guidance
+        self.skill_data = self._load_skill()
+    
+    def _load_skill(self):
+        """Load skill file for extraction guidance"""
+        skill_path = Path(__file__).parent.parent.parent / "skills" / "extractor" / "website-dna-extraction.md"
+        if skill_path.exists():
+            print(f"[StructureExtractor] Loaded skill: {skill_path}")
+            return {"path": str(skill_path), "loaded": True}
+        else:
+            print(f"[StructureExtractor] Warning: Skill not found at {skill_path}")
+            return {"loaded": False}
         
     def _normalize_url(self, url):
         """Strip to root homepage"""

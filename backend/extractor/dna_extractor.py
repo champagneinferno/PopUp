@@ -32,7 +32,7 @@ class WebsiteDNASequencer:
     def __init__(self, url):
         self.url = url
         self.project_root = Path(__file__).parent.parent.parent
-        self.visual_extractor_path = self.project_root / "src" / "extractor" / "visual_extractor.cjs"
+        self.visual_extractor_path = self.project_root / "backend" / "extractor" / "visual_extractor.cjs"
         self.code_version = get_git_commit_hash()
         
     def sequence_dna(self):
