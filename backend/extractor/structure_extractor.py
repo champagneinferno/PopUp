@@ -577,23 +577,39 @@ class StructureExtractor:
         if hero_elem:
             print(f"[Hero] Found hero element: {hero_elem.name} with classes {hero_elem.get('class', [])}")
             
-            # Method 1: Direct buttons and links
-            for btn in hero_elem.select("a, button, input[type='button'], input[type='submit']"):
-                text = btn.get_text(strip=True)
+            # Method 1: Direct links with href
+            for link in hero_elem.select("a[href]"):
+                text = link.get_text(strip=True)
                 if text and len(text) < 50:
-                    href = btn.get('href', '') or ''
                     cta_buttons.append({
                         "text": text,
-                        "href": href
+                        "href": link['href']
                     })
             
-            # Method 2: Look for any clickable element with text
+            # Method 2: Buttons with onclick or JS handlers
+            if len(cta_buttons) == 0:
+                for btn in hero_elem.select("button, [onclick], [data-href], [data-link]"):
+                    text = btn.get_text(strip=True)
+                    if text and len(text) < 50:
+                        # Try to extract href from various sources
+                        href = btn.get('data-href', '') or btn.get('data-link', '') or ''
+                        if not href and btn.get('onclick'):
+                            # Try to extract URL from onclick
+                            import re
+                            url_match = re.search(r"(?:window\.)?location\.?(?:href)?\s*=\s*['\"]([^'\"]+)['\"]", btn['onclick'])
+                            if url_match:
+                                href = url_match.group(1)
+                        cta_buttons.append({
+                            "text": text,
+                            "href": href
+                        })
+            
+            # Method 3: Look for any clickable element with text
             if len(cta_buttons) == 0:
                 for elem in hero_elem.find_all(['a', 'button', 'div', 'span'], string=True):
                     text = elem.get_text(strip=True)
                     if text and 5 < len(text) < 30:
-                        # Likely a CTA button
-                        href = elem.get('href', '') or ''
+                        href = elem.get('href', '') or elem.get('data-href', '') or ''
                         cta_buttons.append({
                             "text": text,
                             "href": href
