@@ -281,7 +281,7 @@
         
         async function loadBatches() {
             try {
-                const indexResponse = await fetch('extraction_results/batch_index.json');
+                const indexResponse = await fetch('../output/batch_index.json');
                 if (!indexResponse.ok) throw new Error('batch_index.json not found');
                 
                 const batchFolders = await indexResponse.json();
