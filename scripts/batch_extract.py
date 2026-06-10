@@ -43,6 +43,20 @@ def run_batch():
                 with open(output_file, 'w') as f:
                     json.dump(profile, f, indent=2)
                 print(f"✅ Success: {url}")
+
+                # Auto-run evaluator on extraction result
+                try:
+                    eval_output = output_file.parent / f"{output_file.stem}_evaluation.json"
+                    from backend.extractor.evaluator import WebsiteEvaluator
+                    evaluator = WebsiteEvaluator(str(output_file))
+                    blueprint = evaluator.evaluate()
+                    if "error" not in blueprint:
+                        with open(eval_output, 'w') as ef:
+                            json.dump(blueprint, ef, indent=2)
+                        print(f"   ✅ Evaluator blueprint: {eval_output.name}")
+                except Exception as e:
+                    print(f"   ⚠️ Evaluator skipped: {e}")
+
                 results.append({"url": url, "output": str(output_file), "status": "success"})
         except Exception as e:
             print(f"❌ Exception: {e}")

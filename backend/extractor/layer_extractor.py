@@ -71,6 +71,7 @@ class LayerExtractor:
                     screenshot_path = os.path.join(self.output_dir, f"{domain}_screenshot.png")
                     page.screenshot(path=screenshot_path, full_page=True, type="png")
                     result["screenshot_path"] = screenshot_path
+                result["section_screenshots"] = self._capture_section_screenshots()
 
                 # Extract by layers
                 result["layers"]["background"] = self._extract_background_layer()
@@ -85,6 +86,7 @@ class LayerExtractor:
                 result["assets"] = self._aggregate_assets(result["layers"])
 
                 # Meta
+                result["hidden_content"] = self._extract_hidden_content()
                 result["meta"] = self._extract_meta()
 
                 self.browser.close()
@@ -641,6 +643,73 @@ class LayerExtractor:
             return results;
         }""")
         return {"floating_elements": elements, "count": len(elements)}
+
+
+    def _capture_section_screenshots(self):
+        """Screenshots per viewport scroll: 1920x1080 slides with overlap and animation settling"""
+        if not self.output_dir:
+            return []
+        import os
+        results = []
+        vh = 1080
+        total_h = self.page.evaluate("() => Math.max(document.documentElement.scrollHeight, document.body.scrollHeight, 1080)")
+        overlap = 100
+        step = vh - overlap
+        slides = max(1, (total_h + step - 1) // step)
+
+        for i in range(slides):
+            try:
+                sy = i * step
+                target_y = sy
+                current_y = self.page.evaluate("window.pageYOffset || document.documentElement.scrollTop")
+                if abs(current_y - target_y) > 200:
+                    intermediate_steps = max(1, (target_y - current_y) // 400)
+                    for s in range(intermediate_steps):
+                        mid_y = current_y + (target_y - current_y) * (s + 1) // intermediate_steps
+                        self.page.evaluate(f"window.scrollTo({{top: {mid_y}, behavior: 'instant'}})")
+                        self.page.wait_for_timeout(150)
+                else:
+                    self.page.evaluate(f"window.scrollTo({{top: {target_y}, behavior: 'instant'}})")
+
+                self.page.wait_for_timeout(2000)
+                try:
+                    unsettled = self.page.evaluate('''() => {
+                        const els = document.querySelectorAll('[class*="animate"], [class*="fade"], [class*="reveal"], [data-aos]');
+                        return els.length;
+                    }''')
+                    if unsettled > 0:
+                        self.page.wait_for_timeout(1500)
+                except Exception:
+                    pass
+
+                fp = os.path.join(self.output_dir, f"slide_{i+1}_of_{slides}.png")
+                self.page.screenshot(path=fp, full_page=False, type="png")
+                results.append({"index": i+1, "total": slides, "scroll_y": sy, "screenshot": fp,
+                                "label": f"Slide {i+1}/{slides}", "overlap_px": overlap})
+            except Exception:
+                continue
+        self.page.evaluate("window.scrollTo(0, 0)")
+        return results
+
+    def _extract_hidden_content(self):
+        """Find content hidden behind scroll, lazy-load, or interaction"""
+        return self.page.evaluate("""() => {
+            const hidden = [];
+            document.querySelectorAll('img[loading="lazy"], img[data-src], img[data-lazy]').forEach(img => {
+                hidden.push({type: "lazy-image", src: img.src || img.getAttribute("data-src") || "", alt: img.alt || ""});
+            });
+            const vpHeight = window.innerHeight;
+            document.querySelectorAll("section, div[class], footer").forEach(el => {
+                try {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top > vpHeight && rect.top < vpHeight * 3) {
+                        const text = (el.textContent || "").trim().substring(0, 60);
+                        if (text) hidden.push({type: "below-fold", tag: el.tagName, text: text, distance: Math.round(rect.top - vpHeight)});
+                    }
+                } catch(e) {}
+            });
+            return hidden.slice(0, 10);
+        }""")
 
     def _extract_meta(self):
         """Extract meta tags"""

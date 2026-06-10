@@ -563,17 +563,28 @@ class WebsiteEvaluator:
 
 
 def main():
-    profile_path = sys.argv[1] if len(sys.argv) > 1 else "extracted_profile.json"
-    
+    import argparse
+    parser = argparse.ArgumentParser(description="Website Evaluator for 3D Transformation")
+    parser.add_argument("profile", nargs="?", default="extracted_profile.json", help="Path to extraction JSON profile")
+    parser.add_argument("--output", "-o", default=None, help="Output path for the 3D blueprint JSON")
+    args = parser.parse_args()
+
+    profile_path = args.profile
     evaluator = WebsiteEvaluator(profile_path)
     blueprint = evaluator.evaluate()
-    
+
     if "error" in blueprint:
         print(f"Error: {blueprint['error']}")
         sys.exit(1)
-    
-    # Save blueprint
-    evaluator.save_blueprint(blueprint)
+
+    # Save blueprint - use --output if provided, else default
+    if args.output:
+        output_path = args.output
+        with open(output_path, 'w') as f:
+            json.dump(blueprint, f, indent=2)
+        print(f"✓ Blueprint saved to: {output_path}")
+    else:
+        evaluator.save_blueprint(blueprint)
     
     # Print summary
     print("\n" + "=" * 70)

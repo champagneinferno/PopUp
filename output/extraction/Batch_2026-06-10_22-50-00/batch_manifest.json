@@ -1,0 +1,12 @@
+{
+  "batch_name": "Batch_2026-06-10_22-50-00",
+  "timestamp": "2026-06-10_22-50-00",
+  "total_sites": 1,
+  "results": [
+    {
+      "url": "https://www.metawatt.com",
+      "output": "www.metawatt.com.json",
+      "status": "success"
+    }
+  ]
+}

@@ -1,0 +1,616 @@
+{
+  "url": "https://www.metawatt.com",
+  "layers": {
+    "background": {
+      "background_images": [
+        {
+          "url": "https://static.wixstatic.com/media/11062b_f6bec34858fa456ab712aa4018880375~mv2.jpg/v1/fill/w_2304,h_1893,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f6bec34858fa456ab712aa4018880375~mv2.jpg",
+          "element": "IMG (full-bleed bg)",
+          "width": 2304,
+          "height": 1893,
+          "alt": "Modern Architecture",
+          "type": "img-background"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/c837a6_44e3014997b64b829ef10d8761ce79ee~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_44e3014997b64b829ef10d8761ce79ee~mv2.jpg",
+          "element": "IMG (full-bleed bg)",
+          "width": 1920,
+          "height": 1080,
+          "alt": "",
+          "type": "img-background"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/e54946_7f289a6af84247d99a8ff3ba883976eb~mv2.png/v1/fill/w_1600,h_335,al_c,q_90,enc_avif,quality_auto/e54946_7f289a6af84247d99a8ff3ba883976eb~mv2.png",
+          "element": "IMG (full-bleed bg)",
+          "width": 2304,
+          "height": 482,
+          "alt": "hd_image_20250315021532.png",
+          "type": "img-background"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/e54946_e5c6a673ba694dc1bc8e7d3fb79b9abf~mv2.png/v1/fill/w_573,h_322,fp_0.50_0.50,q_95,enc_avif,quality_auto/e54946_e5c6a673ba694dc1bc8e7d3fb79b9abf~mv2.webp",
+          "element": "IMG (full-bleed bg)",
+          "width": 573,
+          "height": 322,
+          "alt": "AI in Data Analysis: Turning Raw Data into Smart Decisions",
+          "type": "img-background"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/e54946_3694345396d94623ac70c4ade8145da7~mv2.webp/v1/fill/w_573,h_322,al_c,q_90,enc_avif,quality_auto/e54946_3694345396d94623ac70c4ade8145da7~mv2.webp",
+          "element": "IMG (full-bleed bg)",
+          "width": 573,
+          "height": 322,
+          "alt": "How to Leverage AI for Efficiency, Automation & Innovation",
+          "type": "img-background"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/e54946_1150c8a96bb8401d96d9b7651e8e8bdd~mv2.webp/v1/fill/w_572,h_322,al_c,q_90,enc_avif,quality_auto/e54946_1150c8a96bb8401d96d9b7651e8e8bdd~mv2.webp",
+          "element": "IMG (full-bleed bg)",
+          "width": 572,
+          "height": 322,
+          "alt": "Harnessing the Power of AI: How Artificial Intelligence is Transforming Industries",
+          "type": "img-background"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/c837a6_7635659d6dbc4f81a999fea168e5594b~mv2.jpg/v1/fill/w_2304,h_416,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_7635659d6dbc4f81a999fea168e5594b~mv2.jpg",
+          "element": "IMG (full-bleed bg)",
+          "width": 2304,
+          "height": 416,
+          "alt": "",
+          "type": "img-background"
+        }
+      ],
+      "hero_background": null,
+      "count": 7
+    },
+    "branding": {
+      "logo": "https://static.wixstatic.com/media/e54946_19f16859809f4c2bbf54160705011384~mv2.png/v1/crop/x_0,y_66,w_500,h_118/fill/w_191,h_45,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/CD68DF04-D8B7-44A9-AD93-7492393E5444.png",
+      "logo_url": "https://static.wixstatic.com/media/e54946_19f16859809f4c2bbf54160705011384~mv2.png/v1/crop/x_0,y_66,w_500,h_118/fill/w_191,h_45,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/CD68DF04-D8B7-44A9-AD93-7492393E5444.png",
+      "navigation": [
+        {
+          "text": "Home",
+          "href": "https://www.metawatt.com"
+        },
+        {
+          "text": "Who We Are",
+          "href": "https://www.metawatt.com/aboutus"
+        },
+        {
+          "text": "Resources",
+          "href": "https://www.metawatt.com/resources"
+        },
+        {
+          "text": "Contact",
+          "href": "https://www.metawatt.com/contact"
+        },
+        {
+          "text": "FAQ",
+          "href": "https://www.metawatt.com/faq"
+        }
+      ],
+      "nav_styles": {
+        "background_color": "rgba(0, 0, 0, 0)",
+        "height": "126px",
+        "font_family": "Arial, Helvetica, sans-serif",
+        "border_bottom": "0px none rgb(0, 0, 0)",
+        "link_color": "rgb(0, 0, 238)",
+        "link_font": "raleway, sans-serif",
+        "link_weight": "700",
+        "link_transform": "none"
+      },
+      "brand_colors": [
+        "rgb(0, 0, 0)",
+        "rgb(255, 255, 255)"
+      ],
+      "brand_fonts": [
+        "raleway",
+        "questrial"
+      ]
+    },
+    "hero": {
+      "headline": "Your All-in-One\nInnovation Hub",
+      "subheading": "The Complete Journey: From Learning to Business Impact",
+      "cta_buttons": [
+        {
+          "text": "Apply Now",
+          "href": "",
+          "style": {
+            "bg": "rgba(126, 85, 246, 0)",
+            "color": "rgb(0, 0, 0)",
+            "radius": "0px",
+            "padding": "0px",
+            "font": "Arial, Helvetica, sans-serif",
+            "weight": "400"
+          }
+        },
+        {
+          "text": "Submit Application",
+          "href": "",
+          "style": {
+            "bg": "rgba(126, 85, 246, 0)",
+            "color": "rgb(0, 0, 0)",
+            "radius": "0px",
+            "padding": "0px",
+            "font": "Arial",
+            "weight": "400"
+          }
+        }
+      ],
+      "hero_image": {
+        "src": "https://static.wixstatic.com/media/11062b_f6bec34858fa456ab712aa4018880375~mv2.jpg/v1/fill/w_2304,h_1893,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f6bec34858fa456ab712aa4018880375~mv2.jpg",
+        "alt": "Modern Architecture",
+        "width": 2304,
+        "height": 1893
+      },
+      "background": null,
+      "heading_style": {
+        "font_family": "questrial, sans-serif",
+        "font_size": "80px",
+        "font_weight": "400",
+        "color": "rgb(255, 255, 255)",
+        "line_height": "72px",
+        "letter_spacing": "normal",
+        "text_transform": "none",
+        "text_align": "start"
+      },
+      "subheading_style": {
+        "font_family": "Arial, Helvetica, sans-serif",
+        "font_size": "10px",
+        "font_weight": "400",
+        "color": "rgb(0, 0, 0)",
+        "line_height": "normal"
+      }
+    },
+    "content": {
+      "sections": [
+        {
+          "heading": "Your All-in-OneInnovation Hub",
+          "text_preview": "Your All-in-OneInnovation HubThe Complete Journey: From Learning to Business ImpactApply NowSubmit Your Application TodayAre you a student, individual, or business owner*RequiredStudentIndividualBusiness OwnerSubmit ApplicationSecure Your Spot and Save TimeUnlock the Power of AIIntelligent Tech for ",
+          "text_length": 851,
+          "images": [
+            {
+              "src": "https://static.wixstatic.com/media/11062b_f6bec34858fa456ab712aa4018880375~mv2.jpg/v1/fill/w_2304,h_1893,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f6bec34858fa456ab712aa4018880375~mv2.jpg",
+              "alt": "Modern Architecture"
+            }
+          ],
+          "class": "Le88gL comp-lh9dys35 wixui-section",
+          "tag": "section"
+        },
+        {
+          "heading": "About METAWATT",
+          "text_preview": "About METAWATTAI Solutions. Real-World Experience. Future-Ready Innovation.At MetaWatt, we bridge the gap between AI-driven technology and real-world application. Our cutting-edge solutions empower individuals to automate tasks, enhance decision-making, and drive innovation, all while gaining practi",
+          "text_length": 705,
+          "images": [
+            {
+              "src": "https://static.wixstatic.com/media/c837a6_44e3014997b64b829ef10d8761ce79ee~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_44e3014997b64b829ef10d8761ce79ee~mv2.jpg",
+              "alt": ""
+            }
+          ],
+          "class": "Le88gL comp-lh9dys36 wixui-section",
+          "tag": "section"
+        },
+        {
+          "heading": "World-Class AI-Powered Solutions",
+          "text_preview": "World-Class AI-Powered SolutionsDeveloping AI software can be a complex process, which is why our AI-training system is designed to guide you step by step in creating world-class, industry leading AI solutions.",
+          "text_length": 210,
+          "images": [
+            {
+              "src": "https://static.wixstatic.com/media/e54946_7f289a6af84247d99a8ff3ba883976eb~mv2.png/v1/fill/w_36,h_24,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/e54946_7f289a6af84247d99a8ff3ba883976eb~mv2.png",
+              "alt": "hd_image_20250315021532.png"
+            }
+          ],
+          "class": "Le88gL comp-lh9dys361 wixui-section",
+          "tag": "section"
+        },
+        {
+          "heading": "Resources",
+          "text_preview": "ResourcesExpand your knowledge about AI and see how it can help you automate tasks, optimize efficiency, and drive smarter decisions.View More",
+          "text_length": 142,
+          "images": [],
+          "class": "Le88gL comp-lh9dys362 wixui-section",
+          "tag": "section"
+        },
+        {
+          "heading": "AI in Data Analysis: Turning Raw Data into Smart Decisions",
+          "text_preview": "AI in Data Analysis: Turning Raw Data into Smart DecisionsIntroduction In today's data-driven world, organizations face a critical challenge: extracting meaningful insights from vast amounts of...How to Leverage AI for Efficiency, Automation & InnovationIf you\u2019re a business owner or professional, yo",
+          "text_length": 607,
+          "images": [
+            {
+              "src": "https://static.wixstatic.com/media/e54946_e5c6a673ba694dc1bc8e7d3fb79b9abf~mv2.png/v1/fill/w_444,h_250,fp_0.50_0.50,q_35,blur_30,enc_avif,quality_auto/e54946_e5c6a673ba694dc1bc8e7d3fb79b9abf~mv2.webp",
+              "alt": "AI in Data Analysis: Turning Raw Data into Smart Decisions"
+            },
+            {
+              "src": "https://static.wixstatic.com/media/e54946_e5c6a673ba694dc1bc8e7d3fb79b9abf~mv2.png/v1/fill/w_474,h_267,fp_0.50_0.50,q_95,enc_avif,quality_auto/e54946_e5c6a673ba694dc1bc8e7d3fb79b9abf~mv2.webp",
+              "alt": "AI in Data Analysis: Turning Raw Data into Smart Decisions"
+            },
+            {
+              "src": "https://static.wixstatic.com/media/e54946_3694345396d94623ac70c4ade8145da7~mv2.webp/v1/fill/w_444,h_250,al_c,q_30,blur_30,enc_avif,quality_auto/e54946_3694345396d94623ac70c4ade8145da7~mv2.webp",
+              "alt": "How to Leverage AI for Efficiency, Automation & Innovation"
+            },
+            {
+              "src": "https://static.wixstatic.com/media/e54946_3694345396d94623ac70c4ade8145da7~mv2.webp/v1/fill/w_474,h_267,al_c,q_90,enc_avif,quality_auto/e54946_3694345396d94623ac70c4ade8145da7~mv2.webp",
+              "alt": "How to Leverage AI for Efficiency, Automation & Innovation"
+            },
+            {
+              "src": "https://static.wixstatic.com/media/e54946_1150c8a96bb8401d96d9b7651e8e8bdd~mv2.webp/v1/fill/w_444,h_250,al_c,q_30,blur_30,enc_avif,quality_auto/e54946_1150c8a96bb8401d96d9b7651e8e8bdd~mv2.webp",
+              "alt": "Harnessing the Power of AI: How Artificial Intelligence is Transforming Industries"
+            }
+          ],
+          "class": "Le88gL comp-lh9dys363 wixui-section",
+          "tag": "section"
+        },
+        {
+          "heading": "How to Leverage AI for Efficiency, Automation & Innovation",
+          "text_preview": "How to Leverage AI for Efficiency, Automation & InnovationIf you\u2019re a business owner or professional, you\u2019ve likely heard about the transformative power of artificial intelligence (AI) . From...",
+          "text_length": 194,
+          "images": [],
+          "class": "RiOfiW pu51Xe lyd6fK woUe2C p8Uk20 blog-post-description-font blog-text-color blog-card-background-color blog-card-border-color post-list-item blog-post-post-list-border-color blog-post-post-list-post-container blog-post-post-list-background-color _UH27m",
+          "tag": "div"
+        },
+        {
+          "heading": "Harnessing the Power of AI: How Artificial Intelligence is Transforming Industries",
+          "text_preview": "Harnessing the Power of AI: How Artificial Intelligence is Transforming IndustriesArtificial Intelligence (AI) is revolutionizing the way businesses and individuals operate, offering powerful solutions that enhance...",
+          "text_length": 217,
+          "images": [],
+          "class": "RiOfiW pu51Xe lyd6fK woUe2C p8Uk20 blog-post-description-font blog-text-color blog-card-background-color blog-card-border-color post-list-item blog-post-post-list-border-color blog-post-post-list-post-container blog-post-post-list-background-color _UH27m",
+          "tag": "div"
+        }
+      ],
+      "count": 7
+    },
+    "icons": {
+      "icons": [
+        {
+          "src": "https://static.wixstatic.com/media/40898a93cfff4578b1779073137eb1b4.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/40898a93cfff4578b1779073137eb1b4.png",
+          "alt": "Instagram",
+          "width": 39,
+          "height": 39,
+          "type": "social"
+        },
+        {
+          "src": "https://static.wixstatic.com/media/aebe5b6fd55f471a936c72ff2c8289d7.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/aebe5b6fd55f471a936c72ff2c8289d7.png",
+          "alt": "Facebook",
+          "width": 39,
+          "height": 39,
+          "type": "social"
+        },
+        {
+          "src": "https://static.wixstatic.com/media/aeb686ff41244d85bc1232fcf7325ec0.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/aeb686ff41244d85bc1232fcf7325ec0.png",
+          "alt": "Twitter",
+          "width": 39,
+          "height": 39,
+          "type": "social"
+        },
+        {
+          "src": "https://static.wixstatic.com/media/fcfebdfae12a44f993a94aeed8e2e66b.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fcfebdfae12a44f993a94aeed8e2e66b.png",
+          "alt": "LinkedIn",
+          "width": 39,
+          "height": 39,
+          "type": "social"
+        },
+        {
+          "src": "https://static.wixstatic.com/media/11062b_c7468ec61d494ead83af6058b76cadc0~mv2.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_c7468ec61d494ead83af6058b76cadc0~mv2.png",
+          "alt": "TikTok ",
+          "width": 39,
+          "height": 39,
+          "type": "social"
+        }
+      ],
+      "count": 5
+    },
+    "footer": {
+      "links": [],
+      "social_links": [],
+      "copyright": "\u00a9 2026 by Metawatt. LLC",
+      "text": "\u00a9 2026 by Metawatt. LLC"
+    },
+    "floating": {
+      "floating_elements": [],
+      "count": 0
+    }
+  },
+  "assets": [
+    {
+      "src": "https://static.wixstatic.com/media/11062b_f6bec34858fa456ab712aa4018880375~mv2.jpg/v1/fill/w_2304,h_1893,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f6bec34858fa456ab712aa4018880375~mv2.jpg",
+      "type": "background",
+      "width": 2304,
+      "height": 1893,
+      "element": "IMG (full-bleed bg)",
+      "layer": "background"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/c837a6_44e3014997b64b829ef10d8761ce79ee~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_44e3014997b64b829ef10d8761ce79ee~mv2.jpg",
+      "type": "background",
+      "width": 1920,
+      "height": 1080,
+      "element": "IMG (full-bleed bg)",
+      "layer": "background"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/e54946_7f289a6af84247d99a8ff3ba883976eb~mv2.png/v1/fill/w_1600,h_335,al_c,q_85,enc_avif,quality_auto/e54946_7f289a6af84247d99a8ff3ba883976eb~mv2.png",
+      "type": "background",
+      "width": 2304,
+      "height": 482,
+      "element": "IMG (full-bleed bg)",
+      "layer": "background"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/e54946_e5c6a673ba694dc1bc8e7d3fb79b9abf~mv2.png/v1/fill/w_573,h_322,fp_0.50_0.50,q_85,enc_avif,quality_auto/e54946_e5c6a673ba694dc1bc8e7d3fb79b9abf~mv2.webp",
+      "type": "background",
+      "width": 573,
+      "height": 322,
+      "element": "IMG (full-bleed bg)",
+      "layer": "background"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/e54946_3694345396d94623ac70c4ade8145da7~mv2.webp/v1/fill/w_573,h_322,al_c,q_85,enc_avif,quality_auto/e54946_3694345396d94623ac70c4ade8145da7~mv2.webp",
+      "type": "background",
+      "width": 573,
+      "height": 322,
+      "element": "IMG (full-bleed bg)",
+      "layer": "background"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/e54946_1150c8a96bb8401d96d9b7651e8e8bdd~mv2.webp/v1/fill/w_572,h_322,al_c,q_85,enc_avif,quality_auto/e54946_1150c8a96bb8401d96d9b7651e8e8bdd~mv2.webp",
+      "type": "background",
+      "width": 572,
+      "height": 322,
+      "element": "IMG (full-bleed bg)",
+      "layer": "background"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/c837a6_7635659d6dbc4f81a999fea168e5594b~mv2.jpg/v1/fill/w_2304,h_416,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_7635659d6dbc4f81a999fea168e5594b~mv2.jpg",
+      "type": "background",
+      "width": 2304,
+      "height": 416,
+      "element": "IMG (full-bleed bg)",
+      "layer": "background"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/e54946_19f16859809f4c2bbf54160705011384~mv2.png/v1/crop/x_0,y_66,w_500,h_118/fill/w_191,h_45,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/CD68DF04-D8B7-44A9-AD93-7492393E5444.png",
+      "type": "logo",
+      "layer": "branding"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/11062b_f6bec34858fa456ab712aa4018880375~mv2.jpg/v1/fill/w_2304,h_1893,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f6bec34858fa456ab712aa4018880375~mv2.jpg",
+      "type": "hero",
+      "alt": "Modern Architecture",
+      "width": 2304,
+      "height": 1893,
+      "layer": "hero"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/11062b_f6bec34858fa456ab712aa4018880375~mv2.jpg/v1/fill/w_2304,h_1893,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f6bec34858fa456ab712aa4018880375~mv2.jpg",
+      "type": "content",
+      "alt": "Modern Architecture",
+      "section": "Your All-in-OneInnovation Hub",
+      "layer": "content"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/c837a6_44e3014997b64b829ef10d8761ce79ee~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_44e3014997b64b829ef10d8761ce79ee~mv2.jpg",
+      "type": "content",
+      "alt": "",
+      "section": "About METAWATT",
+      "layer": "content"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/e54946_7f289a6af84247d99a8ff3ba883976eb~mv2.png/v1/fill/w_36,h_24,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e54946_7f289a6af84247d99a8ff3ba883976eb~mv2.png",
+      "type": "content",
+      "alt": "hd_image_20250315021532.png",
+      "section": "World-Class AI-Powered Solutions",
+      "layer": "content"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/e54946_e5c6a673ba694dc1bc8e7d3fb79b9abf~mv2.png/v1/fill/w_444,h_250,fp_0.50_0.50,q_85,enc_avif,quality_auto/e54946_e5c6a673ba694dc1bc8e7d3fb79b9abf~mv2.webp",
+      "type": "content",
+      "alt": "AI in Data Analysis: Turning Raw Data into Smart Decisions",
+      "section": "AI in Data Analysis: Turning Raw Data into Smart Decisions",
+      "layer": "content"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/e54946_e5c6a673ba694dc1bc8e7d3fb79b9abf~mv2.png/v1/fill/w_474,h_267,fp_0.50_0.50,q_85,enc_avif,quality_auto/e54946_e5c6a673ba694dc1bc8e7d3fb79b9abf~mv2.webp",
+      "type": "content",
+      "alt": "AI in Data Analysis: Turning Raw Data into Smart Decisions",
+      "section": "AI in Data Analysis: Turning Raw Data into Smart Decisions",
+      "layer": "content"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/e54946_3694345396d94623ac70c4ade8145da7~mv2.webp/v1/fill/w_444,h_250,al_c,q_85,enc_avif,quality_auto/e54946_3694345396d94623ac70c4ade8145da7~mv2.webp",
+      "type": "content",
+      "alt": "How to Leverage AI for Efficiency, Automation & Innovation",
+      "section": "AI in Data Analysis: Turning Raw Data into Smart Decisions",
+      "layer": "content"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/e54946_3694345396d94623ac70c4ade8145da7~mv2.webp/v1/fill/w_474,h_267,al_c,q_85,enc_avif,quality_auto/e54946_3694345396d94623ac70c4ade8145da7~mv2.webp",
+      "type": "content",
+      "alt": "How to Leverage AI for Efficiency, Automation & Innovation",
+      "section": "AI in Data Analysis: Turning Raw Data into Smart Decisions",
+      "layer": "content"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/e54946_1150c8a96bb8401d96d9b7651e8e8bdd~mv2.webp/v1/fill/w_444,h_250,al_c,q_85,enc_avif,quality_auto/e54946_1150c8a96bb8401d96d9b7651e8e8bdd~mv2.webp",
+      "type": "content",
+      "alt": "Harnessing the Power of AI: How Artificial Intelligence is Transforming Industries",
+      "section": "AI in Data Analysis: Turning Raw Data into Smart Decisions",
+      "layer": "content"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/40898a93cfff4578b1779073137eb1b4.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/40898a93cfff4578b1779073137eb1b4.png",
+      "type": "social",
+      "alt": "Instagram",
+      "width": 39,
+      "height": 39,
+      "layer": "icons"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/aebe5b6fd55f471a936c72ff2c8289d7.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/aebe5b6fd55f471a936c72ff2c8289d7.png",
+      "type": "social",
+      "alt": "Facebook",
+      "width": 39,
+      "height": 39,
+      "layer": "icons"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/aeb686ff41244d85bc1232fcf7325ec0.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/aeb686ff41244d85bc1232fcf7325ec0.png",
+      "type": "social",
+      "alt": "Twitter",
+      "width": 39,
+      "height": 39,
+      "layer": "icons"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/fcfebdfae12a44f993a94aeed8e2e66b.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fcfebdfae12a44f993a94aeed8e2e66b.png",
+      "type": "social",
+      "alt": "LinkedIn",
+      "width": 39,
+      "height": 39,
+      "layer": "icons"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/11062b_c7468ec61d494ead83af6058b76cadc0~mv2.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_c7468ec61d494ead83af6058b76cadc0~mv2.png",
+      "type": "social",
+      "alt": "TikTok ",
+      "width": 39,
+      "height": 39,
+      "layer": "icons"
+    }
+  ],
+  "meta": {
+    "viewport": "width=device-width, initial-scale=1",
+    "generator": "Wix.com Website Builder",
+    "format-detection": "telephone=no",
+    "skype_toolbar": "skype_toolbar_parser_compatible",
+    "description": "Metawatt. is your premier destination for AI education and custom solutions. We provide cutting-edge AI training, automation, and development, empowering individuals and businesses to bring ideas to life. With a team of expert developers and AI specialists, we offer hands-on learning and tailored AI",
+    "og:title": "Metawatt. | Your All-in-One AI Innovation Hub",
+    "og:description": "Metawatt. is your premier destination for AI education and custom solutions. We provide cutting-edge AI training, automation, and development, empowering individuals and businesses to bring ideas to life. With a team of expert developers and AI specialists, we offer hands-on learning and tailored AI",
+    "og:image": "https://static.wixstatic.com/media/e54946_30b43479e4bb43af8c2ee7c786c3dee9~mv2.png/v1/fill/w_1600,h_1066,al_c/e54946_30b43479e4bb43af8c2ee7c786c3dee9~mv2.png",
+    "og:image:width": "1600",
+    "og:image:height": "1066",
+    "og:url": "https://www.metawatt.com",
+    "og:site_name": "Metawatt.",
+    "og:type": "website",
+    "google-site-verification": "A-25ht2piVjtS6WUygbv5UEWxkxM5p0CmD9_U9HUFyo",
+    "twitter:card": "summary_large_image",
+    "twitter:title": "Metawatt. | Your All-in-One AI Innovation Hub",
+    "twitter:description": "Metawatt. is your premier destination for AI education and custom solutions. We provide cutting-edge AI training, automation, and development, empowering individuals and businesses to bring ideas to life. With a team of expert developers and AI specialists, we offer hands-on learning and tailored AI",
+    "twitter:image": "https://static.wixstatic.com/media/e54946_30b43479e4bb43af8c2ee7c786c3dee9~mv2.png/v1/fill/w_1600,h_1066,al_c/e54946_30b43479e4bb43af8c2ee7c786c3dee9~mv2.png"
+  },
+  "framework": {
+    "framework": "wix",
+    "confidence": 0.85,
+    "indicators": [
+      "wix:wixui-section class",
+      "wix:data-hook attribute",
+      "wix:Wix generator meta"
+    ],
+    "meta_generator": "wix.com website builder"
+  },
+  "screenshot_path": "output/extraction/Batch_2026-06-10_22-50-00/metawatt.com\\www_metawatt_com_screenshot.png",
+  "section_screenshots": [
+    {
+      "index": 1,
+      "total": 6,
+      "scroll_y": 0,
+      "screenshot": "output/extraction/Batch_2026-06-10_22-50-00/metawatt.com\\slide_1_of_6.png",
+      "label": "Page 1/6"
+    },
+    {
+      "index": 2,
+      "total": 6,
+      "scroll_y": 1080,
+      "screenshot": "output/extraction/Batch_2026-06-10_22-50-00/metawatt.com\\slide_2_of_6.png",
+      "label": "Page 2/6"
+    },
+    {
+      "index": 3,
+      "total": 6,
+      "scroll_y": 2160,
+      "screenshot": "output/extraction/Batch_2026-06-10_22-50-00/metawatt.com\\slide_3_of_6.png",
+      "label": "Page 3/6"
+    },
+    {
+      "index": 4,
+      "total": 6,
+      "scroll_y": 3240,
+      "screenshot": "output/extraction/Batch_2026-06-10_22-50-00/metawatt.com\\slide_4_of_6.png",
+      "label": "Page 4/6"
+    },
+    {
+      "index": 5,
+      "total": 6,
+      "scroll_y": 4320,
+      "screenshot": "output/extraction/Batch_2026-06-10_22-50-00/metawatt.com\\slide_5_of_6.png",
+      "label": "Page 5/6"
+    },
+    {
+      "index": 6,
+      "total": 6,
+      "scroll_y": 5400,
+      "screenshot": "output/extraction/Batch_2026-06-10_22-50-00/metawatt.com\\slide_6_of_6.png",
+      "label": "Page 6/6"
+    }
+  ],
+  "hidden_content": [
+    {
+      "type": "below-fold",
+      "tag": "DIV",
+      "text": "Secure Your Spot and Save Time",
+      "distance": 406
+    },
+    {
+      "type": "below-fold",
+      "tag": "SECTION",
+      "text": "Unlock the Power of AIIntelligent Tech for Limitless Potenti",
+      "distance": 397
+    },
+    {
+      "type": "below-fold",
+      "tag": "DIV",
+      "text": "Unlock the Power of AIIntelligent Tech for Limitless Potenti",
+      "distance": 397
+    },
+    {
+      "type": "below-fold",
+      "tag": "DIV",
+      "text": "Unlock the Power of AIIntelligent Tech for Limitless Potenti",
+      "distance": 398
+    },
+    {
+      "type": "below-fold",
+      "tag": "DIV",
+      "text": "Unlock the Power of AIIntelligent Tech for Limitless Potenti",
+      "distance": 398
+    },
+    {
+      "type": "below-fold",
+      "tag": "DIV",
+      "text": "Unlock the Power of AI",
+      "distance": 561
+    },
+    {
+      "type": "below-fold",
+      "tag": "DIV",
+      "text": "Intelligent Tech for Limitless Potential",
+      "distance": 729
+    },
+    {
+      "type": "below-fold",
+      "tag": "DIV",
+      "text": "#comp-krp2iu9c svg [data-color=\"1\"] {fill: #38A6F2;}\n#comp-k",
+      "distance": 398
+    },
+    {
+      "type": "below-fold",
+      "tag": "DIV",
+      "text": "#comp-krp2iu9c svg [data-color=\"1\"] {fill: #38A6F2;}\n#comp-k",
+      "distance": 398
+    },
+    {
+      "type": "below-fold",
+      "tag": "DIV",
+      "text": "#comp-krp2iu9c svg [data-color=\"1\"] {fill: #38A6F2;}\n#comp-k",
+      "distance": 523
+    }
+  ]
+}

@@ -191,9 +191,9 @@
             // Disable button during extraction
             const extractBtn = document.querySelector('.extract-all-btn');
             extractBtn.disabled = true;
-            extractBtn.textContent = '⏳ Extracting...';
+            extractBtn.textContent = '⏳ Starting extraction...';
             
-            // Call backend API
+            // Call the extraction server API
             fetch('/api/extract', {
                 method: 'POST',
                 headers: {
@@ -203,110 +203,57 @@
             })
             .then(response => {
                 if (!response.ok) {
-                    throw new Error('Failed to start extraction');
+                    throw new Error('Failed to start extraction (server may not be running)');
                 }
                 return response.json();
             })
             .then(data => {
-                console.log('✅ Extraction started:', data);
-                // Start polling for job status
-                if (data.job_ids && data.job_ids.length > 0) {
-                    pollJobStatus(data.job_ids);
-                } else {
-                    // No job IDs, just reload after delay
-                    setTimeout(() => {
-                        loadBatches();
-                        extractBtn.disabled = false;
-                        extractBtn.textContent = '🚀 Extract All Websites';
-                    }, 180000); // 3 minutes
+                console.log('Extraction started:', data);
+                extractBtn.textContent = '⏳ Extracting ' + urls.length + ' site(s)...';
+                if (data.job_id) {
+                    pollJob(data.job_id);
                 }
             })
             .catch(error => {
-                alert('❌ Error starting extraction: ' + error.message);
+                alert('Error: ' + error.message + '
+
+Run the server:
+  python extraction_server.py [port]
+Then refresh this page.');
                 extractBtn.disabled = false;
                 extractBtn.textContent = '🚀 Extract All Websites';
             });
         }
         
-        function pollJobStatus(jobIds) {
+        function pollJob(jobId) {
             const extractBtn = document.querySelector('.extract-all-btn');
-            let completed = 0;
-            const total = jobIds.length;
             
-            function checkJob(index) {
-                if (index >= total) {
-                    // All jobs checked, now poll until completed
-                    checkCompletion(jobIds);
-                    return;
-                }
-                
-                const jobId = jobIds[index];
-                fetch(`/api/job/${jobId}`)
-                .then(response => response.json())
+            function check() {
+                fetch('/api/job/' + jobId)
+                .then(r => r.json())
                 .then(data => {
-                    console.log(`Job ${jobId}: ${data.status}`);
-                    if (data.status === 'completed' || data.status === 'failed') {
-                        completed++;
-                        if (completed === total) {
-                            // All jobs finished
-                            loadBatches();
-                            extractBtn.disabled = false;
-                            extractBtn.textContent = '🚀 Extract All Websites';
-                            alert('✅ Extraction completed! Check the sidebar for new batches.');
-                        }
-                    }
-                    // Check next job
-                    checkJob(index + 1);
-                })
-                .catch(error => {
-                    console.error('Error checking job status:', error);
-                    completed++;
-                    if (completed === total) {
+                    console.log('Job ' + jobId + ': ' + data.status);
+                    if (data.status === 'completed') {
                         loadBatches();
                         extractBtn.disabled = false;
                         extractBtn.textContent = '🚀 Extract All Websites';
-                    }
-                    checkJob(index + 1);
-                });
-            }
-            
-            checkJob(0);
-        }
-        
-        function checkCompletion(jobIds) {
-            // Poll every 5 seconds until all jobs are completed
-            const extractBtn = document.querySelector('.extract-all-btn');
-            let allDone = false;
-            
-            function poll() {
-                if (allDone) return;
-                
-                const promises = jobIds.map(jobId =>
-                    fetch(`/api/job/${jobId}`)
-                    .then(r => r.json())
-                    .catch(() => ({ status: 'unknown' }))
-                );
-                
-                Promise.all(promises)
-                .then(results => {
-                    const allCompleted = results.every(r => r.status === 'completed' || r.status === 'failed');
-                    if (allCompleted) {
-                        allDone = true;
+                        alert('Extraction completed! Batch: ' + data.batch_name);
+                    } else if (data.status === 'error' || (data.results && data.results.some(function(r) { return r.status === 'error'; }))) {
                         loadBatches();
                         extractBtn.disabled = false;
                         extractBtn.textContent = '🚀 Extract All Websites';
-                        alert('✅ Extraction completed! Check the sidebar for new batches.');
+                        var errors = (data.results || []).filter(function(r) { return r.status === 'error'; });
+                        alert('Finished with ' + errors.length + ' error(s). Check the batch for details.');
                     } else {
-                        // Poll again in 5 seconds
-                        setTimeout(poll, 5000);
+                        setTimeout(check, 5000);
                     }
                 })
-                .catch(() => {
-                    setTimeout(poll, 5000);
+                .catch(function() {
+                    setTimeout(check, 5000);
                 });
             }
             
-            poll();
+            setTimeout(check, 2000);
         }
         
         async function loadBatches() {
@@ -366,10 +313,28 @@
             const mostRecentBatchId = batches.length > 0 ? batches[0].id : null;
             
             batchList.innerHTML = batches.map(batch => {
-                const date = new Date(batch.timestamp);
-                const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-                const timeStr = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
-                const isNew = batch.id === mostRecentBatchId;
+                            // Fix timestamp: support both ISO and "YYYY-MM-DD_HH-MM-SS" format
+                            let ts = batch.timestamp || '';
+                            let date;
+                            if (ts.includes('_')) {
+                                // Convert "2026-06-10_22-45-00" to "2026-06-10T22:45:00"
+                                ts = ts.replace(/_/g, 'T').replace(/-/g, ':').replace('T', '-');
+                                ts = ts.replace(/-/g, '/').replace(/T/, ' ');
+                                // Now: "2026/06/10 22:45:00" - this is parseable by Safari/Chrome
+                                // Better: just parse the parts
+                                const parts = batch.timestamp.split('_');
+                                const datePart = parts[0]; // "2026-06-10"
+                                const timePart = parts[1]; // "22-45-00"
+                                const [y, m, d] = datePart.split('-');
+                                const [h, mi, s] = timePart.split('-');
+                                date = new Date(parseInt(y), parseInt(m)-1, parseInt(d), parseInt(h), parseInt(mi), parseInt(s));
+                            } else {
+                                date = new Date(ts);
+                            }
+                            const isValid = date instanceof Date && !isNaN(date);
+                            const dateStr = isValid ? date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : 'Unknown';
+                            const timeStr = isValid ? date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true }) : '';
+                            const isNew = batch.id === mostRecentBatchId;
                 
                 return `
                     <div class="batch-item">
@@ -455,19 +420,41 @@
                         const iconsLayer = layers.icons || {};
                         const footer = layers.footer || {};
 
-                        // ===== 0. SCREENSHOT COMPARISON =====
+                        // ===== 0. SCREENSHOT + VIEWPORT SLIDES =====
+                                        const sectionSlides = data.section_screenshots || [];
                                         html += `
                                             <div class="data-section" style="overflow: hidden;">
-                                                <h3>📸 SITE SCREENSHOT</h3>
-                                                <div style="padding: 15px;">
-                                                    <div style="background: #0f0f23; border-radius: 8px; border: 1px solid #2a2a4a; overflow: hidden;">
-                                                        ${data.screenshot_path ? `
-                                                        <div style="position: relative;">
-                                                            <img src="../${data.screenshot_path.replace(/\\\\/g, '/')}" alt="Website Screenshot" style="width: 100%; max-height: 500px; object-fit: contain; display: block;" onerror="this.parentElement.innerHTML='<div style=\\\"padding: 20px; text-align: center; color: #666;\\\">Screenshot not available - run extraction with output_dir set</div>'">
-                                                            <div style="position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,0.7); color: #93c5fd; padding: 4px 10px; border-radius: 6px; font-size: 11px;">🔍 Actual Site</div>
-                                                        </div>
-                                                        ` : '<div style="padding: 20px; text-align: center; color: #666;">No screenshot captured - run with output directory</div>'}
+                                                <h3>📸 SITE PAGES (${sectionSlides.length} viewport slides)
+                                                    <span style="float:right;font-size:11px;color:#888;">
+                                                        <a href="evaluator_viewer.html" style="color:#1976d2;" target="_blank">🔗 Open Evaluator</a>
+                                                    </span>
+                                                </h3>
+                                                <div style="padding: 0;">
+                                                    ${data.screenshot_path ? `
+                                                    <div style="position: relative;">
+                                                        <img src="${data.screenshot_path.replace(/\\\\/g, '/').replace(/^.*?(output\/extraction)/, '../$1')}" alt="Full Page Screenshot" style="width: 100%; max-height: 200px; object-fit: contain; display: block; cursor: zoom-in; border-bottom: 1px solid #e0e0e0;" onclick="zoomImage(this.src)" onerror="this.style.display='none'">
+                                                        <div style="position: absolute; top: 6px; right: 8px; background: rgba(0,0,0,0.6); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 10px;">Full Page</div>
+                                                    </div>` : ''}
+                                                    ${sectionSlides.length > 0 ? `
+                                                    <div style="display: flex; gap: 10px; padding: 12px; overflow-x: auto; white-space: nowrap; background: #f8f9fa;">
+                                                        ${sectionSlides.map((slide, idx) => {
+                                                            const imgPath = slide.screenshot ? slide.screenshot.replace(/\\\\/g, '/').replace(/^.*?(output\/extraction)/, '../$1') : '';
+                                                            return `
+                                                            <div style="flex: 0 0 auto; width: 280px; border-radius: 8px; overflow: hidden; border: 1px solid #e0e0e0; background: white; box-shadow: 0 1px 4px rgba(0,0,0,0.08);">
+                                                                <div style="height: 158px; overflow: hidden; background: #eee; position: relative;">
+                                                                    <img src="${imgPath}" alt="Slide ${slide.index}" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;" onclick="zoomImage(this.src)" onerror="this.parentElement.innerHTML='<div style=\\"padding: 50px; text-align: center; color: #999; font-size: 12px;\\">No preview</div>'">
+                                                                    <div style="position: absolute; top: 4px; right: 4px; background: rgba(0,0,0,0.6); color: #fff; padding: 2px 6px; border-radius: 3px; font-size: 9px;">${slide.index}/${slide.total}</div>
+                                                                </div>
+                                                                <div style="padding: 8px 10px;">
+                                                                    <div style="font-size: 11px; color: #555; font-weight: 600;">${slide.label || 'Page ' + slide.index}</div>
+                                                                    <div style="font-size: 10px; color: #999; margin-top: 2px;">Scroll Y: ${slide.scroll_y}px</div>
+                                                                </div>
+                                                            </div>`;
+                                                        }).join('')}
                                                     </div>
+                                                    <div style="padding: 6px 12px; font-size: 10px; color: #888; border-top: 1px solid #e0e0e0; text-align: center;">
+                                                        ← Scroll → Each card = one 1920×1080 viewport slide. Click to zoom.
+                                                    </div>` : ''}
                                                 </div>
                                             </div>`;
 
@@ -602,26 +589,94 @@
                                             }
 
                                             // Brand fonts
-                                            if (branding.brand_fonts.length > 0) {
-                                                html += `
-                                                    <div style="padding: 0 20px 20px 20px; border-top: 1px solid rgba(0,0,0,0.05);">
-                                                        <div style="font-size: 11px; color: #888; margin-top: 15px; margin-bottom: 8px; font-weight: 600;">TYPOGRAPHY</div>
-                                                        ${branding.brand_fonts.map(f => {
-                                                            // Try to use Google Fonts
-                                                            const fontName = f.replace(/\s+/g, '+');
-                                                            return `
-                                                            <div style="margin-bottom: 8px;">
-                                                                <link href="https://fonts.googleapis.com/css2?family=${fontName}:wght@400;700&display=swap" rel="stylesheet">
-                                                                <div style="font-family: '${f}', sans-serif; font-size: 18px; padding: 10px 14px; background: #f8f9fa; border-radius: 6px; border: 1px solid rgba(0,0,0,0.05); color: #333;">
-                                                                    ${f} — The quick brown fox jumps over the lazy dog
-                                                                </div>
-                                                                <div style="font-family: '${f}', sans-serif; font-size: 14px; padding: 8px 14px; color: #666;">
-                                                                    ${f} — ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789
-                                                                </div>
-                                                            </div>`;
-                                                        }).join('')}
-                                                    </div>`;
-                                            }
+                                            // Brand fonts
+                                                                                                if (branding.brand_fonts.length > 0) {
+                                                                                                    // Also show typography scale if available
+                                                                                                    const typeScale = branding.typography_scale || {};
+                                                                                                    const headings = typeScale.headings || {};
+                                                                                                    const bodyText = typeScale.body;
+                                                                                                    const navLinks = typeScale.nav_links;
+                                                                                                    const btnType = typeScale.buttons;
+                                                                                                    const hasTypeScale = Object.keys(headings).length > 0;
+
+                                                                                                    html += `
+                                                                                                        <div style="padding: 0 20px 20px 20px; border-top: 1px solid rgba(0,0,0,0.05);">
+                                                                                                            <div style="font-size: 11px; color: #888; margin-top: 15px; margin-bottom: 8px; font-weight: 600;">TYPOGRAPHY</div>
+                                                                                                            ${branding.brand_fonts.map(f => {
+                                                                                                                const fontName = f.replace(/\s+/g, '+');
+                                                                                                                return `
+                                                                                                                <div style="margin-bottom: 8px;">
+                                                                                                                    <link href="https://fonts.googleapis.com/css2?family=${fontName}:wght@400;700&display=swap" rel="stylesheet">
+                                                                                                                    <div style="font-family: '${f}', sans-serif; font-size: 18px; padding: 10px 14px; background: #f8f9fa; border-radius: 6px; border: 1px solid rgba(0,0,0,0.05); color: #333;">
+                                                                                                                        ${f} — The quick brown fox jumps over the lazy dog
+                                                                                                                    </div>
+                                                                                                                </div>`;
+                                                                                                            }).join('')}`;
+
+                                                                                                    // Typography Scale (if available)
+                                                                                                    if (hasTypeScale) {
+                                                                                                        // Order headings by level
+                                                                                                        const levelOrder = ['h1','h2','h3','h4','h5','h6'];
+                                                                                                        html += `
+                                                                                                            <div style="margin-top: 15px;">
+                                                                                                                <div style="font-size: 11px; color: #888; margin-bottom: 10px; font-weight: 600;">TYPE SCALE</div>`;
+                                                            
+                                                                                                        levelOrder.forEach(level => {
+                                                                                                            const h = headings[level];
+                                                                                                            if (!h) return;
+                                                                                                            // Determine text color readability
+                                                                                                            const rgb = (h.color || '').match(/\d+/g);
+                                                                                                            const isWhite = h.color && h.color.includes('255, 255, 255');
+                                                                                                            const bgColor = isWhite ? '#1a1a2e' : '#f8f9fa';
+                                                                                                            const textColor = isWhite ? '#fff' : '#333';
+                                                                
+                                                                                                            html += `
+                                                                                                                <div style="margin-bottom: 6px; padding: ${level === 'h1' ? '16px' : level === 'h2' ? '14px' : level === 'h3' ? '12px' : '10px'} 14px; background: ${bgColor}; border-radius: 6px; border: 1px solid rgba(0,0,0,0.05);">
+                                                                                                                    <div style="font-family: '${h.font_family || 'inherit'}'; font-size: ${h.font_size || '16px'}; font-weight: ${h.font_weight || '400'}; color: ${h.color || '#333'}; line-height: ${h.line_height || 'normal'}; letter-spacing: ${h.letter_spacing || 'normal'}; text-transform: ${h.text_transform || 'none'};">
+                                                                                                                        ${level.toUpperCase()} — ${h.font_size || '?'} ${h.font_weight || '?'}w
+                                                                                                                    </div>
+                                                                                                                    <div style="font-size: 10px; color: ${isWhite ? '#888' : '#999'}; margin-top: 4px; font-family: monospace;">${h.font_family || '?'} | ${h.color || '?'}</div>
+                                                                                                                </div>`;
+                                                                                                        });
+
+                                                                                                        // Body text
+                                                                                                        if (bodyText) {
+                                                                                                            html += `
+                                                                                                                <div style="margin-bottom: 6px; padding: 10px 14px; background: #f8f9fa; border-radius: 6px; border: 1px solid rgba(0,0,0,0.05);">
+                                                                                                                    <div style="font-family: '${bodyText.font_family || 'inherit'}'; font-size: ${bodyText.font_size || '14px'}; font-weight: ${bodyText.font_weight || '400'}; color: ${bodyText.color || '#333'};">
+                                                                                                                        Body — ${bodyText.font_size || '?'} — The quick brown fox jumps over the lazy dog.
+                                                                                                                    </div>
+                                                                                                                    <div style="font-size: 10px; color: #999; margin-top: 4px; font-family: monospace;">${bodyText.font_family || '?'} | ${bodyText.color || '?'}</div>
+                                                                                                                </div>`;
+                                                                                                        }
+
+                                                                                                        // Nav links
+                                                                                                        if (navLinks) {
+                                                                                                            html += `
+                                                                                                                <div style="margin-bottom: 6px; padding: 10px 14px; background: #f0f4ff; border-radius: 6px; border: 1px solid rgba(0,0,0,0.05);">
+                                                                                                                    <div style="font-family: '${navLinks.font_family || 'inherit'}'; font-size: ${navLinks.font_size || '14px'}; font-weight: ${navLinks.font_weight || '400'}; color: ${navLinks.color || '#333'}; text-transform: ${navLinks.text_transform || 'none'};">
+                                                                                                                        Nav Link — ${navLinks.font_size || '?'}
+                                                                                                                    </div>
+                                                                                                                    <div style="font-size: 10px; color: #999; margin-top: 4px; font-family: monospace;">${navLinks.font_family || '?'} | ${navLinks.color || '?'}</div>
+                                                                                                                </div>`;
+                                                                                                        }
+
+                                                                                                        // Buttons
+                                                                                                        if (btnType) {
+                                                                                                            html += `
+                                                                                                                <div style="margin-bottom: 6px; padding: 10px 14px; background: #f0f4ff; border-radius: 6px; border: 1px solid rgba(0,0,0,0.05);">
+                                                                                                                    <div style="font-family: '${btnType.font_family || 'inherit'}'; font-size: ${btnType.font_size || '14px'}; font-weight: ${btnType.font_weight || '400'}; color: ${btnType.color || '#333'}; text-transform: ${btnType.text_transform || 'none'};">
+                                                                                                                        Button — ${btnType.font_size || '?'}
+                                                                                                                    </div>
+                                                                                                                    <div style="font-size: 10px; color: #999; margin-top: 4px; font-family: monospace;">${btnType.font_family || '?'} | ${btnType.color || '?'}</div>
+                                                                                                                </div>`;
+                                                                                                        }
+
+                                                                                                        html += `</div>`;
+                                                                                                    }
+
+                                                                                                    html += `</div>`;
+                                                                                                }
 
                                             html += `</div></div>`;
                                         }

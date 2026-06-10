@@ -5,229 +5,379 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evaluator Viewer - PopUp AI</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: #0f172a;
-            color: #e2e8f0;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        h1 {
-            color: #38bdf8;
-            margin-bottom: 20px;
-            font-size: 28px;
-        }
-        
-        .upload-section {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        
-        .upload-section input[type="file"] {
-            background: #334155;
-            color: #e2e8f0;
-            padding: 10px;
-            border: 1px solid #475569;
-            border-radius: 4px;
-            margin-right: 10px;
-        }
-        
-        .decision-panel {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        
-        .decision-panel h2 {
-            color: #38bdf8;
-            margin-bottom: 15px;
-            font-size: 20px;
-        }
-        
-        .metadata {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        
-        .meta-item {
-            background: #334155;
-            padding: 15px;
-            border-radius: 6px;
-        }
-        
-        .meta-label {
-            color: #94a3b8;
-            font-size: 12px;
-            text-transform: uppercase;
-            margin-bottom: 5px;
-        }
-        
-        .meta-value {
-            color: #e2e8f0;
-            font-size: 18px;
-            font-weight: 600;
-        }
-        
-        .objects-section {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        
-        .object-card {
-            background: #334155;
-            padding: 15px;
-            border-radius: 6px;
-            margin-bottom: 10px;
-            border-left: 4px solid #38bdf8;
-        }
-        
-        .object-card.high-priority {
-            border-left-color: #10b981;
-        }
-        
-        .object-card.medium-priority {
-            border-left-color: #f59e0b;
-        }
-        
-        .object-card.low-priority {
-            border-left-color: #64748b;
-        }
-        
-        .object-type {
-            color: #38bdf8;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-        
-        .object-content {
-            color: #e2e8f0;
-            margin-bottom: 5px;
-        }
-        
-        .object-priority {
-            color: #94a3b8;
-            font-size: 12px;
-        }
-        
-        .empty-state {
-            text-align: center;
-            padding: 60px 20px;
-            color: #64748b;
-        }
-        
-        .empty-state h2 {
-            color: #475569;
-            margin-bottom: 10px;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f0f2f5; display: flex; height: 100vh; overflow: hidden; }
+
+        .sidebar { width: 280px; background: white; border-right: 1px solid #ddd; display: flex; flex-direction: column; overflow: hidden; box-shadow: 2px 0 4px rgba(0,0,0,0.1); }
+        .sidebar-header { padding: 15px; border-bottom: 1px solid #ddd; background: #7c3aed; }
+        .sidebar-header h2 { margin: 0 0 5px 0; font-size: 18px; color: white; }
+        .sidebar-header a { color: white; text-decoration: none; font-size: 12px; opacity: 0.9; }
+        .sidebar-header a:hover { opacity: 1; text-decoration: underline; }
+
+        .upload-section { padding: 10px 15px; background: #f8f9fa; border-bottom: 1px solid #ddd; }
+        .upload-section input[type="file"] { width: 100%; background: white; color: #333; padding: 8px; border: 1px solid #ddd; border-radius: 4px; font-size: 12px; }
+
+        #searchInput { width: 100%; padding: 8px; margin-top: 8px; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px; color: white; font-size: 13px; }
+        #searchInput::placeholder { color: rgba(255,255,255,0.7); }
+        #searchInput:focus { outline: none; background: rgba(255,255,255,0.3); }
+
+        .batch-list { flex: 1; overflow-y: auto; padding: 10px; }
+        .batch-item { margin-bottom: 8px; border: 1px solid #ddd; border-radius: 6px; background: white; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .batch-header { padding: 10px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; background: #f8f9fa; transition: background 0.2s; }
+        .batch-header:hover { background: #e9ecef; }
+        .batch-header h3 { margin: 0; font-size: 13px; color: #333; display: flex; align-items: center; gap: 6px; }
+        .batch-date { font-size: 11px; color: #666; margin-top: 2px; }
+
+        .badge-new { background: #7c3aed; color: white; padding: 2px 6px; border-radius: 3px; font-size: 10px; font-weight: bold; }
+        .badge-count { background: #7c3aed; color: white; padding: 2px 6px; border-radius: 3px; font-size: 11px; }
+
+        .eval-list { display: none; padding: 5px 0; background: white; }
+        .eval-list.expanded { display: block; }
+
+        .tree-item { padding: 8px 15px; cursor: pointer; display: flex; align-items: center; gap: 8px; border-left: 3px solid transparent; transition: all 0.2s; margin: 2px 5px; border-radius: 4px; border: 1px solid #7c3aed; background: rgba(124,58,237,0.05); }
+        .tree-item:hover { background: rgba(124,58,237,0.15); border-color: #7c3aed; border-left: 3px solid #7c3aed; }
+        .tree-item.active { background: rgba(124,58,237,0.2); border-color: #7c3aed; border-left: 3px solid #7c3aed; }
+        .tree-item .site-url { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; color: #333; }
+        .tree-item .style-badge { font-size: 9px; padding: 1px 4px; border-radius: 3px; background: #e9d5ff; color: #7c3aed; }
+        .tree-item .theme-badge { font-size: 9px; padding: 1px 4px; border-radius: 3px; background: #dbeafe; color: #2563eb; }
+
+        .main-content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+        .content-header { padding: 15px 20px; background: white; border-bottom: 1px solid #ddd; display: flex; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .content-header h2 { margin: 0; font-size: 18px; color: #7c3aed; }
+
+        .data-display { flex: 1; overflow-y: auto; padding: 20px; }
+
+        .decision-panel { background: white; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .decision-panel h3 { padding: 12px 16px; margin: 0; background: #f8f9fa; font-size: 13px; color: #333; border-bottom: 1px solid #e0e0e0; font-weight: 600; }
+
+        .metadata { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; padding: 15px; }
+        .meta-item { background: #f8f9fa; padding: 12px; border-radius: 6px; }
+        .meta-label { color: #888; font-size: 11px; text-transform: uppercase; margin-bottom: 4px; }
+        .meta-value { color: #333; font-size: 16px; font-weight: 600; }
+
+        .objects-section { background: white; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 20px; overflow: hidden; }
+        .objects-section h3 { padding: 12px 16px; margin: 0; background: #f8f9fa; font-size: 13px; color: #333; border-bottom: 1px solid #e0e0e0; font-weight: 600; }
+
+        .object-card { padding: 12px 16px; border-bottom: 1px solid #eee; border-left: 4px solid #7c3aed; }
+        .object-card:last-child { border-bottom: none; }
+        .object-card.high-priority { border-left-color: #10b981; }
+        .object-card.medium-priority { border-left-color: #f59e0b; }
+        .object-card.low-priority { border-left-color: #64748b; }
+
+        .object-type { color: #7c3aed; font-weight: 600; margin-bottom: 3px; font-size: 13px; }
+        .object-content { color: #333; margin-bottom: 3px; font-size: 12px; }
+        .object-priority { color: #888; font-size: 11px; }
+        .object-reason { color: #888; font-size: 11px; margin-top: 4px; font-style: italic; }
+
+        .empty-state { text-align: center; padding: 60px 20px; color: #888; }
+        .empty-state h2 { color: #7c3aed; margin-bottom: 10px; font-size: 20px; }
+        .empty-state p { color: #999; font-size: 13px; }
+        .empty-state-icon { font-size: 48px; margin-bottom: 15px; }
+
+        .loading { text-align: center; padding: 20px; color: #888; }
+        .error { color: #f44336; padding: 15px; background: #ffebee; border-radius: 4px; margin: 10px; border: 1px solid #f44336; }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f0f2f5; }
+        ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #aaa; }
+
+        .raw-toggle { color: #7c3aed; cursor: pointer; font-size: 12px; padding: 8px 16px; display: inline-block; }
+        .raw-toggle:hover { text-decoration: underline; }
+        .raw-json { display: none; padding: 15px; background: #f8f9fa; font-size: 11px; max-height: 400px; overflow: auto; }
+        .raw-json.show { display: block; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🎯 Evaluator Viewer</h1>
-        
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>🎯 Evaluator Viewer</h2>
+            <a href="extraction_viewer.html">📁 Open Extractor</a>
+            <input type="text" id="searchInput" placeholder="🔍 Search evaluations..." onkeyup="filterEvals()">
+        </div>
         <div class="upload-section">
             <input type="file" id="fileInput" accept=".json" />
-            <p style="margin-top: 10px; color: #94a3b8;">Upload a 3d_scene_blueprint.json file to visualize evaluator decisions</p>
+            <p style="margin-top: 8px; color: #888; font-size: 11px;">Upload a 3d_scene_blueprint.json file</p>
         </div>
-        
-        <div id="viewerContent" class="empty-state">
-            <h2>No File Loaded</h2>
-            <p>Upload a 3d_scene_blueprint.json file to see what the evaluator decided</p>
+        <div class="batch-list" id="batchList">
+            <div class="loading">Loading evaluations...</div>
         </div>
     </div>
     
+    <div class="main-content">
+        <div class="content-header">
+            <h2 id="contentTitle">Select an evaluation to view</h2>
+        </div>
+        <div class="data-display" id="viewerContent">
+            <div class="empty-state">
+                <div class="empty-state-icon">🎯</div>
+                <h2>No Evaluation Loaded</h2>
+                <p>Select an evaluation from the sidebar, or upload a blueprint JSON file</p>
+            </div>
+        </div>
+    </div>
+
     <script>
+        let evalEntries = [];
+        let currentEvalId = null;
+
+        // File upload handler
         document.getElementById('fileInput').addEventListener('change', function(e) {
             const file = e.target.files[0];
             if (!file) return;
-            
             const reader = new FileReader();
             reader.onload = function(e) {
                 try {
                     const data = JSON.parse(e.target.result);
-                    renderEvaluatorData(data);
+                    renderEvaluatorData(data, file.name);
+                    document.getElementById('contentTitle').textContent = 'Viewing: ' + file.name;
                 } catch (err) {
                     alert('Error parsing JSON: ' + err.message);
                 }
             };
             reader.readAsText(file);
         });
-        
-        function renderEvaluatorData(data) {
-            const container = document.getElementById('viewerContent');
+
+        // Load eval entries from eval_index.json
+        window.addEventListener('DOMContentLoaded', function() {
+            loadEvalEntries();
+        });
+
+        async function loadEvalEntries() {
+            try {
+                // Try loading the eval index
+                const response = await fetch('../output/evaluation/eval_index.json');
+                if (!response.ok) throw new Error('Not found');
+                const data = await response.json();
+                evalEntries = data || [];
+                if (evalEntries.length > 0) {
+                    displayEvalBatches();
+                } else {
+                    document.getElementById('batchList').innerHTML = '<div class="empty-state"><p>No evaluations yet. Run extraction first.</p></div>';
+                }
+            } catch (e) {
+                // Fall back to scanning extraction batches for evaluation files
+                try {
+                    const batchResponse = await fetch('../output/batch_index.json');
+                    if (!batchResponse.ok) throw new Error('No batch index');
+                    const batchData = await batchResponse.json();
+                    const folders = batchData.batches || [];
+                    evalEntries = [];
+                    for (const folder of folders) {
+                        try {
+                            const manifestResp = await fetch('../output/extraction/' + folder + '/batch_manifest.json');
+                            if (!manifestResp.ok) continue;
+                            const manifest = await manifestResp.json();
+                            const results = manifest.results || [];
+                            for (const r of results) {
+                                if (r.status === 'success') {
+                                    // Check for evaluation file
+                                    var outPath = r.output || '';
+                                    var baseName = outPath.replace('.json', '_evaluation.json');
+                                    evalEntries.push({
+                                        batch: folder,
+                                        url: r.url,
+                                        domain: r.url.replace('https://', '').replace('http://', '').split('/')[0],
+                                        eval_file: '../output/extraction/' + folder + '/' + baseName.split('/').pop(),
+                                        created: manifest.timestamp || ''
+                                    });
+                                }
+                            }
+                        } catch(e2) {}
+                    }
+                    if (evalEntries.length > 0) {
+                        displayEvalBatches();
+                    } else {
+                        document.getElementById('batchList').innerHTML = '<div class="empty-state"><p>No evaluations found. Run extraction + evaluator first.</p></div>';
+                    }
+                } catch(e3) {
+                    document.getElementById('batchList').innerHTML = '<div class="error">Could not load evaluations. Make sure the server is running.</div>';
+                }
+            }
+        }
+
+        function displayEvalBatches() {
+            const batchList = document.getElementById('batchList');
+            
+            // Group by batch
+            var batchMap = {};
+            evalEntries.forEach(function(entry) {
+                var batch = entry.batch || 'Unknown';
+                if (!batchMap[batch]) batchMap[batch] = [];
+                batchMap[batch].push(entry);
+            });
+            
+            var batchNames = Object.keys(batchMap).sort().reverse();
+            
+            var html = '';
+            batchNames.forEach(function(batchName, idx) {
+                var entries = batchMap[batchName];
+                var batchId = 'evalbatch_' + idx;
+                var ts = entries[0].created || '';
+                var dateStr = 'Unknown';
+                if (ts) {
+                    var parts = ts.split('_');
+                    if (parts.length >= 2) {
+                        dateStr = parts[0] + ' ' + parts[1].replace(/-/g, ':');
+                    } else {
+                        dateStr = ts.substring(0, 10);
+                    }
+                }
+                
+                html += '<div class="batch-item">';
+                html += '<div class="batch-header" onclick="toggleBatch(\'' + batchId + '\')">';
+                html += '<div><h3>📦 ' + batchName + '</h3><div class="batch-date">' + dateStr + '</div></div>';
+                html += '<span class="badge-count">' + entries.length + ' evals</span>';
+                html += '</div>';
+                html += '<div class="eval-list" id="' + batchId + '">';
+                
+                entries.forEach(function(entry, eidx) {
+                    var globalIdx = evalEntries.indexOf(entry);
+                    html += '<div class="tree-item" data-eval="' + globalIdx + '" onclick="loadEval(' + globalIdx + ', this)">';
+                    html += '<span class="site-url">' + entry.domain + '</span>';
+                    // Will update badges after loading
+                    html += '</div>';
+                });
+                
+                html += '</div>';
+                html += '</div>';
+            });
+            
+            batchList.innerHTML = html;
+        }
+
+        function toggleBatch(batchId) {
+            const list = document.getElementById(batchId);
+            if (!list) return;
+            if (list.classList.contains('expanded')) {
+                list.classList.remove('expanded');
+            } else {
+                document.querySelectorAll('.eval-list.expanded').forEach(function(el) { el.classList.remove('expanded'); });
+                list.classList.add('expanded');
+            }
+        }
+
+        function filterEvals() {
+            var term = document.getElementById('searchInput').value.toLowerCase();
+            document.querySelectorAll('.batch-item').forEach(function(item) {
+                var text = item.textContent.toLowerCase();
+                item.style.display = text.includes(term) ? 'block' : 'none';
+            });
+        }
+
+        async function loadEval(idx, element) {
+            document.querySelectorAll('.tree-item.active').forEach(function(el) { el.classList.remove('active'); });
+            if (element) element.classList.add('active');
+            
+            var entry = evalEntries[idx];
+            if (!entry) return;
+            
+            document.getElementById('contentTitle').textContent = 'Viewing: ' + entry.domain;
+            
+            try {
+                var response = await fetch(entry.eval_file);
+                if (!response.ok) throw new Error('Not found: ' + entry.eval_file);
+                var data = await response.json();
+                renderEvaluatorData(data, entry.domain);
+                
+                // Update badges with actual style/theme
+                if (element && data.scene_metadata) {
+                    var meta = data.scene_metadata;
+                    if (meta.style) {
+                        var styleSpan = '<span class="style-badge">' + meta.style + '</span>';
+                    }
+                    if (meta.theme) {
+                        var themeSpan = '<span class="theme-badge">' + meta.theme + '</span>';
+                    }
+                    if (styleSpan || themeSpan) {
+                        element.innerHTML = '<span class="site-url">' + entry.domain + '</span> ' + (styleSpan || '') + ' ' + (themeSpan || '');
+                    }
+                }
+            } catch (err) {
+                document.getElementById('viewerContent').innerHTML = '<div class="error">Error loading evaluation: ' + err.message + '</div>';
+            }
+        }
+
+        function renderEvaluatorData(data, label) {
+            var container = document.getElementById('viewerContent');
             
             // Check if it's valid evaluator output
-            if (!data.scene_metadata || !data['3d_objects']) {
+            if (!data.scene_metadata && !data['3d_objects']) {
                 container.innerHTML = '<div class="empty-state"><h2>Invalid Format</h2><p>This doesn\'t look like evaluator output (3d_scene_blueprint.json)</p></div>';
                 return;
             }
             
-            const metadata = data.scene_metadata;
-            const objects = data['3d_objects'];
+            var metadata = data.scene_metadata || {};
+            var objects = data['3d_objects'] || [];
+            var environment = data.environment || {};
             
-            container.innerHTML = `
-                <div class="decision-panel">
-                    <h2>📊 Evaluator Decisions</h2>
-                    <div class="metadata">
-                        <div class="meta-item">
-                            <div class="meta-label">Focal Point</div>
-                            <div class="meta-value">${metadata.focal_point || 'Not detected'}</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Theme</div>
-                            <div class="meta-value">${metadata.theme || 'generic'}</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Max 3D Objects</div>
-                            <div class="meta-value">${metadata.max_3d_objects || 0}</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Token Cost Estimate</div>
-                            <div class="meta-value">${metadata.token_cost_estimate || 0}</div>
-                        </div>
-                    </div>
-                </div>
+            var html = '';
+            html += '<div class="decision-panel">';
+            html += '<h3>📊 Evaluator Decisions' + (label ? ' — ' + label : '') + '</h3>';
+            
+            if (metadata.source_url) {
+                html += '<div style="padding: 8px 16px; background: #f0f4ff; font-size: 12px; color: #2563eb; border-bottom: 1px solid #e0e0e0;">Source: ' + metadata.source_url + '</div>';
+            }
+            
+            html += '<div class="metadata">';
+            html += '<div class="meta-item"><div class="meta-label">Focal Point</div><div class="meta-value">' + (metadata.focal_point || 'Not detected') + '</div></div>';
+            html += '<div class="meta-item"><div class="meta-label">Theme</div><div class="meta-value">' + (metadata.theme || 'generic') + '</div></div>';
+            html += '<div class="meta-item"><div class="meta-label">3D Style</div><div class="meta-value">' + (metadata.style || 'default') + '</div></div>';
+            html += '<div class="meta-item"><div class="meta-label">Max 3D Objects</div><div class="meta-value">' + (metadata.max_3d_objects || 0) + '</div></div>';
+            html += '<div class="meta-item"><div class="meta-label">Token Cost</div><div class="meta-value">' + (metadata.token_cost_estimate || 0) + '</div></div>';
+            
+            if (metadata.token_usage) {
+                html += '<div class="meta-item"><div class="meta-label">Complexity</div><div class="meta-value">' + (metadata.token_usage.complexity_multiplier || 1) + 'x</div></div>';
+                html += '<div class="meta-item"><div class="meta-label">Decisions Made</div><div class="meta-value">' + (metadata.token_usage.decisions_made || 0) + '</div></div>';
+            }
+            html += '</div></div>';
+            
+            // Environment section
+            if (environment.background || environment.lighting) {
+                html += '<div class="decision-panel">';
+                html += '<h3>🌍 Environment</h3>';
+                html += '<div class="metadata">';
                 
-                <div class="objects-section">
-                    <h2>🎨 3D Objects Decided</h2>
-                    <div id="objectsList"></div>
-                </div>
-            `;
+                var bg = environment.background || {};
+                html += '<div class="meta-item"><div class="meta-label">Background Type</div><div class="meta-value">' + (bg.type || 'color') + '</div></div>';
+                if (bg.source && bg.source.includes('http')) {
+                    html += '<div class="meta-item" style="grid-column: 1/-1;"><div class="meta-label">Background Source</div><div class="meta-value" style="font-size: 11px; word-break: break-all;">' + bg.source.substring(0, 100) + '</div></div>';
+                }
+                
+                var light = environment.lighting || {};
+                html += '<div class="meta-item"><div class="meta-label">Lighting</div><div class="meta-value">' + (light.type || 'ambient') + '</div></div>';
+                if (light.intensity) html += '<div class="meta-item"><div class="meta-label">Light Intensity</div><div class="meta-value">' + light.intensity + '</div></div>';
+                
+                html += '</div></div>';
+            }
             
-            const objectsList = document.getElementById('objectsList');
+            // Objects section
+            html += '<div class="objects-section">';
+            html += '<h3>🎨 3D Objects (' + objects.length + ')</h3>';
             
-            if (objects && objects.length > 0) {
-                objects.forEach(obj => {
-                    const card = document.createElement('div');
-                    card.className = `object-card ${obj.priority}-priority`;
-                    card.innerHTML = `
-                        <div class="object-type">${obj.type || 'unknown'}</div>
-                        <div class="object-content">${obj.content || obj.text || 'No content'}</div>
-                        <div class="object-priority">Priority: ${obj.priority || 'unknown'}</div>
-                        ${obj.reason ? `<div style="color: #94a3b8; font-size: 12px; margin-top: 5px;">Reason: ${obj.reason}</div>` : ''}
-                    `;
-                    objectsList.appendChild(card);
+            if (objects.length > 0) {
+                objects.forEach(function(obj) {
+                    var priority = obj.priority || 'medium';
+                    html += '<div class="object-card ' + priority + '-priority">';
+                    html += '<div class="object-type">' + (obj.type || 'unknown') + '</div>';
+                    html += '<div class="object-content">' + (obj.content || obj.text || obj.heading || 'No content') + '</div>';
+                    html += '<div class="object-priority">Priority: ' + obj.priority + '</div>';
+                    if (obj.reason) html += '<div class="object-reason">' + obj.reason + '</div>';
+                    if (obj.position) {
+                        html += '<div style="font-size: 10px; color: #aaa; margin-top: 4px;">pos: ' + JSON.stringify(obj.position) + (obj.scale ? ' | scale: ' + obj.scale : '') + '</div>';
+                    }
+                    html += '</div>';
                 });
             } else {
-                objectsList.innerHTML = '<p style="color: #64748b;">No 3D objects decided yet</p>';
+                html += '<div style="padding: 20px; text-align: center; color: #888;">No 3D objects decided yet</div>';
             }
+            
+            html += '<div class="raw-toggle" onclick="var r=this.nextElementSibling;r.classList.toggle(\'show\');this.textContent=r.classList.contains(\'show\')?\'Hide Raw JSON\':\'Show Raw JSON\'">Show Raw JSON</div>';
+            html += '<div class="raw-json"><pre>' + JSON.stringify(data, null, 2) + '</pre></div>';
+            
+            html += '</div>';
+            
+            container.innerHTML = html;
         }
     </script>
 </body>
