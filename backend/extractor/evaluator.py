@@ -42,9 +42,41 @@ class WebsiteEvaluator:
         
         print(f"\n🎨 Evaluator - Creative Director")
         print("="*70)
-        print(f"Analyzing DNA Profile for: {self.profile['website_profile']['url']}")
-        
-        dna = self.profile['website_profile']
+
+        # Support both old (website_profile) and new (layer-based) formats
+        if 'website_profile' in self.profile:
+            dna = self.profile['website_profile']
+        else:
+            # New layer-based format: convert to legacy structure for evaluator
+            raw = self.profile
+            dna = {
+                'url': raw.get('url', ''),
+                'title': raw.get('meta', {}).get('title', '') or raw.get('url', ''),
+                'structure': {
+                    'navigation': raw.get('layers', {}).get('branding', {}).get('navigation', []),
+                    'hero_section': {
+                        'heading': raw.get('layers', {}).get('hero', {}).get('headline', ''),
+                        'cta_buttons': raw.get('layers', {}).get('hero', {}).get('cta_buttons', [])
+                    },
+                    'sections': raw.get('layers', {}).get('content', {}).get('sections', []),
+                    'buttons': [],
+                    'footer': raw.get('layers', {}).get('footer', {}),
+                },
+                'assets': {
+                    'images': [],
+                    'logo': raw.get('layers', {}).get('branding', {}).get('logo', '')
+                },
+                'visual_dna': {
+                    'computed_colors': raw.get('layers', {}).get('branding', {}).get('brand_colors', []),
+                    'button_styles': [],
+                    'hero_background': {},
+                    'nav_styles': raw.get('layers', {}).get('branding', {}).get('nav_styles', {}),
+                },
+                'meta': raw.get('meta', {}),
+                'analysis': {'complexity_score': 5}
+            }
+
+        print(f"Analyzing DNA Profile for: {dna.get('url', 'unknown')}")
         
         # Phase 1: Identify FOCAL POINT and THEME
         focal_point = self._identify_focal_point(dna)
@@ -66,6 +98,34 @@ class WebsiteEvaluator:
         
         # Phase 5: Create EFFICIENT scene blueprint (only what's NEEDED)
         scene_blueprint = self._create_efficient_scene(dna, colors, style, focal_point, theme)
+
+        # Add thought process and reasoning to blueprint
+        scene_blueprint['_thought_process'] = {
+            'focal_point': {
+                'value': focal_point,
+                'source': 'hero_section.heading' if dna.get('structure', {}).get('hero_section', {}).get('heading') else 'first_section_heading',
+                'rationale': 'The hero heading is the first thing visitors see and defines the brand message — it must be the central 3D focal point.'
+            },
+            'theme': {
+                'value': theme,
+                'rationale': self._get_theme_rationale(dna, theme),
+                'matched_keywords': self._get_theme_keywords(dna)
+            },
+            'style_decision': style,
+            'complexity_analysis': complexity,
+            'color_analysis': {
+                'explicit_count': len(colors.get('explicit', [])),
+                'implicit_count': len(colors.get('implicit', [])),
+                'background_source': colors.get('background_source'),
+                'explicit_colors': colors.get('explicit', []),
+                'implicit_notes': [c.get('note', '') for c in colors.get('implicit', [])],
+                'from_images': colors.get('from_images', [])
+            },
+            'objects_rationale': self._generate_objects_rationale(dna, scene_blueprint.get('3d_objects', []), theme)
+        }
+
+        # Include source assets from DNA for visual previews
+        scene_blueprint['_source_assets'] = self._get_source_assets(dna)
         
         # Phase 6: Generate token report
         self._update_token_usage(scene_blueprint)
@@ -105,8 +165,137 @@ class WebsiteEvaluator:
         elif any(kw in combined for kw in ['blog', 'news', 'article', 'post']):
             return 'content-media'
         else:
-            return 'generic'
-    
+                    return 'generic'
+
+    def _get_theme_rationale(self, dna, theme):
+        """Explain WHY this theme was chosen"""
+        url = dna.get('url', '').lower()
+        title = dna.get('title', '').lower()
+        desc = dna.get('meta', {}).get('description', '').lower()
+        combined = f"{url} {title} {desc}"
+        rationales = {
+            'e-commerce': f"Site URL/title contains commerce keywords (e.g., 'shop', 'product', 'buy') → optimized for product-focused 3D showcase.",
+            'ai-technology': f"Site contains AI/tech keywords (e.g., 'ai', 'artificial intelligence', 'machine learning') → futuristic 3D environment with clean geometry.",
+            'design-creative': f"Site description suggests creative/design focus (e.g., 'creative', 'design', 'portfolio') → artistic 3D layout with organic shapes.",
+            'saas-platform': f"Site uses SaaS/platform language (e.g., 'saas', 'software', 'platform') → professional 3D scene with clean UI elements.",
+            'content-media': f"Site appears to be content/media focused (e.g., 'blog', 'news', 'article') → minimalist 3D with emphasis on text readability.",
+            'generic': f"No strong theme signals detected — using generic 3D scene with broad appeal."
+        }
+        return rationales.get(theme, 'No specific rationale available.')
+
+    def _get_theme_keywords(self, dna):
+        """Return the matching keywords that determined the theme"""
+        url = dna.get('url', '').lower()
+        title = dna.get('title', '').lower()
+        desc = dna.get('meta', {}).get('description', '').lower()
+        combined = f"{url} {title} {desc}"
+        theme_keywords = {
+            'e-commerce': ['shop', 'store', 'commerce', 'product', 'buy', 'sell'],
+            'ai-technology': ['ai', 'artificial intelligence', 'machine learning', 'agent'],
+            'design-creative': ['design', 'creative', 'portfolio', 'studio'],
+            'saas-platform': ['saas', 'software', 'platform', 'cloud'],
+            'content-media': ['blog', 'news', 'article', 'post'],
+        }
+        matched = []
+        for theme_name, kws in theme_keywords.items():
+            for kw in kws:
+                if kw in combined:
+                    matched.append({'theme': theme_name, 'keyword': kw})
+        if not matched:
+            matched.append({'theme': 'generic', 'keyword': 'none', 'note': 'No theme keywords matched'})
+        return matched
+
+    def _generate_objects_rationale(self, dna, objects, theme):
+        """Generate rationale for each 3D object decision"""
+        rationale = []
+        for obj in objects:
+            obj_type = obj.get('type', 'unknown')
+            priority = obj.get('priority', 'medium')
+            content = obj.get('content') or obj.get('text') or obj.get('heading') or ''
+            if obj_type == 'hero_text':
+                rationale.append({
+                    'object_type': obj_type,
+                    'content_preview': str(content)[:80],
+                    'priority': priority,
+                    'reasoning': 'Hero heading is the website focal point — ALWAYS converted to 3D as the centerpiece of the scene (position 0,0,0). Gets highest scale/emphasis.',
+                    '3d_representation': 'Floating 3D text geometry with glow effect, centered in scene',
+                    'source_from': 'hero_section.heading'
+                })
+            elif obj_type == 'cta_button':
+                rationale.append({
+                    'object_type': obj_type,
+                    'content_preview': str(content)[:80],
+                    'priority': priority,
+                    'reasoning': 'CTA buttons drive user action — converted to interactive 3D buttons positioned below the hero text.',
+                    '3d_representation': '3D button panel with hover animation, positioned at y=-1',
+                    'source_from': 'hero_section.cta_buttons'
+                })
+            elif obj_type == 'content_panel':
+                rationale.append({
+                    'object_type': obj_type,
+                    'content_preview': str(content)[:80],
+                    'priority': priority,
+                    'reasoning': 'Content sections provide context — placed at depth (negative Z) to create layered parallax scene.',
+                    '3d_representation': '3D floating card at distance, with soft shadow and fade-in animation',
+                    'source_from': 'structure.sections'
+                })
+            elif obj_type == 'sketchfab_asset':
+                rationale.append({
+                    'object_type': obj_type,
+                    'content_preview': str(content)[:80],
+                    'priority': priority,
+                    'reasoning': 'Fallback 3D asset from SketchFab when website doesn\'t have enough content objects — low priority filler.',
+                    '3d_representation': 'Imported 3D model from SketchFab, positioned at right side',
+                    'source_from': 'external_sketchfab_search'
+                })
+            else:
+                rationale.append({
+                    'object_type': obj_type,
+                    'content_preview': str(content)[:80],
+                    'priority': priority,
+                    'reasoning': 'Standard 3D conversion based on extraction analysis.',
+                    '3d_representation': 'Generic 3D panel',
+                    'source_from': 'extraction_profile'
+                })
+        total_objects = len(objects)
+        max_allowed = objects[0].get('max_objects', 5) if objects else 5
+        rationale.append({
+            'summary': f'Converted {total_objects} of {max_allowed} allowed objects',
+            'theme_limit': f'Theme "{theme}" limits to {max_allowed} objects for efficiency',
+        })
+        return rationale
+
+    def _get_source_assets(self, dna):
+        """Extract actual website assets for visual preview in the viewer"""
+        assets = dna.get('assets', {})
+        images = assets.get('images', [])[:10]
+        logo = assets.get('logo', '')
+        visual = dna.get('visual_dna', {})
+        hero_bg = visual.get('hero_background', {})
+        source_assets = {
+            'hero_image': '',
+            'logo': logo,
+            'content_images': [],
+            'background_images': [],
+            'screenshot': ''
+        }
+        bg_image = hero_bg.get('background_image') or hero_bg.get('clean_url') or ''
+        if bg_image and bg_image != 'none':
+            source_assets['hero_image'] = bg_image
+        for img in images:
+            src = img.get('src', '') if isinstance(img, dict) else img
+            if src and not any(x in str(src).lower() for x in ['icon', 'logo', 'favicon']):
+                source_assets['content_images'].append(src)
+        bg_list = visual.get('background_images', [])
+        for bg in bg_list[:5]:
+            src = bg.get('clean_url') or bg.get('url') or (bg if isinstance(bg, str) else '')
+            if src:
+                source_assets['background_images'].append(src)
+        screenshot = dna.get('screenshot_path') or dna.get('screenshot', '')
+        if screenshot:
+            source_assets['screenshot'] = screenshot
+        return source_assets
+
     def _analyze_complexity(self, dna):
         """Analyze website complexity to estimate token usage"""
         score = dna.get('analysis', {}).get('complexity_score', 5)

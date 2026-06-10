@@ -183,26 +183,32 @@ class ExtractionHandler(SimpleHTTPRequestHandler):
                 output_file = batch_base / f"{domain.replace('.', '_')}.json"
 
                 cmd = [
-                    sys.executable,
+                    "C:\Python314\python.exe",
                     str(PROJECT_ROOT / "backend" / "extractor" / "dna_extractor.py"),
                     "--url", url,
                     "--output", str(output_file)
                 ]
 
-                proc = subprocess.run(cmd, capture_output=True, text=True, timeout=180, cwd=PROJECT_ROOT)
+                proc = subprocess.run(cmd, capture_output=True, text=True, timeout=180, cwd=str(PROJECT_ROOT))
+                print(f"[{job_id}] CMD: {' '.join(cmd)}")
+                print(f"[{job_id}] RC: {proc.returncode}")
                 status = "success" if proc.returncode == 0 else "error"
+                if proc.returncode != 0:
+                    stderr_tail = proc.stderr[-500:] if proc.stderr else ''
+                    print(f"[{job_id}] STDERR: {stderr_tail}")
+                    results[-1 if results else 0]["error"] = stderr_tail
 
                 if status == "success":
                     # Run evaluator on the extraction output
                     eval_output = batch_base / f"{domain.replace('.', '_')}_evaluation.json"
                     eval_cmd = [
-                        sys.executable,
+                        "C:\Python314\python.exe",
                         str(evaluator_script),
                         str(output_file),
                         "--output", str(eval_output)
                     ]
                     try:
-                        subprocess.run(eval_cmd, capture_output=True, text=True, timeout=30, cwd=PROJECT_ROOT)
+                        subprocess.run(eval_cmd, capture_output=True, text=True, timeout=30, cwd=str(PROJECT_ROOT))
                     except Exception:
                         pass
 

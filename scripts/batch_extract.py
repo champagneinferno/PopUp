@@ -6,7 +6,7 @@ from pathlib import Path
 from datetime import datetime
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "backend" / "extractor"))
-from dna_extractor import WebsiteDNASequencer
+from dna_extractor import extract_website
 
 URLS = [
     "https://www.shopify.com",
@@ -27,12 +27,10 @@ def run_batch():
     for i, url in enumerate(URLS, 1):
         print(f"\n[{i}/{len(URLS)}] Extracting: {url}")
         try:
-            url_folder = url.replace('https://', '').replace('http://', '').replace('/', '_')
-            output_dir = Path(f"output/extraction/{batch_name}/{url_folder}").resolve()
-            output_dir.mkdir(parents=True, exist_ok=True)
+            output_file = Path(f"output/extraction/{batch_name}/{url.replace('https://', '').replace('/', '_')}.json")
+            output_file.parent.mkdir(parents=True, exist_ok=True)
 
-            sequencer = WebsiteDNASequencer(url, output_dir=str(output_dir))
-            profile = sequencer.sequence_dna()
+            profile = extract_website(url, output_path=str(output_file), output_dir=str(output_file.parent))
 
             if "error" in profile:
                 print(f"❌ Failed: {profile['error']}")
@@ -47,7 +45,10 @@ def run_batch():
                 # Auto-run evaluator on extraction result
                 try:
                     eval_output = output_file.parent / f"{output_file.stem}_evaluation.json"
-                    from backend.extractor.evaluator import WebsiteEvaluator
+                    import sys as _sys
+                    from pathlib import Path as _Path
+                    _sys.path.insert(0, str(_Path(__file__).parent.parent / 'backend' / 'extractor'))
+                    from evaluator import WebsiteEvaluator
                     evaluator = WebsiteEvaluator(str(output_file))
                     blueprint = evaluator.evaluate()
                     if "error" not in blueprint:

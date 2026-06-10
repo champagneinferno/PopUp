@@ -215,12 +215,8 @@
                 }
             })
             .catch(error => {
-                alert('Error: ' + error.message + '
-
-Run the server:
-  python extraction_server.py [port]
-Then refresh this page.');
-                extractBtn.disabled = false;
+                            alert('Error: ' + error.message + '\n\nRun the server:\n  python extraction_server.py [port]\nThen refresh this page.');
+                            extractBtn.disabled = false;
                 extractBtn.textContent = '🚀 Extract All Websites';
             });
         }
@@ -436,24 +432,39 @@ Then refresh this page.');
                                                         <div style="position: absolute; top: 6px; right: 8px; background: rgba(0,0,0,0.6); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 10px;">Full Page</div>
                                                     </div>` : ''}
                                                     ${sectionSlides.length > 0 ? `
-                                                    <div style="display: flex; gap: 10px; padding: 12px; overflow-x: auto; white-space: nowrap; background: #f8f9fa;">
-                                                        ${sectionSlides.map((slide, idx) => {
-                                                            const imgPath = slide.screenshot ? slide.screenshot.replace(/\\\\/g, '/').replace(/^.*?(output\/extraction)/, '../$1') : '';
-                                                            return `
-                                                            <div style="flex: 0 0 auto; width: 280px; border-radius: 8px; overflow: hidden; border: 1px solid #e0e0e0; background: white; box-shadow: 0 1px 4px rgba(0,0,0,0.08);">
-                                                                <div style="height: 158px; overflow: hidden; background: #eee; position: relative;">
-                                                                    <img src="${imgPath}" alt="Slide ${slide.index}" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;" onclick="zoomImage(this.src)" onerror="this.parentElement.innerHTML='<div style=\\"padding: 50px; text-align: center; color: #999; font-size: 12px;\\">No preview</div>'">
-                                                                    <div style="position: absolute; top: 4px; right: 4px; background: rgba(0,0,0,0.6); color: #fff; padding: 2px 6px; border-radius: 3px; font-size: 9px;">${slide.index}/${slide.total}</div>
-                                                                </div>
-                                                                <div style="padding: 8px 10px;">
-                                                                    <div style="font-size: 11px; color: #555; font-weight: 600;">${slide.label || 'Page ' + slide.index}</div>
-                                                                    <div style="font-size: 10px; color: #999; margin-top: 2px;">Scroll Y: ${slide.scroll_y}px</div>
-                                                                </div>
-                                                            </div>`;
-                                                        }).join('')}
-                                                    </div>
-                                                    <div style="padding: 6px 12px; font-size: 10px; color: #888; border-top: 1px solid #e0e0e0; text-align: center;">
-                                                        ← Scroll → Each card = one 1920×1080 viewport slide. Click to zoom.
+                                                    <div class="slideshow-container" style="position: relative; background: #f8f9fa; padding: 0;">
+                                                        <div style="overflow: hidden; position: relative;">
+                                                            <div id="slideTrack" style="display: flex; transition: transform 0.4s ease-in-out;">
+                                                                ${sectionSlides.map((slide, idx) => {
+                                                                    const imgPath = slide.screenshot ? slide.screenshot.replace(/\\\\\\\\/g, '/').replace(/^.*?(output\\/extraction)/, '../$1') : '';
+                                                                    return `
+                                                                    <div class="slide-card" style="flex: 0 0 100%; display: flex; justify-content: center; padding: 20px 60px;">
+                                                                        <div style="width: 320px; border-radius: 10px; overflow: hidden; border: 1px solid #e0e0e0; background: white; box-shadow: 0 2px 12px rgba(0,0,0,0.1);">
+                                                                            <div style="height: 180px; overflow: hidden; background: #eee; position: relative;">
+                                                                                <img src="${imgPath}" alt="Slide ${slide.index}" style="width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;" onclick="zoomImage(this.src)" onerror="this.parentElement.innerHTML='<div style=\\"padding: 50px; text-align: center; color: #999; font-size: 12px;\\">No preview</div>'">
+                                                                                <div style="position: absolute; top: 6px; right: 6px; background: rgba(0,0,0,0.65); color: #fff; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600;">${slide.index}/${slide.total}</div>
+                                                                            </div>
+                                                                            <div style="padding: 12px 14px;">
+                                                                                <div style="font-size: 13px; color: #333; font-weight: 600;">${slide.label || 'Page ' + slide.index}</div>
+                                                                                <div style="font-size: 11px; color: #999; margin-top: 3px;">Scroll Y: ${slide.scroll_y}px · 1920×1080</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>`;
+                                                                }).join('')}
+                                                            </div>
+                                                        </div>
+                                                        <!-- Prev / Next Arrows -->
+                                                        <button onclick="prevSlide()" style="position: absolute; top: 50%; left: 8px; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 1px solid #ddd; background: white; color: #333; font-size: 18px; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.15); z-index: 5; display: flex; align-items: center; justify-content: center; transition: all 0.2s;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='white'">&#9664;</button>
+                                                        <button onclick="nextSlide()" style="position: absolute; top: 50%; right: 8px; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 1px solid #ddd; background: white; color: #333; font-size: 18px; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.15); z-index: 5; display: flex; align-items: center; justify-content: center; transition: all 0.2s;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='white'">&#9654;</button>
+                                                        <!-- Slide Counter Dots -->
+                                                        <div style="text-align: center; padding: 8px 0 14px 0;">
+                                                            <span id="slideCounter" style="font-size: 13px; color: #666; font-weight: 600; background: white; padding: 4px 14px; border-radius: 12px; border: 1px solid #e0e0e0;">1 / ${sectionSlides.length}</span>
+                                                            <div style="display: flex; justify-content: center; gap: 6px; margin-top: 6px;">
+                                                                ${sectionSlides.map((_, idx) => `
+                                                                    <span class="slide-dot" data-dot="${idx}" onclick="goToSlide(${idx})" style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: ${idx === 0 ? '#1976d2' : '#ccc'}; cursor: pointer; transition: background 0.3s;"></span>
+                                                                `).join('')}
+                                                            </div>
+                                                        </div>
                                                     </div>` : ''}
                                                 </div>
                                             </div>`;
@@ -884,6 +895,46 @@ Then refresh this page.');
                     html += `</div>`;
                     display.innerHTML = html;
                 }
+        
+        // ===== SLIDESHOW CAROUSEL FUNCTIONS =====
+        let currentSlideIndex = 0;
+        let totalSlideCount = 0;
+
+        function prevSlide() {
+            const track = document.getElementById('slideTrack');
+            if (!track) return;
+            const slides = track.querySelectorAll('.slide-card');
+            if (slides.length === 0) return;
+            totalSlideCount = slides.length;
+            currentSlideIndex = (currentSlideIndex - 1 + totalSlideCount) % totalSlideCount;
+            goToSlide(currentSlideIndex);
+        }
+
+        function nextSlide() {
+            const track = document.getElementById('slideTrack');
+            if (!track) return;
+            const slides = track.querySelectorAll('.slide-card');
+            if (slides.length === 0) return;
+            totalSlideCount = slides.length;
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlideCount;
+            goToSlide(currentSlideIndex);
+        }
+
+        function goToSlide(idx) {
+            const track = document.getElementById('slideTrack');
+            if (!track) return;
+            const slides = track.querySelectorAll('.slide-card');
+            if (slides.length === 0) return;
+            currentSlideIndex = idx;
+            track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+            // Update counter
+            const counter = document.getElementById('slideCounter');
+            if (counter) counter.textContent = (idx + 1) + ' / ' + slides.length;
+            // Update dots
+            document.querySelectorAll('.slide-dot').forEach(function(dot, i) {
+                dot.style.background = (i === idx) ? '#1976d2' : '#ccc';
+            });
+        }
     </script>
 </body>
 </html>
