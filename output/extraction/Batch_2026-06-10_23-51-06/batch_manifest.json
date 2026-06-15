@@ -1,0 +1,22 @@
+{
+  "batch_name": "Batch_2026-06-10_23-51-06",
+  "timestamp": "2026-06-10_23-51-06",
+  "total_sites": 3,
+  "results": [
+    {
+      "url": "https://www.metawatt.com",
+      "output": "C:/Users/bum19/orca/workspaces/PopUp/PopUp.AI/output/extraction/Batch_2026-06-10_23-51-06/www_metawatt_com.json",
+      "status": "error"
+    },
+    {
+      "url": "https://example.com",
+      "output": "C:/Users/bum19/orca/workspaces/PopUp/PopUp.AI/output/extraction/Batch_2026-06-10_23-51-06/example_com.json",
+      "status": "error"
+    },
+    {
+      "url": "https://www.wikipedia.org",
+      "output": "C:/Users/bum19/orca/workspaces/PopUp/PopUp.AI/output/extraction/Batch_2026-06-10_23-51-06/www_wikipedia_org.json",
+      "status": "error"
+    }
+  ]
+}

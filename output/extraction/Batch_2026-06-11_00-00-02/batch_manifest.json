@@ -1,0 +1,12 @@
+{
+  "batch_name": "Batch_2026-06-11_00-00-02",
+  "timestamp": "2026-06-11_00-00-02",
+  "total_sites": 1,
+  "results": [
+    {
+      "url": "https://example.com",
+      "output": "C:/Users/bum19/orca/workspaces/PopUp/PopUp.AI/output/extraction/Batch_2026-06-11_00-00-02/example_com.json",
+      "status": "error"
+    }
+  ]
+}

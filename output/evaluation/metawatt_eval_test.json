@@ -1,0 +1,116 @@
+{
+  "scene_metadata": {
+    "source_url": "https://www.metawatt.com",
+    "title": "https://www.metawatt.com",
+    "style": "bold-cinematic",
+    "theme": "ai-technology",
+    "focal_point": "Your All-in-One\nInnovation Hub",
+    "complexity": 1.5,
+    "token_cost_estimate": 150,
+    "max_3d_objects": 5,
+    "token_usage": {
+      "base_cost": 50,
+      "complexity_multiplier": 1.5,
+      "total_tokens": 150,
+      "decisions_made": 5
+    }
+  },
+  "environment": {
+    "background": {
+      "type": "image",
+      "source": "https://source.unsplash.com/1600x900/?ai-technology,Your All-in-One\nInnovation Hub",
+      "note": "From Unsplash API (free to use)"
+    },
+    "lighting": {
+      "type": "spotlight",
+      "intensity": 1.0,
+      "color": "#ffffff"
+    },
+    "fog": {
+      "enabled": false
+    }
+  },
+  "3d_objects": [
+    {
+      "type": "hero_text",
+      "content": "Your All-in-One\nInnovation Hub",
+      "cta_buttons": [
+        {
+          "text": "Apply Now",
+          "href": "",
+          "style": {
+            "bg": "rgba(126, 85, 246, 0)",
+            "color": "rgb(0, 0, 0)",
+            "radius": "0px",
+            "padding": "0px",
+            "font": "Arial, Helvetica, sans-serif",
+            "weight": "400"
+          }
+        },
+        {
+          "text": "Submit Application",
+          "href": "",
+          "style": {
+            "bg": "rgba(126, 85, 246, 0)",
+            "color": "rgb(0, 0, 0)",
+            "radius": "0px",
+            "padding": "0px",
+            "font": "Arial",
+            "weight": "400"
+          }
+        }
+      ],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "scale": 1.5,
+      "priority": "high"
+    },
+    {
+      "type": "cta_button",
+      "text": "Apply Now",
+      "href": "",
+      "position": {
+        "x": -1,
+        "y": -1,
+        "z": 0
+      },
+      "priority": "high"
+    },
+    {
+      "type": "cta_button",
+      "text": "Submit Application",
+      "href": "",
+      "position": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      },
+      "priority": "high"
+    },
+    {
+      "type": "content_panel",
+      "heading": "Your All-in-OneInnovation Hub",
+      "preview": "Your All-in-OneInnovation HubThe Complete Journey: From Learning to Business ImpactApply NowSubmit Your Application TodayAre you a student, individual, or business owner*RequiredStudentIndividualBusin",
+      "position": {
+        "x": 0,
+        "y": -2.0,
+        "z": -5
+      },
+      "priority": "medium"
+    },
+    {
+      "type": "content_panel",
+      "heading": "About METAWATT",
+      "preview": "About METAWATTAI Solutions. Real-World Experience. Future-Ready Innovation.At MetaWatt, we bridge the gap between AI-driven technology and real-world application. Our cutting-edge solutions empower in",
+      "position": {
+        "x": 0,
+        "y": -3.5,
+        "z": -7
+      },
+      "priority": "medium"
+    }
+  ]
+}

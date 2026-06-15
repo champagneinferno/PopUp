@@ -1,0 +1,16 @@
+[
+  {
+    "batch": "Batch_2026-06-11_00-22-53",
+    "url": "https://www.metawatt.com",
+    "domain": "www_metawatt_com",
+    "eval_file": "../output/evaluation/metawatt_eval_test.json",
+    "created": "2026-06-11_00-25-00"
+  },
+  {
+    "batch": "test_thought_process",
+    "url": "https://www.metawatt.com",
+    "domain": "metawatt_with_thought",
+    "eval_file": "../output/evaluation/metawatt_with_thought.json",
+    "created": "2026-06-11_12-00-00"
+  }
+]

@@ -1,0 +1,220 @@
+{
+  "scene_metadata": {
+    "source_url": "https://www.metawatt.com",
+    "title": "https://www.metawatt.com",
+    "style": "bold-cinematic",
+    "theme": "ai-technology",
+    "focal_point": "Your All-in-One\nInnovation Hub",
+    "complexity": 1.5,
+    "token_cost_estimate": 150,
+    "max_3d_objects": 5,
+    "token_usage": {
+      "base_cost": 50,
+      "complexity_multiplier": 1.5,
+      "total_tokens": 150,
+      "decisions_made": 5
+    }
+  },
+  "environment": {
+    "background": {
+      "type": "image",
+      "source": "https://source.unsplash.com/1600x900/?ai-technology,Your All-in-One\nInnovation Hub",
+      "note": "From Unsplash API (free to use)"
+    },
+    "lighting": {
+      "type": "spotlight",
+      "intensity": 1.0,
+      "color": "#ffffff"
+    },
+    "fog": {
+      "enabled": false
+    }
+  },
+  "3d_objects": [
+    {
+      "type": "hero_text",
+      "content": "Your All-in-One\nInnovation Hub",
+      "cta_buttons": [
+        {
+          "text": "Apply Now",
+          "href": "",
+          "style": {
+            "bg": "rgba(126, 85, 246, 0)",
+            "color": "rgb(0, 0, 0)",
+            "radius": "0px",
+            "padding": "0px",
+            "font": "Arial, Helvetica, sans-serif",
+            "weight": "400"
+          }
+        },
+        {
+          "text": "Submit Application",
+          "href": "",
+          "style": {
+            "bg": "rgba(126, 85, 246, 0)",
+            "color": "rgb(0, 0, 0)",
+            "radius": "0px",
+            "padding": "0px",
+            "font": "Arial",
+            "weight": "400"
+          }
+        }
+      ],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "scale": 1.5,
+      "priority": "high"
+    },
+    {
+      "type": "cta_button",
+      "text": "Apply Now",
+      "href": "",
+      "position": {
+        "x": -1,
+        "y": -1,
+        "z": 0
+      },
+      "priority": "high"
+    },
+    {
+      "type": "cta_button",
+      "text": "Submit Application",
+      "href": "",
+      "position": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      },
+      "priority": "high"
+    },
+    {
+      "type": "content_panel",
+      "heading": "Your All-in-OneInnovation Hub",
+      "preview": "Your All-in-OneInnovation HubThe Complete Journey: From Learning to Business ImpactApply NowSubmit Your Application TodayAre you a student, individual, or business owner*RequiredStudentIndividualBusin",
+      "position": {
+        "x": 0,
+        "y": -2.0,
+        "z": -5
+      },
+      "priority": "medium"
+    },
+    {
+      "type": "content_panel",
+      "heading": "About METAWATT",
+      "preview": "About METAWATTAI Solutions. Real-World Experience. Future-Ready Innovation.At MetaWatt, we bridge the gap between AI-driven technology and real-world application. Our cutting-edge solutions empower in",
+      "position": {
+        "x": 0,
+        "y": -3.5,
+        "z": -7
+      },
+      "priority": "medium"
+    }
+  ],
+  "_thought_process": {
+    "focal_point": {
+      "value": "Your All-in-One\nInnovation Hub",
+      "source": "hero_section.heading",
+      "rationale": "The hero heading is the first thing visitors see and defines the brand message \u2014 it must be the central 3D focal point."
+    },
+    "theme": {
+      "value": "ai-technology",
+      "rationale": "Site contains AI/tech keywords (e.g., 'ai', 'artificial intelligence', 'machine learning') \u2192 futuristic 3D environment with clean geometry.",
+      "matched_keywords": [
+        {
+          "theme": "ai-technology",
+          "keyword": "ai"
+        }
+      ]
+    },
+    "style_decision": {
+      "style": "bold-cinematic",
+      "confidence": 2,
+      "all_scores": {
+        "minimalist": 0,
+        "bold-cinematic": 2,
+        "tech-corporate": 2,
+        "creative-playful": 0,
+        "dark-moody": 0
+      }
+    },
+    "complexity_analysis": {
+      "score": 5,
+      "multiplier": 1.5,
+      "level": "moderate",
+      "total_elements": 12
+    },
+    "color_analysis": {
+      "explicit_count": 2,
+      "implicit_count": 0,
+      "background_source": null,
+      "explicit_colors": [
+        "rgb(0, 0, 0)",
+        "rgb(255, 255, 255)"
+      ],
+      "implicit_notes": [],
+      "from_images": [
+        {
+          "source": "og:image",
+          "value": "https://static.wixstatic.com/media/e54946_30b43479e4bb43af8c2ee7c786c3dee9~mv2.png/v1/fill/w_1600,h_1066,al_c/e54946_30b43479e4bb43af8c2ee7c786c3dee9~mv2.png",
+          "note": "OG image may contain dominant brand colors"
+        }
+      ]
+    },
+    "objects_rationale": [
+      {
+        "object_type": "hero_text",
+        "content_preview": "Your All-in-One\nInnovation Hub",
+        "priority": "high",
+        "reasoning": "Hero heading is the website focal point \u2014 ALWAYS converted to 3D as the centerpiece of the scene (position 0,0,0). Gets highest scale/emphasis.",
+        "3d_representation": "Floating 3D text geometry with glow effect, centered in scene",
+        "source_from": "hero_section.heading"
+      },
+      {
+        "object_type": "cta_button",
+        "content_preview": "Apply Now",
+        "priority": "high",
+        "reasoning": "CTA buttons drive user action \u2014 converted to interactive 3D buttons positioned below the hero text.",
+        "3d_representation": "3D button panel with hover animation, positioned at y=-1",
+        "source_from": "hero_section.cta_buttons"
+      },
+      {
+        "object_type": "cta_button",
+        "content_preview": "Submit Application",
+        "priority": "high",
+        "reasoning": "CTA buttons drive user action \u2014 converted to interactive 3D buttons positioned below the hero text.",
+        "3d_representation": "3D button panel with hover animation, positioned at y=-1",
+        "source_from": "hero_section.cta_buttons"
+      },
+      {
+        "object_type": "content_panel",
+        "content_preview": "Your All-in-OneInnovation Hub",
+        "priority": "medium",
+        "reasoning": "Content sections provide context \u2014 placed at depth (negative Z) to create layered parallax scene.",
+        "3d_representation": "3D floating card at distance, with soft shadow and fade-in animation",
+        "source_from": "structure.sections"
+      },
+      {
+        "object_type": "content_panel",
+        "content_preview": "About METAWATT",
+        "priority": "medium",
+        "reasoning": "Content sections provide context \u2014 placed at depth (negative Z) to create layered parallax scene.",
+        "3d_representation": "3D floating card at distance, with soft shadow and fade-in animation",
+        "source_from": "structure.sections"
+      },
+      {
+        "summary": "Converted 5 of 5 allowed objects",
+        "theme_limit": "Theme \"ai-technology\" limits to 5 objects for efficiency"
+      }
+    ]
+  },
+  "_source_assets": {
+    "hero_image": "",
+    "logo": "https://static.wixstatic.com/media/e54946_19f16859809f4c2bbf54160705011384~mv2.png/v1/crop/x_0,y_66,w_500,h_118/fill/w_191,h_45,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/CD68DF04-D8B7-44A9-AD93-7492393E5444.png",
+    "content_images": [],
+    "background_images": [],
+    "screenshot": ""
+  }
+}

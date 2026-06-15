@@ -1,0 +1,17 @@
+{
+  "batch_name": "Batch_2026-06-10_23-52-45",
+  "timestamp": "2026-06-10_23-52-45",
+  "total_sites": 2,
+  "results": [
+    {
+      "url": "https://www.example.com",
+      "output": "C:/Users/bum19/orca/workspaces/PopUp/PopUp.AI/output/extraction/Batch_2026-06-10_23-52-45/www_example_com.json",
+      "status": "error"
+    },
+    {
+      "url": "https://www.wikipedia.org",
+      "output": "C:/Users/bum19/orca/workspaces/PopUp/PopUp.AI/output/extraction/Batch_2026-06-10_23-52-45/www_wikipedia_org.json",
+      "status": "error"
+    }
+  ]
+}

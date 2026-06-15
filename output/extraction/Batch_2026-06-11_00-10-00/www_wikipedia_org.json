@@ -1,0 +1,283 @@
+{
+  "url": "https://www.wikipedia.org",
+  "framework": {
+    "framework": "static-html",
+    "confidence": 0.5,
+    "indicators": [],
+    "meta_generator": ""
+  },
+  "screenshot_path": "C:\\Users\\bum19\\orca\\workspaces\\PopUp\\PopUp.AI\\output\\extraction\\Batch_2026-06-11_00-10-00\\www_wikipedia_org_screenshot.png",
+  "layers": {
+    "background": {
+      "background_images": [
+        {
+          "url": "https://www.wikipedia.org/portal/wikipedia.org/assets/img/sprite-e49fbf32.svg",
+          "element": "DIV.sprite",
+          "color": "rgba(0, 0, 0, 0)",
+          "width": 50,
+          "height": 50,
+          "position": "static",
+          "is_hero_candidate": false,
+          "type": "css-background"
+        },
+        {
+          "url": "https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png",
+          "element": "IMG (full-bleed bg)",
+          "width": 200,
+          "height": 183,
+          "alt": "",
+          "type": "img-background"
+        }
+      ],
+      "hero_background": null,
+      "count": 2
+    },
+    "branding": {
+      "logo": "https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png",
+      "logo_url": "https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png",
+      "navigation": [
+        {
+          "text": "English7,189,000+articles",
+          "href": "https://en.wikipedia.org/"
+        },
+        {
+          "text": "日本語1,503,000+記事",
+          "href": "https://ja.wikipedia.org/"
+        },
+        {
+          "text": "Deutsch3.125.000+Artikel",
+          "href": "https://de.wikipedia.org/"
+        },
+        {
+          "text": "Русский2 103 000+статей",
+          "href": "https://ru.wikipedia.org/"
+        },
+        {
+          "text": "Français2 761 000+articles",
+          "href": "https://fr.wikipedia.org/"
+        },
+        {
+          "text": "Español2.116.000+artículos",
+          "href": "https://es.wikipedia.org/"
+        },
+        {
+          "text": "中文1,537,000+条目 / 條目",
+          "href": "https://zh.wikipedia.org/"
+        },
+        {
+          "text": "Italiano1.971.000+voci",
+          "href": "https://it.wikipedia.org/"
+        },
+        {
+          "text": "Polski1 696 000+haseł",
+          "href": "https://pl.wikipedia.org/"
+        },
+        {
+          "text": "Português1.173.000+artigos",
+          "href": "https://pt.wikipedia.org/"
+        }
+      ],
+      "nav_styles": {
+        "background_color": "rgba(0, 0, 0, 0)",
+        "height": "325px",
+        "font_family": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Inter, Helvetica, Arial, sans-serif",
+        "border_bottom": "0px none rgb(32, 33, 34)",
+        "link_color": "rgb(51, 102, 204)",
+        "link_font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Inter, Helvetica, Arial, sans-serif",
+        "link_weight": "400",
+        "link_transform": "none"
+      },
+      "brand_colors": [
+        "rgb(32, 33, 34)"
+      ],
+      "brand_fonts": []
+    },
+    "hero": {
+      "headline": "We owe you an explanation.",
+      "subheading": "You deserve an explanation, so please don't skip this 1-minute read. Our fundraiser won't last long, and we need some help to reach our goal. Less than 2% of our readers donate, but if everyone who saw this message gave $2.75, we'd hit our goal in a few hours. The rare few who donate do so because W",
+      "cta_buttons": [
+        {
+          "text": "Close",
+          "href": "",
+          "style": {
+            "bg": "rgba(0, 0, 0, 0)",
+            "color": "rgb(192, 230, 255)",
+            "radius": "0px",
+            "padding": "12px",
+            "font": "\"Source Serif Pro\", Georgia, Times, serif",
+            "weight": "400"
+          }
+        },
+        {
+          "text": "Donate now",
+          "href": "https://donate.wikimedia.org/?wmf_medium=portal&wmf_campaign=portalBanner&wmf_source=portalBanner_en10C_2526_blueBanner&uselang=en&appeal=SupportingWikipedia",
+          "style": {
+            "bg": "rgb(4, 157, 255)",
+            "color": "rgb(0, 0, 0)",
+            "radius": "2px",
+            "padding": "10px 15px",
+            "font": "\"Source Serif Pro\", Georgia, Times, serif",
+            "weight": "700"
+          }
+        }
+      ],
+      "hero_image": null,
+      "background": null,
+      "heading_style": {
+        "font_family": "Montserrat, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "font_size": "26px",
+        "font_weight": "700",
+        "color": "rgb(32, 33, 34)",
+        "line_height": "39px",
+        "letter_spacing": "normal",
+        "text_transform": "none",
+        "text_align": "left"
+      }
+    },
+    "content": {
+      "sections": [
+        {
+          "heading": "1,000,000+articles",
+          "text_preview": "1,000,000+articlesالعربيةDeutschEnglishEspañolفارسیFrançaisItalianoمصرىNederlands日本語PolskiPortuguêsSinugboanong BinisayaSvenskaУкраїнськаTiếng ViệtWinaray中文Русский100,000+articlesAfrikaansShqipAsturianuAzərbaycancaБългарски閩南語 / Bân-lâm-gúবাংলাБеларускаяCatalàČeštinaCymraegDanskEestiΕλληνικάEsperant",
+          "text_length": 3054,
+          "images": [],
+          "class": "lang-list-content",
+          "tag": "div"
+        },
+        {
+          "heading": "We owe you an explanation.",
+          "text_preview": "We owe you an explanation.You deserve an explanation, so please don't skip this 1-minute read. Our fundraiser won't last long, and we need some help to reach our goal. Less than 2% of our readers donate, but if everyone who saw this message gave$2.75, we'd hit our goal in a few hours. The rare few w",
+          "text_length": 644,
+          "images": [],
+          "class": "portal-banner-content",
+          "tag": "div"
+        }
+      ],
+      "count": 2
+    },
+    "icons": {
+      "icons": [],
+      "count": 0
+    },
+    "footer": {
+      "links": [
+        {
+          "text": "You can support our work with a donation.",
+          "url": "https://donate.wikimedia.org/?wmf_medium=portal&wmf_campaign=portalFooter&wmf_source=portalFooter"
+        },
+        {
+          "text": "Download Wikipedia for Android or iOS",
+          "url": "https://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications"
+        },
+        {
+          "text": "Google Play Store",
+          "url": "https://play.google.com/store/apps/details?id=org.wikipedia&referrer=utm_source%3Dportal%26utm_medium%3Dbutton%26anid%3Dadmob"
+        },
+        {
+          "text": "Apple App Store",
+          "url": "https://itunes.apple.com/app/apple-store/id324715238?pt=208305&ct=portal&mt=8"
+        },
+        {
+          "text": "CommonsFree media collection",
+          "url": "//commons.wikimedia.org/"
+        },
+        {
+          "text": "WikivoyageFree travel guide",
+          "url": "//www.wikivoyage.org/"
+        },
+        {
+          "text": "WiktionaryFree dictionary",
+          "url": "//www.wiktionary.org/"
+        },
+        {
+          "text": "WikibooksFree textbooks",
+          "url": "//www.wikibooks.org/"
+        },
+        {
+          "text": "WikidataFree knowledge base",
+          "url": "//www.wikidata.org/"
+        },
+        {
+          "text": "WikiversityFree learning resources",
+          "url": "//www.wikiversity.org/"
+        },
+        {
+          "text": "WikiquoteFree quote compendium",
+          "url": "//www.wikiquote.org/"
+        },
+        {
+          "text": "MediaWikiFree & open wiki software",
+          "url": "//www.mediawiki.org/"
+        },
+        {
+          "text": "WikisourceFree content library",
+          "url": "//www.wikisource.org/"
+        },
+        {
+          "text": "WikispeciesFree species directory",
+          "url": "//species.wikimedia.org/"
+        },
+        {
+          "text": "WikifunctionsFree function library",
+          "url": "//www.wikifunctions.org/"
+        },
+        {
+          "text": "Meta-WikiCommunity coordination & documentation",
+          "url": "//meta.wikimedia.org/"
+        },
+        {
+          "text": "Creative Commons Attribution-ShareAlike License",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        },
+        {
+          "text": "Terms of Use",
+          "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use"
+        },
+        {
+          "text": "Privacy Policy",
+          "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy"
+        }
+      ],
+      "social_links": [],
+      "copyright": "",
+      "text": "Wikipedia is hosted by the Wikimedia Foundation, a non-profit organization that also hosts a range of other projects.You can support our work with a donation.Download Wikipedia for Android or iOSSave your favorite articles to read offline, sync your reading lists across devices and customize your reading experience with the official Wikipedia app.Google Play StoreApple App StoreCommonsFree media collectionWikivoyageFree travel guideWiktionaryFree dictionaryWikibooksFree textbooksWikidataFree kno"
+    },
+    "floating": {
+      "floating_elements": [],
+      "count": 0
+    }
+  },
+  "assets": [
+    {
+      "src": "https://www.wikipedia.org/portal/wikipedia.org/assets/img/sprite-e49fbf32.svg",
+      "type": "background",
+      "width": 50,
+      "height": 50,
+      "element": "DIV.sprite",
+      "layer": "background"
+    },
+    {
+      "src": "https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png",
+      "type": "background",
+      "width": 200,
+      "height": 183,
+      "element": "IMG (full-bleed bg)",
+      "layer": "background"
+    },
+    {
+      "src": "https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png",
+      "type": "logo",
+      "layer": "branding"
+    }
+  ],
+  "meta": {
+    "description": "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation.",
+    "viewport": "initial-scale=1,user-scalable=yes",
+    "og:title": "Wikipedia, the free encyclopedia",
+    "og:type": "website",
+    "og:description": "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation.",
+    "og:image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/250px-Wikipedia-logo-v2.svg.png"
+  },
+  "extraction_timestamp": "2026-06-11T00:07:57.400561",
+  "_version": "2.0-layer-based"
+}

@@ -1,0 +1,12 @@
+{
+  "batch_name": "Batch_2026-06-11_00-22-53",
+  "timestamp": "2026-06-11_00-22-53",
+  "total_sites": 1,
+  "results": [
+    {
+      "url": "https://www.metawatt.com",
+      "output": "C:\\Users\\bum19\\orca\\workspaces\\PopUp\\PopUp.AI\\output\\extraction\\Batch_2026-06-11_00-22-53\\www_metawatt_com.json",
+      "status": "success"
+    }
+  ]
+}
